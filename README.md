@@ -2,6 +2,8 @@
 
 > A portfolio display for projects, notes and other work.
 
+This project builds the site. Site is served in the sub-repo dist.
+
 ## Build Setup
 
 ``` bash
