@@ -1,0 +1,3 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:DarkPurple141/DarkPurple141.github.io.git
