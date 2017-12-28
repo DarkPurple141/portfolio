@@ -3,6 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Icon from 'vue-awesome/components/Icon'
+
+import 'vue-awesome/icons/github'
+import 'vue-awesome/icons/bitbucket'
+import 'vue-awesome/icons/twitter'
+import 'vue-awesome/icons/medium'
+
+
+// globally (in your main .js file)
+Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
 
