@@ -9,7 +9,7 @@ import 'vue-awesome/icons/github'
 import 'vue-awesome/icons/bitbucket'
 import 'vue-awesome/icons/twitter'
 import 'vue-awesome/icons/medium'
-
+import 'vue-awesome/icons/circle'
 
 // globally (in your main .js file)
 Vue.component('icon', Icon)

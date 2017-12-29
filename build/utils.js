@@ -22,6 +22,13 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  const lessLoader = {
+      loader: 'less-loader',
+      options: {
+         sourceMap: options.sourceMap
+      }
+  }
+
   const postcssLoader = {
     loader: 'postcss-loader',
     options: {
@@ -31,7 +38,7 @@ exports.cssLoaders = function (options) {
 
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
+    const loaders = options.usePostCSS ? [cssLoader, postcssLoader, lessLoader] : [cssLoader]
 
     if (loader) {
       loaders.push({

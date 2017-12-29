@@ -1,12 +1,14 @@
 <template lang="html">
    <footer>
+      <Links/>
       <div class="social-icons">
          <a v-for="icon in icons"
             :href="icon.url"
             :key="icon.name"
-            :class="icon.name"
             target="_blank">
-            <icon scale="1.5" :name="icon.name"></icon>
+            <icon class="icon-frame" scale="2">
+               <icon :class="icon.name" :name="icon.name"></icon>
+            </icon>
          </a>
       </div>
       <div class="copyright">
@@ -17,8 +19,11 @@
 </template>
 
 <script>
+import Links from '@/components/Links'
+
 export default {
    name: 'AppFooter',
+   components: { Links },
    data() {
       return {
          icons: [
@@ -44,38 +49,73 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="less">
+@import '../assets/colors';
+
+footer {
+   padding: 1em;
+   background-color: @background-dark;
+   color: @text-light;
+}
+
 footer .fa-icon {
-   margin-right: 3px;
+   margin-right: 14px;
+}
+
+a .icon-frame {
+   color: @text-light;
 }
 
 a {
    text-decoration: none;
-   color: black;
+   color: inherit;
 }
 
-.copyright {
+div {
    font-size: small;
-   padding: 1em;
+
+   &.copyright {
+      padding-bottom: 1em;
+   }
+
+   &.social-icons {
+      padding-top: 1.5em;
+   }
 }
 
-.twitter:hover {
-   color: #00aced;
+svg {
+   &:hover > .twitter {
+      color: @twitter;
+   }
+
+   &:active > .twitter {
+      color: lighten(@twitter, 10%);
+   }
+
+   &:hover > .bitbucket {
+      color: @bitbucket;
+   }
+
+   &:active > .bitbucket {
+      color: lighten(@bitbucket, 10%);
+   }
+
+   &:hover > .github {
+      color: @github;
+   }
+
+   &:active > .github {
+      color: lighten(@github, 10%);
+   }
+
+   &:hover > .medium {
+      color: @medium;
+   }
+
+   &:active > .medium {
+      color: lighten(@medium, 10%);
+   }
+
 }
 
-.bitbucket:hover {
-   color: navy;
-}
-
-.medium:hover {
-   color: #00AB6B;
-}
-
-.github:hover {
-   color: rgba(0, 0, 0, 0.5);
-}
-
-.fa-icon:active {
-   color: rgba(0, 0, 0, 0.7);
-}
 </style>
