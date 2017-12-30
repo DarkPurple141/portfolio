@@ -1,37 +1,41 @@
 <template>
   <div id="app">
+     <AppNav/>
      <router-view/>
      <AppFooter/>
   </div>
 </template>
 
 <script>
-import AppFooter from './components/Footer'
+import AppFooter from '@/components/Footer'
+import AppNav from '@/components/Nav'
 
 export default {
   name: 'portfolio',
-  components: { AppFooter }
+  components: { AppFooter, AppNav }
 }
 </script>
 
 <style lang="less">
-@background-dark: #222;
-@text: #2c3e50;
-@text-light: #ddd;
+@import './assets/colors';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-size: normal;
+  font-size: medium;
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: @text;
-  margin-top: 60px;
 }
 
-main {
-   margin-top: 2em;
+html, body, main {
+   margin: 0;
+}
+
+
+article {
+   line-height: 1.5em;
 }
 
 section {

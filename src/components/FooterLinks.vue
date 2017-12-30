@@ -19,7 +19,6 @@ export default {
 
    mounted() {
       this.$router.options.routes.forEach(route => {
-            console.log(route)
             this.links.push(
                {
                    name: route.name,
@@ -36,20 +35,35 @@ export default {
 @import '../assets/colors';
 
 nav {
-   font-size: 1.4em;
+   font-size: 1.2em;
 }
 
 a {
    transition: all .2s ease;
-   border-bottom: 1px solid transparent;
+   -webkit-transition: all .2s ease;
+   -moz-transition: all .2s ease;
+   -o-transition: all .2s ease;
+   &:link {
+      border-bottom: 1.5px solid transparent;
+   }
 
    &:visited {
       color: @text-light-link;
    }
 
-   &:hover, &:focus {
+   &:hover {
       color: lighten(@text-light, 15%);
       border-color: lighten(@text-light, 15%);
+   }
+
+   &:focus {
+      color: lighten(@text-light, 15%);
+      border-color: lighten(@text-light, 15%);
+   }
+
+   &:active {
+      color: @text-light-link;
+      border-color: @text-light-link;
    }
 }
 

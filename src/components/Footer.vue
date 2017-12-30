@@ -6,7 +6,7 @@
             :href="icon.url"
             :key="icon.name"
             target="_blank">
-            <icon class="icon-frame" scale="2">
+            <icon class="icon-frame" scale="1.5">
                <icon :class="icon.name" :name="icon.name"></icon>
             </icon>
          </a>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Links from '@/components/Links'
+import Links from '@/components/FooterLinks'
 
 export default {
    name: 'AppFooter',
@@ -59,7 +59,7 @@ footer {
 }
 
 footer .fa-icon {
-   margin-right: 14px;
+   margin-right: 16px;
 }
 
 a .icon-frame {
@@ -84,6 +84,11 @@ div {
 }
 
 svg {
+   transition: all .2s ease;
+   -webkit-transition: all .2s ease;
+   -moz-transition: all .2s ease;
+   -o-transition: all .2s ease;
+
    &:hover > .twitter {
       color: @twitter;
    }
