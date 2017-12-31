@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <AppNav/>
+     <AppNav v-if="this.$route.name != 'Home'"/>
      <router-view/>
      <AppFooter/>
   </div>
@@ -19,6 +19,10 @@ export default {
 <style lang="less">
 @import './assets/colors';
 
+.banner {
+   font-size: 4em;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: medium;
@@ -31,8 +35,12 @@ export default {
 
 html, body, main {
    margin: 0;
+   min-width: 330px;
 }
 
+li, p {
+  line-height: 1.2;
+}
 
 article {
    line-height: 1.5em;
@@ -47,8 +55,13 @@ section:nth-child(odd) {
    color: @text-light;
 }
 
-body {
-   margin: 0;
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 </style>

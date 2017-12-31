@@ -1,6 +1,6 @@
 <template lang="html">
 <main>
-   <header></header>
+   <ArticleHeader :title="'Journalism'"/>
    <article>
 
    </article>
@@ -8,19 +8,30 @@
 </template>
 
 <script>
+import ArticleHeader from '@/components/ArticleHeader'
+
 export default {
    name: 'Media',
+   components: {
+      ArticleHeader
+   }
 }
 </script>
 
 <style lang="less" scoped>
+@import '../assets/colors';
 header {
-   background-image: url("../../static/images/media.jpg");
-   background-size: 100% auto;
-   background-repeat: no-repeat;
-   background-position: 0 -80px;
-   width: 100%;
-   height: 350px;
+   background-image: radial-gradient(ellipse closest-side,
+      @pallette-d, fade(black, 30%)
+    ), url("../../static/images/media.jpg");
+   background-position: 0, 0 -80px;
+}
+
+@media screen and (max-width: 500px) {
+   header {
+      background-size: auto, 600px auto;
+      background-position: 0, 90% -80px;
+   }
 }
 
 </style>

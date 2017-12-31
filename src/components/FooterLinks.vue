@@ -55,12 +55,12 @@ a {
       color: lighten(@text-light, 15%);
       border-color: lighten(@text-light, 15%);
    }
-
+/*
    &:focus {
       color: lighten(@text-light, 15%);
       border-color: lighten(@text-light, 15%);
    }
-
+*/
    &:active {
       color: @text-light-link;
       border-color: @text-light-link;
@@ -74,12 +74,13 @@ ul {
 }
 
 li {
+   margin-left: 0.1em;
    display: inline-block;
 }
 
 li:after {
    content: "|";
-   margin: 0.5em;
+   margin: 0.5em 0em 0.5em 0.5em;
 }
 
 li:last-child:after {

@@ -1,7 +1,8 @@
 <template>
    <main class="banners">
      <header>
-        <h1>{{ msg }}</h1>
+        <h1>Welcome!</h1>
+        <h3>Thanks for stopping by..</h3>
      </header>
      <section v-for="card in Slides" :id="card.id">
         <HomeCard :title="card.title" :content="card.content" />
@@ -10,7 +11,7 @@
 </template>
 
 <script>
-import slides from '@/HomeContent'
+import slides from '@/content/HomeContent'
 import HomeCard from '@/components/HomeCard'
 
 export default {

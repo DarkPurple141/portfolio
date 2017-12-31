@@ -10,6 +10,8 @@ import 'vue-awesome/icons/bitbucket'
 import 'vue-awesome/icons/twitter'
 import 'vue-awesome/icons/medium'
 import 'vue-awesome/icons/circle'
+import 'vue-awesome/icons/linkedin'
+import 'vue-awesome/icons/reorder'
 
 // globally (in your main .js file)
 Vue.component('icon', Icon)

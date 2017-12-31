@@ -42,6 +42,10 @@ export default {
             {
                name: "bitbucket",
                url: "https://bitbucket.org/DarkPurple141/"
+            },
+            {
+               name: "linkedin",
+               url: "https://www.linkedin.com/in/alex-hinds-12449660/"
             }
          ]
       }
@@ -119,6 +123,14 @@ svg {
 
    &:active > .medium {
       color: lighten(@medium, 10%);
+   }
+
+   &:hover > .linkedin {
+      color: @linkedin;
+   }
+
+   &:active > .linkedin {
+      color: lighten(@linkedin, 10%);
    }
 
 }
