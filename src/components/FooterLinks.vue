@@ -74,18 +74,19 @@ ul {
 }
 
 li {
-   margin-left: 0.1em;
+   margin: 0;
+   padding-left: 0.5em;
+   padding-right: 0.5em;
    display: inline-block;
+   border-right: 1px solid #ddd;
 }
 
-li:after {
-   content: "|";
-   margin: 0.5em 0em 0.5em 0.5em;
+li:first-child {
+   padding-left: 0.5em;
 }
 
-li:last-child:after {
-   content: "";
-   margin-right: 0;
+li:last-child {
+   border-right: none;
 }
 
 </style>

@@ -55,6 +55,7 @@ export default {
 
 <style lang="less">
 @import '../assets/colors';
+@import '../assets/logo';
 
 footer {
    padding: 1em;

@@ -18,12 +18,14 @@ export default {
 
 <style lang="less">
 @import './assets/colors';
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
 
 .banner {
    font-size: 4em;
 }
 
 #app {
+  //font-family: 'Roboto', sans-serif;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: medium;
   letter-spacing: normal;
