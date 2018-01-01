@@ -23,7 +23,6 @@ export default {
    },
    mounted() {
       MediaContent.content.split('\n').forEach(item => {
-         console.log(item)
          this.content.push(item)
       })
    }
