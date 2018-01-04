@@ -35,7 +35,7 @@ header {
    display: flex;
    background-repeat: no-repeat;
    background-image: linear-gradient(90deg,
-      @pallette-a,
+      fade(@pallette-a,90%), @pallette-a, 
     ), url("../../static/images/profile_landscape.jpg");
     background-position: 100% 0px, -400px -100px;
     background-size: 50% 100%, 1200px;
