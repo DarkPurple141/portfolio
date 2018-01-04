@@ -23,6 +23,7 @@ export default {
 @import '../assets/colors';
 
 nav {
+   box-shadow: 0px 3px 10px 0px #555555;
    font-weight: bold;
    min-width: 350px;
    display: flex;

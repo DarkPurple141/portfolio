@@ -36,6 +36,7 @@ header {
       @pallette-d, fade(black, 30%)
     ), url("../../static/images/media.jpg");
    background-position: 0, 0 -80px;
+   background-size: auto, 100% auto;
 }
 
 // article style

@@ -21,7 +21,6 @@ export default {
 <style lang="less" scoped>
 @import '../assets/colors';
 header {
-   background-size: 100% auto;
    background-repeat: no-repeat;
    display: flex;
    height: 300px;

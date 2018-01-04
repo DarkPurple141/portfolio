@@ -1,11 +1,6 @@
 <template>
    <main class="banners">
-     <header>
-        <h1>Welcome!</h1>
-        <h3>Thanks for stopping by..</h3>
-        <h3>This site is under construction so
-           there's nothing to see here. Yet.</h3>
-     </header>
+     <HomeSplash/>
      <section v-for="card in Slides" :id="card.id">
         <HomeCard :title="card.title" :content="card.content" />
      </section>
@@ -15,10 +10,11 @@
 <script>
 import slides from '@/content/HomeContent'
 import HomeCard from '@/components/HomeCard'
+import HomeSplash from '@/components/HomeSplash'
 
 export default {
   name: 'Home',
-  components: { HomeCard },
+  components: { HomeCard, HomeSplash },
   data () {
     return {
       Slides: slides,
@@ -29,7 +25,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped>
 
 /*
 #media {
@@ -42,11 +38,6 @@ export default {
 
 section {
    display: none;
-}
-
-header {
-   margin: 10em;
-   background-color: white;
 }
 
 h1, h2 {
