@@ -3,7 +3,7 @@
      <aside class="right">
         <div class="splash-container">
            <div class="first">
-             <h1>Hi, I'm Alex.</h1>
+             <h1>A | H</h1>
            </div>
            <div class="second">
               <h2>Engineer.</h2>
@@ -14,8 +14,8 @@
              <p><em>Thanks for stopping by.</em></p>
            </div>
            <div class="second" title="more below">
-             <icon scale=2 class="bounce" name="arrow-down"/>
-          </div>
+             <icon class="bounce" scale=1.5 name="arrow-down"/>
+           </div>
         </div>
       </aside>
    </header>
@@ -30,16 +30,31 @@ export default {
 <style lang="less" scoped>
 @import '../assets/colors';
 
+/*
 header {
    height: 100vh;
    display: flex;
    background-repeat: no-repeat;
    background-image: linear-gradient(90deg,
-      fade(@pallette-a,90%), @pallette-a, 
+      fade(@pallette-a,90%), @pallette-a,
     ), url("../../static/images/profile_landscape.jpg");
-    background-position: 100% 0px, -400px -100px;
+    background-position: 100% 0px, -420px -100px;
     background-size: 50% 100%, 1200px;
-    box-shadow: 0px 3px 3px 0px #ccc;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-height: 680px;
+}
+*/
+
+header {
+   height: 100vh;
+   display: flex;
+   background-repeat: no-repeat;
+   background-image: linear-gradient(90deg,
+      fade(@pallette-b, 45%), @pallette-b,
+    ), url("../../static/images/profile_landscape.jpg");
+    background-position: 0px 0px, -400px -100px;
+    background-size: 100%, 1200px;
     flex-direction: row;
     justify-content: flex-end;
     max-height: 680px;
@@ -87,9 +102,11 @@ header {
 
 .right {
    display: flex;
-   width: 50%;
+   width: 45%;
+   color: @text;
    //box-shadow: 1px 1px 3px 0px;
-   background-color: fade(@pallette-a, 80%);
+   background-color: @pallette-a;
+   background: linear-gradient(90deg, fade(@pallette-b, 80%), @pallette-b);
    justify-content: center;
    align-items: center;
 }
@@ -109,7 +126,6 @@ div.splash-container {
 }
 
 .second, .third  {
-   font-size: normal;
    font-weight: normal;
    margin: auto;
    padding: 1em;
@@ -117,6 +133,7 @@ div.splash-container {
 
 div > h1 {
    margin: 5px auto;
+   font-weight: bold;
 }
 
 div > h2 {
@@ -125,11 +142,11 @@ div > h2 {
 
 @media screen and (max-width: 600px) {
    header {
-      background-size: 0, 1100px;
+      background-size: 100%, 1100px;
       background-position: 100% 0px, -420px -100px;
    }
    .right {
-      background-color: @pallette-a;
+      background-color: @pallette-b;
    }
 }
 
@@ -138,15 +155,19 @@ div > h2 {
    header {
       flex-direction: column;
       height: 100vh;
-      background-size: 0, 1000px;
+      background-size: 100%, 1000px;
       background-position: 100% 0px, -325px -150px;
+      background-image: linear-gradient(180deg,
+         fade(@pallette-b, 45%), @pallette-b,
+       ), url("../../static/images/profile_landscape.jpg");
       justify-content: flex-end;
+      align-items: center;
    }
 
    .right {
       width: 100%;
       //box-shadow: 0px -2px 3px 0px @background-dark;
-      background-color: @pallette-a;
+      //background-color: @pallette-a;
       justify-content: center;
    }
 
