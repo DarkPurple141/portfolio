@@ -2,13 +2,16 @@
 <section class="right-nav">
    <nav class="dropdown">
       <icon class="menu-icon" name="reorder" scale="1.5"></icon>
-      <div class="dropdown-content" v-for="item in links">
-         <router-link v-if="item.name != 'Home'" :key="item.name" :to="item.name">
-            {{ item.name }}
+      <div class="dropdown-content">
+         <router-link v-for="item in links" v-if="item.name != 'Home'" :key="item.name" :to="item.name">
+            <h2>{{ item.name }}</h2>
          </router-link>
       </div>
    </nav>
-   <router-link v-for="item in links" v-if="item.name != 'Home'" :key="item.name" :to="item.name">
+   <router-link v-for="item in links"
+      v-if="item.name != 'Home'"
+      :key="item.name"
+      :to="item.name">
       {{ item.name }}
    </router-link>
 </section>
@@ -67,11 +70,8 @@ section a {
 
 .dropdown-content {
    font-size: 1.5rem;
-   position: absolute;
    background-color: @pallette-a;
-   left: -120px;
    z-index: 1;
-   min-width: 60px;
 }
 
 svg {
@@ -87,15 +87,18 @@ svg {
       display: block;
    }
 
-   .dropdown:active, .dropdown:hover {
-      transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -o-transition: all .2s ease;
+   .dropdown:active {
+      transition: all .5s ease;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
 
       .dropdown-content {
+         position: fixed;
+         left: 0;
+         width: 100vw;
+         height: 100vh;
          display: block;
-         background-color: @pallette-b;
       }
 
       a {

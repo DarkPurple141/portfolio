@@ -51,8 +51,8 @@ header {
    display: flex;
    background-repeat: no-repeat;
    background-image: linear-gradient(90deg,
-      fade(@pallette-b, 45%), @pallette-b,
-    ), url("../../static/images/profile_landscape.jpg");
+      fade(@pallette-b, 45%), @pallette-d,
+    ), url("../../static/images/profile_landscape_bw.jpg");
     background-position: 0px 0px, -400px -100px;
     background-size: 100%, 1200px;
     flex-direction: row;
@@ -102,11 +102,11 @@ header {
 
 .right {
    display: flex;
-   width: 45%;
-   color: @text;
+   width: 50%;
+   color: @text-light;
    //box-shadow: 1px 1px 3px 0px;
    background-color: @pallette-a;
-   background: linear-gradient(90deg, fade(@pallette-b, 80%), @pallette-b);
+   background: linear-gradient(90deg, fade(@pallette-d, 80%), @pallette-d);
    justify-content: center;
    align-items: center;
 }
@@ -159,15 +159,13 @@ div > h2 {
       background-position: 100% 0px, -325px -150px;
       background-image: linear-gradient(180deg,
          fade(@pallette-b, 45%), @pallette-b,
-       ), url("../../static/images/profile_landscape.jpg");
+       ), url("../../static/images/profile_landscape_bw.jpg");
       justify-content: flex-end;
       align-items: center;
    }
 
    .right {
       width: 100%;
-      //box-shadow: 0px -2px 3px 0px @background-dark;
-      //background-color: @pallette-a;
       justify-content: center;
    }
 

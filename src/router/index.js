@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
-import Projects from '@/pages/Projects'
-import Media from '@/pages/Media'
-import About from '@/pages/About'
-import Contact from '@/pages/Contact'
+import Engineering from '@/pages/Engineering'
+import Journalism from '@/pages/Journalism'
+import Writing from '@/pages/Writing'
 
 Vue.use(Router)
 
@@ -15,25 +14,27 @@ export default new Router({
       name: 'Home',
       component: Home
     },
+    /*
     {
       path: '/about',
       name: 'About',
       component: About
     },
+    */
     {
-      path: '/projects',
-      name: 'Projects',
-      component: Projects
+      path: '/engineer',
+      name: 'Engineering',
+      component: Engineering
     },
     {
-      path: '/media',
-      name: 'Media',
-      component: Media
+      path: '/journo',
+      name: 'Journalism',
+      component: Journalism
     },
     {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
+      path: '/blog',
+      name: 'Writing',
+      component: Writing
     },
 
   ]

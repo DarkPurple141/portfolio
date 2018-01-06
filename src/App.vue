@@ -41,7 +41,7 @@ html, body, main {
 }
 
 li, p {
-  line-height: 1.2;
+  line-height: normal;
 }
 
 article {
@@ -49,12 +49,7 @@ article {
 }
 
 section {
-   padding: 2em 0;
-}
-
-section:nth-child(odd) {
-   background-color: @background-dark;
-   color: @text-light;
+   display: flex;
 }
 
 ul {

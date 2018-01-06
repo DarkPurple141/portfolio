@@ -1,5 +1,6 @@
 <template lang="html">
    <footer>
+      <Logo :fill="'#ddd'" :stroke="'#ddd'"/>
       <Links/>
       <div class="social-icons">
          <a v-for="icon in icons"
@@ -20,10 +21,11 @@
 
 <script>
 import Links from '@/components/FooterLinks'
+import Logo from '@/components/Logo'
 
 export default {
    name: 'AppFooter',
-   components: { Links },
+   components: { Links, Logo },
    data() {
       return {
          icons: [

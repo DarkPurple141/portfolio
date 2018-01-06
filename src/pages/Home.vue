@@ -1,14 +1,23 @@
 <template>
    <main class="banners">
      <HomeSplash/>
-     <section v-for="card in Slides" :id="card.id">
-        <HomeCard :title="card.title" :content="card.content" />
+     <section id="bio">
+        <summary>
+           <p v-for="par in bio">{{ par }}</p>
+        </summary>
      </section>
+     <HomeCard v-for="card in slides"
+      :title="card.title"
+      :content="card.content"
+      :icon="card.icon"
+      :id="card.id"
+      :key="card.id"
+      />
   </main>
 </template>
-
 <script>
 import slides from '@/content/HomeContent'
+import AboutContent from '@/content/AboutContent'
 import HomeCard from '@/components/HomeCard'
 import HomeSplash from '@/components/HomeSplash'
 
@@ -17,9 +26,12 @@ export default {
   components: { HomeCard, HomeSplash },
   data () {
     return {
-      Slides: slides,
-      msg: 'Currently under construction...'
+      slides: slides,
+      bio: [],
     }
+  },
+  mounted() {
+    this.bio = AboutContent.content.split('\n')
   }
 }
 </script>
@@ -36,21 +48,46 @@ export default {
 }
 */
 
+.fa-icon {
+   margin: 2px;
+}
+
 section {
-   display: none;
+   flex-direction: row;
 }
 
-h1, h2 {
-  font-weight: normal;
+section#bio {
+   //background-color: #ccc;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+summary {
+
+   padding: 10% 15% 10% 15%;
+   text-align: left;
+   font-size: large;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+summary p {
+   line-height: 2;
+}
+
+section:nth-child(odd) {
+   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 500px) {
+
+   section, section:nth-child(odd) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   article {
+      width: 100%;
+   }
 }
 
 </style>
