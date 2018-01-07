@@ -4,7 +4,7 @@
          <icon :name="icon" scale="2"/>
          <h1>{{ title }}</h1>
       </article>
-      <article>
+      <article class="content">
          <p>{{ content }}</p>
       </article>
    </section>
@@ -36,6 +36,16 @@ section {
    height: 50vw;
 }
 
+p {
+   text-align: left;
+   line-height: 1.8;
+}
+
+.content {
+   width: 40%;
+   padding: 0% 5%;
+}
+
 section:nth-child(3n) {
    .header {
       background-color: @pallette-a;
@@ -65,11 +75,12 @@ article {
    justify-content: center;
    align-items: center;
    width: 50%;
-   padding: 15px;
+   padding: 8% 0% 8% 0%;
+   max-width: 50%;
 }
 
 article > h1 {
-   font-size: 2rem;
+   font-size: 2.25em;
 }
 
 @media screen and (min-width: 1000px) {
@@ -78,14 +89,34 @@ article > h1 {
    }
 
    article > h1 {
-      font-size: 2.5rem;
+      font-size: 2.5em;
    }
 }
 
 @media screen and (max-width: 500px) {
 
+   article > h1 {
+      font-size: 1.75em;
+   }
+
    section {
-      height: 50vh;
+      min-height: 60vh;
+   }
+
+   article {
+      width: 100%;
+      max-width: 100%;
+   }
+
+   .header {
+      max-width: 80%;
+      width: 100%;
+      margin-top: 5%;
+   }
+
+   .content {
+      width: 80%;
+      padding: 5%;
    }
 }
 

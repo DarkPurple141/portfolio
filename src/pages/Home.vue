@@ -4,6 +4,12 @@
      <section id="bio">
         <summary>
            <p v-for="par in bio">{{ par }}</p>
+           <a href="mailto:alex.hinds141@gmail.com"> 
+             <figure>
+                <icon scale="3" name="envelope"/>
+             </figure>
+             <h3>alex.hinds141@gmail.com</h3>
+           </a>
         </summary>
      </section>
      <HomeCard v-for="card in slides"
@@ -39,17 +45,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 
-/*
-#media {
-   background-image: url('../../static/images/media.jpg');
-   background-repeat: no-repeat;
-   background-size: 100%;
-   filter: grayscale();
-}
-*/
-
 .fa-icon {
-   margin: 2px;
+   margin: 4px;
+}
+
+p {
+   text-align: left;
 }
 
 section {
@@ -64,13 +65,16 @@ section#bio {
 }
 
 summary {
-
    padding: 10% 15% 10% 15%;
    text-align: left;
    font-size: large;
 }
 summary p {
    line-height: 2;
+}
+
+summary a {
+   text-align: center;
 }
 
 section:nth-child(odd) {

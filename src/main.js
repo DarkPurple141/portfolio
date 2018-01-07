@@ -17,7 +17,7 @@ import 'vue-awesome/icons/gears'
 import 'vue-awesome/icons/pencil'
 import 'vue-awesome/icons/code'
 import 'vue-awesome/icons/newspaper-o'
-import 'vue-awesome/icons/user-circle'
+import 'vue-awesome/icons/envelope'
 
 // globally (in your main .js file)
 Vue.component('icon', Icon)
