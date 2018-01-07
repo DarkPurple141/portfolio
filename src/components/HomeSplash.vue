@@ -22,8 +22,11 @@
 </template>
 
 <script>
+import Logo from '@/components/Logo'
+
 export default {
-   name: 'HomeSplash'
+   name: 'HomeSplash',
+   components: {Logo}
 }
 </script>
 

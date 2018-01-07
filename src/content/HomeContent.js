@@ -14,7 +14,7 @@ export default [
    {
       content: "I'm a teacher and I blog. I teach computer science at UNSW. I like to bring people along on my dev journeys by blogging and explaining my process.",
       title: "Teaching",
-      id: "teaching",
+      id: "writing",
       icon: "pencil"
    },
    {

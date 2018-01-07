@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/Home'
+import About from '@/pages/About'
 import Engineering from '@/pages/Engineering'
 import Journalism from '@/pages/Journalism'
 import Writing from '@/pages/Writing'
@@ -14,13 +15,6 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    /*
-    {
-      path: '/about',
-      name: 'About',
-      component: About
-    },
-    */
     {
       path: '/engineer',
       name: 'Engineering',
@@ -33,9 +27,14 @@ export default new Router({
     },
     {
       path: '/blog',
-      name: 'Writing',
+      name: 'Teaching',
       component: Writing
     },
+    {
+      path: '/about',
+      name: 'Skills',
+      component: About
+    }
 
   ]
 })

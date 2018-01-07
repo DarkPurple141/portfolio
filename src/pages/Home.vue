@@ -4,9 +4,9 @@
      <section id="bio">
         <summary>
            <p v-for="par in bio">{{ par }}</p>
-           <a href="mailto:alex.hinds141@gmail.com"> 
+           <a href="mailto:alex.hinds141@gmail.com">
              <figure>
-                <icon scale="3" name="envelope"/>
+                <icon scale="2.5" name="envelope"/>
              </figure>
              <h3>alex.hinds141@gmail.com</h3>
            </a>
@@ -47,6 +47,8 @@ export default {
 
 .fa-icon {
    margin: 4px;
+   min-height: 100%;
+   min-width: 100%;
 }
 
 p {

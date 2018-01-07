@@ -6,6 +6,7 @@
       </article>
       <article class="content">
          <p>{{ content }}</p>
+         <router-link :to="{ name: title }">< More ></router-link>
       </article>
    </section>
 </template>
@@ -36,6 +37,15 @@ section {
    height: 50vw;
 }
 
+a {
+   font-weight: bolder;
+   border-bottom: 2px solid transparent;
+}
+
+a:hover {
+   border-bottom: 2px solid;
+}
+
 p {
    text-align: left;
    line-height: 1.8;
@@ -44,6 +54,27 @@ p {
 .content {
    width: 40%;
    padding: 0% 5%;
+}
+
+#tech .header:hover {
+   transition: 0.5s ease-in;
+   background-image: linear-gradient(#222, transparent), url('../../static/images/mandelbrot.jpg');
+   background-size: 100%;
+}
+
+#media .header:hover {
+   background-image: linear-gradient(white, transparent), url('../../static/images/media.jpg');
+   background-size: cover;
+}
+
+#writing .header:hover {
+   background-image: linear-gradient(#222, transparent), url('../../static/images/teaching.jpg');
+   background-size: cover;
+}
+
+#skills .header:hover {
+   background-image: linear-gradient(fade(@pallette-a, 85%), fade(@pallette-a, 90%)), url('../../static/images/skills.jpg');
+   background-size: cover;
 }
 
 section:nth-child(3n) {
@@ -83,7 +114,7 @@ article > h1 {
    font-size: 2.25em;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
    section {
       font-size: 1.5rem;
    }
@@ -100,7 +131,7 @@ article > h1 {
    }
 
    section {
-      min-height: 60vh;
+      min-height: 400px;
    }
 
    article {
