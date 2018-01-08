@@ -1,7 +1,7 @@
 <template lang="html">
 <nav>
    <ul>
-      <li v-for="link in links">
+      <li v-for="link in links" v-if="link.name != 'Home'">
          <router-link :to="{ name: link.name }">{{link.name}}</router-link>
       </li>
    </ul>

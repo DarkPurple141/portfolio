@@ -35,6 +35,8 @@ export default {
   color: @text;
 }
 
+
+
 html, body, main {
    margin: 0;
    min-width: 330px;
@@ -59,6 +61,11 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
 }
 
 </style>

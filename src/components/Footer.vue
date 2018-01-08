@@ -1,6 +1,8 @@
 <template lang="html">
    <footer>
-      <Logo :fill="'#ddd'" :stroke="'#ddd'"/>
+      <router-link class="highlight-logo" :to="{ name: 'Home' }">
+         <Logo :fill="'#ddd'" :stroke="'#ddd'"/>
+      </router-link>
       <Links/>
       <div class="social-icons">
          <a v-for="icon in icons"
@@ -55,9 +57,8 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import '../assets/colors';
-@import '../assets/logo';
 
 footer {
    padding: 1em;
@@ -71,11 +72,6 @@ footer .fa-icon {
 
 a .icon-frame {
    color: @text-light;
-}
-
-a {
-   text-decoration: none;
-   color: inherit;
 }
 
 div {
@@ -137,5 +133,4 @@ svg {
    }
 
 }
-
 </style>

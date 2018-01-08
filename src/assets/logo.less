@@ -1,10 +1,4 @@
-
-.logo {
-   //border: 2px solid #ddd;
-   font-weight: bold;
-   font-size: large;
-   margin: 1em;
-}
+@import "colors";
 
 svg {
   stroke-width: 2px;
@@ -14,14 +8,31 @@ rect {
   fill: none;
 }
 
+.logo {
+   -webkit-user-select: none; /* Safari */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* IE10+/Edge */
+   user-select: none; /* Standard */
+}
+
 text {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 40px;
   stroke-width: 1px;
 }
 
-/*
+.highlight-logo g:hover {
+   rect {
+      fill: #ddd;
+   }
+   stroke: @background-dark;
+   fill: @background-dark;
+}
 
-
-
-*/
+.highlight-logo g:active {
+   rect {
+      fill: #fff;
+   }
+   stroke: @background-dark;
+   fill: @background-dark;
+}
