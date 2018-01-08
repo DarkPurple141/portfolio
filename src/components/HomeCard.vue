@@ -136,7 +136,7 @@ article > h1 {
    }
 
    section {
-      min-height: 400px;
+      min-height: 500px;
    }
 
    article {
