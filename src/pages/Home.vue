@@ -14,6 +14,7 @@
      </section>
      <HomeCard v-for="card in slides"
       :title="card.title"
+      :stub="card.stub"
       :content="card.content"
       :icon="card.icon"
       :id="card.id"

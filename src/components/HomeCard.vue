@@ -5,7 +5,7 @@
          <h1>{{ title }}</h1>
       </article>
       <article class="content">
-         <p>{{ content }}</p>
+         <p><span>{{ stub }}</span> {{ content }}</p>
          <router-link :to="{ name: title }">< More ></router-link>
       </article>
    </section>
@@ -22,6 +22,10 @@ export default {
          type: String,
          required: true
       },
+      stub: {
+         type: String,
+         required: true
+      },
       icon: {
          type: String
       }
@@ -35,6 +39,10 @@ export default {
 section {
    width: 100%;
    height: 50vw;
+}
+
+p > span {
+   font-weight: bold;
 }
 
 a {
