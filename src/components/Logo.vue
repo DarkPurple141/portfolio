@@ -1,7 +1,7 @@
 <template lang="html">
 <figure>
    <svg width="100" height="100" viewBox="0 0 100 100"
-       xmlns="http://www.w3.org/2000/svg">
+       xmlns="http://www.w3.org/2000/svg" :transform="`scale(${scalefactor || 1})`">
      <g :fill="fill" :stroke="stroke">
        <text x="25" y="50" text-anchor="middle" alignment-baseline="central" scale="2">A</text>
        <text x="75" y="50" text-anchor="middle" alignment-baseline="central" scale="2">H</text>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-   props: ['stroke', 'fill']
+   props: ['stroke', 'fill', 'scalefactor']
 }
 </script>
 

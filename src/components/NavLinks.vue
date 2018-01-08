@@ -11,7 +11,7 @@
    <router-link v-for="item in links"
       v-if="item.name != 'Home'"
       :key="item.name"
-      :to="item.name">
+      :to="{ name: item.name }" >
       {{ item.name }}
    </router-link>
 </section>

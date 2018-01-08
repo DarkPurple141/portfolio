@@ -1,6 +1,6 @@
 <template>
    <main class="banners">
-     <HomeSplash/>
+     <Splash/>
      <section id="bio">
         <summary>
            <p v-for="par in bio">{{ par }}</p>
@@ -25,11 +25,11 @@
 import slides from '@/content/HomeContent'
 import AboutContent from '@/content/AboutContent'
 import HomeCard from '@/components/HomeCard'
-import HomeSplash from '@/components/HomeSplash'
+import Splash from '@/components/Splash'
 
 export default {
   name: 'Home',
-  components: { HomeCard, HomeSplash },
+  components: { HomeCard, Splash },
   data () {
     return {
       slides: slides,

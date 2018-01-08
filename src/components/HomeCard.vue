@@ -116,12 +116,9 @@ article > h1 {
 
 @media screen and (min-width: 800px) {
    section {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
    }
 
-   article > h1 {
-      font-size: 2.5em;
-   }
 }
 
 @media screen and (max-width: 500px) {
