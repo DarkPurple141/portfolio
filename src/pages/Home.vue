@@ -3,7 +3,9 @@
      <Splash/>
      <section id="bio">
         <summary>
-           <p v-for="par in bio">{{ par }}</p>
+           <p v-for="par in bio" class="bio-par">
+             {{ par }}
+           </p>
            <a href="mailto:alex.hinds141@gmail.com">
              <figure>
                 <icon scale="2.5" name="envelope"/>
@@ -50,6 +52,10 @@ export default {
    margin: 4px;
    min-height: 100%;
    min-width: 100%;
+}
+
+.bio-par {
+   text-align: center;
 }
 
 p {

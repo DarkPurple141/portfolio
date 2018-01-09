@@ -5,21 +5,7 @@ import VueScrollTo from 'vue-scrollto'
 import App from './App'
 import router from './router'
 import Icon from 'vue-awesome/components/Icon'
-
-import 'vue-awesome/icons/github'
-import 'vue-awesome/icons/bitbucket'
-import 'vue-awesome/icons/twitter'
-import 'vue-awesome/icons/medium'
-import 'vue-awesome/icons/circle'
-import 'vue-awesome/icons/linkedin'
-import 'vue-awesome/icons/reorder'
-import 'vue-awesome/icons/arrow-down'
-import 'vue-awesome/icons/gears'
-import 'vue-awesome/icons/pencil'
-import 'vue-awesome/icons/code'
-import 'vue-awesome/icons/newspaper-o'
-import 'vue-awesome/icons/envelope'
-import 'vue-awesome/icons/chevron-down'
+import './icons'
 
 // globally (in your main .js file)
 Vue.component('icon', Icon)

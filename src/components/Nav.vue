@@ -49,7 +49,7 @@ nav > section {
    color: inherit;
    background-color: #f8f8f8;
    padding: 0;
-   margin: 1em 0;
+   //margin: 1em 0;
    width: 20%;
    min-width: 110px;
    max-width: 110px;

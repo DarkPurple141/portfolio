@@ -23,8 +23,9 @@ export default {
 header {
    background-repeat: no-repeat;
    display: flex;
-   height: 300px;
-   max-height: 300px;
+   min-height: 50vh;
+   height: 400px;
+   max-height: 400px;
    align-items: center;
    justify-content: center;
    color: @text-light;
