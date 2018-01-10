@@ -13,6 +13,7 @@
       </figure>
       <summary>
          <div>
+
             <p>
                {{ project.description }}
             </p>
@@ -76,6 +77,10 @@ section div {
    justify-content: center;
 }
 
+p {
+   line-height: 2;
+}
+
 .description {
    .link {
       text-align: center;
@@ -102,7 +107,7 @@ section:nth-child(odd) article {
 
 section article {
    min-height: 45vmax;
-   max-height: 45vmax;
+   max-height: 50vmax;
    width: 100%;
    display: flex;
    align-items: center;
@@ -219,4 +224,71 @@ img {
     height: auto;
     //height: auto;
 }
+
+@media screen and (max-width: 800px) {
+   section header {
+      h1 {
+         font-size: 2.5em;
+      }
+   }
+
+   section summary {
+      p {
+         font-size: 1em;
+      }
+   }
+}
+
+@media screen and (max-width: 600px) {
+
+   section {
+      header, figure, summary {
+         width: 100%;
+         margin: 5vmax;
+      }
+
+      figure.splash, figure.support {
+            width: 90%;
+      }
+
+      summary {
+         margin: 0;
+      }
+
+      article {
+         .description {
+
+            p {
+               text-align: center;
+               margin: 1vmax;
+
+            }
+            width: 95%;
+         }
+
+         .live {
+            iframe {
+               width: 100vw;
+               height: 100vw;
+            }
+
+            img {
+               width: 100vw;
+               height: auto;
+            }
+            width: 100%;
+         }
+
+         max-height: none;
+         display: block;
+         width: 100%;
+      }
+
+
+      header {
+         height: 25vh;
+      }
+   }
+}
+
 </style>

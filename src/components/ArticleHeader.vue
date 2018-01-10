@@ -31,6 +31,10 @@ header {
    color: @text-light;
 }
 
+.banner {
+   font-size: 5em;
+}
+
 @media screen and (max-width: 500px) {
 
    .banner {

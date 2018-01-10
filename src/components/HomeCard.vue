@@ -2,7 +2,7 @@
    <section>
       <article class="header">
          <icon :name="icon" scale="2"/>
-         <h1>{{ title }}</h1>
+         <h1><router-link :to="{ name: title }">{{ title }}</router-link></h1>
       </article>
       <article class="content">
          <p><span>{{ stub }}</span> {{ content }}</p>
@@ -43,6 +43,17 @@ section {
 
 p > span {
    font-weight: bold;
+}
+
+h1 a {
+   font-weight: bold;
+}
+
+h1 a:hover {
+   border: none;
+   background-color: @pallette-b;
+   color: @pallette-c;
+   padding: 1vmax;
 }
 
 a {

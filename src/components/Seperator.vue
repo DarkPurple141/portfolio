@@ -37,6 +37,7 @@ article {
 }
 
 article p {
+   line-height: 2;
    font-size: 1.25em;
 }
 

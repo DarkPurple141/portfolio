@@ -64,15 +64,9 @@ main {
 }
 
 main header + section, main section:last-child  {
+   //line-height: 3;
    margin: 0;
    box-shadow: none;
-}
-
-section {
-   background-color: @pallette-c;
-   color: @text-light;
-   margin: 5vmax;
-   box-shadow: 5px 5px 10px 1px grey;
 }
 
 main > header {
@@ -87,6 +81,10 @@ section:nth-child(4n-1) {
 }
 
 section {
+   background-color: @pallette-c;
+   color: @text-light;
+   margin: 5vmax;
+   box-shadow: 5px 5px 10px 1px grey;
    min-height: 300px;
    //padding: 50px;
    flex-flow: row wrap;
@@ -96,8 +94,18 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-   main {
-      font-size: 12px;
+
+
+   section {
+      margin: 0;
+   }
+
+   section:nth-child(4n-1) {
+      flex-direction: row;
+   }
+
+   main > header {
+      background-size: auto, 600px auto;
    }
 }
 
