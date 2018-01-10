@@ -1,55 +1,181 @@
 <template lang="html">
    <section>
       <header>
-         <h1>{{ project.name }}</h1>
+         <div>
+            <h1>{{ project.name }}</h1>
+         </div>
       </header>
       <figure class="splash">
-         <img :src="project.images.large" alt="An Image"/>
+         <img :src="project.images.large" alt="large image related to topic"/>
       </figure>
       <figure class="support">
-         <img :src="project.images.small[0]" alt="An Image"/>
+         <img :src="project.images.small" alt="small image related to topic"/>
       </figure>
       <summary>
-         <p>
-            {{ project.description }}
-         </p>
+         <div>
+            <p>
+               {{ project.description }}
+            </p>
+         </div>
       </summary>
-      <figure class="support">
-         <img :src="project.images.small[1]" alt="An Image"/>
-      </figure>
+      <article>
+         <aside class="description">
+
+            <h2>{{ project.languages }}</h2>
+            <h2>Background</h2>
+            <p>
+               {{ project.description }}
+            </p>
+            <h3 class="link">
+               <a :href="project.story" target="_blank">Full story..</a>
+            </h3>
+            <div class="links">
+               <a :href="project.link" target="_blank">
+                  <icon scale='2' name="github"/>
+               </a>
+               <a v-if="project.live" :href="project.live" target="_blank">
+                  Live
+               </a>
+            </div>
+         </aside>
+         <aside class="live">
+            <iframe frameborder="0"
+                    allowfullscreen
+                    align="center"
+                    :src="project.live">
+            </iframe>
+         </aside>
+      </article>
    </section>
 </template>
 
 <script>
+import LanguageIcon from '@/components/LanguageIcon'
+
 export default {
    props: {
       project: {
          type: Object,
          required: true
       }
-   }
+   },
+   components: { LanguageIcon }
 }
 </script>
 
 <style lang="less" scoped>
 @import '../assets/colors';
 
+section div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.description {
+   .link {
+      text-align: center;
+   }
+
+   .links a {
+      margin: 1em;
+   }
+}
+
+a {
+   font-weight: bolder;
+   border-bottom: 2px solid transparent;
+}
+
+a:hover {
+   cursor: pointer;
+   border-bottom: 2px solid;
+}
+
+section:nth-child(odd) article {
+   flex-direction: row-reverse;
+}
+
+section article {
+   min-height: 50vw;
+   max-height: 50vw;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: row;
+   justify-content: center;
+   .live {
+      width: 50%;
+      //display: flex;
+      //height: 100%;
+      overflow: hidden;
+      iframe {
+         //max-width: 50%;
+         width: 50vmax;
+         height: 50vmax;
+
+      }
+   }
+   .description {
+      padding: 2.5%;
+      width: 45%;
+      p {
+         text-align: left;
+      }
+   }
+}
+
 section header {
-   background-color: @background-dark;
-   color: @text-light;
+   align-items: center;
+   justify-content: center;
+   display: flex;
    width: 25%;
    h1 {
       font-size: 3em;
    }
 }
 
+section header {
+   background-color: @background-dark;
+   color: @text-light;
+}
+
+section:nth-child(3n+2) summary,
+section:nth-child(3n) article {
+   background-color: @pallette-a;
+   color: @text-light;
+}
+
+section:nth-child(3n+1) summary,
+section:nth-child(3n+2) article {
+   background-color: @background-dark;
+   color: @text-light;
+
+}
+
+section:nth-child(3n) summary,
+section:nth-child(3n+1) article {
+   background-color: @pallette-c;
+   color: @text-light;
+}
+/*
+section:nth-child(4n + 3) header,
+section:nth-child(4n) summary,
+section:nth-child(4n + 1) article {
+   background-color: @pallette-d;
+   color: @text-light;
+}
+*/
+
 section summary {
+   display: flex;
    background-color: @pallette-d;
    color: @text-light;
    width: 50%;
    p {
-      padding: 30px;
-      font-size: 2em;
+      padding: 2em;
+      font-size: 1.5em;
    }
 }
 
@@ -65,6 +191,8 @@ section {
 figure {
    padding: 0;
    margin: 0;
+   max-height: 500px;
+   overflow: hidden;
 }
 
 
@@ -78,7 +206,7 @@ figure {
 
 img {
     max-width: 100%;
-    min-width: 100%;
+    //min-width: 100%;
     display: block;
     height: auto;
     //height: auto;

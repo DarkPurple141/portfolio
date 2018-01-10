@@ -4,18 +4,21 @@
    <article>
       <h1></h1>
       <p>
-      {{ content }}
+         {{ content }}
       </p>
+   <LanguageIcon :language="'javascript'"/>
    </article>
+
 </main>
 </template>
 
 <script>
 import ArticleHeader from '@/components/ArticleHeader'
 import AboutContent from '@/content/AboutContent'
+import LanguageIcon from '@/components/LanguageIcon'
 
 export default {
-   components: { ArticleHeader },
+   components: { ArticleHeader, LanguageIcon },
    name: 'About',
    data() {
       return {

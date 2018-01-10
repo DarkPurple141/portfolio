@@ -6,9 +6,6 @@
       :key="proj.id"
       :project="proj"/>
    <Seperator/>
-   <ProjectCard v-for="proj in projects"
-      :key="proj.id"
-      :project="proj"/>
 </main>
 </template>
 
@@ -26,15 +23,28 @@ export default {
       return {
          projects: [
             {
-               name: "Project Name",
+               name: "Tank Hunter",
                images: {
-                  large: "https://picsum.photos/600/300?image=100",
-                  small: [
-                     "https://picsum.photos/300?image=200",
-                     "https://picsum.photos/300?image=301"
-                  ]
+                  large: "static/images/projects/tanks/large.png",
+                  small: "static/images/projects/tanks/small.png"
                },
-               description: "Lorem Ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+               languages: ["javascript", "css", "html"],
+               tools: ["paper.js"],
+               description: "A little toy 2D game made to experiment with paper.js. Game is currently available and playable here.",
+               link: "",
+               live: "https://cheap-nation.surge.sh"
+            },
+            {
+               name: "Map Maker",
+               images: {
+                  large: "static/images/projects/maps/large.jpg",
+                  small: "static/images/projects/maps/small.jpg"
+               },
+               languages: ["python"],
+               tools: ["pygame"],
+               description: "This is a sub-repository of some work I did on creating a map-generating framework. The code is pretty rough in parts; I was figuring it out as I went. I tried to clean it up toward the end with some success, although it's still far from optimised.",
+               link: "https://github.com/DarkPurple141/Maps",
+               story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
             }
          ]
       }
@@ -45,6 +55,23 @@ export default {
 <style lang="less" scoped>
 
 @import '../assets/colors';
+
+main {
+   background-color: @text-light;
+}
+
+main header + section, main section:last-child  {
+   margin: 0;
+   box-shadow: none;
+}
+
+
+
+section {
+   background-color: @pallette-a;
+   margin: 30px;
+   box-shadow: 5px 5px 10px 1px grey;
+}
 
 main > header {
    background-image: linear-gradient(90deg,
