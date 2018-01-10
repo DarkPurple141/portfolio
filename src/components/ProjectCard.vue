@@ -13,7 +13,6 @@
       </figure>
       <summary>
          <div>
-
             <p>
                {{ project.description }}
             </p>
@@ -21,8 +20,7 @@
       </summary>
       <article>
          <aside class="description">
-
-            <h2>{{ project.languages }}</h2>
+            <LanguageIcons :languages="project.languages"/>
             <h2>Background</h2>
             <p>
                {{ project.description }}
@@ -39,23 +37,12 @@
                </a>
             </div>
          </aside>
-         <aside class="live">
-            <iframe v-if="project.live" frameborder="0"
-                    allowfullscreen
-                    align="center"
-                    :src="project.live">
-            </iframe>
-            <img
-            v-if="project.gif"
-            :src="project.gif"
-            alt="supporting image"/>
-         </aside>
       </article>
    </section>
 </template>
 
 <script>
-import LanguageIcon from '@/components/LanguageIcon'
+import LanguageIcons from '@/components/LanguageIcons'
 
 export default {
    props: {
@@ -64,7 +51,7 @@ export default {
          required: true
       }
    },
-   components: { LanguageIcon }
+   components: { LanguageIcons }
 }
 </script>
 
@@ -107,28 +94,14 @@ section:nth-child(odd) article {
 
 section article {
    min-height: 45vmax;
-   max-height: 50vmax;
+   //max-height: 50vmax;
    width: 100%;
    display: flex;
    align-items: center;
    flex-direction: row;
    flex-wrap: row;
    justify-content: center;
-   .live {
-      width: 50%;
-      //display: flex;
-      //height: 100%;
-      //overflow: hidden;
-      iframe {
-         //max-width: 50%;
-         width: 45vmax;
-         height: 45vmax;
-      }
-      img {
-         width: 45vmax;
-         height: 45vmax;
-      }
-   }
+
    .description {
       padding: 2.5%;
       width: 45%;
@@ -179,7 +152,6 @@ section:nth-child(4n + 1) article {
    color: @text-light;
 }
 */
-
 section summary {
    display: flex;
    background-color: @pallette-d;
@@ -189,6 +161,8 @@ section summary {
    p {
       padding: 2em;
       font-size: 1.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
    }
 }
 

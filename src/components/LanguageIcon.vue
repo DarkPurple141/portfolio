@@ -14,7 +14,7 @@ export default {
    computed: {
       img_link: function() {
          let val = ""
-         switch (this.language) {   
+         switch (this.language) {
             case 'java':
                val = 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg'
                break;
@@ -22,7 +22,7 @@ export default {
                val = 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'
                break;
             case 'python':
-               val = 'https://www.python.org/static/community_logos/python-logo-inkscape.svg'
+               val = 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg'
                break;
             case 'html':
                val = 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'
@@ -46,5 +46,10 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
+
+i img {
+   max-width: 75px;
+   max-height: 75px;
+}
 </style>
