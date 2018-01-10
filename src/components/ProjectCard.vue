@@ -39,11 +39,15 @@
             </div>
          </aside>
          <aside class="live">
-            <iframe frameborder="0"
+            <iframe v-if="project.live" frameborder="0"
                     allowfullscreen
                     align="center"
                     :src="project.live">
             </iframe>
+            <img
+            v-if="project.gif"
+            :src="project.gif"
+            alt="supporting image"/>
          </aside>
       </article>
    </section>
@@ -97,8 +101,8 @@ section:nth-child(odd) article {
 }
 
 section article {
-   min-height: 50vw;
-   max-height: 50vw;
+   min-height: 45vmax;
+   max-height: 45vmax;
    width: 100%;
    display: flex;
    align-items: center;
@@ -109,12 +113,15 @@ section article {
       width: 50%;
       //display: flex;
       //height: 100%;
-      overflow: hidden;
+      //overflow: hidden;
       iframe {
          //max-width: 50%;
-         width: 50vmax;
-         height: 50vmax;
-
+         width: 45vmax;
+         height: 45vmax;
+      }
+      img {
+         width: 45vmax;
+         height: 45vmax;
       }
    }
    .description {
@@ -173,6 +180,7 @@ section summary {
    background-color: @pallette-d;
    color: @text-light;
    width: 50%;
+
    p {
       padding: 2em;
       font-size: 1.5em;

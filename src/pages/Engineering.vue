@@ -1,11 +1,11 @@
 <template lang="html">
 <main>
    <ArticleHeader :title="'Engineering'"/>
-   <Seperator/>
+   <Seperator :copy="copy"/>
    <ProjectCard v-for="proj in projects"
       :key="proj.id"
       :project="proj"/>
-   <Seperator/>
+   <Seperator :email="true"/>
 </main>
 </template>
 
@@ -13,6 +13,7 @@
 import ProjectCard from '@/components/ProjectCard'
 import ArticleHeader from '@/components/ArticleHeader'
 import Seperator from '@/components/Seperator'
+import EngContent from '@/content/EngContent'
 
 const API_URI = "https://api.github.com/"
 
@@ -21,6 +22,7 @@ export default {
    components: { ProjectCard, ArticleHeader, Seperator },
    data() {
       return {
+         copy: EngContent.copy,
          projects: [
             {
                name: "Tank Hunter",
@@ -42,8 +44,9 @@ export default {
                },
                languages: ["python"],
                tools: ["pygame"],
-               description: "This is a sub-repository of some work I did on creating a map-generating framework. The code is pretty rough in parts; I was figuring it out as I went. I tried to clean it up toward the end with some success, although it's still far from optimised.",
+               description: "This is a sub-repository of some work I did on creating a map-generating framework for games. The code is pretty rough in parts. But I leant a bunch doing it.",
                link: "https://github.com/DarkPurple141/Maps",
+               gif: "static/images/projects/maps/maps.gif",
                story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
             }
          ]
@@ -65,11 +68,10 @@ main header + section, main section:last-child  {
    box-shadow: none;
 }
 
-
-
 section {
-   background-color: @pallette-a;
-   margin: 30px;
+   background-color: @pallette-c;
+   color: @text-light;
+   margin: 5vmax;
    box-shadow: 5px 5px 10px 1px grey;
 }
 
@@ -91,6 +93,12 @@ section {
    //flex-direction: row-reverse;
    justify-content: center;
    //align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+   main {
+      font-size: 12px;
+   }
 }
 
 </style>
