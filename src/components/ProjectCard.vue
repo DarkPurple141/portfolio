@@ -216,13 +216,18 @@ img {
 @media screen and (max-width: 600px) {
 
    section {
-      header, figure, summary {
+      header, figure, summary, article {
          width: 100%;
-         margin: 5vmax;
+         min-height: 90vw;
+         //margin: 5vmax;
       }
 
-      figure.splash, figure.support {
-            width: 90%;
+      figure.splash {
+         display: none;
+      }
+
+      figure.support {
+         width: 100%;
       }
 
       summary {
@@ -240,22 +245,9 @@ img {
             width: 95%;
          }
 
-         .live {
-            iframe {
-               width: 100vw;
-               height: 100vw;
-            }
-
-            img {
-               width: 100vw;
-               height: auto;
-            }
-            width: 100%;
-         }
-
+         padding: 5% 0;
          max-height: none;
          display: block;
-         width: 100%;
       }
 
 

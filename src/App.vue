@@ -35,8 +35,6 @@ export default {
   color: @text;
 }
 
-
-
 html, body, main {
    margin: 0;
    min-width: 330px;
