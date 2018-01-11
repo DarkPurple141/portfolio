@@ -14,7 +14,7 @@
       <summary>
          <div>
             <p>
-               {{ project.description }}
+               {{ project.description.main }}
             </p>
          </div>
       </summary>
@@ -23,7 +23,7 @@
             <LanguageIcons :languages="project.languages"/>
             <h2>Background</h2>
             <p>
-               {{ project.description }}
+               {{ project.description.story }}
             </p>
             <h3 class="link">
                <a :href="project.story" target="_blank">Full story..</a>
@@ -94,6 +94,7 @@ section:nth-child(odd) article {
 
 section article {
    min-height: 45vmax;
+   //font-size: 1.75vmax;
    //max-height: 50vmax;
    width: 100%;
    display: flex;
@@ -103,8 +104,9 @@ section article {
    justify-content: center;
 
    .description {
-      padding: 2.5%;
-      width: 45%;
+      margin: auto;
+      padding: 5%;
+      width: 60%;
       p {
          text-align: left;
       }
@@ -155,12 +157,20 @@ section:nth-child(4n + 1) article {
 section summary {
    display: flex;
    background-color: @pallette-d;
+   align-items: center;
+   justify-content: center;
    color: @text-light;
    width: 50%;
 
+   div {
+      margin: auto;
+      width: 80%;
+      height: 90%;
+   }
+
    p {
-      padding: 2em;
-      font-size: 1.5em;
+      //padding: 1em;
+      font-size: 1.25em;
       overflow: hidden;
       text-overflow: ellipsis;
    }
@@ -208,7 +218,7 @@ img {
 
    section summary {
       p {
-         font-size: 1em;
+         font-size: 2.5vmax;
       }
    }
 }
@@ -232,6 +242,9 @@ img {
 
       summary {
          margin: 0;
+         p {
+            font-size: 1.25em;
+         }
       }
 
       article {
@@ -242,12 +255,10 @@ img {
                margin: 1vmax;
 
             }
-            width: 95%;
+            width: 80%;
          }
 
-         padding: 5% 0;
          max-height: none;
-         display: block;
       }
 
 
