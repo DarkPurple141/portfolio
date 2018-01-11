@@ -9,8 +9,9 @@ export default {
          },
          languages: ["javascript", "css", "html"],
          tools: ["paper.js"],
-         description: "A little toy 2D game made to experiment with paper.js. Game is currently available and playable here.",
-         link: "",
+         description: "A little toy 2D game made to experiment with the paper.js vector graphics library." +
+         " It was my first real foray into doing something substantial with JS. A lot of fun to fiddle with.",
+         link: "https://github.com/DarkPurple141/Tank-Hunter-2D",
          live: "https://cheap-nation.surge.sh"
       },
       {
@@ -21,10 +22,24 @@ export default {
          },
          languages: ["python"],
          tools: ["pygame"],
-         description: "This is a sub-repository of some work I did on creating a map-generating framework for games. The code is pretty rough in parts. But I leant a bunch doing it.",
+         description: "I wanted to try my hand at random map generation for games. It was rough in parts, but I learnt a ton doing it.",
          link: "https://github.com/DarkPurple141/Maps",
          gif: "static/images/projects/maps/maps.gif",
          story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
+      },
+      {
+         name: "Sokoban",
+         images: {
+            large: "static/images/projects/sokoban/large.png",
+            small: "static/images/projects/sokoban/small.png"
+         },
+         languages: ["java"],
+         tools: ["junit", "swing"],
+         description: "We built the puzzle game 'sokoban' as a major second year project." +
+         " Four man team. Long nights, communication, project management - all key.",
+         link: "https://github.com/DarkPurple141/sokoban"
+         //gif: "static/images/projects/maps/maps.gif",
+         //story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
       }
    ]
 }
