@@ -1,28 +1,41 @@
 <template lang="html">
 <main>
-   <ArticleHeader :title="'Who is this dude!'"/>
-   <article>
-      <h1></h1>
-      <p>
-         {{ content }}
-      </p>
-   <LanguageIcon :language="'javascript'"/>
-   </article>
-
+   <ArticleHeader  :title="'About'"/>
+   <Seperator :resume='true'/>
+   <section>
+      <article>
+         <figure>
+            <img src="static/images/profile.jpg" alt="Alex Hinds profile">
+         </figure>
+         <p v-for="line in lines">
+            {{ line }}
+         </p>
+         <h2>Languages</h2>
+         <LanguageIcons :languages="content.languages"/>
+         <h3>Tools</h3>
+         <LanguageIcons :languages="content.tools"/>
+      </article>
+   </section>
 </main>
 </template>
 
 <script>
 import ArticleHeader from '@/components/ArticleHeader'
 import AboutContent from '@/content/AboutContent'
-import LanguageIcon from '@/components/LanguageIcon'
+import LanguageIcons from '@/components/LanguageIcons'
+import Seperator from '@/components/Seperator'
 
 export default {
-   components: { ArticleHeader, LanguageIcon },
+   components: { ArticleHeader, LanguageIcons, Seperator },
    name: 'About',
    data() {
       return {
-         content: AboutContent.content
+         content: AboutContent
+      }
+   },
+   computed: {
+      lines: function() {
+         return this.content.description.split('\n')
       }
    }
 }
@@ -32,11 +45,43 @@ export default {
 @import '../assets/colors';
 
 header {
-   background-image: radial-gradient(ellipse closest-side,
-      @pallette-d, fade(black, 20%)
+   background-image: linear-gradient(90deg,
+      fade(@pallette-b, 45%), @pallette-d,
     ), url("../../static/images/profile_landscape.jpg");
-    background-position: center;
-    background-size: auto, 1000px auto;
+   background-size: auto, 2500px auto;
+}
+
+section + section {
+   background-color: @text-light;
+   color: @background-dark;
+   justify-content: center;
+   article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1.25em;
+      width: 60%;
+      text-align: left;
+      margin: auto;
+      padding: 5vmax;
+      p {
+         line-height: 2;
+         //margin: auto;
+      }
+
+      figure {
+         display: flex;
+         align-items: center;
+         img {
+            margin: auto;
+            width: 80%;
+            height: auto;
+            border-radius: 100%;
+         }
+
+      }
+   }
 }
 
 @media screen and (max-width: 500px) {
@@ -45,9 +90,4 @@ header {
    }
 }
 
-@media screen and (min-width: 1001px) {
-   header {
-      background-size: auto, 100% auto;
-   }
-}
 </style>

@@ -106,7 +106,7 @@ section article {
    .description {
       margin: auto;
       padding: 5%;
-      width: 60%;
+      width: 50%;
       p {
          text-align: left;
       }
@@ -251,11 +251,10 @@ img {
          .description {
 
             p {
-               text-align: center;
                margin: 1vmax;
 
             }
-            width: 80%;
+            width: 70%;
          }
 
          max-height: none;

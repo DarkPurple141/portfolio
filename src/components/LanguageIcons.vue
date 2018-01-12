@@ -27,12 +27,13 @@ export default {
 ul {
    //background-color: white;
    width: 500px;
+   max-width: 100%;
    padding: 1vmax;
    margin: auto;
 }
 
 .lang-icons {
    display: inline;
-   margin: 1vmax;
+   margin: 1.25vmax;
 }
 </style>

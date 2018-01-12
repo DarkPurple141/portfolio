@@ -15,6 +15,9 @@ export default {
       img_link: function() {
          let val = ""
          switch (this.language) {
+            case 'c':
+               val = 'static/images/icons/c.svg'
+               break;
             case 'java':
                val = 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg'
                break;
@@ -33,12 +36,29 @@ export default {
             case 'node':
                val = 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg'
                break;
-            case 'vue':
+            case 'vuejs':
                val = 'https://vuejs.org/images/logo.png'
                break;
             case 'paperjs':
                val = 'static/images/icons/paperjs.jpg'
                break;
+            case 'npm':
+               val = 'https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg'
+               break;
+            case 'mongodb':
+               val = 'https://upload.wikimedia.org/wikipedia/en/4/45/MongoDB-Logo.svg'
+               break;
+            case 'postgresql':
+               val = 'https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg'
+               break;
+            case 'linux':
+               val = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png'
+               break;
+
+            case 'macOS':
+               val = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'
+               break;
+
          }
          return val
       }
@@ -51,5 +71,7 @@ export default {
 i img {
    max-width: 75px;
    max-height: 75px;
+   min-width: 60px;
+   min-height: 60px;
 }
 </style>
