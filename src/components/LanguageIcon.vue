@@ -1,6 +1,6 @@
 <template lang="html">
 <i>
-   <img :src="img_link"></img>
+   <img :title="language" :src="img_link"></img>
 </i>
 </template>
 
@@ -16,7 +16,7 @@ export default {
          let val = ""
          switch (this.language) {
             case 'c':
-               val = 'static/images/icons/c.svg'
+               val = 'static/images/icons/c.png'
                break;
             case 'java':
                val = 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg'
@@ -54,9 +54,14 @@ export default {
             case 'linux':
                val = 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png'
                break;
-
+            case 'git':
+               val = 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png'
+               break;
             case 'macOS':
                val = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'
+               break;
+            case 'markdown':
+               val = 'static/images/icons/markdown.svg'
                break;
 
          }
@@ -69,9 +74,9 @@ export default {
 <style lang="less" scoped>
 
 i img {
-   max-width: 75px;
-   max-height: 75px;
-   min-width: 60px;
-   min-height: 60px;
+   max-width: 80px;
+   max-height: 80px;
+   min-width: 70px;
+   min-height: 70px;
 }
 </style>

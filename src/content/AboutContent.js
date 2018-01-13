@@ -11,8 +11,7 @@ export default {
       'c',
       'css',
       'html',
-      'markdown',
-      'sql'
+      'markdown'
    ],
    tools: [
       'vuejs',
@@ -22,7 +21,8 @@ export default {
       'linux',
       'macOS',
       'mongodb',
-      'postgresql'
+      'postgresql',
+      'git'
    ],
    tags: ["about", "bio", "alexander-hinds", "al-hinds"]
 }

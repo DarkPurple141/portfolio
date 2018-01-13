@@ -24,16 +24,20 @@ export default {
 </script>
 
 <style scoped lang="less">
+div {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
 ul {
    //background-color: white;
-   width: 500px;
+   //width: 500px;
    max-width: 100%;
-   padding: 1vmax;
    margin: auto;
 }
 
 .lang-icons {
-   display: inline;
-   margin: 1.25vmax;
+   margin: 2vmax;
 }
+
 </style>

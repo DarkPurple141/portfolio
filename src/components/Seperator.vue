@@ -44,6 +44,7 @@ section article {
    align-items: center;
    justify-content: center;
    flex-direction: column;
+   max-height: 30vh;
 }
 
 section {
@@ -59,7 +60,7 @@ section article figure {
 article {
    //display: block;
    margin: auto;
-   padding: 5vmax;
+   padding: 10vh 0;
    line-height: 2;
    font-size: 1.25em;
 }

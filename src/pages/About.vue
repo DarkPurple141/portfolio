@@ -1,8 +1,8 @@
 <template lang="html">
 <main>
    <ArticleHeader  :title="'About'"/>
-   <Seperator :resume='true'/>
-   <section>
+   <Seperator class="seperator" :resume='true'/>
+   <section class="description">
       <article>
          <figure>
             <img src="static/images/profile.jpg" alt="Alex Hinds profile">
@@ -11,13 +11,19 @@
          <p v-for="line in lines">
             {{ line }}
          </p>
-         <h2>Languages</h2>
-         <LanguageIcons :languages="content.languages"/>
-         <h3>Tools</h3>
-         <LanguageIcons :languages="content.tools"/>
       </article>
+      <section>
+         <aside>
+            <h2>Languages</h2>
+            <LanguageIcons :languages="content.languages"/>
+         </aside>
+         <aside>
+            <h3>Tools</h3>
+            <LanguageIcons :languages="content.tools"/>
+         </aside>
+      </section>
    </section>
-   <Seperator :email='true'/>
+   <Seperator class="seperator" :email='true'/>
 </main>
 </template>
 
@@ -57,15 +63,15 @@ header {
    background-size: auto, 2500px auto;
 }
 
-section:last-child, section:nth-child(2) {
+.seperator {
    background-color: @pallette-c;
    color: @text-light;
    margin: 0;
 }
 
-section:nth-child(3) {
-   margin: 5vmax;
-   box-shadow: 5px 5px 10px 1px grey;
+.description {
+   padding: 5vmax;
+   font-size: 1.25em;
    background-color: #ccc;
    color: @text;
    justify-content: center;
@@ -75,11 +81,11 @@ section:nth-child(3) {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-size: 1.25em;
+
       width: 60%;
       text-align: left;
       margin: auto;
-      padding: 5vmax;
+      //padding: 5vmax;
       p {
          line-height: 2;
          //margin: auto;
@@ -95,13 +101,25 @@ section:nth-child(3) {
             border-radius: 100%;
          }
       }
-
+   }
+   section {
+      width: 60%;
+      margin: auto;
+      align-items: center;
+      flex-direction: column;
    }
 }
 
 @media screen and (max-width: 500px) {
    header {
       background-size: auto, 600px auto;
+   }
+
+   .description {
+      font-size: 1em;
+      article, section {
+         width: 90%;
+      }
    }
 }
 
