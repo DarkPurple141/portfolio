@@ -7,6 +7,7 @@
          <figure>
             <img src="static/images/profile.jpg" alt="Alex Hinds profile">
          </figure>
+         <h2>Hi, I'm Alex.</h2>
          <p v-for="line in lines">
             {{ line }}
          </p>
@@ -16,6 +17,7 @@
          <LanguageIcons :languages="content.tools"/>
       </article>
    </section>
+   <Seperator :email='true'/>
 </main>
 </template>
 
@@ -44,6 +46,10 @@ export default {
 <style lang="less" scoped>
 @import '../assets/colors';
 
+main {
+   background-color: @text-light;
+}
+
 header {
    background-image: linear-gradient(90deg,
       fade(@pallette-b, 45%), @pallette-d,
@@ -51,10 +57,19 @@ header {
    background-size: auto, 2500px auto;
 }
 
-section + section {
-   background-color: @text-light;
-   color: @background-dark;
+section:last-child, section:nth-child(2) {
+   background-color: @pallette-c;
+   color: @text-light;
+   margin: 0;
+}
+
+section:nth-child(3) {
+   margin: 5vmax;
+   box-shadow: 5px 5px 10px 1px grey;
+   background-color: #ccc;
+   color: @text;
    justify-content: center;
+   flex-direction: column;
    article {
       display: flex;
       justify-content: center;
@@ -69,18 +84,18 @@ section + section {
          line-height: 2;
          //margin: auto;
       }
-
       figure {
          display: flex;
          align-items: center;
          img {
+            max-width: 260px;
+            width: 30vmax;
             margin: auto;
-            width: 80%;
             height: auto;
             border-radius: 100%;
          }
-
       }
+
    }
 }
 
