@@ -60,9 +60,17 @@ section article figure {
 article {
    //display: block;
    margin: auto;
-   padding: 10vh 0;
-   line-height: 2;
+   padding: 10vh 10vw;
    font-size: 1.25em;
+   p {
+      line-height: 2;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   article {
+      padding: 10vh 5vw;
+   }
 }
 
 </style>

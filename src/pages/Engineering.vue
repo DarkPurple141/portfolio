@@ -38,7 +38,6 @@ main {
 }
 
 main header + section, main section:last-child  {
-   //line-height: 3;
    margin: 0;
    box-shadow: none;
 }
@@ -60,15 +59,11 @@ section {
    margin: 5vmax;
    box-shadow: 5px 5px 10px 1px grey;
    min-height: 300px;
-   //padding: 50px;
    flex-flow: row wrap;
-   //flex-direction: row-reverse;
    justify-content: center;
-   //align-items: center;
 }
 
 @media screen and (max-width: 600px) {
-
 
    section {
       margin: 0;

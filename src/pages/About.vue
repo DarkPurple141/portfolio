@@ -64,7 +64,7 @@ header {
 }
 
 .seperator {
-   background-color: @pallette-c;
+   background-color: @pallette-d;//@pallette-c;
    color: @text-light;
    margin: 0;
 }
@@ -112,7 +112,7 @@ header {
 
 @media screen and (max-width: 500px) {
    header {
-      background-size: auto, 600px auto;
+      background-size: auto, 1200px auto;
    }
 
    .description {
