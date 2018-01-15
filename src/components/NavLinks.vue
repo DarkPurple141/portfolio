@@ -3,7 +3,9 @@
    <nav :class="{ 'dropdown-open': open, 'dropdown': !open }" @click="$emit('toggle')">
       <icon class="menu-icon" :name="open ? 'close' : 'reorder'" scale="1.5"></icon>
       <div class="dropdown-content">
-         <router-link v-for="item in links" v-if="item.name != 'Home'" :key="item.name" :to="item.name">
+         <router-link v-for="item in links" v-if="item.name != 'Home'"
+            :key="item.name"
+            :to="item.path">
             <h2>{{ item.name }}</h2>
          </router-link>
       </div>
@@ -12,7 +14,7 @@
       <router-link v-for="item in links"
          v-if="item.name != 'Home'"
          :key="item.name"
-         :to="{ name: item.name }" >
+         :to="item.path" >
          {{ item.name }}
       </router-link>
    </nav>

@@ -64,8 +64,8 @@ header {
 }
 
 .seperator {
-   background-color: @pallette-d;//@pallette-c;
-   color: @text-light;
+   background-color: @pallette-e;//@pallette-c;
+   color: @text;
    margin: 0;
 }
 
@@ -120,6 +120,12 @@ header {
       article, section {
          width: 90%;
       }
+   }
+}
+
+@media screen and (min-width: 1100px) {
+   main {
+      font-size: 1.4em;
    }
 }
 

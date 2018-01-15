@@ -13,15 +13,23 @@
       </figure>
       <summary class="child-card">
          <div>
-            <p>
-               {{ content.description }}
-            </p>
+            <div>
+               <icon scale='1.5' name="quote-left"/>
+               <p>
+                  {{ content.description }}
+               </p>
+            </div>
          </div>
       </summary>
       <aside class="child-card">
-         <h2 class="link">
-            <a :href="content.link" target="_blank">More</a>
-         </h2>
+         <div>
+            <h2>Excerpt</h2>
+            <p>"{{ content.preview.content }}"</p>
+            <p class="context">-<em>{{ content.preview.context }}</em></p>
+            <h3 class="link">
+               <a :href="content.link" target="_blank">More</a>
+            </h3>
+         </div>
       </aside>
       <article v-if="content.added" class="added child-card">
          <figure class="support">
@@ -32,6 +40,7 @@
                <p>
                   {{ content.added.description }}
                </p>
+               <icon scale='1.5' name="quote-right"/>
             </div>
          </summary>
       </article>
@@ -92,8 +101,16 @@ section header {
 }
 
 .child-card {
-   min-height: 45vw;
-   max-height: 45vw;
+   //padding: 2em 0;
+   min-height: 50vw;
+   //max-height: 60vw;
+
+   div div {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      display: block;
+   }
 }
 
 .added {
@@ -101,19 +118,29 @@ section header {
    display: flex;
    flex-direction: row;
    summary, figure {
-      margin: 0;
-      max-height: 45vw;
+      div {
+         //width: 90%;
+         display: block;
+         height: auto;
+      }
+   }
+   summary {
+      padding: 5vmax 0;
    }
 }
 
 figure {
-   background-color: @text-light;
+   background-color: white;
    display: flex;
    justify-content: center;
+   margin: auto;
 }
 
 figure img {
-   max-width: 70vw;
+   //min-height: 100vw;
+   margin: auto;
+   //width: 1000px;
+   max-width: 100vw;
    height: auto;
 }
 
@@ -122,16 +149,31 @@ figure img {
 }
 
 aside {
+   padding: 7.5vh 0;
    display: flex;
    width: 50%;
-   h2 {
+   div {
+      width: 85%;
+      display: block;
       margin: auto;
+      h3 {
+         margin: auto;
+      }
+      p {
+         text-align: left;
+      }
+      .context {
+         text-align: center;
+         font-size: 0.8rem;
+      }
    }
+
 }
 
 @media screen and (max-width: 600px) {
    section {
       .child-card {
+         //padding: 5vh 0;
          width: 100%;
          min-height: 50vh;
          //margin: 5vmax;
@@ -147,7 +189,7 @@ aside {
       }
 
       figure img {
-         max-width: 600px;
+         max-width: 800px;
          height: auto;
       }
 
@@ -160,6 +202,10 @@ aside {
          p {
             font-size: 1.25em;
          }
+      }
+
+      aside {
+         padding: 7.5vh 0;
       }
 
       article {

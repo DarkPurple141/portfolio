@@ -91,7 +91,7 @@ section article {
    .description {
       margin: auto;
       padding: 5%;
-      width: 50%;
+      width: 60%;
       p {
          text-align: left;
       }

@@ -62,7 +62,7 @@ header {
 }
 
 .seperator {
-   background-color: @pallette-a;
+   background-color: @pallette-d;
    color: @text-light;
    margin: 0;
 }
@@ -99,6 +99,13 @@ p {
       flex-direction: row;
    }
 
+
+}
+
+@media screen and (min-width: 1000px) {
+   main {
+      font-size: 1.4em;
+   }
 }
 
 </style>
