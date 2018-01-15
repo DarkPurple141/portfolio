@@ -7,7 +7,7 @@
       </router-link>
    </section>
    <!-- Other Page Links -->
-   <Links/>
+   <Links :open="open" @toggle="toggleMenu()"/>
 </nav>
 </template>
 
@@ -15,7 +15,17 @@
 import Links from '@/components/NavLinks';
 
 export default {
-   components: { Links }
+   components: { Links },
+   data() {
+      return {
+         open: false
+      }
+   },
+   methods: {
+      toggleMenu: function() {
+         this.open = !this.open
+      }
+   }
 }
 </script>
 
@@ -34,6 +44,7 @@ nav {
 }
 
 section a {
+   //margin: 1em;
    padding: 1em;
    &:hover {
       background-color: fade(@pallette-d, 10%);
@@ -48,11 +59,25 @@ nav > section {
    color: inherit;
    background-color: #f8f8f8;
    padding: 0;
-   margin: 1em 0;
    width: 20%;
    min-width: 110px;
    max-width: 110px;
    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+   nav {
+      z-index: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      max-height: 3.5em;
+      width: 100vw;
+   }
+
+   nav > section {
+      margin: auto;
+   }
 }
 
 </style>

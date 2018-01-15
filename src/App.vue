@@ -67,4 +67,14 @@ a {
    color: inherit;
 }
 
+@media screen and (max-width: 500px) {
+   .banners {
+      margin-top: 0;
+   }
+
+   main {
+      margin-top: 3.5rem;
+   }
+}
+
 </style>

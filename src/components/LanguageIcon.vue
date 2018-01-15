@@ -79,4 +79,13 @@ i img {
    min-width: 70px;
    min-height: 70px;
 }
+
+@media screen and (max-width: 550px) {
+   i img {
+      max-width: 60px;
+      max-height: 60px;
+      min-width: 50px;
+      min-height: 50px;
+   }
+}
 </style>

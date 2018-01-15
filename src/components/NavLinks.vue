@@ -1,19 +1,21 @@
 <template lang="html">
 <section class="right-nav">
-   <nav class="dropdown">
-      <icon class="menu-icon" name="reorder" scale="1.5"></icon>
+   <nav :class="{ 'dropdown-open': open, 'dropdown': !open }" @click="$emit('toggle')">
+      <icon class="menu-icon" :name="open ? 'close' : 'reorder'" scale="1.5"></icon>
       <div class="dropdown-content">
          <router-link v-for="item in links" v-if="item.name != 'Home'" :key="item.name" :to="item.name">
             <h2>{{ item.name }}</h2>
          </router-link>
       </div>
    </nav>
-   <router-link v-for="item in links"
-      v-if="item.name != 'Home'"
-      :key="item.name"
-      :to="{ name: item.name }" >
-      {{ item.name }}
-   </router-link>
+   <nav class="fullscreen">
+      <router-link v-for="item in links"
+         v-if="item.name != 'Home'"
+         :key="item.name"
+         :to="{ name: item.name }" >
+         {{ item.name }}
+      </router-link>
+   </nav>
 </section>
 </template>
 
@@ -23,6 +25,12 @@ export default {
    data() {
       return {
          links: []
+      }
+   },
+   props: {
+      open: {
+         required: true,
+         type: Boolean
       }
    },
    mounted() {
@@ -60,50 +68,71 @@ section a {
    display: flex;
    flex: auto;
    justify-content: flex-end;
+   .fullscreen {
+      display: flex;
+   }
+}
+
+.dropdown, .dropdown-open {
+   cursor: pointer;
+   margin: 1em;
 }
 
 .dropdown {
    display: none;
    position: relative;
-   width: 50px;
+   .dropdown-content {
+      display: none;
+   }
 }
 
 .dropdown-content {
    font-size: 1.5rem;
-   background-color: @pallette-a;
+   background-color: #f8f8f8;
    z-index: 1;
 }
 
-svg {
-   padding-right: 1em;
+.dropdown-open {
+   display: none;
+   transition: all .5s ease;
+   -webkit-transition: all .5s ease;
+   -moz-transition: all .5s ease;
+   -o-transition: all .5s ease;
+
+   .dropdown-content {
+      position: fixed;
+      left: 0;
+      top: 3.5rem;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+   }
+
+   a {
+      display: block;
+   }
 }
 
-@media screen and (max-width: 480px) {
-   .right-nav a {
+@media screen and (max-width: 500px) {
+   .right-nav .fullscreen {
       display: none;
+   }
+
+   .right-nav {
+      cursor: default;
+      max-width: none;
+      max-height: 3.5em;
    }
 
    .dropdown {
       display: block;
+      .dropdown-content {
+         display: none;
+      }
    }
 
-   .dropdown:active {
-      transition: all .5s ease;
-      -webkit-transition: all .5s ease;
-      -moz-transition: all .5s ease;
-      -o-transition: all .5s ease;
-
-      .dropdown-content {
-         position: fixed;
-         left: 0;
-         width: 100vw;
-         height: 100vh;
-         display: block;
-      }
-
-      a {
-         display: block;
-      }
+   .dropdown-open {
+      display: block;
    }
 }
 

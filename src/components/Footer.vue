@@ -1,9 +1,12 @@
 <template lang="html">
    <footer>
+      <!-- Home Icon -->
       <router-link class="highlight-logo" :to="{ name: 'Home' }">
          <Logo :fill="'#ddd'" :stroke="'#ddd'"/>
       </router-link>
+      <!-- Page Links -->
       <Links/>
+      <!-- Social -->
       <div class="social-icons">
          <a v-for="icon in icons"
             :href="icon.url"
@@ -14,6 +17,7 @@
             </icon>
          </a>
       </div>
+      <!-- Copyright footer -->
       <div class="copyright">
          <p>Copyright &#xa9; Alexander Hinds 2017</p>
          <p>All rights reserved.</p>
