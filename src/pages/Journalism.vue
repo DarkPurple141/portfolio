@@ -51,7 +51,6 @@ header {
 .card {
    background-color: @pallette-c;
    color: @text-light;
-   margin: 5vmax;
    box-shadow: 5px 5px 10px 1px grey;
    min-height: 300px;
    flex-flow: row wrap;
