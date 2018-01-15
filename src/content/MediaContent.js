@@ -1,11 +1,46 @@
 export default {
-   tags: ["Media", "media", "journalism", "writing"],
-   content:
-`I've worked in the media since 2009 across print, television and online. I began as a communications intern at political advocacy group, GetUp! and worked with them through the 2010 Federal Election.
-In late 2010 I began full-time work as a reporter and online editor with British Publisher Future PLC notably working at their sporting titles BikeRadar and Cyclingnews. I travelled within regional Australia as a reporter for Cyclingnews covering the Subaru National Road Series, and was also given the opportunity to go to Colombia briefly as a correspondent.
-In 2011, I left Cyclingnews after being offered a position as a journalist with SBS.
-I was quickly identified as strong television performer and was afforded many opportunities in the area. In 2014, he was invited to cover the Tour de France on location with SBS where he excelled, all the while diarising his time overseas online in photos and short blogs for the Tour website.
-At SBS I also found a niche as a columnist and opinion writer, developing a strong following on twitter and through my own blog. In 2013, I relaunched the SBS Cycling Podcast. I regularly hosted and produced it between 2013-2016.
-I've worked with SBS personalities David Basheer, Henk Vogels, Dave McKenzie, Kate Bates, Scott McGrory, Michael Tomalaris and Matt Keenan.
-I've also appeared on ABC local radio, Triple J, and SBS Radio.`
+   tags: [
+      "Media", "media", "journalism", "writing"
+   ],
+   content: [
+      {
+         name: "GetUp!",
+         image: "static/images/getup.jpg",
+         description: "Worked in communications and strategy for GetUp, "+
+                      "a political advocacy group in the lead-up to the 2010 election.",
+         year: "2009",
+         link: "https://www.getup.org.au/"
+      },
+      {
+         name: "FuturePLC",
+         image: "static/images/cycling.jpg",
+         description: "First full-time gig as a reporter and online editor with" +
+                      " British Publisher Future PLC was a blast. Travel, commissioning and editing.",
+         year: "2010-2011",
+         link: "http://www.cyclingnews.com/"
+      },
+      {
+         name: "SBS",
+         image: "static/images/tv.jpg",
+         description: "Jumped at the chance to join SBS as a journalist in 2011." +
+                      " Worked across televison and online, and went to the Tour de France in 2014.",
+         link: "https://www.sbs.com.au/cyclingcentral/person/al-hinds",
+         year: "2011-2016",
+         added: {
+            name: "Podcasts, Opinions",
+            image: "static/images/podcast.jpg",
+            description: "SBS was also where I really began to find myself as columnist and opinion writer;"+
+                        " developing a strong following which helped to launch a podcast in 2012, and allowed me to branch out and co-write my first book.",
+            link: "https://www.sbs.com.au/cyclingcentral/person/al-hinds",
+         }
+      },
+      {
+         name: "Guardian Australia",
+         image: "static/images/guardian.jpg",
+         description: "After leaving the SBS I worked in a roving role for the Guardian Australia." +
+                      " The place oozed experience, and rigorous process. I learnt a lot.",
+         link: "https://www.theguardian.com/profile/alex-hinds",
+         year: "2015-2016"
+      }
+   ]
 }

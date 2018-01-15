@@ -1,0 +1,178 @@
+@import '../assets/colors';
+
+section div {
+   margin: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   div {
+      padding: 1vmax;
+      display: block;
+   }
+}
+
+p {
+   line-height: 2;
+}
+
+.description {
+   .link {
+      text-align: center;
+   }
+
+   .links a {
+      margin: 1em;
+   }
+}
+
+a {
+   font-weight: bolder;
+   border-bottom: 2px solid transparent;
+}
+
+a:hover {
+   cursor: pointer;
+   border-bottom: 2px solid;
+}
+
+section:nth-child(odd) article {
+   flex-direction: row-reverse;
+}
+
+
+
+section header {
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   width: 30%;
+   h1 {
+      font-size: 3em;
+   }
+}
+
+section header {
+   background-color: @background-dark;
+   color: @text-light;
+}
+
+/*
+section:nth-child(4n + 3) header,
+section:nth-child(4n) summary,
+section:nth-child(4n + 1) article {
+   background-color: @pallette-d;
+   color: @text-light;
+}
+*/
+section summary {
+   display: flex;
+   background-color: @pallette-d;
+   align-items: center;
+   justify-content: center;
+   color: @text-light;
+   width: 50%;
+
+   div {
+      margin: auto;
+      width: 80%;
+      height: 90%;
+   }
+
+   p {
+      //padding: 1em;
+      font-size: 1.25em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
+}
+
+section {
+   min-height: 300px;
+   //padding: 50px;
+   flex-flow: row wrap;
+   //flex-direction: row-reverse;
+   justify-content: center;
+   //align-items: center;
+}
+
+figure {
+   padding: 0;
+   margin: 0;
+   max-height: 500px;
+   overflow: hidden;
+}
+
+
+.splash {
+   width: 70%;
+}
+
+.support {
+   width: 50%;
+}
+
+img {
+    max-width: 100%;
+    //min-width: 100%;
+    display: block;
+    height: auto;
+    //height: auto;
+}
+
+@media screen and (max-width: 800px) {
+   section header {
+      h1 {
+         font-size: 2.5em;
+      }
+   }
+
+   section summary {
+      p {
+         font-size: 2.5vmax;
+      }
+   }
+}
+
+@media screen and (max-width: 550px) {
+
+   section {
+      header, figure, summary, article {
+         width: 100%;
+         min-height: 90vw;
+         //margin: 5vmax;
+      }
+
+      figure.splash {
+         display: none;
+      }
+
+      figure.support {
+         width: 100%;
+      }
+
+      summary {
+         margin: 0;
+         p {
+            font-size: 1.25em;
+         }
+      }
+
+      article {
+         .description {
+
+            p {
+               margin: 1vmax;
+
+            }
+            width: 70%;
+         }
+
+         max-height: none;
+      }
+
+
+      header {
+         height: 25vh;
+      }
+   }
+}

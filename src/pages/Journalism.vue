@@ -2,11 +2,10 @@
 <main>
    <ArticleHeader :title="'Journalism'"/>
    <Seperator class="seperator" :copy="lede.content"/>
-   <section class="description">
-      <article>
-         <p v-for="para in content">{{ para }}</p>
-      </article>
-   </section>
+   <MediaCard class="card" v-for="job in content"
+      :key="job.name"
+      :content="job"
+   />
    <Seperator class="seperator" :email="true"/>
 </main>
 </template>
@@ -16,23 +15,22 @@ import ArticleHeader from '@/components/ArticleHeader'
 import MediaContent from '@/content/MediaContent'
 import HomeContent from '@/content/HomeContent'
 import Seperator from '@/components/Seperator'
+import MediaCard from '@/components/MediaCard'
 
 export default {
    name: 'Media',
    components: {
       ArticleHeader,
-      Seperator
+      Seperator,
+      MediaCard
    },
    data() {
       return {
          lede: "",
-         content: []
+         content: MediaContent.content
       }
    },
    mounted() {
-      MediaContent.content.split('\n').forEach(item => {
-         this.content.push(item)
-      })
 
       this.lede = HomeContent.filter(item => {
          return item.id === 'media'
@@ -48,6 +46,20 @@ header {
    fade(@pallette-e, 40%), @pallette-d,
    ), url("../../static/images/media.jpg");
    background-size: auto, cover;
+}
+
+.card {
+   background-color: @pallette-c;
+   color: @text-light;
+   margin: 5vmax;
+   box-shadow: 5px 5px 10px 1px grey;
+   min-height: 300px;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+.card:nth-child(odd) {
+   flex-direction: row-reverse;
 }
 
 .seperator {
@@ -74,18 +86,20 @@ p {
    text-align: left;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
    header {
       background-size: auto, 600px auto;
       background-position: 0, 100% 0px;
    }
 
-   .description {
-      padding: 1vmax;
-      article {
-         width: 95%;
-      }
+   .card {
+      margin: 0;
    }
+
+   .card:nth-child(odd) {
+      flex-direction: row;
+   }
+
 }
 
 </style>

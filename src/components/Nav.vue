@@ -39,7 +39,7 @@ nav {
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   background-color: #f8f8f8;
+   background-color: @nav-white;
    color: @background-dark;
 }
 
@@ -57,7 +57,7 @@ section a {
 
 nav > section {
    color: inherit;
-   background-color: #f8f8f8;
+   background-color: inherit;
    padding: 0;
    width: 20%;
    min-width: 110px;
