@@ -73,7 +73,7 @@ section:nth-child(3n+1) article {
 section:nth-child(3n+2) summary,
 section:nth-child(3n) aside,
 section:nth-child(3n) article {
-   background-color: @pallette-e;
+   background-color: @pallette-a; // 456
    color: @text-light;
 
 }

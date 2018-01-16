@@ -64,8 +64,9 @@ header {
 }
 
 .seperator {
-   background-color: @pallette-e;//@pallette-c;
-   color: @text;
+   padding: 1em 0;
+   background-color: @pallette-c;//@pallette-c;
+   color: @text-light;
    margin: 0;
 }
 

@@ -62,9 +62,9 @@ header {
 }
 
 .seperator {
-   background-color: @pallette-b;
-   color: #222;
-   padding: 2em 0;
+   background-color: @pallette-c;
+   color: @text-light;
+   padding: 1em 0;
 }
 
 .description {
