@@ -12,6 +12,7 @@ import './icons'
 Vue.component('icon', Icon)
 Vue.use(VueScrollTo)
 Vue.use(VueAnalytics, {
+  router,
   id: 'UA-25942721-4'
 })
 
