@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-analytics": "^5.8.0",
     "vue-awesome": "^2.3.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.8.0"
   },
   "devDependencies": {
+    "vue-analytics": "^5.8.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
