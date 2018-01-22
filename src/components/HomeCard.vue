@@ -2,11 +2,11 @@
    <section>
       <article class="header">
          <icon :name="icon" scale="2"/>
-         <h1><router-link :to="{ name: title }">{{ title }}</router-link></h1>
+         <h1><router-link :to="{ name: link }">{{ title }}</router-link></h1>
       </article>
       <article class="content">
          <p><span>{{ stub }}</span> {{ content }}</p>
-         <router-link :to="{ name: title }">< More ></router-link>
+         <router-link :to="{ name: link }">< More ></router-link>
       </article>
    </section>
 </template>
@@ -28,6 +28,10 @@ export default {
       },
       icon: {
          type: String
+      },
+      link: {
+         type: String,
+         required: true
       }
    }
 }
@@ -96,19 +100,19 @@ p {
    background-size: cover;
 }
 
-section:nth-child(3n) {
+section:nth-child(3n+1) {
    .header {
       background-color: @pallette-a;
    }
 }
 
-section:nth-child(3n+1) {
+section:nth-child(3n+2) {
    .header {
       background-color: @pallette-b;
    }
 }
 
-section:nth-child(3n+2) {
+section:nth-child(3n) {
    .header {
       background-color: @pallette-d;
    }
@@ -118,6 +122,7 @@ section:nth-child(odd) {
    background-color: @background-dark;
    color: @text-light;
 }
+
 
 article {
    display: flex;
@@ -133,12 +138,6 @@ article > h1 {
    font-size: 2.25em;
 }
 
-@media screen and (min-width: 800px) {
-   section {
-      font-size: 1.4rem;
-   }
-
-}
 
 @media screen and (max-width: 500px) {
 
@@ -165,6 +164,14 @@ article > h1 {
       width: 80%;
       padding: 5%;
    }
+}
+
+@media screen and (min-width: 1000px) {
+   section {
+      font-size: 1.25rem;
+      max-height: 500px;
+   }
+
 }
 
 </style>

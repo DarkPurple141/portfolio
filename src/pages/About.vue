@@ -1,7 +1,8 @@
 <template lang="html">
+<div>
+<ArticleHeader  :title="'Skills'"/>
+<Seperator class="seperator" :resume='true'/>
 <main>
-   <ArticleHeader  :title="'Skills'"/>
-   <Seperator class="seperator" :resume='true'/>
    <section class="description">
       <article>
          <figure>
@@ -23,8 +24,9 @@
          </aside>
       </section>
    </section>
-   <Seperator class="seperator" :email='true'/>
 </main>
+<Seperator class="seperator" :email='true'/>
+</div>
 </template>
 
 <script>
@@ -117,17 +119,11 @@ header {
    }
 
    .description {
-      font-size: 1em;
       article, section {
          width: 90%;
       }
    }
 }
 
-@media screen and (min-width: 1100px) {
-   main {
-      font-size: 1.4em;
-   }
-}
 
 </style>

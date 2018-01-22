@@ -1,38 +1,31 @@
 <template>
+<div>
+   <Splash/>
+   <Seperator id="bio" :email="true" :copy="bio"/>
    <main class="banners">
-     <Splash/>
-     <section id="bio">
-        <summary>
-           <p v-for="par in bio" class="bio-par">
-             {{ par }}
-           </p>
-           <a href="mailto:alex.hinds141@gmail.com">
-             <figure>
-                <icon scale="2.5" name="envelope"/>
-             </figure>
-             <h3>alex.hinds141@gmail.com</h3>
-           </a>
-        </summary>
-     </section>
      <HomeCard v-for="card in slides"
       :title="card.title"
       :stub="card.stub"
       :content="card.content"
       :icon="card.icon"
+      :link="card.link"
       :id="card.id"
       :key="card.id"
       />
-  </main>
+   </main>
+</div>
+
 </template>
 <script>
 import slides from '@/content/HomeContent'
 import AboutContent from '@/content/AboutContent'
 import HomeCard from '@/components/HomeCard'
+import Seperator from '@/components/Seperator'
 import Splash from '@/components/Splash'
 
 export default {
   name: 'Home',
-  components: { HomeCard, Splash },
+  components: { HomeCard, Splash, Seperator },
   data () {
     return {
       slides: slides,
@@ -67,7 +60,7 @@ section {
 }
 
 section#bio {
-   //background-color: #ccc;
+   background-color: #fff;
    flex-direction: column;
    justify-content: center;
    align-items: center;
@@ -90,6 +83,7 @@ section:nth-child(odd) {
    flex-direction: row-reverse;
 }
 
+// mobile
 @media screen and (max-width: 500px) {
 
    section, section:nth-child(odd) {
@@ -102,5 +96,15 @@ section:nth-child(odd) {
       width: 100%;
    }
 }
+
+// desktop wide
+@media screen and (min-width: 1000px) {
+   main {
+      box-shadow: 0px 15px 10px 10px #ddd;
+      max-width: 1000px;
+      margin: auto;
+   }
+}
+
 
 </style>

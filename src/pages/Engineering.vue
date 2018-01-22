@@ -1,12 +1,14 @@
 <template lang="html">
-<main>
+<div>
    <ArticleHeader :title="'Engineering'"/>
    <Seperator :copy="copy"/>
-   <ProjectCard v-for="proj in projects"
-      :key="proj.id"
-      :project="proj"/>
+   <main>
+      <ProjectCard v-for="proj in projects"
+         :key="proj.id"
+         :project="proj"/>
+   </main>
    <Seperator :email="true"/>
-</main>
+</div>
 </template>
 
 <script>
@@ -22,7 +24,7 @@ export default {
    components: { ProjectCard, ArticleHeader, Seperator },
    data() {
       return {
-         copy: EngContent.copy,
+         copy: EngContent.copy.split('\n'),
          projects: EngContent.projects
       }
    }
@@ -33,16 +35,7 @@ export default {
 
 @import '../assets/colors';
 
-main {
-   background-color: @text-light;
-}
-
-main header + section, main section:last-child  {
-   margin: 0;
-   box-shadow: none;
-}
-
-main > header {
+header {
    background-image: linear-gradient(90deg,
       fade(@pallette-b, 45%), @pallette-d,
     ), url("../../static/images/mandelbrot.jpg");
@@ -56,7 +49,6 @@ section:nth-child(4n-1) {
 section {
    background-color: @pallette-c;
    color: @text-light;
-   margin: 5vmax;
    box-shadow: 5px 5px 10px 1px grey;
    min-height: 300px;
    flex-flow: row wrap;
@@ -73,7 +65,7 @@ section {
       flex-direction: row;
    }
 
-   main > header {
+   header {
       background-size: auto, 600px auto;
    }
 }

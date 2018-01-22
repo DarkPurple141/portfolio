@@ -38,31 +38,41 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
-      meta: {scrollToTop: true }
+      meta: {
+         scrollToTop: true
+      }
     },
     {
       path: '/engineer',
-      name: 'Engineering',
+      name: 'Engineer',
       component: Engineering,
-      meta: {scrollToTop: true }
+      meta: {
+         scrollToTop: true
+      }
     },
     {
       path: '/journo',
-      name: 'Journalism',
+      name: 'Journalist',
       component: Journalism,
-      meta: {scrollToTop: true }
+      meta: {
+         scrollToTop: true
+      }
     },
     {
-      path: '/blog',
-      name: 'Teaching',
+      path: '/thinker',
+      name: 'Thinker',
       component: Writing,
-      meta: {scrollToTop: true }
+      meta: {
+         scrollToTop: true
+      }
     },
     {
       path: '/about',
-      name: 'Skills',
+      name: 'About',
       component: About,
-      meta: {scrollToTop: true }
+      meta: {
+         scrollToTop: true
+      }
     }
 
   ]

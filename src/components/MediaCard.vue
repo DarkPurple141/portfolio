@@ -18,6 +18,7 @@
                <p>
                   {{ content.description }}
                </p>
+               <icon scale='1.5' name="quote-right"/>
             </div>
          </div>
       </summary>
@@ -37,6 +38,7 @@
          </figure>
          <summary>
             <div>
+               <icon scale='1.5' name="quote-left"/>
                <p>
                   {{ content.added.description }}
                </p>
@@ -215,6 +217,14 @@ aside {
       header {
          height: 25vh;
       }
+   }
+}
+
+// widescreen
+@media screen and (min-width: 1000px) {
+   .child-card {
+      min-height: 400px;
+      max-height: 500px;
    }
 }
 

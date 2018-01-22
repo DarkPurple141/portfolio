@@ -1,13 +1,15 @@
 <template lang="html">
-<main>
+<div>
    <ArticleHeader :title="'Journalism'"/>
-   <Seperator class="seperator" :copy="lede.content"/>
-   <MediaCard class="card" v-for="job in content"
-      :key="job.name"
-      :content="job"
-   />
+   <Seperator class="seperator" :copy="lede"/>
+   <main>
+      <MediaCard class="card" v-for="job in content"
+         :key="job.name"
+         :content="job"
+      />
+   </main>
    <Seperator class="seperator" :email="true"/>
-</main>
+</div>
 </template>
 
 <script>
@@ -31,10 +33,9 @@ export default {
       }
    },
    mounted() {
-
       this.lede = HomeContent.filter(item => {
          return item.id === 'media'
-      })[0]
+      })[0].content.split('\n')
    }
 }
 </script>
@@ -98,14 +99,7 @@ p {
    .card:nth-child(odd) {
       flex-direction: row;
    }
-
-
 }
 
-@media screen and (min-width: 1000px) {
-   main {
-      font-size: 1.4em;
-   }
-}
 
 </style>

@@ -1,7 +1,10 @@
 <template lang="html">
-<main>
+<div>
    <Splash/>
-</main>
+   <main>
+
+   </main>
+</div>
 </template>
 
 <script>

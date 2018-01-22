@@ -10,7 +10,7 @@
             <h3>Resume.pdf</h3>
          </a>
       </aside>
-      <p v-if="copy">{{ copy }}</p>
+      <p v-if="copy" v-for="par in copy">{{ par }}</p>
       <a v-if="email" href="mailto:alex.hinds141@gmail.com">
         <figure>
           <icon scale="2.5" name="envelope"/>
@@ -49,7 +49,7 @@ section article {
 
 section {
    h3, h4 {
-      margin-top: 0;
+      margin: 0.5em 0;
    }
 }
 

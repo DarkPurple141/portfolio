@@ -58,6 +58,10 @@ export default {
 <style lang="less" scoped>
 @import '../assets/card';
 
+section {
+   max-width: 1000px;
+}
+
 section:nth-child(3n+2) summary,
 section:nth-child(3n) article {
    background-color: @pallette-a;

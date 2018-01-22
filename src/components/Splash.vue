@@ -44,8 +44,6 @@ header h3 {
 // mobile
 @media screen and (max-width: 500px) {
    header {
-      min-height: 65vh;
-      max-height: 65vh;
       background-size: 100% auto, 1000px auto;
    }
 }

@@ -35,6 +35,9 @@ export default {
   color: @text;
 }
 
+body, main {
+   background-color: @nav-white;
+}
 
 html, body, main {
    margin: 0;
@@ -74,6 +77,14 @@ a {
 
    main {
       margin-top: 3.5rem;
+   }
+}
+
+// desktop wide
+@media screen and (min-width: 1000px) {
+   main {
+      max-width: 1000px;
+      margin: auto;
    }
 }
 
