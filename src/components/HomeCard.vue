@@ -139,14 +139,14 @@ article > h1 {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
    article > h1 {
       font-size: 1.75em;
    }
 
    section {
-      min-height: 500px;
+      min-height: 550px;
    }
 
    article {

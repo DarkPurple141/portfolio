@@ -56,6 +56,7 @@ p {
 }
 
 section {
+   transition: 0.8s;
    flex-direction: row;
 }
 
@@ -84,7 +85,7 @@ section:nth-child(odd) {
 }
 
 // mobile
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
    section, section:nth-child(odd) {
       flex-direction: column;

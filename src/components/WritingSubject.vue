@@ -15,14 +15,10 @@
 
 <script>
 import { prettyDate } from '@/helpers'
-import BlogHeader from '@/components/BlogHeader'
 
 export default {
    name: 'blog-feed',
    resource: 'BlogFeed',
-   components: {
-       BlogHeader
-   },
    props: {
       subject: {
          type: String,
@@ -53,7 +49,7 @@ export default {
            }
          }
 
-         interval = setInterval(stack, 125)
+         interval = setInterval(stack, 150)
       },
       filterBy(posts) {
          return posts.filter(item =>

@@ -116,6 +116,7 @@ section article {
    transition: 0.5s;
 
    ul {
+      padding-left: 10px;
       margin: 12px 0;
    }
 }
@@ -134,6 +135,7 @@ section article {
    }
 
    .theme {
+      margin-top: 10px;
       h1 {
          margin-bottom: 5px;
          text-align: left;
