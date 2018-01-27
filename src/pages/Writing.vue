@@ -1,7 +1,7 @@
 <template lang="html">
 <div>
    <ArticleHeader v-if="!post" :title="'Writing'"/>
-   <Seperator class="support" :copy="['I like to write.']"/>
+   <Seperator v-if="!post" class="support" :copy="['I like to write.']"/>
    <main>
      <transition-group tag="section" :name="transition" v-if="!post">
         <article v-for="theme in feed" :key="theme.link">
