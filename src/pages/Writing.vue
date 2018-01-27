@@ -1,7 +1,7 @@
 <template lang="html">
 <div>
    <ArticleHeader v-if="!post" :title="'Writing'"/>
-   <!--<Seperator :copy="['I like to write.']"/>-->
+   <Seperator class="support" :copy="['I like to write.']"/>
    <main>
      <transition-group tag="section" :name="transition" v-if="!post">
         <article v-for="theme in feed" :key="theme.link">
@@ -79,8 +79,20 @@ export default {
 <style lang="less" scoped>
 @import '../assets/colors';
 
+header {
+   background-image: linear-gradient(90deg,
+      fade(@pallette-b, 45%), @pallette-c,
+    ); //url("../../static/images/mandelbrot.jpg");
+   background-size: auto, 100% auto;
+}
+
 section {
    display: block;
+}
+
+.support {
+   background-color: #222;
+   color: @text-light;
 }
 
 section article {
@@ -108,7 +120,7 @@ section article {
    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
    section article {
       display: flex;
       flex-direction: column;
@@ -123,6 +135,7 @@ section article {
 
    .theme {
       h1 {
+         margin-bottom: 5px;
          text-align: left;
          border-right: none;
          padding-bottom: 0.5em;

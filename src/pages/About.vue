@@ -1,6 +1,6 @@
 <template lang="html">
 <div>
-<ArticleHeader  :title="'Skills'"/>
+<ArticleHeader  :title="'About'"/>
 <main>
    <section class="description">
       <article>
@@ -74,7 +74,7 @@ header {
 .description {
    padding: 5vmax;
    font-size: 1.25em;
-   background-color: #ccc;
+   //background-color: #ccc;
    color: @text;
    justify-content: center;
    flex-direction: column;
