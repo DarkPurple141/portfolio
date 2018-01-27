@@ -82,6 +82,10 @@ time {
    //font-style: italic;
 }
 
+.preview ul {
+   padding: 1px;
+}
+
 .preview h2 {
    margin: 10px 0px;
 

@@ -1,7 +1,6 @@
 <template lang="html">
 <div>
 <ArticleHeader  :title="'Skills'"/>
-<Seperator class="seperator" :resume='true'/>
 <main>
    <section class="description">
       <article>
@@ -25,7 +24,7 @@
       </section>
    </section>
 </main>
-<Seperator class="seperator" :email='true'/>
+<Seperator class="seperator" :resume='true'/>
 </div>
 </template>
 
@@ -113,7 +112,7 @@ header {
    }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
    header {
       background-size: auto, 1200px auto;
    }

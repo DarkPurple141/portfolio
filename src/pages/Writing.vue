@@ -101,8 +101,10 @@ section article {
 .theme-list {
    width: 70%;
    text-align: left;
+   transition: 0.5s;
+
    ul {
-      margin: 12px;
+      margin: 12px 0;
    }
 }
 
@@ -114,20 +116,20 @@ section article {
       width: 90%;
    }
 
+   .theme, .theme-list {
+      width: 90%;
+      margin: auto;
+   }
+
    .theme {
-      width: 100%;
       h1 {
-         padding-right: auto;
+         text-align: left;
          border-right: none;
-         padding-bottom: 1em;
+         padding-bottom: 0.5em;
          border-bottom: 1px solid @text-light;
       }
    }
 
-   .theme-list {
-      width: 90%;
-      margin: auto;
-   }
 }
 
 </style>

@@ -32,6 +32,7 @@ div {
 ul {
    //background-color: white;
    //width: 500px;
+   padding: 0;
    max-width: 100%;
    margin: auto;
 }
