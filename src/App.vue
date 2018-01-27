@@ -70,6 +70,10 @@ a {
    color: inherit;
 }
 
+h1 {
+   font-size: 2em;
+}
+
 @media screen and (max-width: 500px) {
    .banners {
       margin-top: 0;

@@ -1,0 +1,66 @@
+<template lang="html">
+   <section class="blog">
+      <article class="blog-content" v-html="markdown"></article>
+      <router-link :to="{ path: '/thinker' }"><h3>Back</h3></router-link>
+      <footer class="comments">
+         <vue-disqus v-if="commentsReady" shortname="alhinds"
+          :key="post" :identifier="post" :url="`https://alhinds.com/#/thinker/read/${post}`"/>
+      </footer>
+   </section>
+</template>
+
+<script>
+import VueDisqus from 'vue-disqus/VueDisqus'
+import marked from 'marked'
+import Prism from 'prismjs'
+
+export default {
+   name: 'blog-post',
+   props: {
+      post: {
+         type: String,
+         required: true
+      }
+   },
+   resource: 'BlogPost',
+   components: { VueDisqus },
+
+   data() {
+      return {
+         title: '',
+         content: '',
+         published: '',
+         description: '',
+         commentsReady: false
+      }
+   },
+
+   computed: {
+      markdown() {
+         return marked(this.content)
+      }
+   },
+   watch: {
+  'markdown': function() {
+    this.$nextTick(()=> Prism.highlightAll())
+  }
+},
+
+   methods: {
+      showComments() {
+         setTimeout(() => {
+            this.commentsReady = true
+         }, 550)
+      }
+   },
+   beforeMount() {
+      this.$getResource('post', this.post)
+         .then(this.showComments)
+   }
+}
+</script>
+
+<style lang="less" scoped>
+@import '../assets/blog';
+
+</style>

@@ -1,7 +1,7 @@
 <template lang="html">
 <nav>
    <ul>
-      <li v-for="link in links" v-if="link.name != 'Home'">
+      <li v-for="link in links">
          <router-link :to="{ name: link.name }">{{link.name}}</router-link>
       </li>
    </ul>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { isTopLevelRoute } from '@/helpers'
+
 export default {
 
    data() {
@@ -17,14 +19,20 @@ export default {
       }
    },
 
+   methods: {
+      isTopLevelRoute
+   },
+
    mounted() {
       this.$router.options.routes.forEach(route => {
-            this.links.push(
-               {
-                   name: route.name,
-                   path: route.path
-               }
-            )
+            if (this.isTopLevelRoute(route.name)) {
+               this.links.push(
+                  {
+                      name: route.name,
+                      path: route.path
+                  }
+               )
+            }
         })
    }
 

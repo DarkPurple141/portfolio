@@ -7,13 +7,28 @@ import App from './App'
 import router from './router'
 import Icon from 'vue-awesome/components/Icon'
 import './icons'
+import './helpers'
+import resource from './plugins/resource'
+import * as content from './content/blog'
+
+import 'prismjs/themes/prism.css'
+import 'prismjs/components/prism-c.min.js'
+import 'prismjs/components/prism-yaml.min.js'
+import 'prismjs/components/prism-bash.min.js'
 
 // globally (in your main .js file)
 Vue.component('icon', Icon)
+
 Vue.use(VueScrollTo)
+
 Vue.use(VueAnalytics, {
   router,
   id: 'UA-25942721-4'
+})
+
+Vue.use(resource, {
+   resources: content,
+   endpoint: '/static/api'
 })
 
 Vue.config.productionTip = false

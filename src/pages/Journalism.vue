@@ -28,7 +28,7 @@ export default {
    },
    data() {
       return {
-         lede: "",
+         lede: [],
          content: MediaContent.content
       }
    },

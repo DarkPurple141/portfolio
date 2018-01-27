@@ -31,7 +31,7 @@ export default {
          type: Boolean
       },
       copy: {
-         type: String
+         type: Array
       }
    }
 }

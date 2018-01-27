@@ -3,7 +3,7 @@
    <nav :class="{ 'dropdown-open': open, 'dropdown': !open }" @click="$emit('toggle')">
       <icon class="menu-icon" :name="open ? 'close' : 'reorder'" scale="1.5"></icon>
       <div class="dropdown-content">
-         <router-link v-for="item in links" v-if="item.name != 'Home'"
+         <router-link v-for="item in links"
             :key="item.name"
             :to="item.path">
             <h2>{{ item.name }}</h2>
@@ -12,7 +12,6 @@
    </nav>
    <nav class="fullscreen">
       <router-link v-for="item in links"
-         v-if="item.name != 'Home'"
          :key="item.name"
          :to="item.path" >
          {{ item.name }}
@@ -22,6 +21,8 @@
 </template>
 
 <script>
+import { isTopLevelRoute } from '@/helpers'
+
 export default {
    name: "NavLinks",
    data() {
@@ -35,14 +36,20 @@ export default {
          type: Boolean
       }
    },
+   methods: {
+      isTopLevelRoute
+   },
+
    mounted() {
       this.$router.options.routes.forEach(route => {
-            this.links.push(
-               {
-                   name: route.name,
-                   path: route.path
-               }
-            )
+            if (this.isTopLevelRoute(route.name)) {
+               this.links.push(
+                  {
+                      name: route.name,
+                      path: route.path
+                  }
+               )
+            }
         })
    }
 }

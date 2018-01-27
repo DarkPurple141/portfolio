@@ -64,16 +64,28 @@ export default new Router({
       component: Writing,
       meta: {
          scrollToTop: true
-      }
-    },
-    {
+      },
+      props: true
+   },
+   {
+     path: '/thinker/:subject',
+     name: 'BlogSubject',
+     component: Writing,
+     props: true
+   },
+   {
+      path: '/thinker/read/:post',
+      name: 'Article',
+      component: Writing,
+      props: true
+   },
+   {
       path: '/about',
       name: 'About',
       component: About,
       meta: {
          scrollToTop: true
       }
-    }
-
+   }
   ]
 })

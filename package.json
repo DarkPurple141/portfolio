@@ -7,16 +7,18 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/blogs.js && node build/build.js"
   },
   "dependencies": {
+    "lodash.merge": "^4.6.0",
+    "marked": "^0.3.12",
     "vue": "^2.5.2",
     "vue-awesome": "^2.3.4",
+    "vue-disqus": "^2.0.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.8.0"
   },
   "devDependencies": {
-    "vue-analytics": "^5.8.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -41,11 +43,13 @@
     "portfinder": "^1.0.13",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
+    "prismjs": "^1.10.0",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-analytics": "^5.8.0",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
