@@ -1,21 +1,16 @@
 <template lang="html">
-   <main>
-      <nav>
-         <!--<BlogHeader/>-->
-         <transition-group tag="ul" :name="transition">
-            <li v-for="post in feed" class="preview" :key="post.id">
-               <summary>
-                  <h2>{{ post.title }}</h2>
-                  <p>{{ post.description }}</p>
-                  <time>
-                     {{ prettyDate(post.date) }}
-                  </time>
-               </summary>
-               <router-link :to="{ path: `/thinker/read/${post.id}` }">Read</router-link>
-            </li>
-         </transition-group>
-      </nav>
-   </main>
+   <transition-group tag="ul" :name="transition">
+      <li v-for="post in feed" class="preview" :key="post.id">
+         <router-link :to="{ path: `/thinker/read/${post.id}` }">
+            <summary>
+               <h2>{{ post.title }}</h2>
+               <!--<h4>{{ post.tags }}</h4>-->
+               <time>{{ prettyDate(post.date)}}</time>
+               <p>{{ post.description }}</p>
+            </summary>
+         </router-link>
+      </li>
+   </transition-group>
 </template>
 
 <script>
@@ -25,7 +20,9 @@ import BlogHeader from '@/components/BlogHeader'
 export default {
    name: 'blog-feed',
    resource: 'BlogFeed',
-   components: { BlogHeader },
+   components: {
+       BlogHeader
+   },
    props: {
       subject: {
          type: String,
@@ -78,4 +75,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../assets/colors';
+
+time {
+   color: @text-light-link;
+   //font-style: italic;
+}
+
+.preview h2 {
+   margin: 10px 0px;
+
+   &:hover {
+      color: @text-light;
+   }
+}
+
 </style>

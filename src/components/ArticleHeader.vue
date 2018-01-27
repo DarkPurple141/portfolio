@@ -38,6 +38,7 @@ header {
 @media screen and (max-width: 500px) {
 
    .banner {
+      margin-top: 70px;
       font-size: 3em;
    }
 }

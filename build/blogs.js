@@ -1,8 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 
-const BASE = '../posts'
-const DEST = '../static/api'
+const BASE = './posts'
+const DEST = './static/api'
 
 function success(err) {
    err ? console.error(err) : console.log("All done!")

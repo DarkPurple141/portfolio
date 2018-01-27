@@ -20,10 +20,6 @@ export default {
 @import './assets/colors';
 @import url('https://fonts.googleapis.com/css?family=Roboto:500');
 
-.banner {
-   font-size: 4em;
-}
-
 #app {
   //font-family: 'Roboto', sans-serif;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -35,6 +31,10 @@ export default {
   color: @text;
 }
 
+.banner {
+   font-size: 4em;
+}
+
 body, main {
    background-color: @nav-white;
 }
@@ -44,12 +44,17 @@ html, body, main {
    min-width: 330px;
 }
 
-li, p {
-  line-height: normal;
+li, p, h4 {
+  line-height: 1.8;
+  letter-spacing: 0.05px;
+}
+
+h1 {
+   font-size: 2em;
 }
 
 article {
-   line-height: 1.5em;
+   line-height: 1.5;
 }
 
 section {
@@ -60,6 +65,7 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
@@ -70,13 +76,10 @@ a {
    color: inherit;
 }
 
-h1 {
-   font-size: 2em;
-}
-
 @media screen and (max-width: 500px) {
-   .banners {
-      margin-top: 0;
+   .banner {
+      margin-top: 100px;
+      font-size: 2.5em;
    }
 
    main {

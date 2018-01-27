@@ -3,7 +3,7 @@ title: Types and Memory in C
 stub: Why do we use "types" in C?
 tags: explainers,c
 ---
-# Why do we use "types" in C?
+## Why do we use "types" in C?
 
 Types are likely to give you all sorts of headaches as a beginner programmer --
 and it's not surprising -- they're far from intuitive.

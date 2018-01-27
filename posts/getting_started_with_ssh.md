@@ -1,10 +1,9 @@
 ---
 title: SSH and SSH keys
-stub: Setting up ssh keys to make your life easier
+stub: Setting up SSH keys to make your life easier
 tags: explainers,linux
 ---
-# What are ssh keys?!
-
+## What are ssh keys?!
 Cool security keys that allow your computers to recognise eachother! (basically)
 Usefully, ssh keys will allow you to remotely
 login into cse (or any computer) without using your password.

@@ -1,9 +1,8 @@
 ---
 title: Using Git
-stub: The basics to getting started with git, a version control system
+stub: Getting started with git, a version control system
 tags: linux,git,explainers
 ---
-
 [This tutorial is comprehensive](https://www.atlassian.com/git/tutorials/what-is-version-control) - I suggest you use it, but if time poor, below will suffice.
 
 ## Installing Git
@@ -29,9 +28,9 @@ its real power is in allowing multi-user collaboration. And for that you'll need
 
 There are a number of options here, but some of the bigger ones are:
 
-* [GitHub](github.com)
-* [BitBucket](bitbucket.org)
-* [GitLab](gitlab.com)
+* [GitHub](https://www.github.com)
+* [BitBucket](https://www.bitbucket.org)
+* [GitLab](https://www.gitlab.com)
 
 They're subtly different but fulfil the same purpose, hosting your repository.
 

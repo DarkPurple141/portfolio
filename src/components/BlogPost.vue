@@ -1,5 +1,6 @@
 <template lang="html">
    <section class="blog">
+      <h1 class="banner">{{ title }}</h1>
       <article class="blog-content" v-html="markdown"></article>
       <router-link :to="{ path: '/thinker' }"><h3>Back</h3></router-link>
       <footer class="comments">
@@ -62,5 +63,6 @@ export default {
 
 <style lang="less" scoped>
 @import '../assets/blog';
+@import '../assets/colors';
 
 </style>

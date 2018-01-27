@@ -1,10 +1,8 @@
 ---
-title: The Secure Copy Protocol (SCP)
+title: Secure Copy Protocol (SCP)
 stub: Transferring files and folders via the command line (SCP)
 tags: explainers,linux
 ---
-## Transferring files and folders via the command line (SCP)
-
 If you're working remotely, or don't have access to your normal computer you may
 currently use something like DropBox or Google Drive to access and update your files.
 Both of these can be cumbersome. SCP (Or the secure copy) provides a simple command line based alternative. SCP's strength is its simplicity.

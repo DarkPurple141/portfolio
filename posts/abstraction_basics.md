@@ -3,8 +3,6 @@ title: Abstraction
 stub: What is abstraction and how does it apply to programming?
 tags: explainers,c
 ---
-## What is abstraction and how does it apply to programming?
-
 Abstraction is the concept of properly targeting our thinking around the level that
 makes most the contextual sense. It allows us to drill down and become more specific when we need to, or break out into broader more general concepts.
 

@@ -4,7 +4,6 @@ stub: Understanding the use and application of header files
 tags: c,explainers
 ---
 ## Understanding the use and application of header files
-
 Header files fulfil a few key principles of good modular code:
 
 * They allow us to separate out our related logic

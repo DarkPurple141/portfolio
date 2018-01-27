@@ -1,13 +1,33 @@
 
 .blog {
    display: block;
-   margin: 0 10%;
+   margin: 0 15vw;
 }
 
 .blog-content {
    text-align: left;
+   line-height: 2;
+}
+
+h3 {
+   margin: 5vh auto;
 }
 
 .comments {
    margin: 2em 0;
+}
+
+.banner {
+   color: @text-light-link;
+}
+
+@media screen and (max-width: 600px) {
+
+   .banner {
+      font-size: 3em;
+   }
+
+   .blog {
+      font-size: 0.9em;
+   }
 }
