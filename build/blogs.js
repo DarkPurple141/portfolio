@@ -103,8 +103,8 @@ function asyncMain() {
          if (err) throw err
          let promises = []
          for (let i=0; i<items.length; i++) {
-            stat(items[i])
-            .then(data => readFile(items[i], data))
+            stat(BASE + '/' + items[i])
+            .then(data => readFile(BASE + '/' + items[i], data))
             .then(data => {
                promises.push(data)
                if (promises.length == items.length) {
@@ -116,7 +116,6 @@ function asyncMain() {
       })
    })
 }
-
 asyncMain()
 .then((data) => {
    data = data.map(item => {
@@ -139,3 +138,4 @@ asyncMain()
    ),
    success
 ))
+.catch(err => console.error(err))
