@@ -21,10 +21,9 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto:500');
 
 #app {
-  //font-family: 'Roboto', sans-serif;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  //font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: medium;
-  letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -61,11 +60,6 @@ section {
    display: flex;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 li {
   display: inline-block;
   margin: 0 10px;
@@ -82,9 +76,6 @@ a {
       font-size: 2.5em;
    }
 
-   main {
-      margin-top: 3.5rem;
-   }
 }
 
 // desktop wide
