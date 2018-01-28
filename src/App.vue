@@ -18,6 +18,7 @@ export default {
 
 <style lang="less">
 @import './assets/colors';
+@import './assets/quotes';
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
 #app {
@@ -81,9 +82,9 @@ a {
 }
 
 // desktop wide
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
    main {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
    }
 }

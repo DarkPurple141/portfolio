@@ -15,7 +15,6 @@
 <script>
 import ArticleHeader from '@/components/ArticleHeader'
 import MediaContent from '@/content/MediaContent'
-import HomeContent from '@/content/HomeContent'
 import Seperator from '@/components/Seperator'
 import MediaCard from '@/components/MediaCard'
 
@@ -33,9 +32,7 @@ export default {
       }
    },
    mounted() {
-      this.lede = HomeContent.filter(item => {
-         return item.id === 'media'
-      })[0].content.split('\n')
+      this.lede = MediaContent.copy.split('\n')
    }
 }
 </script>
@@ -52,7 +49,7 @@ header {
 .card {
    background-color: @pallette-c;
    color: @text-light;
-   box-shadow: 5px 5px 10px 1px grey;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
    min-height: 300px;
    flex-flow: row wrap;
    justify-content: center;

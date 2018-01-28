@@ -2,6 +2,9 @@ export default {
    tags: [
       "Media", "media", "journalism", "writing"
    ],
+   copy: "I've been a journalist in one form or another for over a decade. I've worked for two national Australian broadcasters and an international newspaper. " +
+         "I've worked as a copywriter and subeditor, a reporter, and a commissioning editor. " +
+         "I'm highly adaptable and have delivered work across all sorts of subjects and media.",
    content: [
       {
          name: "GetUp!",
@@ -23,7 +26,7 @@ export default {
          year: "2010-2011",
          link: "http://www.cyclingnews.com/",
          preview: {
-            content: "He was a renegade in the early 90s when he tried to sway a culture of corruption in the Colombian political structure, and now as the newly appointed Minister of Sport he wants to put in policies that will set Colombia up for a long and rich era of sporting success.",
+            content: "He was a renegade in the early 90s when he tried to sway a culture of corruption in the Colombian political structure, and now as the newly appointed Minister of Sport he wants to put in policies that will set Colombia..", //up for a long and rich era of sporting success.",
             context: "An interview with the Colombian Sports Minister in Bogota, '12'"
          }
       },
@@ -35,7 +38,7 @@ export default {
          link: "https://www.sbs.com.au/cyclingcentral/person/al-hinds",
          year: "2011-2016",
          preview: {
-            content: "Its snake like bends carved into the steep mountain face are as synonymous with the Giro as they are with cycling. But as picturesque as the view down its 48 hairpins may be; this relentless slog is a cruel mountain to try and tame...",
+            content: "Its seeminly endless bends are tranquil, even picturesque from above; but on a bike this 48-hairpin monster is among the cruelest mountains to try tame...",
             context: "A feature on the Passo dello Stelvio, '14'"
          },
          added: {
@@ -50,7 +53,7 @@ export default {
          name: "Guardian Australia",
          image: "static/images/guardian.jpg",
          preview: {
-            content: "Set to take place in a sold-out Key Arena, the fifth edition of ‘The International’ broke its own record this week when its prize-pool bubbled above the $US 11 million dollar mark after another surge in funding support from fans. That number could balloon to as high as $US 15 million on current trends before the tournament takes place in August...",
+            content: "Set to take place in a sold-out Key Arena, Seattle, the fifth edition of ‘The International’ broke its own record this week when its prize-pool bubbled above the $US 11 million dollar mark after another surge in funding support from fans.",
             context: "On the Dota World Championships, '15'"
          },
          description: "After leaving SBS I worked in a roving role for the Guardian Australia." +

@@ -10,7 +10,9 @@
             <h3>Resume.pdf</h3>
          </a>
       </aside>
-      <p v-if="copy" v-for="par in copy">{{ par }}</p>
+      <aside v-if="copy" class="copy">
+         <p v-for="par in copy">{{ par }}</p>
+      </aside>
       <a v-if="email" href="mailto:alex.hinds141@gmail.com">
         <figure>
           <icon scale="2.5" name="envelope"/>
@@ -45,7 +47,10 @@ section article {
    justify-content: center;
    flex-direction: column;
    max-height: 100vh;
-   max-width: 800px;
+   max-width: 750px;
+   .copy {
+      text-align: left;
+   }
 }
 
 section {

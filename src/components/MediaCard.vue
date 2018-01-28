@@ -4,7 +4,7 @@
          <div>
             <div>
                <h1>{{ content.name }}</h1>
-               <h3>{{ content.year }}</h3>
+               <time>{{ content.year }}</time>
             </div>
          </div>
       </header>
@@ -108,7 +108,7 @@ section header {
 .child-card {
    //padding: 2em 0;
    min-height: 50vw;
-   //max-height: 60vw;
+   //max-height: 50vh;
 
    div div {
       width: 100%;

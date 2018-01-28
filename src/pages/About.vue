@@ -1,6 +1,6 @@
 <template lang="html">
 <div>
-<ArticleHeader  :title="'About'"/>
+<!--<ArticleHeader  :title="'About'"/>-->
 <main>
    <section class="description">
       <article>
@@ -8,9 +8,10 @@
             <img src="static/images/profile.jpg" alt="Alex Hinds profile">
          </figure>
          <h2>Hi, I'm Alex.</h2>
-         <p v-for="line in lines">
-            {{ line }}
-         </p>
+         <aside>
+            <p v-for="line in lines">{{ line }}</p>
+         </aside>
+
       </article>
       <section>
          <aside>
@@ -54,7 +55,8 @@ export default {
 @import '../assets/colors';
 
 main {
-   //background-color: @text-light;
+   min-width: 100vw;
+   background-color: @text-light;
 }
 
 header {
@@ -85,7 +87,7 @@ header {
       align-items: center;
       flex-direction: column;
 
-      width: 60%;
+      width: 70%;
       text-align: left;
       margin: auto;
       //padding: 5vmax;
@@ -106,14 +108,19 @@ header {
       }
    }
    section {
-      width: 60%;
+      width: 70%;
       margin: auto;
       align-items: center;
       flex-direction: column;
    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+
+   main {
+      margin-top: 50px;
+   }
+
    header {
       background-size: auto, 1200px auto;
    }

@@ -49,7 +49,7 @@ section:nth-child(4n-1) {
 section {
    background-color: @pallette-c;
    color: @text-light;
-   box-shadow: 5px 5px 10px 1px grey;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
    min-height: 300px;
    flex-flow: row wrap;
    justify-content: center;

@@ -4,11 +4,11 @@
         "title": "Explainers",
         "description": "Some tips and tricks I've learnt along the way.",
         "link": "explainers"
-     },
-     {
-        "title": "Thoughts",
-        "description": "All sorts of subjects and ponderings.",
-        "link": "thoughts"
      }
-  ]
+  ],
+  "saved": {
+       "title": "Thoughts",
+       "description": "All sorts of subjects and ponderings.",
+       "link": "thoughts"
+   }
 }

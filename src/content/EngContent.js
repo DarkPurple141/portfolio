@@ -8,6 +8,7 @@ export default {
    projects: [
       {
          name: "Tank Hunter",
+         year: 2016,
          images: {
             large: "static/images/projects/tanks/large.png",
             small: "static/images/projects/tanks/small.png"
@@ -26,6 +27,7 @@ export default {
       },
       {
          name: "Map Maker",
+         year: 2016,
          images: {
             large: "static/images/projects/maps/large.jpg",
             small: "static/images/projects/maps/small.jpg"
@@ -44,6 +46,7 @@ export default {
       },
       {
          name: "Sokoban",
+         year: 2017,
          images: {
             large: "static/images/projects/sokoban/large.png",
             small: "static/images/projects/sokoban/small.png"
@@ -60,6 +63,7 @@ export default {
       },
       {
          name: "Portfolio",
+         year: 2018,
          images: {
             large: "static/images/projects/portfolio/large.png",
             small: "static/images/projects/portfolio/small.png"

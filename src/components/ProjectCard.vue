@@ -3,6 +3,7 @@
       <header>
          <div>
             <h1>{{ project.name }}</h1>
+            <time>{{ project.year }}</time>
          </div>
       </header>
       <figure class="splash">
@@ -59,13 +60,14 @@ export default {
 @import '../assets/card';
 
 section {
-   max-width: 1000px;
+   margin: 5vmax;
+   max-width: 800px;
 }
 
 section:nth-child(3n+2) summary,
 section:nth-child(3n) article {
-   background-color: @pallette-a;
-   color: @text-light;
+   background-color: @nav-white;
+   color: @text;
 }
 
 section:nth-child(3n+1) summary,
@@ -81,7 +83,7 @@ section:nth-child(3n) summary {
 }
 
 section:nth-child(3n+1) article {
-   background-color: @text-light;
+   background-color: @nav-white;
    color: @text;
 }
 
@@ -104,6 +106,10 @@ section article {
          text-align: left;
       }
    }
+}
+
+section header div {
+   flex-direction: column;
 }
 
 </style>
