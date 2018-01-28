@@ -59,10 +59,7 @@ export default {
 <style lang="less" scoped>
 @import '../assets/card';
 
-section {
-   margin: 5vmax;
-   max-width: 800px;
-}
+
 
 section:nth-child(3n+2) summary,
 section:nth-child(3n) article {
@@ -111,5 +108,6 @@ section article {
 section header div {
    flex-direction: column;
 }
+
 
 </style>

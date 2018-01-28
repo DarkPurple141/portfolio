@@ -88,10 +88,11 @@ p {
       background-size: auto, 600px auto;
       background-position: 0, 100% 0px;
    }
-
+   /*
    .card {
       margin: 0;
    }
+   */
 
    .card:nth-child(odd) {
       flex-direction: row;

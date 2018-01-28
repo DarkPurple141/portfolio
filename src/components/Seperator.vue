@@ -46,7 +46,7 @@ section article {
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   max-height: 100vh;
+   //max-height: 100vh;
    max-width: 750px;
    .copy {
       text-align: left;

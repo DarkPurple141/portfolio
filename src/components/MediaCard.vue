@@ -176,6 +176,7 @@ aside {
 }
 
 @media screen and (max-width: 600px) {
+
    section {
       .child-card {
          //padding: 5vh 0;
