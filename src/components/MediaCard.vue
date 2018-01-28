@@ -14,22 +14,27 @@
       <summary class="child-card">
          <div>
             <div>
-               <icon scale='1.5' name="quote-left"/>
+
                <p>
                   {{ content.description }}
                </p>
-               <icon scale='1.5' name="quote-right"/>
+
             </div>
          </div>
       </summary>
       <aside class="child-card">
          <div>
-            <h2>Excerpt</h2>
-            <p>"{{ content.preview.content }}"</p>
-            <p class="context">-<em>{{ content.preview.context }}</em></p>
-            <h3 class="link">
-               <a :href="content.link" target="_blank">More</a>
-            </h3>
+            <icon scale='1.5' name="quote-left"/>
+            <p>{{ content.preview.content }}</p>
+            <icon scale='1.5' name="quote-right"/>
+
+               <p class="context">
+                  <a class="link ":href="content.link" target="_blank">
+                     -<em>{{ content.preview.context }}
+                     </em>
+                  </a>
+               </p>
+            </a>
          </div>
       </aside>
       <article v-if="content.added" class="added child-card">
@@ -38,11 +43,9 @@
          </figure>
          <summary>
             <div>
-               <icon scale='1.5' name="quote-left"/>
                <p>
                   {{ content.added.description }}
                </p>
-               <icon scale='1.5' name="quote-right"/>
             </div>
          </summary>
       </article>

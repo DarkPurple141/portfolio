@@ -75,10 +75,14 @@ section:nth-child(3n+2) article {
 
 }
 
-section:nth-child(3n) summary,
-section:nth-child(3n+1) article {
+section:nth-child(3n) summary {
    background-color: @pallette-c;
    color: @text-light;
+}
+
+section:nth-child(3n+1) article {
+   background-color: @text-light;
+   color: @text;
 }
 
 section article {

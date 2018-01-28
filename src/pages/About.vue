@@ -18,7 +18,7 @@
             <LanguageIcons :languages="content.languages"/>
          </aside>
          <aside>
-            <h3>Tools</h3>
+            <h2>Tools</h2>
             <LanguageIcons :languages="content.tools"/>
          </aside>
       </section>
@@ -54,7 +54,7 @@ export default {
 @import '../assets/colors';
 
 main {
-   background-color: @text-light;
+   //background-color: @text-light;
 }
 
 header {
@@ -72,8 +72,9 @@ header {
 }
 
 .description {
+   margin: auto;
+   max-width: 800px;
    padding: 5vmax;
-   font-size: 1.25em;
    //background-color: #ccc;
    color: @text;
    justify-content: center;
@@ -119,7 +120,7 @@ header {
 
    .description {
       article, section {
-         width: 90%;
+         width: 85%;
       }
    }
 }

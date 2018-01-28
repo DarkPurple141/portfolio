@@ -44,7 +44,8 @@ section article {
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   max-height: 30vh;
+   max-height: 100vh;
+   max-width: 800px;
 }
 
 section {
@@ -68,9 +69,13 @@ article {
 }
 
 @media screen and (max-width: 600px) {
-   article {
+   section article {
+      text-align: left;
+      max-width: 80vw;
       padding: 10vh 5vw;
+      font-size: 1em;
    }
+
 }
 
 </style>

@@ -21,7 +21,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 
 #app {
-  font-family: 'Roboto', sans-serif;
+  //font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   //font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: medium;
   letter-spacing: 0.25px;

@@ -63,6 +63,9 @@ export default {
             case 'markdown':
                val = 'static/images/icons/markdown.svg'
                break;
+            case 'less':
+               val = "http://lesscss.org/public/img/logo.png"
+               break;
 
          }
          return val
