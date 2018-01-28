@@ -70,7 +70,6 @@ article {
 
 @media screen and (max-width: 600px) {
    section article {
-      text-align: left;
       max-width: 80vw;
       padding: 10vh 5vw;
       font-size: 1em;
