@@ -107,8 +107,8 @@ section header {
 
 .child-card {
    //padding: 2em 0;
-   min-height: 50vw;
-   //max-height: 50vh;
+   min-height: 40vw;
+   max-height: 50vmax;
 
    div div {
       width: 100%;
@@ -181,7 +181,7 @@ aside {
       .child-card {
          //padding: 5vh 0;
          width: 100%;
-         min-height: 50vh;
+         min-height: 45vh;
          //margin: 5vmax;
       }
 
@@ -225,9 +225,9 @@ aside {
 }
 
 // widescreen
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 850px) {
    .child-card {
-      min-height: 400px;
+      min-height: 380px;
       max-height: 500px;
    }
 }

@@ -39,8 +39,6 @@ section:nth-child(odd) article {
    flex-direction: row-reverse;
 }
 
-
-
 section header {
    align-items: center;
    justify-content: center;
@@ -56,14 +54,6 @@ section header {
    color: @text-light;
 }
 
-/*
-section:nth-child(4n + 3) header,
-section:nth-child(4n) summary,
-section:nth-child(4n + 1) article {
-   background-color: @pallette-d;
-   color: @text-light;
-}
-*/
 section summary {
    display: flex;
    background-color: @pallette-d;
@@ -88,7 +78,7 @@ section summary {
 
 section {
    margin: 5vmax;
-   max-width: 900px;
+   max-width: 850px;
    min-height: 300px;
    //padding: 50px;
    flex-flow: row wrap;
@@ -100,7 +90,7 @@ section {
 figure {
    padding: 0;
    margin: 0;
-   max-height: 500px;
+   max-height: 480px;
    overflow: hidden;
 }
 
@@ -111,6 +101,7 @@ figure {
 
 .support {
    width: 50%;
+   max-height: 50vw;
 }
 
 img {
@@ -118,10 +109,10 @@ img {
     //min-width: 100%;
     display: block;
     height: auto;
-    //height: auto;
+    //overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
    section header {
       h1 {
          font-size: 2.5em;
@@ -181,7 +172,7 @@ img {
    }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
       section {
          margin: 5vmax auto;
       }
