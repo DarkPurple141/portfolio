@@ -8,8 +8,10 @@
             </div>
          </div>
       </header>
-      <figure class="support child-card">
-         <img :src="content.image" :alt="content.name + ' image'"/>
+      <figure class="support child-card"
+         @mouseover="hover.primary=true"
+         @mouseleave="hover.primary=false">
+         <img :class="{ 'greyscale': !hover.primary }" :src="content.image" :alt="content.name + ' image'"/>
       </figure>
       <summary class="child-card">
          <div>
@@ -38,8 +40,10 @@
          </div>
       </aside>
       <article v-if="content.added" class="added child-card">
-         <figure class="support">
-            <img :src="content.added.image" :alt="content.name + ' image'"/>
+         <figure class="support"
+            @mouseover="hover.secondary=true"
+            @mouseleave="hover.secondary=false">
+            <img :class="{ 'greyscale': !hover.secondary }" :src="content.added.image" :alt="content.name + ' image'"/>
          </figure>
          <summary>
             <div>
@@ -58,6 +62,14 @@ export default {
       content: {
          type: Object,
          required: true
+      }
+   },
+   data() {
+      return {
+         hover: {
+            primary: false,
+            secondary: false
+         }
       }
    }
 }
@@ -107,7 +119,7 @@ section header {
 
 .child-card {
    //padding: 2em 0;
-   min-height: 40vw;
+   min-height: 40vmax;
    max-height: 50vmax;
 
    div div {
@@ -152,6 +164,7 @@ figure img {
 .support {
    width: 50%;
 }
+
 
 aside {
    padding: 7.5vh 0;

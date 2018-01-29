@@ -41,7 +41,7 @@ export default {
 }
 
 body, main {
-   background-color: @nav-white;
+   background-color: #efefef;
 }
 
 html, body, main {
@@ -64,11 +64,6 @@ article {
 
 section {
    display: flex;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {

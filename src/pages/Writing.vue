@@ -123,6 +123,11 @@ section article {
       padding-left: 10px;
       margin: 12px 0;
    }
+
+   li {
+     display: inline-block;
+     margin: 0 10px;
+   }
 }
 
 @media screen and (max-width: 700px) {

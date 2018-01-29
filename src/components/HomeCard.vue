@@ -127,6 +127,10 @@ section:nth-child(odd) {
    color: @text-light;
 }
 
+section:nth-child(even) {
+   background-color: @nav-white;
+}
+
 article {
    display: flex;
    flex-direction: column;

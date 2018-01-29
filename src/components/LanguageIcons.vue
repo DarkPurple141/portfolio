@@ -37,6 +37,11 @@ ul {
    margin: auto;
 }
 
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 .lang-icons {
    margin: 2vmax;
 }

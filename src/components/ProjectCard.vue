@@ -6,11 +6,15 @@
             <time>{{ project.year }}</time>
          </div>
       </header>
-      <figure class="splash">
-         <img :src="project.images.large" alt="large image related to topic"/>
+      <figure class="splash"
+         @mouseover="hover.primary=true"
+         @mouseleave="hover.primary=false">
+         <img :class="{greyscale: !hover.primary}" :src="project.images.large" alt="large image related to topic"/>
       </figure>
-      <figure class="support">
-         <img :src="project.images.small" alt="small image related to topic"/>
+      <figure class="support"
+         @mouseover="hover.secondary=true"
+         @mouseleave="hover.secondary=false">
+         <img :class="{greyscale: !hover.secondary}" :src="project.images.small" alt="small image related to topic"/>
       </figure>
       <summary>
          <div>
@@ -50,6 +54,14 @@ export default {
       project: {
          type: Object,
          required: true
+      }
+   },
+   data() {
+      return {
+         hover: {
+            primary: false,
+            secondary: false
+         }
       }
    },
    components: { LanguageIcons }
