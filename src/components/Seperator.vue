@@ -17,7 +17,7 @@
         <figure>
           <icon scale="2.5" name="envelope"/>
         </figure>
-        <h4>alex.hinds141@gmail.com</h4>
+        <h3>alex.hinds141@gmail.com</h3>
       </a>
    </article>
 </section>

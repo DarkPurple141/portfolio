@@ -188,7 +188,7 @@ aside {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
    section {
       .child-card {

@@ -55,7 +55,7 @@ section {
    justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
    section {
       margin: 0;
