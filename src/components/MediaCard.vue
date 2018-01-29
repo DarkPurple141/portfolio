@@ -102,12 +102,9 @@ section:nth-child(3n+2) article {
    color: @text-light;
 }
 
-section header {
+section header.child-card {
    background-color: white;
    color: @text;
-}
-
-section header {
    align-items: center;
    justify-content: center;
    display: flex;
@@ -194,7 +191,7 @@ aside {
       .child-card {
          //padding: 5vh 0;
          width: 100%;
-         min-height: 45vh;
+         min-height: 50vw;
          //margin: 5vmax;
       }
 
@@ -231,8 +228,9 @@ aside {
          max-height: none;
       }
 
-      header {
-         height: 25vh;
+      header.child-card {
+         width: 100%;
+         min-height: 70vw;
       }
    }
 }
