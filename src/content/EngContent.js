@@ -1,5 +1,5 @@
 export default {
-   copy: "I'm a full-stack software engineer and designer." +
+   copy: "I'm a junior full-stack software engineer and designer." +
    " I can develop an idea from scratch and turn it into a minimum viable product." +
    "\nI'm a product manager that bridges the gap between the dev team and the client. "+
    "I can translate an idea into a technical solution --" +
@@ -76,6 +76,7 @@ export default {
                   "What I can do. What I've done. Who I am.",
             story: ""
          },
+         live: "http://alhinds.com",
          link: "https://github.com/DarkPurple141/portfolio",
          story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
       }

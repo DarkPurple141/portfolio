@@ -1,7 +1,7 @@
 <template>
 <div>
    <Splash/>
-   <Seperator id="bio" :email="true" :copy="bio"/>
+   <Seperator id="bio" class="bio" :email="true" :copy="bio"/>
    <main class="banners">
      <HomeCard v-for="card in slides"
       :title="card.title"
@@ -42,9 +42,14 @@ export default {
 <style lang="less" scoped>
 
 .fa-icon {
-   margin: 4px;
+   margin: 5px;
    min-height: 100%;
    min-width: 100%;
+}
+
+main {
+   margin: 5vmax;
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .bio-par {
@@ -96,14 +101,18 @@ section:nth-child(odd) {
    article {
       width: 100%;
    }
+
+   main {
+      margin: 0;
+   }
+
 }
 
 // desktop wide
 @media screen and (min-width: 1000px) {
    main {
-      box-shadow: 0px 15px 10px 10px #ddd;
       max-width: 1000px;
-      margin: auto;
+      margin: 5vmax auto;
    }
 }
 

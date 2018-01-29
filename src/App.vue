@@ -12,7 +12,10 @@ import AppNav from '@/components/Nav'
 
 export default {
   name: 'portfolio',
-  components: { AppFooter, AppNav }
+  components: {
+     AppFooter,
+     AppNav
+  }
 }
 </script>
 

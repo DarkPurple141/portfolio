@@ -1,8 +1,12 @@
 <template lang="html">
    <section>
       <article class="header">
-         <icon :name="icon" scale="2"/>
-         <h1><router-link :to="{ name: link }">{{ title }}</router-link></h1>
+         <router-link class="header-link" :to="{ name: link }">
+            <div class="inner">
+               <icon :name="icon" scale="2"/>
+               <h1>{{ title }}</h1>
+            </div>
+         </router-link>
       </article>
       <article class="content">
          <p><span>{{ stub }}</span> {{ content }}</p>
@@ -123,7 +127,6 @@ section:nth-child(odd) {
    color: @text-light;
 }
 
-
 article {
    display: flex;
    flex-direction: column;
@@ -134,10 +137,26 @@ article {
    max-width: 50%;
 }
 
+.header {
+   padding: 0;
+   .header-link {
+      padding: 10% 5%;
+      min-height: 80%;
+      min-width: 90%;
+      display: flex;
+      border: none;
+      .inner {
+         margin: auto;
+      }
+      &:hover {
+         border: none;
+      }
+   }
+}
+
 article > h1 {
    font-size: 2.25em;
 }
-
 
 @media screen and (max-width: 600px) {
 
@@ -166,10 +185,10 @@ article > h1 {
    }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
    section {
       font-size: 1.25rem;
-      max-height: 500px;
+      max-height: 450px;
    }
 
 }

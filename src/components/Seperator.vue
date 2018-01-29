@@ -51,6 +51,13 @@ section article {
    .copy {
       text-align: left;
    }
+
+}
+
+.bio article {
+   .copy {
+      text-align: center;
+   }
 }
 
 section {
