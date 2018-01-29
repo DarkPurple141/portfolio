@@ -50,7 +50,7 @@ export default {
          subjects: [],
          copy: [
             "I like to write and teach. I've always found trying to explain something to be the best test of truly grasping a concept.",
-            "I've learnt a ton reading/watching/listening to tidbits from some amazing minds along my own journey. My writing is a small part of paying that forward."
+            "I've learnt a ton reading, watching, listening to tidbits from some amazing minds along my own journey. My writing is a small part of paying that forward."
          ],
          transition: 'preview-appear'
       }

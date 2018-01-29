@@ -188,7 +188,7 @@ aside {
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 
    section {
       .child-card {
@@ -216,7 +216,7 @@ aside {
          width: 100%;
       }
 
-      summary {
+      summary.child-card {
          margin: 0;
          p {
             font-size: 1.25em;
