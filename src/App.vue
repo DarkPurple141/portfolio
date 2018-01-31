@@ -28,6 +28,7 @@ export default {
   //font-family: 'Roboto', sans-serif;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   //font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  //font-family: Futura,Trebuchet MS,Arial,sans-serif;
   font-size: medium;
   letter-spacing: 0.25px;
   -webkit-font-smoothing: antialiased;

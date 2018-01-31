@@ -71,8 +71,6 @@ export default {
 <style lang="less" scoped>
 @import '../assets/card';
 
-
-
 section:nth-child(3n+2) summary,
 section:nth-child(3n) article {
    background-color: @nav-white;

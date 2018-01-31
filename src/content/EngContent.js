@@ -22,7 +22,7 @@ export default {
                    " I thought the idea of a tank game would be pretty friggin’ fun."
          },
          link: "https://github.com/DarkPurple141/Tank-Hunter-2D",
-         live: "https://cheap-nation.surge.sh",
+         live: " http://alhinds.com/Tank-Hunter-2D/",
          story: "https://medium.com/alex-hinds-portfolio/making-an-html5-game-using-paper-js-dc05f51119d5"
       },
       {
@@ -43,6 +43,23 @@ export default {
          },
          link: "https://github.com/DarkPurple141/Maps",
          story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
+      },
+      {
+         name: "Baby Names",
+         year: 2017,
+         images: {
+            large: "static/images/projects/baby/large.png",
+            small: "static/images/projects/baby/small.png"
+         },
+         languages: ["javascript", "css", "html"],
+         description: {
+            main: "A simple HTML-CSS-JS mix to help come up with a name for.. well basically anything.",
+            story: "After many sleepless nights trying to figure out a name for my partner and I's first born, I resolved to what all good" +
+                  " software engineers do. I built a mini-app."
+         },
+         link: "https://github.com/DarkPurple141/baby-names",
+         live: "http://alhinds.com/baby-names/",
+         story: "https://medium.com/alex-hinds-portfolio/making-an-html5-game-using-paper-js-dc05f51119d5"
       },
       {
          name: "Sokoban",
@@ -78,7 +95,7 @@ export default {
          },
          live: "http://alhinds.com",
          link: "https://github.com/DarkPurple141/portfolio",
-         story: "https://medium.com/@al_hinds/making-dem-maps-fa2187b70c8b#.744ldhpov"
+         story: "https://medium.com/@al_hinds/web-development-is-easy-right-6c27129d9764"
       }
    ]
 }
