@@ -50,7 +50,7 @@ export default {
             large: "static/images/projects/baby/large.jpg",
             small: "static/images/projects/baby/small.png"
          },
-         languages: ["node", "css", "html", "vuejs"],
+         languages: ["node", "css", "vuejs"],
          description: {
             main: "A simple HTML-CSS-JS mix to help come up with a name for.. well basically anything. Well it started like that anyway.",
             story: "After many sleepless nights trying to figure out a name for my partner and I's first born, I resolved to what all good" +

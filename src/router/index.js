@@ -33,6 +33,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 
 export default new Router({
   scrollBehavior,
+  mode: 'history',
   routes: [
     {
       path: '/',

@@ -117,7 +117,7 @@ section article {
 .theme-list {
    width: 70%;
    text-align: left;
-   transition: 0.5s;
+   transition: all 0.3s;
 
    ul {
       padding-left: 10px;
