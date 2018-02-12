@@ -8,7 +8,7 @@ export default [
       icon: "code"
    },
    {
-      stub: "I'm a writer and journalist.",
+      stub: "I'm a journalist.",
       content: "I've written for print and online, worked in television and have produced and run multiple podcasts.",
       title: "Journalist",
       link: "Journalist",
@@ -18,7 +18,7 @@ export default [
    {
       stub: "I'm a teacher and I blog.",
       content: "I teach computer science at UNSW. I like to bring people along on my dev journeys by blogging and explaining my process.",
-      title: "Thinker",
+      title: "Writer",
       link: "Thinker",
       id: "writing",
       icon: "pencil"

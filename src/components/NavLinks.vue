@@ -59,7 +59,8 @@ export default {
 @import '../assets/colors';
 
 section a {
-   font-size: 0.8rem;
+   font-size: 0.95rem;
+   font-weight: normal;
    flex: auto;
    padding: 1em;
    &:hover {

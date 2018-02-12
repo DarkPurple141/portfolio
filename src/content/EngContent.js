@@ -1,10 +1,9 @@
 export default {
-   copy: "I'm a junior full-stack software engineer and designer." +
+   copy: "I'm a junior full-stack software engineer and UI/UX designer." +
    " I can develop an idea from scratch and turn it into a minimum viable product." +
-   "\nI'm a product manager that bridges the gap between the dev team and the client. "+
+   "\nMy skill is in bridging the gap between the dev team and the client. "+
    "I can translate an idea into a technical solution --" +
-   " and I can decode the technical jargon into terms a client can understand.\n" +
-   "If this sounds like the kind of thing you're looking for; get in touch.",
+   " and I can decode the technical jargon into terms a client can understand.\n",
    projects: [
       {
          name: "Tank Hunter",
@@ -48,12 +47,12 @@ export default {
          name: "Baby Names",
          year: 2017,
          images: {
-            large: "static/images/projects/baby/large.png",
+            large: "static/images/projects/baby/large.jpg",
             small: "static/images/projects/baby/small.png"
          },
-         languages: ["javascript", "css", "html"],
+         languages: ["node", "css", "html", "vuejs"],
          description: {
-            main: "A simple HTML-CSS-JS mix to help come up with a name for.. well basically anything.",
+            main: "A simple HTML-CSS-JS mix to help come up with a name for.. well basically anything. Well it started like that anyway.",
             story: "After many sleepless nights trying to figure out a name for my partner and I's first born, I resolved to what all good" +
                   " software engineers do. I built a mini-app."
          },

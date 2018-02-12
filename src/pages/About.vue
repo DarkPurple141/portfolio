@@ -92,6 +92,7 @@ header {
       margin: auto;
       //padding: 5vmax;
       p {
+         font-size: 1.25em;
          line-height: 2;
          //margin: auto;
       }
