@@ -129,6 +129,9 @@ header {
    .description {
       article, section {
          width: 85%;
+         p {
+            font-size: 1em;
+         }
       }
    }
 }
