@@ -15,7 +15,7 @@
       </figure>
       <summary class="child-card">
          <div>
-            <div>
+            <div class="summary">
 
                <p>
                   {{ content.description }}
@@ -47,9 +47,11 @@
          </figure>
          <summary>
             <div>
-               <p>
-                  {{ content.added.description }}
-               </p>
+               <div class="summary">
+                  <p>
+                     {{ content.added.description }}
+                  </p>
+               </div>
             </div>
          </summary>
       </article>

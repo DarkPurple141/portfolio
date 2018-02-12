@@ -18,9 +18,11 @@
       </figure>
       <summary>
          <div>
-            <p>
-               {{ project.description.main }}
-            </p>
+            <div class="summary">
+               <p>
+                  {{ project.description.main }}
+               </p>
+            </div>
          </div>
       </summary>
       <article>
@@ -92,6 +94,15 @@ section:nth-child(3n) summary {
 section:nth-child(3n+1) article {
    background-color: @nav-white;
    color: @text;
+}
+
+section summary div {
+   height: 100%;
+   .summary {
+      height: auto;
+      width: 100%;
+      margin: auto;
+   }
 }
 
 section article {
