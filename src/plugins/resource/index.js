@@ -42,6 +42,11 @@ export default {
         .then(response => response.json())
         .then(response => cache.set(uri, response))
         .then(response => resolve(response, mappers))
+        .catch(err => {
+           console.error(err)
+           /* deal with errors in future */
+           window.location.href = '/thinker'
+        })
     }
   }
 }

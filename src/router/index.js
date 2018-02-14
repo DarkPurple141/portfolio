@@ -69,16 +69,18 @@ export default new Router({
       props: true
    },
    {
+      path: '/thinker/read/*',
+      name: 'Article',
+      component: Writing,
+      props: (route) => ({
+            post: route.query.post,
+        })
+   },
+   {
      path: '/thinker/:subject',
      name: 'BlogSubject',
      component: Writing,
      props: true
-   },
-   {
-      path: '/thinker/read/:post',
-      name: 'Article',
-      component: Writing,
-      props: true
    },
    {
       path: '/about',

@@ -1,7 +1,7 @@
 <template lang="html">
    <transition-group tag="ul" :name="transition">
       <li v-for="post in feed" class="preview" :key="post.id">
-         <router-link :to="{ path: `/thinker/read/${post.id}` }">
+         <router-link :to="{ path: `/thinker/read/?post=${post.id}` }">
             <summary>
                <h2>{{ post.title }}</h2>
                <!--<h4>{{ post.tags }}</h4>-->

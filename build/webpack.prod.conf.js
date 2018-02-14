@@ -41,7 +41,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       // Absolute path to compiled SPA
       path.join(__dirname, '../dist'),
       // List of routes to prerender
-      [ '/', '/about', '/engineer', '/thinker', '/journo' ]
+      [ '/', '/about', '/engineer', '/thinker', '/journo', '/thinker/read/' ]
     ),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
