@@ -3,7 +3,7 @@
    <article class="lede">
       <aside v-if="resume">
          <p>Honestly, I just came here for a resumé.</p>
-         <a href="static/resume.pdf">
+         <a href="/static/resume.pdf">
             <figure>
                <icon scale='2.5' name="file"/>
             </figure>

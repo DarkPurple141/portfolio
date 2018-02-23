@@ -16,7 +16,7 @@ export default {
          let val = ""
          switch (this.language) {
             case 'c':
-               val = 'static/images/icons/c.png'
+               val = '/static/images/icons/c.png'
                break;
             case 'java':
                val = 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg'
@@ -40,7 +40,7 @@ export default {
                val = 'https://vuejs.org/images/logo.png'
                break;
             case 'paperjs':
-               val = 'static/images/icons/paperjs.jpg'
+               val = '/static/images/icons/paperjs.jpg'
                break;
             case 'npm':
                val = 'https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg'
@@ -61,7 +61,7 @@ export default {
                val = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'
                break;
             case 'markdown':
-               val = 'static/images/icons/markdown.svg'
+               val = '/static/images/icons/markdown.svg'
                break;
             case 'less':
                val = "http://lesscss.org/public/img/logo.png"

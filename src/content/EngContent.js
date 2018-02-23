@@ -9,8 +9,8 @@ export default {
          name: "Tank Hunter",
          year: 2016,
          images: {
-            large: "static/images/projects/tanks/large.png",
-            small: "static/images/projects/tanks/small.png"
+            large: "/static/images/projects/tanks/large.png",
+            small: "/static/images/projects/tanks/small.png"
          },
          languages: ["javascript", "css", "html"],
          tools: ["paper.js"],
@@ -28,8 +28,8 @@ export default {
          name: "Map Maker",
          year: 2016,
          images: {
-            large: "static/images/projects/maps/large.jpg",
-            small: "static/images/projects/maps/small.jpg"
+            large: "/static/images/projects/maps/large.jpg",
+            small: "/static/images/projects/maps/small.jpg"
          },
          languages: ["python"],
          tools: ["pygame"],
@@ -47,8 +47,8 @@ export default {
          name: "Baby Names",
          year: 2017,
          images: {
-            large: "static/images/projects/baby/large.jpg",
-            small: "static/images/projects/baby/small.png"
+            large: "/static/images/projects/baby/large.jpg",
+            small: "/static/images/projects/baby/small.png"
          },
          languages: ["node", "css", "vuejs"],
          description: {
@@ -64,8 +64,8 @@ export default {
          name: "Sokoban",
          year: 2017,
          images: {
-            large: "static/images/projects/sokoban/large.png",
-            small: "static/images/projects/sokoban/small.png"
+            large: "/static/images/projects/sokoban/large.png",
+            small: "/static/images/projects/sokoban/small.png"
          },
          languages: ["java"],
          tools: ["junit", "swing"],
@@ -81,8 +81,8 @@ export default {
          name: "Portfolio",
          year: 2018,
          images: {
-            large: "static/images/projects/portfolio/large.png",
-            small: "static/images/projects/portfolio/small.png"
+            large: "/static/images/projects/portfolio/large.png",
+            small: "/static/images/projects/portfolio/small.png"
          },
          languages: ["javascript", "vuejs", "npm", "css", "node"],
          tools: ["less", "vuejs", "node"],

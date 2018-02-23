@@ -5,7 +5,7 @@
    <section class="description">
       <article>
          <figure>
-            <img src="static/images/profile.jpg" alt="Alex Hinds profile">
+            <img src="/static/images/profile.jpg" alt="Alex Hinds profile">
          </figure>
          <h2>Hi, I'm Alex.</h2>
          <aside>
