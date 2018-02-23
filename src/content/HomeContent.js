@@ -27,7 +27,7 @@ export default [
       stub: "I've got a diverse skillset.",
       content: "I pride myself on being the bridge between the technical and non-technical. "+
          "I can comfortably sit in both worlds.",
-      title: "Problem Solver", // Adaptable, Malleable,
+      title: "About", // Adaptable, Malleable,
       link: "About",
       id: "skills",
       icon: "gears"

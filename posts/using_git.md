@@ -3,7 +3,7 @@ title: Using Git
 stub: Getting started with git, a version control system
 tags: linux,git,explainers
 ---
-**[This tutorial is comprehensive]**(https://www.atlassian.com/git/tutorials/what-is-version-control) - I suggest you use it, but if time poor, below will suffice.
+[This tutorial is comprehensive](https://www.atlassian.com/git/tutorials/what-is-version-control) - I suggest you use it, but if time poor, below will suffice.
 
 ## Installing Git
 If you don't have git already (most systems will), you'll need to install it
