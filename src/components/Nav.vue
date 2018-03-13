@@ -41,6 +41,8 @@ nav {
    align-items: center;
    background-color: @nav-white;
    color: @background-dark;
+   font-size: 1.25em;
+   height: 90px;
 }
 
 section a {
@@ -65,7 +67,7 @@ nav > section {
    cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
    nav {
       z-index: 1;
       position: fixed;

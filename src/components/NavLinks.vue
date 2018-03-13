@@ -59,8 +59,8 @@ export default {
 @import '../assets/colors';
 
 section a {
-   font-size: 0.95rem;
-   font-weight: normal;
+   //font-size: 1.25rem;
+   //font-weight: normal;
    flex: auto;
    padding: 1em;
    &:hover {
@@ -123,7 +123,7 @@ section a {
    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
    .right-nav .fullscreen {
       display: none;
    }
