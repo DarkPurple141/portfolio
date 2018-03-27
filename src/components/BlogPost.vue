@@ -5,7 +5,7 @@
       <router-link :to="{ path: '/thinker' }"><h3>Back</h3></router-link>
       <footer class="comments">
          <vue-disqus v-if="commentsReady" shortname="alhinds"
-          :key="post" :identifier="post" :url="`https://alhinds.com/#/thinker/read/${post}`"/>
+          :key="post" :identifier="post" :url="`http://alhinds.com/thinker/read/?post=${post}`"/>
       </footer>
    </section>
 </template>

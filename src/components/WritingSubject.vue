@@ -49,7 +49,7 @@ export default {
            }
          }
 
-         interval = setInterval(stack, 150)
+         interval = setInterval(stack, 0)
       },
       filterBy(posts) {
          return posts.filter(item =>
