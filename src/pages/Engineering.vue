@@ -17,7 +17,6 @@ import ArticleHeader from '@/components/ArticleHeader'
 import Seperator from '@/components/Seperator'
 import EngContent from '@/content/EngContent'
 
-const API_URI = "https://api.github.com/"
 
 export default {
    name: "Projects",
