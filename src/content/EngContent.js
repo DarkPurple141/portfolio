@@ -6,6 +6,25 @@ export default {
    " and I can decode the technical jargon into terms a client can understand.\n",
    projects: [
       {
+         name: "Sort Visualizer",
+         year: 2018,
+         images: {
+            large: "/static/images/projects/sorting/large.png",
+            small: "/static/images/projects/sorting/small.jpg"
+         },
+         languages: ["javascript", "css", "html"],
+         tools: [],
+         description: {
+            main: "As preparation for an frontend interview I wanted to make something in pure javascript. This was " +
+                  "an exercise in writing clean code, and making something fun. Plus it's educational.",
+            story: "I need* to write something in depth about making this, but part of it came from wanting to explore the. "+
+                   "concept of generators in an asynchronous context of javascript."
+         },
+         link: "https://github.com/DarkPurple141/sorting-algo-visualizer",
+         live: "https://sorting.alhinds.com",
+         story: "https://medium.com/@al_hinds/web-development-is-easy-right-6c27129d9764"
+      },
+      {
          name: "Tank Hunter",
          year: 2016,
          images: {
