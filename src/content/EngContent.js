@@ -17,8 +17,8 @@ export default {
          description: {
             main: "As preparation for an interview I wanted to make something in pure javascript. This was " +
                   "an exercise in writing clean code, and making something fun. Plus it's educational.",
-            story: "I need to write something in depth about making this, but part of it came from wanting to explore the. "+
-                   "concept of generators in an asynchronous context of javascript."
+            story: "I need to write something in depth about making this, but part of it came from wanting to explore the "+
+                   "concept of generators in a asynchronous javascript."
          },
          link: "https://github.com/DarkPurple141/sorting-algo-visualizer",
          live: "https://sorting.alhinds.com",
