@@ -97,18 +97,13 @@ section a {
 }
 
 .dropdown-content {
-   font-size: 1.5rem;
+   font-size: 1.3rem;
    background-color: #f8f8f8;
    z-index: 1;
 }
 
 .dropdown-open {
    display: none;
-   transition: all .5s ease;
-   -webkit-transition: all .5s ease;
-   -moz-transition: all .5s ease;
-   -o-transition: all .5s ease;
-
    .dropdown-content {
       position: fixed;
       left: 0;
