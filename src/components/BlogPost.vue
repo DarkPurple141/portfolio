@@ -4,7 +4,7 @@
       <article class="blog-content" v-html="markdown"></article>
       <router-link :to="{ path: '/thinker' }"><h3>Back</h3></router-link>
       <footer class="comments">
-         <vue-disqus v-if="commentsReady" shortname="alhinds"
+         <vue-disqus v-if="commentsReady" shortname="ah-portfolio"
           :key="post" :identifier="post" :url="`https://alhinds.com/thinker/read/?post=${post}`"/>
       </footer>
    </section>
