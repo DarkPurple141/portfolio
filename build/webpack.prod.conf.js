@@ -37,12 +37,14 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
 
-     new PrerenderSpaPlugin(
+    new PrerenderSpaPlugin({
       // Absolute path to compiled SPA
-      path.join(__dirname, '../dist'),
-      // List of routes to prerender
-      [ '/', '/about', '/engineer', '/thinker', '/journo', '/thinker/read/' ]
-    ),
+      staticDir: path.join(__dirname, '../dist'),
+      // Optional - The location of index.html
+      indexPath: path.join(__dirname, '../dist', 'index.html'),
+      // Required - Routes to render.
+      routes:[ '/', '/about', '/engineer', '/thinker', '/journo', '/thinker/read/' ]
+    }),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
