@@ -42,7 +42,7 @@ nav {
    background-color: @nav-white;
    color: @background-dark;
    font-size: 1.25em;
-   height: 90px;
+   height: 75px;
 }
 
 section a {
