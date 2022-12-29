@@ -3,6 +3,10 @@
   "private": true,
   "author": "Alex H <alex.hinds141@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "eslint --ext .ts,.tsx packages/**"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
     "@types/node": "^17.0.45",
