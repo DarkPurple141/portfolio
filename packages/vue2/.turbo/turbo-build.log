@@ -1,0 +1,29 @@
+
+> @portfolio/vue2@1.0.0 build /Users/ahinds/repos/portfolio/packages/vue2
+> node build/blogs.js && vite build
+
+published-2017-october-10-abstraction-basics.json saved!
+what_are_header_files.json saved!
+using_git.json saved!
+what_is_main_argcv.json saved!
+getting_started_with_scp.json saved!
+error_checking_and_debugging.json saved!
+type_in_c.json saved!
+getting_started_with_functions.json saved!
+getting_started_with_ssh.json saved!
+All done!
+vite v4.0.3 building for production...
+transforming...
+✓ 98 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                  2.73 kB
+dist/assets/media-a0adef18.jpg                  92.66 kB
+dist/assets/profile-0b06fd36.jpg               114.99 kB
+dist/assets/skills-b67d9428.jpg                210.72 kB
+dist/assets/profile_landscape_bw-d9252821.jpg  315.48 kB
+dist/assets/profile_landscape-6cda7501.jpg     338.60 kB
+dist/assets/teaching-61977f01.jpg              367.41 kB
+dist/assets/mandelbrot-5334fe68.jpg            535.42 kB
+dist/assets/style-91f441af.css                  24.34 kB │ gzip:  4.92 kB
+dist/assets/index-bca27eb9.js                  242.08 kB │ gzip: 85.57 kB
