@@ -1,40 +1,41 @@
+<!-- eslint-disable vue/require-v-for-key -->
 <template>
-<div>
-   <ul>
+  <div>
+    <ul>
       <li class="lang-icons" v-for="lang in languages">
-         <LanguageIcon :language="lang"/>
+        <LanguageIcon :language="lang" />
       </li>
-   </ul>
-</div>
+    </ul>
+  </div>
 </template>
 
 <script>
-import LanguageIcon from '@/components/LanguageIcon.vue';
+import LanguageIcon from '@/components/LanguageIcon.vue'
 
 export default {
-   props: {
-      languages: {
-         type: Array
-      }
-   },
-   components: {
-      LanguageIcon
-   }
+  props: {
+    languages: {
+      type: Array,
+    },
+  },
+  components: {
+    LanguageIcon,
+  },
 }
 </script>
 
 <style scoped lang="less">
 div {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 ul {
-   //background-color: white;
-   //width: 500px;
-   padding: 0;
-   max-width: 100%;
-   margin: auto;
+  //background-color: white;
+  //width: 500px;
+  padding: 0;
+  max-width: 100%;
+  margin: auto;
 }
 
 li {
@@ -43,7 +44,6 @@ li {
 }
 
 .lang-icons {
-   margin: 2vmax;
+  margin: 2vmax;
 }
-
 </style>

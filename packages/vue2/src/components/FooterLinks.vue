@@ -1,41 +1,37 @@
 <template>
-<nav>
-   <ul>
-      <li v-for="link in links">
-         <router-link :to="{ name: link.name }">{{link.name}}</router-link>
+  <nav>
+    <ul>
+      <li v-for="link in links" :key="link.name">
+        <router-link :to="{ name: link.name }">{{ link.name }}</router-link>
       </li>
-   </ul>
-</nav>
+    </ul>
+  </nav>
 </template>
 
 <script>
 import { isTopLevelRoute } from '@/helpers'
 
 export default {
+  data() {
+    return {
+      links: [],
+    }
+  },
 
-   data() {
-      return {
-         links: []
-      }
-   },
+  methods: {
+    isTopLevelRoute,
+  },
 
-   methods: {
-      isTopLevelRoute
-   },
-
-   mounted() {
-      this.$router.options.routes.forEach(route => {
-            if (this.isTopLevelRoute(route.name)) {
-               this.links.push(
-                  {
-                      name: route.name,
-                      path: route.path
-                  }
-               )
-            }
+  mounted() {
+    this.$router.options.routes.forEach((route) => {
+      if (this.isTopLevelRoute(route.name)) {
+        this.links.push({
+          name: route.name,
+          path: route.path,
         })
-   }
-
+      }
+    })
+  },
 }
 </script>
 
@@ -43,58 +39,57 @@ export default {
 @import '../assets/colors';
 
 nav {
-   font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 a {
-   transition: all .2s ease;
-   -webkit-transition: all .2s ease;
-   -moz-transition: all .2s ease;
-   -o-transition: all .2s ease;
-   &:link {
-      border-bottom: 1.5px solid transparent;
-   }
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  &:link {
+    border-bottom: 1.5px solid transparent;
+  }
 
-   &:visited {
-      color: @text-light-link;
-   }
+  &:visited {
+    color: @text-light-link;
+  }
 
-   &:hover {
-      color: lighten(@text-light, 15%);
-      border-color: lighten(@text-light, 15%);
-   }
-/*
+  &:hover {
+    color: lighten(@text-light, 15%);
+    border-color: lighten(@text-light, 15%);
+  }
+  /*
    &:focus {
       color: lighten(@text-light, 15%);
       border-color: lighten(@text-light, 15%);
    }
 */
-   &:active {
-      color: @text-light-link;
-      border-color: @text-light-link;
-   }
+  &:active {
+    color: @text-light-link;
+    border-color: @text-light-link;
+  }
 }
 
 ul {
-   margin: 0 auto;
-   list-style-type: none;
-   padding: 0.5em;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0.5em;
 }
 
 li {
-   margin: 0;
-   padding-left: 0.5em;
-   padding-right: 0.5em;
-   display: inline-block;
-   border-right: 1px solid #ddd;
+  margin: 0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: inline-block;
+  border-right: 1px solid #ddd;
 }
 
 li:first-child {
-   padding-left: 0.5em;
+  padding-left: 0.5em;
 }
 
 li:last-child {
-   border-right: none;
+  border-right: none;
 }
-
 </style>

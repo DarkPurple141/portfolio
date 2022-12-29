@@ -1,4 +1,3 @@
-
 import 'vue-awesome/icons/github'
 import 'vue-awesome/icons/bitbucket'
 import 'vue-awesome/icons/twitter'

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import Router, { RouterOptions } from 'vue-router'
 import Home from '@/pages/Home.vue'
 import About from '@/pages/About.vue'
 import Engineering from '@/pages/Engineering.vue'
@@ -7,12 +7,16 @@ import Journalism from '@/pages/Journalism.vue'
 import Writing from '@/pages/Writing.vue'
 
 Vue.use(Router)
-const scrollBehavior = (to, from, savedPosition) => {
+const scrollBehavior: RouterOptions['scrollBehavior'] = (
+  to,
+  _,
+  savedPosition
+) => {
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
     return savedPosition
   } else {
-    const position = {}
+    const position = {} as any
     // new navigation.
     // scroll to anchor by returning the selector
     if (to.hash) {
