@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <section>
    <article class="lede">
       <aside v-if="resume">

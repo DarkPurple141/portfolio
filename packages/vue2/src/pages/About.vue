@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div>
 <!--<ArticleHeader  :title="'About'"/>-->
 <main>
@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import ArticleHeader from '@/components/ArticleHeader'
+import ArticleHeader from '@/components/ArticleHeader.vue'
 import AboutContent from '@/content/AboutContent'
-import LanguageIcons from '@/components/LanguageIcons'
-import Seperator from '@/components/Seperator'
+import LanguageIcons from '@/components/LanguageIcons.vue'
+import Seperator from '@/components/Seperator.vue'
 
 export default {
    components: { ArticleHeader, LanguageIcons, Seperator },

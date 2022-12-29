@@ -1,6 +1,6 @@
-<template lang="html">
+<template>
 <i>
-   <img :title="language" :src="img_link"></img>
+   <img :title="language" :src="img_link">
 </i>
 </template>
 

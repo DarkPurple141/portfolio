@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div>
    <ArticleHeader :title="'Journalism'"/>
    <Seperator class="seperator" :copy="lede"/>
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import ArticleHeader from '@/components/ArticleHeader'
+import ArticleHeader from '@/components/ArticleHeader.vue'
 import MediaContent from '@/content/MediaContent'
-import Seperator from '@/components/Seperator'
-import MediaCard from '@/components/MediaCard'
+import Seperator from '@/components/Seperator.vue'
+import MediaCard from '@/components/MediaCard.vue'
 
 export default {
    name: 'Media',

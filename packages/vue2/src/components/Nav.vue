@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <nav>
    <!-- Home Button -->
    <section>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Links from '@/components/NavLinks';
+import Links from '@/components/NavLinks.vue';
 
 export default {
    components: { Links },

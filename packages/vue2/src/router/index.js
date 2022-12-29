@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/Home'
-import About from '@/pages/About'
-import Engineering from '@/pages/Engineering'
-import Journalism from '@/pages/Journalism'
-import Writing from '@/pages/Writing'
+import Home from '@/pages/Home.vue'
+import About from '@/pages/About.vue'
+import Engineering from '@/pages/Engineering.vue'
+import Journalism from '@/pages/Journalism.vue'
+import Writing from '@/pages/Writing.vue'
 
 Vue.use(Router)
 const scrollBehavior = (to, from, savedPosition) => {
@@ -19,7 +19,7 @@ const scrollBehavior = (to, from, savedPosition) => {
       position.selector = to.hash
     }
     // check if any matched route config has meta that requires scrolling to top
-    if (to.matched.some(m => m.meta.scrollToTop)) {
+    if (to.matched.some((m) => m.meta.scrollToTop)) {
       // cords will be used if no selector is provided,
       // or if the selector didn't match any element.
       position.x = 0
@@ -40,55 +40,55 @@ export default new Router({
       name: 'Home',
       component: Home,
       meta: {
-         scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: '/engineer',
       name: 'Engineer',
       component: Engineering,
       meta: {
-         scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: '/journo',
       name: 'Journalist',
       component: Journalism,
       meta: {
-         scrollToTop: true
-      }
+        scrollToTop: true,
+      },
     },
     {
       path: '/thinker',
       name: 'Thinker',
       component: Writing,
       meta: {
-         scrollToTop: true
+        scrollToTop: true,
       },
-      props: true
-   },
-   {
+      props: true,
+    },
+    {
       path: '/thinker/read/*',
       name: 'Article',
       component: Writing,
       props: (route) => ({
-            post: route.query.post,
-        })
-   },
-   {
-     path: '/thinker/:subject',
-     name: 'BlogSubject',
-     component: Writing,
-     props: true
-   },
-   {
+        post: route.query.post,
+      }),
+    },
+    {
+      path: '/thinker/:subject',
+      name: 'BlogSubject',
+      component: Writing,
+      props: true,
+    },
+    {
       path: '/about',
       name: 'About',
       component: About,
       meta: {
-         scrollToTop: true
-      }
-   }
-  ]
+        scrollToTop: true,
+      },
+    },
+  ],
 })

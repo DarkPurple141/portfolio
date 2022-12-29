@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div>
    <ArticleHeader v-if="!post" :title="'Writing'"/>
    <Seperator v-if="!post" class="support" :copy="copy"/>
@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import Seperator from '@/components/Seperator'
-import ArticleHeader from '@/components/ArticleHeader'
-import BlogPost from '@/components/BlogPost'
-import WritingSubject from '@/components/WritingSubject'
+import Seperator from '@/components/Seperator.vue'
+import ArticleHeader from '@/components/ArticleHeader.vue'
+import BlogPost from '@/components/BlogPost.vue'
+import WritingSubject from '@/components/WritingSubject.vue'
 
 export default {
    name: "Thinker",

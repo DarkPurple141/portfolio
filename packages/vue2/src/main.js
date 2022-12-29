@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import VueScrollTo from 'vue-scrollto'
 import VueAnalytics from 'vue-analytics'
-import App from './App'
+import App from './App.vue'
 import router from './router'
-import Icon from 'vue-awesome/components/Icon'
+import Icon from 'vue-awesome/components/Icon.vue'
 import './icons'
 import './helpers'
 import resource from './plugins/resource'
@@ -25,20 +25,20 @@ Vue.use(VueScrollTo)
 
 Vue.use(VueAnalytics, {
   router,
-  id: 'UA-25942721-4'
+  id: 'UA-25942721-4',
 })
 
 Vue.use(resource, {
-   resources: content,
-   endpoint: '/static/api'
+  resources: content,
+  endpoint: '/static/api',
 })
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
+  render: (h) => h(App),
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
+  components: { App },
 })

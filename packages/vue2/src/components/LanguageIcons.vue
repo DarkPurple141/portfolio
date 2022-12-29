@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div>
    <ul>
       <li class="lang-icons" v-for="lang in languages">
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import LanguageIcon from '@/components/LanguageIcon';
+import LanguageIcon from '@/components/LanguageIcon.vue';
 
 export default {
    props: {

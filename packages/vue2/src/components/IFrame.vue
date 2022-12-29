@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <aside class="live">
       <iframe v-if="project.live" frameborder="0"
               allowfullscreen

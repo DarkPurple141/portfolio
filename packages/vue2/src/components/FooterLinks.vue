@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <nav>
    <ul>
       <li v-for="link in links">

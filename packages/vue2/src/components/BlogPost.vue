@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <section class="blog">
       <h1 class="banner">{{ title }}</h1>
       <article class="blog-content" v-html="markdown"></article>
@@ -10,9 +10,9 @@
    </section>
 </template>
 
-<script>
-import VueDisqus from 'vue-disqus/VueDisqus'
-import marked from 'marked'
+<script lang="ts">
+import VueDisqus from 'vue-disqus/VueDisqus.vue'
+import * as marked from 'marked'
 import Prism from 'prismjs'
 
 export default {

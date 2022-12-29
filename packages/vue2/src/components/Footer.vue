@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <footer>
       <!-- Home Icon -->
       <router-link class="highlight-logo" :to="{ name: 'Home' }">
@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import Links from '@/components/FooterLinks'
-import Logo from '@/components/Logo'
+import Links from '@/components/FooterLinks.vue'
+import Logo from '@/components/Logo.vue'
 
 export default {
    name: 'AppFooter',

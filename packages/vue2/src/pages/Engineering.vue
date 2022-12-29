@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div>
    <ArticleHeader :title="'Engineering'"/>
    <Seperator :copy="copy"/>
@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import ProjectCard from '@/components/ProjectCard'
-import ArticleHeader from '@/components/ArticleHeader'
-import Seperator from '@/components/Seperator'
+import ProjectCard from '@/components/ProjectCard.vue'
+import ArticleHeader from '@/components/ArticleHeader.vue'
+import Seperator from '@/components/Seperator.vue'
 import EngContent from '@/content/EngContent'
 
 

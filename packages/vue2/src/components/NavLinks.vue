@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <section class="right-nav">
    <nav :class="{ 'dropdown-open': open, 'dropdown': !open }" @click="$emit('toggle')">
       <icon class="menu-icon" :name="open ? 'close' : 'reorder'" scale="1.5"></icon>

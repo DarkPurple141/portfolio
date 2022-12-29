@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <header>
       <h1 class="banner">{{ title }}</h1>
    </header>

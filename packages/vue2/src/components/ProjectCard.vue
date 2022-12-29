@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <section>
       <header>
          <div>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import LanguageIcons from '@/components/LanguageIcons'
+import LanguageIcons from '@/components/LanguageIcons.vue'
 
 export default {
    props: {

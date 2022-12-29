@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import AppFooter from '@/components/Footer'
-import AppNav from '@/components/Nav'
+import AppFooter from '@/components/Footer.vue'
+import AppNav from '@/components/Nav.vue'
 
 export default {
   name: 'portfolio',

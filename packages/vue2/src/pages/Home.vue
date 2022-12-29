@@ -19,9 +19,9 @@
 <script>
 import slides from '@/content/HomeContent'
 import AboutContent from '@/content/AboutContent'
-import HomeCard from '@/components/HomeCard'
-import Seperator from '@/components/Seperator'
-import Splash from '@/components/Splash'
+import HomeCard from '@/components/HomeCard.vue'
+import Seperator from '@/components/Seperator.vue'
+import Splash from '@/components/Splash.vue'
 
 export default {
   name: 'Home',

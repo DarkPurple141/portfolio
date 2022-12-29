@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <transition-group tag="ul" :name="transition">
       <li v-for="post in feed" class="preview" :key="post.id">
          <router-link :to="{ path: `/thinker/read/?post=${post.id}` }">

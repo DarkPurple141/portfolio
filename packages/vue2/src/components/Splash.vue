@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <header>
       <Logo :scalefactor="1.5" :stroke="'#2c3e50'" :fill="'#2c3e50'"/>
       <a href="#" v-scroll-to="'#bio'">
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo'
+import Logo from '@/components/Logo.vue'
 
 export default {
    components: { Logo }

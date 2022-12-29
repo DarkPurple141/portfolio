@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
    <section>
       <article class="header">
          <router-link class="header-link" :to="{ name: link }">
@@ -10,7 +10,7 @@
       </article>
       <article class="content">
          <p><span>{{ stub }}</span> {{ content }}</p>
-         <router-link :to="{ name: link }">< More ></router-link>
+         <router-link :to="{ name: link }">&lt; More &gt;</router-link>
       </article>
    </section>
 </template>
