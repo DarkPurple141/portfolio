@@ -4,6 +4,7 @@
   "author": "Alex H <alex.hinds141@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "deploy": "turbo run deploy",
     "build": "turbo run build",
     "lint": "eslint --ext .ts,.tsx packages/**"
   },
