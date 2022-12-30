@@ -61,7 +61,7 @@ main {
 
 header {
   background-image: linear-gradient(90deg, fade(@pallette-b, 45%), @pallette-d),
-    url('../../images/profile_landscape.jpg');
+    url('/images/profile_landscape.jpg');
   background-size: auto, 2500px auto;
 }
 
