@@ -31,7 +31,7 @@ Vue.use(VueAnalytics, {
 
 Vue.use(resource, {
   resources: content,
-  endpoint: '/static/api',
+  endpoint: '/api',
 })
 
 Vue.config.productionTip = false

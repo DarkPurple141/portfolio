@@ -61,7 +61,8 @@ export default {
   },
   beforeMount() {
     // @ts-expect-error
-    this.$getResource('post', this.post).then(this.showComments)
+    this.$getResource('post', this.post)
+    // .then(this.showComments)
   },
 }
 </script>

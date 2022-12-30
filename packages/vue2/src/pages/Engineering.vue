@@ -33,7 +33,7 @@ export default {
 
 header {
   background-image: linear-gradient(90deg, fade(@pallette-b, 45%), @pallette-d),
-    url('/static/images/mandelbrot.jpg');
+    url('/images/mandelbrot.jpg');
   background-size: auto, 100% auto;
 }
 

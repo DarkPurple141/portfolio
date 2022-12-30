@@ -44,7 +44,7 @@ export default {
 @import '../assets/colors';
 header {
   background-image: linear-gradient(90deg, fade(@pallette-e, 40%), @pallette-d),
-    url('/static/images/media.jpg');
+    url('/images/media.jpg');
   background-size: auto, cover;
 }
 

@@ -80,7 +80,7 @@ header {
     90deg,
     fade(@pallette-b, 45%),
     @pallette-c
-  ); //url("../../static/images/mandelbrot.jpg");
+  ); //url("../../images/mandelbrot.jpg");
   background-size: auto, 100% auto;
 }
 

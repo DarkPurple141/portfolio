@@ -1,8 +1,9 @@
 name: CI Build & Testing
 
 on:
-  - push
-  - pull_request
+  push:
+    branches-ignore:
+      - master
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}

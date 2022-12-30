@@ -88,19 +88,19 @@ p {
 #tech .header:hover {
   transition: 0.5s ease-in;
   background-image: linear-gradient(#222, transparent),
-    url('../../static/images/mandelbrot.jpg');
+    url('../../images/mandelbrot.jpg');
   background-size: 100%;
 }
 
 #media .header:hover {
   background-image: linear-gradient(white, transparent),
-    url('../../static/images/media.jpg');
+    url('../../images/media.jpg');
   background-size: cover;
 }
 
 #writing .header:hover {
   background-image: linear-gradient(#222, transparent),
-    url('../../static/images/teaching.jpg');
+    url('../../images/teaching.jpg');
   background-size: cover;
 }
 
@@ -109,7 +109,7 @@ p {
       fade(@pallette-a, 85%),
       fade(@pallette-a, 90%)
     ),
-    url('../../static/images/skills.jpg');
+    url('../../images/skills.jpg');
   background-size: cover;
 }
 

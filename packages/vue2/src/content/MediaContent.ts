@@ -7,7 +7,7 @@ export default {
   content: [
     {
       name: 'GetUp!',
-      image: '/static/images/getup.jpg',
+      image: '/images/getup.jpg',
       description:
         'Worked in communications and strategy for GetUp!, ' +
         'a political advocacy group in the lead-up to the 2010 election.',
@@ -21,7 +21,7 @@ export default {
     },
     {
       name: 'FuturePLC',
-      image: '/static/images/cycling.jpg',
+      image: '/images/cycling.jpg',
       description:
         'First full-time gig as a reporter and online editor with' +
         ' British Publisher Future PLC was a blast. Travel, commissioning and editing.',
@@ -36,7 +36,7 @@ export default {
     },
     {
       name: 'SBS',
-      image: '/static/images/tv.jpg',
+      image: '/images/tv.jpg',
       description:
         'I jumped at the chance to join SBS as a journalist in 2011.' +
         ' Worked across televison and online, and went to the Tour de France in 2014.',
@@ -49,7 +49,7 @@ export default {
       },
       added: {
         name: 'Podcasts, Opinions',
-        image: '/static/images/podcast.jpg',
+        image: '/images/podcast.jpg',
         description:
           'SBS was also where I really began to find myself as columnist and opinion writer;' +
           ' developing a strong following which helped to launch a podcast in 2012, and allowed me to branch out and co-write my first book.',
@@ -58,7 +58,7 @@ export default {
     },
     {
       name: 'Guardian Australia',
-      image: '/static/images/guardian.jpg',
+      image: '/images/guardian.jpg',
       preview: {
         content:
           'Set to take place in a sold-out Key Arena, Seattle, the fifth edition of ‘The International’ broke its own record this week when its prize-pool bubbled above the $US 11 million dollar mark after another surge in funding support from fans.',

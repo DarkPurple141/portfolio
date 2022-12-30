@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const BASE = './posts'
-const DEST = './static/api'
+const DEST = './public/api'
 
 function success(err) {
   err ? console.error(err) : console.log('All done!')

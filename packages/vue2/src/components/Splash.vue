@@ -27,7 +27,7 @@ a {
 // standard
 header {
   background-image: linear-gradient(90deg, fade(@pallette-b, 45%), @pallette-d),
-    url('../../static/images/profile_landscape_bw.jpg');
+    url('../../images/profile_landscape_bw.jpg');
   background-size: 100% auto, 2000px auto;
   background-repeat: no-repeat;
   display: flex;
