@@ -31,5 +31,5 @@ jobs:
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-          VUE_DEPLOY_URL: https://${{repository.owner}}-${{repository.name}}-${{job.name}}-pr-${{pr.number}}.surge.sh
+          VUE_DEPLOY_URL: https://${{github.repository.owner}}-${{github.repository.name}}-${{github.job.name}}-pr-${{github.pr.number}}.surge.sh
         run: pnpm deploy
