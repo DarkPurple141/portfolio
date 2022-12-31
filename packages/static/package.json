@@ -1,4 +1,7 @@
 {
   "name": "@portfolio/static",
-  "author": "Alex Hinds <alex.hinds141@gmail.com>"
+  "author": "Alex Hinds <alex.hinds141@gmail.com>",
+  "scripts": {
+    "build": "echo 'Nothing to do!"
+  }
 }
