@@ -25,7 +25,7 @@ function writeContents(name, meta, date, contents) {
   return new Promise((res, rej) => {
     fs.writeFile(
       `${DEST}/post/${name}.json`,
-      JSON.stringify(json),
+      JSON.stringify(json, null, 2),
       function (err) {
         if (err) {
           rej(err)
@@ -129,9 +129,13 @@ asyncMain()
   .then((data) =>
     fs.writeFile(
       `${DEST}/feed.json`,
-      JSON.stringify({
-        results: data,
-      }),
+      JSON.stringify(
+        {
+          results: data,
+        },
+        null,
+        2
+      ),
       success
     )
   )
