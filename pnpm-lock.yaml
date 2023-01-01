@@ -32,7 +32,10 @@ importers:
       vite: 4.0.3_@types+node@17.0.45
       vitest: 0.26.2
 
-  packages/vue2:
+  apps/static:
+    specifiers: {}
+
+  apps/vue2:
     specifiers:
       '@types/marked': ^4.0.8
       '@types/prismjs': ^1.26.0
