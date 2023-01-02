@@ -33,7 +33,7 @@ export const jobData: Job[] = [
     href: 'https://halyard.dev',
     start_date: new Date('2015').getFullYear(),
     description:
-      "I've built and helped maintain websites for Universities, architecture firms and NFPs.",
+      'I built and helped maintain websites for Universities, architecture firms and NFPs.',
   },
   {
     title: 'Open Source Contributor',
@@ -41,7 +41,7 @@ export const jobData: Job[] = [
     href: 'https://github.com/DarkPurple141/eslint-codemod-utils',
     start_date: new Date('2018').getFullYear(),
     description:
-      "I've been a regular contributor to OSS projects including @compiled, @emotion and eslint-codemod-utils among others.",
+      'I have been a regular contributor to OSS projects including @compiled, @emotion, storybook-addon-performance and eslint-codemod-utils. I see contribution as an important part of being a developer.',
   },
   {
     title: 'TA / Tutor',
@@ -62,8 +62,8 @@ export const jobData: Job[] = [
       'Wrote news and features, took charge of community engagement through social media, ran liveblogs, and liaised with potential writers to engage them if and when required on relevant issues.',
   },
   {
-    title: 'Journalist, Digital Producer',
-    company: 'Special Broadcasting Service',
+    title: 'Journalist / Digital Producer',
+    company: 'SBS',
     href: 'https://sbs.com.au/',
     start_date: new Date('2011').getFullYear(),
     end_date: new Date('2015').getFullYear(),
