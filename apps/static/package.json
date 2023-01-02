@@ -2,6 +2,10 @@
   "name": "@portfolio/static",
   "author": "Alex Hinds <alex.hinds141@gmail.com>",
   "scripts": {
-    "build": "cp -R public dist"
+    "build": "node build/build.js && mkdir -p dist && cp public/* dist/"
+  },
+  "devDependencies": {
+    "handlebars": "latest",
+    "@portfolio/content": "workspace:*"
   }
 }

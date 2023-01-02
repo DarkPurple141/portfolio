@@ -4,22 +4,22 @@ import { jobData } from './data'
 @ObjectType()
 export class Job {
   @Field()
-  title: string
+  title!: string
 
   @Field()
-  description: string
+  description!: string
 
   @Field({ nullable: true })
   href?: string
 
   @Field()
-  company: string
+  company!: string
 
   @Field({ description: 'Job start date' })
-  start_date: Date
+  start_date!: number
 
   @Field({ nullable: true })
-  end_date?: Date
+  end_date?: number
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

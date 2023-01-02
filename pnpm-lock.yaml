@@ -30,10 +30,15 @@ importers:
       turbo: 1.6.3
       typescript: 4.9.4
       vite: 4.0.3_@types+node@17.0.45
-      vitest: 0.26.2
+      vitest: 0.26.3
 
   apps/static:
-    specifiers: {}
+    specifiers:
+      '@portfolio/content': workspace:*
+      handlebars: latest
+    devDependencies:
+      '@portfolio/content': link:../../packages/content
+      handlebars: 4.7.7
 
   apps/vue2:
     specifiers:
@@ -84,6 +89,7 @@ importers:
 
   packages/content:
     specifiers:
+      '@portfolio/tsconfig': workspace:*
       '@types/node': ^18.0.0
       apollo-server: ^3.0.0
       class-validator: ^0.14.0
@@ -97,7 +103,11 @@ importers:
       reflect-metadata: 0.1.13
       type-graphql: 1.1.1_yxlhq5elwzdhphazhcbwh6wmlq
     devDependencies:
+      '@portfolio/tsconfig': link:../tsconfig
       '@types/node': 18.11.18
+
+  packages/tsconfig:
+    specifiers: {}
 
 packages:
 
@@ -2733,6 +2743,19 @@ packages:
     engines: {node: '>= 10.x'}
     dev: false
 
+  /handlebars/4.7.7:
+    resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==, tarball: https://packages.atlassian.com/api/npm/npm-remote/handlebars/-/handlebars-4.7.7.tgz}
+    engines: {node: '>=0.4.7'}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.7
+      neo-async: 2.6.2
+      source-map: 0.6.1
+      wordwrap: 1.0.0
+    optionalDependencies:
+      uglify-js: 3.17.4
+    dev: true
+
   /har-schema/2.0.0:
     resolution: {integrity: sha512-Oqluz6zhGX8cyRaTQlFMPw80bSJVG2x/cFb8ZPhUILGgHka9SsokCCOQgpveePerqidZOrT14ipqfJb7ILcW5Q==, tarball: https://packages.atlassian.com/api/npm/npm-remote/har-schema/-/har-schema-2.0.0.tgz}
     engines: {node: '>=4'}
@@ -3495,6 +3518,10 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==, tarball: https://packages.atlassian.com/api/npm/npm-remote/negotiator/-/negotiator-0.6.3.tgz}
     engines: {node: '>= 0.6'}
     dev: false
+
+  /neo-async/2.6.2:
+    resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==, tarball: https://packages.atlassian.com/api/npm/npm-remote/neo-async/-/neo-async-2.6.2.tgz}
+    dev: true
 
   /netrc/0.1.4:
     resolution: {integrity: sha512-ye8AIYWQcP9MvoM1i0Z2jV0qed31Z8EWXYnyGNkiUAd+Fo8J+7uy90xTV8g/oAbhtjkY7iZbNTizQaXdKUuwpQ==, tarball: https://packages.atlassian.com/api/npm/npm-remote/netrc/-/netrc-0.1.4.tgz}
@@ -4678,6 +4705,14 @@ packages:
     resolution: {integrity: sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==, tarball: https://packages.atlassian.com/api/npm/npm-remote/ufo/-/ufo-1.0.1.tgz}
     dev: true
 
+  /uglify-js/3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==, tarball: https://packages.atlassian.com/api/npm/npm-remote/uglify-js/-/uglify-js-3.17.4.tgz}
+    engines: {node: '>=0.8.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==, tarball: https://packages.atlassian.com/api/npm/npm-remote/unbox-primitive/-/unbox-primitive-1.0.2.tgz}
     dependencies:
@@ -4771,8 +4806,8 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vite-node/0.26.2_@types+node@18.11.18:
-    resolution: {integrity: sha512-4M/zlatItZAyvrQG+82zQBhgDjRZRhVJYFW4T9wcAKh7eMmSiPOVSeI5zsV9UzHXgCcIDKX0o0r3s4OxExTHqg==, tarball: https://packages.atlassian.com/api/npm/npm-remote/vite-node/-/vite-node-0.26.2.tgz}
+  /vite-node/0.26.3_@types+node@18.11.18:
+    resolution: {integrity: sha512-Te2bq0Bfvq6XiO718I+1EinMjpNYKws6SNHKOmVbILAQimKoZKDd+IZLlkaYcBXPpK3HFe2U80k8Zw+m3w/a2w==, tarball: https://packages.atlassian.com/api/npm/npm-remote/vite-node/-/vite-node-0.26.3.tgz}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
@@ -4894,8 +4929,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.26.2:
-    resolution: {integrity: sha512-Jvqxh6SDy9SsuslkDjts0iDewDIdq4rveEt69YgDuAb1tVDGV0lDepVaeAFraoySWqneJmOt4TngFFNhlw7GfA==, tarball: https://packages.atlassian.com/api/npm/npm-remote/vitest/-/vitest-0.26.2.tgz}
+  /vitest/0.26.3:
+    resolution: {integrity: sha512-FmHxU9aUCxTi23keF3vxb/Qp0lYXaaJ+jRLGOUmMS3qVTOJvgGE+f1VArupA6pEhaG2Ans4X+zV9dqM5WISMbg==, tarball: https://packages.atlassian.com/api/npm/npm-remote/vitest/-/vitest-0.26.3.tgz}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -4930,7 +4965,7 @@ packages:
       tinypool: 0.3.0
       tinyspy: 1.0.2
       vite: 4.0.3_@types+node@18.11.18
-      vite-node: 0.26.2_@types+node@18.11.18
+      vite-node: 0.26.3_@types+node@18.11.18
     transitivePeerDependencies:
       - less
       - sass
@@ -5061,6 +5096,10 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==, tarball: https://packages.atlassian.com/api/npm/npm-remote/word-wrap/-/word-wrap-1.2.3.tgz}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /wordwrap/1.0.0:
+    resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==, tarball: https://packages.atlassian.com/api/npm/npm-remote/wordwrap/-/wordwrap-1.0.0.tgz}
     dev: true
 
   /wrap-ansi/6.2.0:
