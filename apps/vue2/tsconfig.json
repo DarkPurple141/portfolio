@@ -1,8 +1,6 @@
 {
+  "extends": "@portfolio/tsconfig/base",
   "compilerOptions": {
     "allowJs": true,
-    "strict": true,
-    "outDir": "dist",
-    "noImplicitThis": true
   }
 }
