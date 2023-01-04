@@ -18,6 +18,11 @@
       "outputs": [
         "dist"
       ]
+    },
+    "generate": {
+      "dependsOn": [
+        "^generate"
+      ]
     }
   }
 }
