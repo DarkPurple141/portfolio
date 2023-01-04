@@ -29,18 +29,12 @@
         </section>
         <section class="bio">
           <h2 class="section-header">Education</h2>
+          {{#each qualifications}}
           <article>
-            <h3>B. Sci. (Computer Science)
-              </h4>
-              <p>University of New South Wales, '18, data visualisation, security, web
-                application
-                engineering.</p>
+            <h3>{{this.course}}</h3>
+            <p>{{this.provider}}, {{this.graduation_year}}, {{this.majors}}.</p>
           </article>
-          <article>
-            <h3>B. Com. & Liberal Studies
-              </h4>
-              <p>University of Sydney, ‘10, economics, political economy, psychology.</p>
-          </article>
+          {{/each}}
         </section>
         <section class="bio">
           <h2 class="section-header">Technical Skills</h2>

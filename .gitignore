@@ -16,6 +16,7 @@ yarn-error.log*
 # turbo repo
 .turbo
 .env.local
+.env*
 
 # build outputs
 dist

@@ -1,11 +1,12 @@
-import type { Job } from './resolver'
+import type { Job } from '@prisma/client'
 
-export const jobData: Job[] = [
+export const jobData: Omit<Job, 'id'>[] = [
   {
     title: 'Software Engineer',
     company: 'Atlassian',
     href: 'https://atlassian.design',
     start_date: new Date('2019').getFullYear(),
+    end_date: null,
     description:
       "Developed an innvoative solution to Atlassian's real user monitoring. Polished exisiting design systems. Mostly working with React/Node.js, golang.",
   },
@@ -32,6 +33,7 @@ export const jobData: Job[] = [
     company: 'Freelance',
     href: 'https://halyard.dev',
     start_date: new Date('2015').getFullYear(),
+    end_date: null,
     description:
       'I built and helped maintain websites for Universities, architecture firms and NFPs.',
   },
@@ -40,6 +42,7 @@ export const jobData: Job[] = [
     company: 'Web',
     href: 'https://github.com/DarkPurple141/eslint-codemod-utils',
     start_date: new Date('2018').getFullYear(),
+    end_date: null,
     description:
       'I have been a regular contributor to OSS projects including @compiled, @emotion, storybook-addon-performance and eslint-codemod-utils. I see contribution as an important part of being a developer.',
   },
