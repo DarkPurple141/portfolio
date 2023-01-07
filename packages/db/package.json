@@ -23,8 +23,8 @@
     "dev": "tsup --watch",
     "format": "prisma format",
     "generate": "prisma generate",
-    "prebuild": "npm run generate",
-    "predev": "npm run generate",
+    "prebuild": "pnpm run generate",
+    "predev": "pnpm run generate",
     "studio": "prisma studio"
   },
   "dependencies": {
