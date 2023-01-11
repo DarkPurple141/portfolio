@@ -27,10 +27,11 @@
     "vitest": "latest"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "prisma": {
     "schema": "packages/db/prisma/schema.prisma",
     "seed": "tsx packages/db/src/seed.ts"
-  }
+  },
+  "packageManager": "pnpm@7.5.0"
 }
