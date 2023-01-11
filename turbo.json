@@ -6,8 +6,8 @@
         "^build"
       ],
       "outputs": [
-        "dist",
-        ".next"
+        "dist/**",
+        ".next/**"
       ]
     },
     "lint": {
@@ -21,7 +21,7 @@
         "^build"
       ],
       "outputs": [
-        "dist"
+        "dist/**"
       ]
     },
     "generate": {
