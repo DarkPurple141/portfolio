@@ -6,6 +6,7 @@
   "scripts": {
     "deploy": "turbo run deploy",
     "build": "turbo run build",
+    "dev": "turbo run dev",
     "lint": "eslint --ext .ts,.tsx apps/** packages/**"
   },
   "devDependencies": {

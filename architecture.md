@@ -2,6 +2,8 @@
 
 ## Deployed Envs
 
+Hosting on Vercel
+
 - alhinds.com
 - static.alhinds.com
 - vue2.alhinds.com
@@ -44,3 +46,4 @@
 - Vue2 ✅
 - Vue3 (TODO)
 - Solid (TODO)
+- Gatsby (TODO)

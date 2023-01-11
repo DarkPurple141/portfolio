@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { Avatar, Heading, Stack } from '@portfolio/ui'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,109 +13,57 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
+      <main className="max-w-3xl m-auto flex flex-col justify-between">
+        <div className="flex flex-row justify-between p-4">
+          <nav className="flex flex-row gap-4">
+            <a className="text-brand.bold" href="/">
+              Home
             </a>
+            <a>About</a>
+            <a>Blog</a>
+          </nav>
+          <div data-settings>
+            <div className="w-4 h-4 bg-slate-200 rounded"></div>
           </div>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        <div className="flex flex-row gap-4 items-center">
+          <Avatar src="/profile.png" />
+          <Stack gap="gap-4">
+            <Stack gap="gap-2">
+              <Heading as="h1" className={inter.className}>
+                Hi, I’m Alex. 👋
+              </Heading>
+              <Heading as="h3" className={inter.className}>
+                I’m a Software Engineer, based in Sydney, Australia.
+              </Heading>
+            </Stack>
+            <p className="text-sm">
+              I’m passionate for UX/UI, frontend engineering and web
+              development. I’m currently focused on design systems, frontend
+              tooling and code evolution at Atlassian but I’m always open to
+              opportunities. Have a look around!
+            </p>
+          </Stack>
+        </div>
+        <div data-secondary className="grid grid-cols-2 gap-4">
+          <div className="border rounded p-4 flex flex-col gap-3">
+            <Heading as="h2">
+              Built with <span className="text-brand.bold">NextJS</span>
+            </Heading>
+            <p className="text-sm">
+              This site was built with NextJS. This site has also been deployed
+              and built with SolidJS, Vue and Remix.
+            </p>
+          </div>
+          <div className="border rounded p-4 flex flex-col gap-3">
+            <Heading as="h2">How this site was built 🛠</Heading>
+            <p className="text-sm">
+              This site was built with NextJS. This site has also been deployed
+              and built with SolidJS, Vue and Remix.
+            </p>
           </div>
         </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        <div className="p-4 text-center">Footer</div>
       </main>
     </>
   )

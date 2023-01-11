@@ -1,6 +1,7 @@
 {
   "name": "@portfolio/tsconfig",
   "version": "1.0.0",
+  "source": "base.json",
   "private": true,
   "license": "MIT",
   "publishConfig": {

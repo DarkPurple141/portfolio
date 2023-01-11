@@ -15,14 +15,14 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html, body, main, #__next {
   height: 100%;
 }
 
-html {
+/* html {
   /* creates an effective 8px rem base */
-  font-size: 50%;
-}
+  /* font-size: 50%; */
+/* } */
 
 /*
   Typographic tweaks!
