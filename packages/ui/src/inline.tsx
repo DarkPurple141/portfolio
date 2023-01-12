@@ -3,12 +3,12 @@ import type { ReactNode } from 'react'
 type InlineProps = {
   children?: ReactNode
   gap?: 'gap-1' | 'gap-2' | 'gap-3' | 'gap-4'
-  align?: 'center' | 'start'
+  align?: 'items-center' | 'items-start'
 }
 
-export function Inline({ children, gap, align }: InlineProps) {
+export function Inline({ children, gap, align = 'items-center' }: InlineProps) {
   return (
-    <div className={`flex items-${align} ${gap} sm:flex-nowrap flex-wrap`}>
+    <div className={`flex ${align} ${gap} sm:flex-nowrap flex-wrap`}>
       {children}
     </div>
   )

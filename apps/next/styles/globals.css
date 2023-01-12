@@ -7,8 +7,12 @@
     @apply font-bold
   }
 
+  nav a {
+    @apply no-underline
+  }
+
   a {
-    @apply font-bold
+    @apply font-bold underline
   }
 
   a:hover, a:active, a:focus {

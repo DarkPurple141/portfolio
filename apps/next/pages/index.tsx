@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="max-w-3xl m-auto flex flex-col justify-between gap-12">
-        <div className="flex flex-row justify-between py-4">
+        <nav className="flex flex-row justify-between py-4">
           <Inline gap="gap-4">
             <a className="text-brand.bold" href="/">
               Home
@@ -34,28 +34,29 @@ export default function Home() {
             </a>
             <div className="leading-5 text-xl">⚙️</div>
           </Inline>
-        </div>
-        <Inline gap="gap-4" align="start">
-          <Avatar src="/profile.png" />
-          <Stack gap="gap-3">
+        </nav>
+        <Inline gap="gap-4" align="items-start">
+          <Avatar size="24" src="/profile.png" />
+          <Stack gap="gap-4">
             <Heading as="h1" className={inter.className}>
               Hi, I’m Alex - a software engineer passionate for building great
               experiences for the web.
             </Heading>
             <p className={inter.className}>
-              I have more than a decade of experience in engineering and am
-              currently focused on design systems, frontend tooling and code
-              evolution at Atlassian.
+              I have more than a <a href="/about">decade of experience</a> in
+              web development and am currently focused on design systems,
+              frontend tooling and code evolution at{' '}
+              <a href="https://atlassian.design">Atlassian</a>.
             </p>
             <p className={inter.className}>
-              I've worked at companies of all sizes, in-house and on contract
-              and I’m always open to opportunities.
+              I've worked at companies of all sizes, in-house and on contract.
+              I’m always open to opportunities.
             </p>
           </Stack>
         </Inline>
         <div data-secondary className="grid sm:grid-cols-2 gap-4">
           <div className="border rounded p-4 flex flex-col gap-3">
-            <Heading as="h2">
+            <Heading className={inter.className} as="h2">
               Built with <span className="text-brand.bold">NextJS</span>
             </Heading>
             <p className={inter.className}>
@@ -64,14 +65,18 @@ export default function Home() {
             </p>
           </div>
           <div className="border rounded p-4 flex flex-col gap-3">
-            <Heading as="h2">How this site was built 🛠</Heading>
+            <Heading className={inter.className} as="h2">
+              How this site was built 🛠
+            </Heading>
             <p className={inter.className}>
               This site was built with NextJS. This site has also been deployed
               and built with SolidJS, Vue and Remix.
             </p>
           </div>
         </div>
-        <div className="p-4 text-center">Footer</div>
+        <div className="p-4 text-center">
+          Designed in Figma. Made in Sydney 🇦🇺
+        </div>
       </main>
     </>
   )
