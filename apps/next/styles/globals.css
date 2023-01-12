@@ -6,15 +6,16 @@
   h1, h2, h3 {
     @apply font-bold
   }
-  p {
-    @apply text-gray-500;
-  }
 
   a {
     @apply font-bold
   }
 
-  a:hover, a:active {
+  a:hover, a:active, a:focus {
     @apply text-brand.bold
+  }
+
+  main {
+    @apply px-4
   }
 }

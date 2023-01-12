@@ -1,12 +1,17 @@
 type AvatarProps = {
   src?: string
+  size?: '48' | '24'
 }
 
-export function Avatar({ src }: AvatarProps) {
+export function Avatar({ src, size = '48' }: AvatarProps) {
   return (
-    <div className="min-w-[192px] w-48 h-48 bg-brand rounded-full overflow-hidden">
+    <div
+      className={`min-w-[${
+        Number(size) * 4
+      }px] w-${size} h-${size} max-sm:w-[100vw] bg-brand sm:rounded-full overflow-hidden`}
+    >
       <img
-        className="max-w-none"
+        className="max-w-[150%]"
         src={src}
         alt="photo of Alex Hinds"
         width={240}

@@ -1,3 +1,5 @@
 export { Avatar } from './avatar'
 export { Heading } from './heading'
 export { Stack } from './stack'
+export { Icon } from './icon'
+export { Inline } from './inline'

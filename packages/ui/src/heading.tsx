@@ -7,8 +7,8 @@ type HeadingProps = {
 }
 
 const sizeMap = {
-  h1: 'text-4xl',
-  h2: 'text-2xl',
+  h1: 'text-2xl',
+  h2: 'text-xl',
   h3: 'text-base',
 } as const
 
