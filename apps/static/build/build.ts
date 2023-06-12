@@ -4,7 +4,7 @@ import fs from 'fs'
 import { prisma } from '@portfolio/db'
 
 async function main() {
-  const jobs = await prisma.job.findMany()
+  const jobs = await prisma.job.findMany({ orderBy: { start_date: 'desc' } })
   const qualifications = await prisma.qualification.findMany()
 
   fs.readFile(
