@@ -11,6 +11,10 @@
   a {
     text-decoration: none;
   }
+
+  .copyright {
+    display: none;
+  }
 }
 
 * {
@@ -142,7 +146,7 @@ footer {
     --border-color: #333;
     --bg-color: #121;
     --accent-bg-color: hsl(240deg 61.54% 20.9%);
-    --accent-bg-color-bold: hsl(240deg 61.54% 50.9%);
+    --accent-bg-color-bold: hsl(240 61% 81%);
   }
 }
 
@@ -171,5 +175,12 @@ footer {
 
   address {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media screen and (orientation: portrait) and (max-width: 36rem) {
+  address {
+    grid-template-columns: 1fr;
   }
 }
