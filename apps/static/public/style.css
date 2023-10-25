@@ -7,11 +7,21 @@
   :root {
     font-size: 15px;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+address {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-style: normal;
 }
 
 :root {
@@ -29,7 +39,7 @@ body {
     'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
   font-kerning: normal;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   max-width: 210mm;
   box-sizing: border-box;
 }
@@ -101,26 +111,24 @@ header {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover,
+a:focus-visible {
+  color: var(--accent-bg-color-bold);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent-bg-color-bold);
 }
 
 footer {
   border-top: 1px solid var(--border-color);
-  display: flex;
-  flex-flow: row wrap;
-  background-color: var(--background-color);
-  justify-content: center;
-  align-items: center;
+  background-color: var(--bg-color);
 }
 
 .footer-link {
   color: var(--text-color-subtle);
-  margin: auto;
-  flex: 1 33%;
 }
 
 /** theming */
@@ -132,20 +140,22 @@ footer {
     --text-color-subtlest: hsl(0deg 0% 86.67% / 60%);
     --text-color-inverse: var(--accent-bg-color);
     --border-color: #333;
-    --background-color: #121;
+    --bg-color: #121;
     --accent-bg-color: hsl(240deg 61.54% 20.9%);
+    --accent-bg-color-bold: hsl(240deg 61.54% 50.9%);
   }
 }
 
 @media print and (prefers-color-scheme: dark), (prefers-color-scheme: light) {
   :root {
-    --background-color: #fff;
+    --bg-color: #fff;
     --text-color: #111;
     --text-color-subtle: hsl(0deg 0% 6.67% / 75%);
     --text-color-subtlest: hsl(0deg 0% 6.67% / 60%);
     --text-color-inverse: var(--accent-bg-color);
     --border-color: #eee;
     --accent-bg-color: hsl(240deg 61.54% 94.9%);
+    --accent-bg-color-bold: hsl(240deg 61.54% 64.9%);
   }
 }
 
@@ -159,7 +169,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  footer {
-    flex-flow: column;
+  address {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
