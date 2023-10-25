@@ -1,6 +1,6 @@
 @page {
   size: 210mm 317mm;
-  margin: 27mm 16mm 27mm 16mm;
+  margin: 0;
 }
 
 @media print {
@@ -15,6 +15,14 @@
   .copyright {
     display: none;
   }
+
+  body {
+    max-width: 210mm;
+  }
+
+  address {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 * {
@@ -24,13 +32,18 @@
 
 address {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   font-style: normal;
 }
 
 :root {
   --splash-font-size: 4.5rem;
-  background-color: var(--neutral-surface);
+  --font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
+  --font-h1: bold var(--splash-font-size) / 1.25 var(--font-family);
+  --font-h2: bold 1.5rem/1.25 var(--font-family);
+  --font-h3: bold 0.875rem/1.25 var(--font-family);
+  --font-body: 0.75rem/1.5 var(--font-family);
 }
 
 body {
@@ -38,20 +51,17 @@ body {
   font-size: 1rem;
   position: relative;
   font-weight: 400;
-  font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
+  font-family: var(--font-family);
   font-kerning: normal;
   color: var(--text-color);
   background-color: var(--bg-color);
-  max-width: 210mm;
+  max-width: 48rem;
   box-sizing: border-box;
 }
 
 p {
   margin-block-end: 1rem;
-  font-size: 0.75rem;
-  line-height: 1.5;
+  font: var(--font-body);
   color: var(--text-color-subtlest);
 }
 
@@ -64,18 +74,15 @@ p {
 
 h1 {
   margin: 0;
-  font-size: var(--splash-font-size);
-  line-height: 1.25;
+  font: var(--font-h1);
 }
 
 h2 {
-  font-size: 1.5rem;
-  line-height: 1.25;
+  font: var(--font-h2);
 }
 
 h3 {
-  font-size: 0.875rem;
-  line-height: 1.25;
+  font: var(--font-h3);
   margin-block-end: 0.5rem;
   color: var(--text-color-subtle);
 }
@@ -87,12 +94,6 @@ main {
 
 .container {
   padding: 1.25rem 2rem;
-}
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .column:first-of-type {
@@ -131,8 +132,12 @@ footer {
   background-color: var(--bg-color);
 }
 
-.footer-link {
-  color: var(--text-color-subtle);
+footer p {
+  margin-block: 0.25rem;
+}
+
+.copyright {
+  margin-block-start: 1rem;
 }
 
 /** theming */
@@ -145,8 +150,8 @@ footer {
     --text-color-inverse: var(--accent-bg-color);
     --border-color: #333;
     --bg-color: #121;
-    --accent-bg-color: hsl(240deg 61.54% 20.9%);
-    --accent-bg-color-bold: hsl(240 61% 81%);
+    --accent-bg-color: hsl(201.82deg 36% 18%);
+    --accent-bg-color-bold: hsl(201.82deg 36% 72%);
   }
 }
 
@@ -163,12 +168,7 @@ footer {
   }
 }
 
-/* mobile */
-@media screen and (orientation: portrait) {
-  :root {
-    --splash-font-size: 3rem;
-  }
-
+@media not print {
   main {
     grid-template-columns: 1fr;
   }
@@ -180,6 +180,10 @@ footer {
 
 /* mobile */
 @media screen and (orientation: portrait) and (max-width: 36rem) {
+  :root {
+    --splash-font-size: 3rem;
+  }
+
   address {
     grid-template-columns: 1fr;
   }

@@ -152,22 +152,16 @@
     </main>
     <footer class='container'>
       <address>
-        <p class='footer-link'>Phone.
-          <a href='tel:+61411849217'>+61 411 849 217</a></p>
-        <p class='footer-link'>Email.
-          <a
-            href='mailto:alex.hinds141@gmail.com'
-          >alex.hinds141@gmail.com</a></p>
-        <p class='footer-link'>Website.
-          <a href='https://alhinds.com'>alhinds.com</a></p>
-        <p class='footer-link'>Github.
-          <a href='https://github.com/DarkPurple141'>@DarkPurple141</a></p>
-        <p class='footer-link'>Linkedin.
-          <a href='https://www.linkedin.com/in/alex-hinds-12449660/'>Alex Hinds</a>
-        </p>
-        <p class='footer-link'>Medium.
-          <a href='https://medium.com/@al_hinds'>@al_hinds</a></p>
+        <p class='footer-link'>phone.
+          <a href='tel:+61411849217'>{{user.phone}}</a></p>
+        <p class='footer-link'>email.
+          <a href='mailto:alex.hinds141@gmail.com'>{{user.email}}</a></p>
+        {{#each user.socials as |social|}}
+          <p class='footer-link'>{{social.name}}.
+            <a href='{{social.url}}'>{{social.username}}</a></p>
+        {{/each}}
       </address>
+      <p class='copyright'>© {{published_year}} Alex Hinds</p>
     </footer>
   </body>
 

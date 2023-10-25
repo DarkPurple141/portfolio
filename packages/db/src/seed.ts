@@ -2,7 +2,7 @@ import { prisma } from '.'
 
 import { educationData } from './data/education'
 import { jobData } from './data/jobs'
-import { userData } from './data/user'
+import { socials, userData } from './data/user'
 ;(async () => {
   try {
     await Promise.all(
@@ -27,9 +27,19 @@ import { userData } from './data/user'
       },
       update: {
         ...userData,
+        socials: {
+          upsert: socials.map((social) => ({
+            where: { url: social.url },
+            update: social,
+            create: social,
+          })),
+        },
       },
       create: {
         ...userData,
+        socials: {
+          create: socials,
+        },
       },
     })
 

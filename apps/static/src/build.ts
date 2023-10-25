@@ -6,6 +6,10 @@ import { prisma } from '@portfolio/db'
 async function main() {
   const jobs = await prisma.job.findMany({ orderBy: { start_date: 'desc' } })
   const qualifications = await prisma.qualification.findMany()
+  const user = await prisma.user.findFirst({
+    where: { email: 'alex.hinds141@gmail.com' },
+    include: { socials: true },
+  })
 
   fs.readFile(
     path.join(__dirname, 'index.template.hbs'),
@@ -17,7 +21,12 @@ async function main() {
 
       const file = rawTemplate.toString()
       const template = hbs.compile(file)
-      const compiled = template({ jobs, qualifications })
+      const compiled = template({
+        jobs,
+        qualifications,
+        published_year: new Date().getFullYear(),
+        user,
+      })
 
       fs.writeFileSync(path.join(__dirname, '../public/index.html'), compiled)
     }
