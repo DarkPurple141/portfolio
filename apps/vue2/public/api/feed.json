@@ -1,80 +1,9 @@
 {
   "results": [
     {
-      "id": "error_checking_and_debugging",
-      "title": "Error Checking",
-      "date": "2022-12-31T01:52:18.097Z",
-      "description": "Error checking and debugging in C",
-      "tags": [
-        "explainers",
-        "c"
-      ]
-    },
-    {
-      "id": "getting_started_with_ssh",
-      "title": "SSH and SSH keys",
-      "date": "2022-12-31T01:52:18.098Z",
-      "description": "Setting up SSH keys to make your life easier",
-      "tags": [
-        "explainers",
-        "linux"
-      ]
-    },
-    {
-      "id": "type_in_c",
-      "title": "Types and Memory in C",
-      "date": "2022-12-31T01:52:18.098Z",
-      "description": "Why do we use \"types\" in C?",
-      "tags": [
-        "explainers",
-        "c"
-      ]
-    },
-    {
-      "id": "what_are_header_files",
-      "title": "What are 'Header' files?",
-      "date": "2022-12-31T01:52:18.099Z",
-      "description": "Understanding the use and application of header files",
-      "tags": [
-        "c",
-        "explainers"
-      ]
-    },
-    {
-      "id": "getting_started_with_functions",
-      "title": "Fun, Fun, Functions!",
-      "date": "2022-12-31T01:52:18.098Z",
-      "description": "How functions work and why we use them",
-      "tags": [
-        "explainers",
-        "c"
-      ]
-    },
-    {
-      "id": "using_git",
-      "title": "Using Git",
-      "date": "2022-12-31T01:52:18.098Z",
-      "description": "Getting started with git, a version control system",
-      "tags": [
-        "linux",
-        "git",
-        "explainers"
-      ]
-    },
-    {
-      "id": "what_is_main_argcv",
-      "title": "Main(), argc and argv[]",
-      "date": "2022-12-31T01:52:18.099Z",
-      "description": "Understanding the different ways to express int main() in C.",
-      "tags": [
-        "explainers",
-        "c"
-      ]
-    },
-    {
       "id": "published-2017-october-10-abstraction-basics",
       "title": "Abstraction",
-      "date": "2022-12-31T01:52:18.098Z",
+      "date": "2023-10-19T22:33:24.716Z",
       "description": "What is abstraction and how does it apply to programming?",
       "tags": [
         "explainers",
@@ -84,11 +13,82 @@
     {
       "id": "getting_started_with_scp",
       "title": "Secure Copy Protocol (SCP)",
-      "date": "2022-12-31T01:52:18.098Z",
+      "date": "2023-10-19T22:33:24.715Z",
       "description": "Transferring files and folders via the command line (SCP)",
       "tags": [
         "explainers",
         "linux"
+      ]
+    },
+    {
+      "id": "getting_started_with_functions",
+      "title": "Fun, Fun, Functions!",
+      "date": "2023-10-19T22:33:24.715Z",
+      "description": "How functions work and why we use them",
+      "tags": [
+        "explainers",
+        "c"
+      ]
+    },
+    {
+      "id": "error_checking_and_debugging",
+      "title": "Error Checking",
+      "date": "2023-10-19T22:33:24.715Z",
+      "description": "Error checking and debugging in C",
+      "tags": [
+        "explainers",
+        "c"
+      ]
+    },
+    {
+      "id": "what_are_header_files",
+      "title": "What are 'Header' files?",
+      "date": "2023-10-19T22:33:24.716Z",
+      "description": "Understanding the use and application of header files",
+      "tags": [
+        "c",
+        "explainers"
+      ]
+    },
+    {
+      "id": "type_in_c",
+      "title": "Types and Memory in C",
+      "date": "2023-10-19T22:33:24.716Z",
+      "description": "Why do we use \"types\" in C?",
+      "tags": [
+        "explainers",
+        "c"
+      ]
+    },
+    {
+      "id": "using_git",
+      "title": "Using Git",
+      "date": "2023-10-19T22:33:24.716Z",
+      "description": "Getting started with git, a version control system",
+      "tags": [
+        "linux",
+        "git",
+        "explainers"
+      ]
+    },
+    {
+      "id": "getting_started_with_ssh",
+      "title": "SSH and SSH keys",
+      "date": "2023-10-19T22:33:24.715Z",
+      "description": "Setting up SSH keys to make your life easier",
+      "tags": [
+        "explainers",
+        "linux"
+      ]
+    },
+    {
+      "id": "what_is_main_argcv",
+      "title": "Main(), argc and argv[]",
+      "date": "2023-10-19T22:33:24.716Z",
+      "description": "Understanding the different ways to express int main() in C.",
+      "tags": [
+        "explainers",
+        "c"
       ]
     }
   ]

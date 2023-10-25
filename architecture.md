@@ -32,6 +32,8 @@ Hosting on Vercel
 
 ## Client Stack
 
+See features.md.
+
 ### Styling
 
 - Vanilla ✅

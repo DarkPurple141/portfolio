@@ -2,32 +2,33 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/**",
-        ".next/**"
-      ]
+      "dependsOn": ["^db:migrate", "^db:seed", "^build"],
+      "outputs": ["dist/**", ".next/**"]
     },
     "lint": {
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
-    "dev": {},
+    "dev": {
+      "dependsOn": ["^db:migrate", "^db:seed"],
+      "cache": false
+    },
+    "watch": {
+      "dependsOn": ["^db:migrate", "^db:seed"],
+      "cache": false
+    },
     "deploy": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
     },
-    "generate": {
-      "dependsOn": [
-        "^generate"
-      ]
+    "db:generate": {
+      "inputs": ["src/**/*.ts", "prisma/schema.prisma"]
+    },
+    "db:migrate": {
+      "dependsOn": ["db:generate"]
+    },
+    "db:seed": {
+      "dependsOn": ["db:migrate"],
+      "inputs": ["src/**/*.ts", "prisma/schema.prisma"]
     }
   }
 }

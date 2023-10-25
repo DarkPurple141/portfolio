@@ -2,6 +2,7 @@ import { prisma } from '.'
 
 import { educationData } from './data/education'
 import { jobData } from './data/jobs'
+import { userData } from './data/user'
 ;(async () => {
   try {
     await Promise.all(
@@ -19,6 +20,19 @@ import { jobData } from './data/jobs'
         })
       )
     )
+
+    await prisma.user.upsert({
+      where: {
+        email: userData.email,
+      },
+      update: {
+        ...userData,
+      },
+      create: {
+        ...userData,
+      },
+    })
+
     await Promise.all(
       jobData.map((job) =>
         prisma.job.upsert({

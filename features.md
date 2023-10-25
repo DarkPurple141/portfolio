@@ -6,6 +6,7 @@
   - Astro
   - Remix
   - Next
+  - Vue?
 
 ## Meta
 

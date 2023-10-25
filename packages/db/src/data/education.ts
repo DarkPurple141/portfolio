@@ -5,7 +5,7 @@ export const educationData: Omit<Qualification, 'id'>[] = [
     course: 'B. Sci. (Computer Science)',
     graduation_year: new Date('2018').getFullYear(),
     provider: 'University of New South Wales',
-    majors: 'economics, political economy, psychology',
+    majors: 'HCI & data visualisation, security, web application engineering',
   },
   {
     course: 'B. Com. & Liberal Studies',

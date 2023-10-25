@@ -28,6 +28,13 @@ model Qualification {
   majors          String
 }
 
+model User {
+  id        Int     @id @default(autoincrement())
+  email     String  @unique
+  name      String?
+  shortDescription String?
+  longDescription String?
+}
 // model Post {
 //   id        Int     @id @default(autoincrement())
 //   title     String

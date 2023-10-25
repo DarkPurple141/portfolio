@@ -2,12 +2,15 @@
   "name": "@portfolio/static",
   "author": "Alex Hinds <alex.hinds141@gmail.com>",
   "scripts": {
-    "build": "tsx build/build.ts && mkdir -p dist && cp public/* dist/"
+    "watch": "tsx watch src/build.ts",
+    "dev": "vite --config vite.config.ts",
+    "build": "tsx src/build.ts && mkdir -p dist && cp public/* dist/"
   },
   "devDependencies": {
     "@portfolio/db": "workspace:*",
     "@portfolio/tsconfig": "workspace:*",
     "handlebars": "latest",
+    "vite": "^4.0.0",
     "tsx": "^3.12.1"
   }
 }
