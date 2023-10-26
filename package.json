@@ -8,7 +8,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "watch": "turbo run watch",
-    "lint": "eslint --ext .ts,.tsx apps/** packages/**"
+    "lint": "eslint \"apps/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" --fix"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",

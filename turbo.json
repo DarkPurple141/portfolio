@@ -9,7 +9,7 @@
       "dependsOn": ["build"]
     },
     "dev": {
-      "dependsOn": ["^db:migrate", "^db:seed"],
+      "dependsOn": ["^db:migrate", "^db:seed", "^build"],
       "cache": false
     },
     "watch": {

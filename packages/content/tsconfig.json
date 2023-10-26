@@ -1,0 +1,7 @@
+{
+  "extends": "@portfolio/tsconfig/base.json",
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "include": ["src/**/*"]
+}
