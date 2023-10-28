@@ -2,20 +2,20 @@ import type { ReactNode } from 'react'
 
 type HeadingProps = {
   className?: string
+  id?: string
   children?: ReactNode
-  as?: keyof typeof sizeMap
+  as?: 'h1' | 'h2' | 'h3' | 'h4'
 }
 
-const sizeMap = {
-  h1: 'text-2xl',
-  h2: 'text-base',
-  h3: 'text-base',
-} as const
-
 export function Heading({
-  className = '',
+  id,
+  className,
   children,
   as: H = 'h3',
 }: HeadingProps) {
-  return <H className={`${sizeMap[H]} ${className}`}>{children}</H>
+  return (
+    <H id={id} className={className}>
+      {children}
+    </H>
+  )
 }

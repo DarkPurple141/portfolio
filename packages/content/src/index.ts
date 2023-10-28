@@ -1,7 +1,6 @@
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 import fs from 'node:fs'
-import remarkAutolinkHeadings from 'remark-autolink-headings'
 import remarkSlug from 'remark-slug'
 
 function kebabToCamelCase(str: string) {
@@ -13,18 +12,19 @@ async function build() {
   const postNames: string[] = []
 
   for (const post of posts) {
-    const postPath = path.join(__dirname, 'posts', post, 'index.mdx')
+    const isDirectory = fs
+      .statSync(path.join(__dirname, 'posts', post))
+      .isDirectory()
+    const postPath = isDirectory
+      ? path.join(__dirname, 'posts', post, 'index.mdx')
+      : path.join(__dirname, 'posts', post)
     const file = fs.readFileSync(postPath, 'utf8')
     const fileMetaData = fs.statSync(postPath)
     const metaData = await bundleMDX({
       source: file,
       cwd: path.join(__dirname, 'posts', post),
       mdxOptions(options) {
-        options.remarkPlugins = [
-          ...(options.remarkPlugins ?? []),
-          remarkSlug,
-          [remarkAutolinkHeadings, { behavior: 'wrap' }],
-        ]
+        options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkSlug]
 
         return options
       },
@@ -41,25 +41,27 @@ async function build() {
       },
     })
 
+    const postCleanName = isDirectory ? post : path.parse(postPath).name
+
     metaData.frontmatter.createdDate = fileMetaData.birthtime
     metaData.frontmatter.modifiedDate = fileMetaData.mtime
-    metaData.frontmatter.slug = `${post}-${fileMetaData.birthtimeMs}`
+    metaData.frontmatter.slug = `${postCleanName}-${fileMetaData.birthtimeMs}`
 
     fs.writeFileSync(
-      path.join(__dirname, '../generated', `${post}.generated.ts`),
+      path.join(__dirname, '../generated', `${postCleanName}.generated.ts`),
       `/** THIS IS A GENERATED FILE\n  @command pnpm build\n  */\nconst metaData = ${JSON.stringify(
         metaData
       )}; export default metaData;`
     )
 
-    postNames.push(post)
+    postNames.push(postCleanName)
   }
 
   fs.writeFileSync(
     path.join(__dirname, '../generated/index.ts'),
     postNames
       .map((post) => {
-        return `/** THIS IS A GENERATED FILE\n  @command pnpm build\n  */\nexport { default as ${kebabToCamelCase(
+        return `export { default as ${kebabToCamelCase(
           post
         )} } from './${post}.generated'`
       })

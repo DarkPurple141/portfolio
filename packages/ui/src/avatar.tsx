@@ -6,7 +6,7 @@ type AvatarProps = {
 export function Avatar({ src }: AvatarProps) {
   return (
     <div
-      className={`min-w-[192px] w-48 h-48 max-sm:w-[100vw] bg-brand sm:rounded-full overflow-hidden pointer-events-none`}
+      className={`min-w-[12rem] w-48 h-48 max-md:w-[100vw] bg-brand md:rounded-full overflow-hidden pointer-events-none`}
     >
       <img
         className="max-w-[150%]"

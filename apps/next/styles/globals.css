@@ -1,25 +1,34 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  h1, h2, h3 {
-    @apply font-bold
-  }
+a {
+  @apply font-bold underline;
+}
 
-  nav a {
-    @apply no-underline
-  }
+p,
+li {
+  color: var(--text-color-subtle);
+}
 
-  a {
-    @apply font-bold underline
-  }
+header a {
+  @apply no-underline;
+}
 
-  a:hover, a:active, a:focus {
-    @apply text-brand.bold
-  }
+a:hover,
+a:active,
+a:focus {
+  @apply text-brand.bold;
+}
 
-  main {
-    @apply px-4
-  }
+main,
+header {
+  @apply px-8;
+}
+
+article {
+  @apply py-8;
+}
+
+.markdown {
+  color: var(--text-color);
 }

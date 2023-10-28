@@ -4,6 +4,7 @@
   "module": "dist/ui.mjs",
   "scripts": {
     "dev": "vite build --watch",
+    "watch": "vite build --watch",
     "build": "vite build"
   },
   "devDependencies": {

@@ -1,0 +1,119 @@
+/* typography */
+:root {
+  --font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
+  --font-heading-600: bold 3rem/1.25 var(--font-family);
+  --font-heading-500: bold 2.5rem/1.25 var(--font-family);
+  --font-heading-400: bold 2rem/1.25 var(--font-family);
+  --font-heading-300: bold 1.5rem/1.25 var(--font-family);
+  --font-heading-200: bold 1rem/1.25 var(--font-family);
+  --font-heading-100: bold 0.875rem/1.25 var(--font-family);
+  /* only use these vars */
+  --font-heading-xl: var(--font-heading-500);
+  --font-heading-lg: var(--font-heading-400);
+  --font-heading-md: var(--font-heading-300);
+  --font-heading-sm: var(--font-heading-200);
+  --font-heading-xs: var(--font-heading-100);
+  --font-body-lg: 1rem/1.5 var(--font-family);
+  --font-body: 0.875rem/1.5 var(--font-family);
+  --font-body-sm: 0.75rem/1.5 var(--font-family);
+}
+
+/* mobile */
+@media screen and (orientation: portrait) and (max-width: 48rem) {
+  :root {
+    --font-heading-xl: var(--font-heading-400);
+    --font-heading-lg: var(--font-heading-300);
+    --font-heading-md: var(--font-heading-200);
+    --font-heading-sm: var(--font-heading-100);
+    --font-body-sm: var(--font-body);
+  }
+}
+
+.heading-xl {
+  font: var(--font-heading-xl);
+}
+
+.heading-lg {
+  font: var(--font-heading-lg);
+}
+
+.heading-md {
+  font: var(--font-heading-md);
+}
+
+.heading-sm {
+  font: var(--font-heading-sm);
+}
+
+/* body default */
+body {
+  position: relative;
+  font: var(--font-body);
+  font-kerning: normal;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  max-width: 48rem;
+}
+
+p,
+time {
+  color: var(--text-color-subtlest);
+}
+
+h3,
+h4,
+h5 {
+  color: var(--text-color-subtle);
+}
+
+a {
+  color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-bg-color-bold);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent-bg-color-bold);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  border: 0 solid var(--border-color);
+}
+
+/** theming */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-surface: #666;
+    --text-color: #fefefe;
+    --text-color-subtle: hsl(0deg 0% 86.67% / 85%);
+    --text-color-subtlest: hsl(0deg 0% 86.67% / 60%);
+    --text-color-inverse: var(--accent-bg-color);
+    --border-color: #333;
+    --bg-color: #121;
+    --accent-bg-color: hsl(201.82deg 36% 18%);
+    --accent-bg-color-bold: hsl(201.82deg 36% 72%);
+  }
+}
+
+@media print and (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff;
+    --text-color: #111;
+    --text-color-subtle: hsl(0deg 0% 6.67% / 75%);
+    --text-color-subtlest: hsl(0deg 0% 6.67% / 60%);
+    --text-color-inverse: var(--accent-bg-color);
+    --border-color: #eee;
+    --accent-bg-color: hsl(240deg 61.54% 94.9%);
+    --accent-bg-color-bold: hsl(240deg 61.54% 64.9%);
+  }
+}

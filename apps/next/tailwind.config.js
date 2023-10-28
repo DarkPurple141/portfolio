@@ -7,10 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: '#A4A4FF',
-        'brand.bold': '#5757FF',
+        brand: 'var(--accent-bg-color)',
+        'brand.bold': 'var(--accent-bg-color-bold)',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
 }
