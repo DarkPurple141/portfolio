@@ -1,5 +1,6 @@
 export { default as about } from './about.generated'
 export { default as abstraction } from './abstraction.generated'
-export { default as testPage } from './test-page.generated'
 export { default as theFoundationsAreFoundationsForAReason } from './the-foundations-are-foundations-for-a-reason.generated'
+export { default as toTheFirstTime } from './to-the-first-time.generated'
 export { default as whatAreHeaderFiles } from './what-are-header-files.generated'
+export { default as whyLighthouseHasMadeUsLazy } from './why-lighthouse-has-made-us-lazy.generated'

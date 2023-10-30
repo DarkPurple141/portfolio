@@ -11,7 +11,7 @@ export const LogoMark = () => {
           <rect x="50" y="0" width="35" height="13" fill="currentColor" />
           <rect x="50" y="22" width="35" height="13" fill="currentColor" />
         </svg>
-        Alex Hinds
+        <span className="max-md:sr-only">Alex Hinds</span>
       </a>
     </h2>
   )

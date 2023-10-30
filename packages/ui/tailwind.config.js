@@ -2,7 +2,15 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'neutral.hover': 'var(--bg-color-hover)',
+      },
+      colors: {
+        brand: 'var(--accent-bg-color)',
+        'brand.bold': 'var(--accent-bg-color-bold)',
+      },
+    },
   },
   plugins: [],
 }

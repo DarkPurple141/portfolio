@@ -1,6 +1,10 @@
 ---
 title: 'Don’t ignore the basics: JS, CSS, HTML'
-stub: Why the building blocks of the web remain the core drivers of success in the modern web
+stub: Why the building blocks of the web remain the core drivers of success in the modern web.
+published: 2018-01-30T02:30:53.235Z
+tags:
+  - web development
+  - javascript
 ---
 
 The modern web is a daunting place for the novice. Gone are the days when good ole’ HTML, CSS and PHP would get you by. This is the era of progressive web applications, there’s a whole industry spawned called frontend engineering, security has become a thing, and browsers have become infinitely more capable and powerful — and that aint even the half of it. There’s a lot more to learn that there ever has been, and there are hundreds and thousands of truly excellent places to learn from. But a lot — and I really mean a lot — is a distraction.

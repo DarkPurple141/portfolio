@@ -33,7 +33,7 @@ export function PostView({ post }: { post: Post }) {
     [post.code]
   )
   return (
-    <article className="markdown prose prose-sm prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold -mt-8">
+    <article className="markdown prose prose-sm prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold prose-headings:text-inherit hover:prose-a:text-brand.bold prose-a:text-inherit -mt-8">
       <Heading as="h1">{post.frontmatter.title}</Heading>
       <Component />
     </article>

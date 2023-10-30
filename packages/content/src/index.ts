@@ -1,8 +1,9 @@
 import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
-import fs from 'node:fs'
+import fs from 'fs'
 import remarkSlug from 'remark-slug'
 import { prisma } from '@portfolio/db'
+import prettier from 'prettier'
 
 function kebabToCamelCase(str: string) {
   return str.replace(/-./g, (x) => x.toUpperCase()[1])
@@ -14,7 +15,6 @@ async function build() {
 
   const user = await prisma.user.findFirst({
     where: { email: 'alex.hinds141@gmail.com' },
-    include: { socials: true },
   })
 
   for (const post of posts) {
@@ -50,15 +50,13 @@ async function build() {
     if (metaData.frontmatter.title === 'About') {
       metaData.frontmatter.author = {
         name: user?.name,
-        socials: user?.socials,
         bio: user?.longDescription,
       }
     }
 
     const postCleanName = isDirectory ? post : path.parse(postPath).name
 
-    const createdDate =
-      metaData.frontmatter.firstPublished || fileMetaData.birthtime
+    const createdDate = metaData.frontmatter.published || fileMetaData.birthtime
 
     const createdDateObj = new Date(createdDate)
 
@@ -78,9 +76,17 @@ async function build() {
 
     fs.writeFileSync(
       path.join(__dirname, '../generated', `${postCleanName}.generated.ts`),
-      `/** THIS IS A GENERATED FILE\n  @command pnpm build\n  */\nconst metaData = ${JSON.stringify(
-        metaData
-      )}; export default metaData;`
+      prettier.format(
+        `/** THIS IS A GENERATED FILE\n * @command pnpm build\n */\nconst metaData = ${JSON.stringify(
+          metaData
+        )}; export default metaData;`,
+        {
+          parser: 'babel',
+          semi: false,
+          singleQuote: true,
+          printWidth: 80,
+        }
+      )
     )
 
     postNames.push(postCleanName)

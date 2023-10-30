@@ -76,7 +76,7 @@ export default function App({ Component, pageProps }: AppProps) {
           ))}
         </Inline>
       </header>
-      <main className="py-8 mt-8">
+      <main className="py-8 my-8">
         <Component {...pageProps} />
       </main>
     </>

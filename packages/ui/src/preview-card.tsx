@@ -30,7 +30,7 @@ export const PreviewCard = ({
           ref.current?.click()
         }
       }}
-      className="flex flex-col gap-4 hover:cursor-pointer hover:bg-gray-100 rounded-md p-4 -m-4"
+      className="flex flex-col gap-4 hover:cursor-pointer hover:bg-neutral.hover rounded-md p-4 -m-4"
     >
       <div>
         {published && (

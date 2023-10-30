@@ -1,7 +1,10 @@
 ---
 title: What's the use of C's header files?
 stub: Header files in C fulfil a few key principles of good modular programming allowing us to separate out our related logic, reuse or not use elements of logic in different files as we see fit and provide an agreed common interface for implementation.
-tags: c,explainers
+published: 2016-01-06T02:30:53.235Z
+tags: 
+  - c
+  - explainers
 ---
 
 ## Understanding the use and application of header files

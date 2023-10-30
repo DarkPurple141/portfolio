@@ -108,14 +108,16 @@ a:focus-visible {
     --text-color-inverse: var(--accent-bg-color);
     --border-color: hsl(201.82deg 24% 18%);
     --bg-color: hsl(201.82deg 24% 6%);
-    --accent-bg-color: hsl(201.82deg 36% 18%);
-    --accent-bg-color-bold: hsl(201.82deg 36% 72%);
+    --bg-color-hover: hsl(201.82deg 24% 12%);
+    --accent-bg-color: hsl(201.82deg 44% 18%);
+    --accent-bg-color-bold: hsl(201.82deg 44% 72%);
   }
 }
 
 @media print and (prefers-color-scheme: dark), (prefers-color-scheme: light) {
   :root {
     --bg-color: hsl(201.82deg 24% 100%);
+    --bg-color-hover: hsl(201.82deg 14.29% 95.88%);
     --text-color: hsl(201.82deg 24% 6%);
     --text-color-subtle: hsl(0deg 0% 6.67% / 75%);
     --text-color-subtlest: hsl(0deg 0% 6.67% / 60%);
