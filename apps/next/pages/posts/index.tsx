@@ -1,7 +1,6 @@
 import { Heading, PreviewCard, Stack } from '@portfolio/ui'
 import { Post, getAllPosts } from '../../clients/posts'
 import { GetStaticProps } from 'next'
-import Link from 'next/link'
 
 export const getStaticProps: GetStaticProps = () => {
   return {
