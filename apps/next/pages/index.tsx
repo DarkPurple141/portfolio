@@ -33,11 +33,9 @@ export default function Home() {
           }}
           promoLink
         >
-          <p>
-            This site was built with Next.js. This site has also been deployed
-            and built with <Link href="https://astro.alhinds.com">Astro</Link>{' '}
-            and <Link href="https://astro.alhinds.com">Remix</Link>.
-          </p>
+          This site was built with Next.js. This site has also been deployed and
+          built with <Link href="https://astro.alhinds.com">Astro</Link> and{' '}
+          <Link href="https://astro.alhinds.com">Remix</Link>.
         </PreviewCard>
         <PreviewCard
           promoLink
@@ -48,10 +46,8 @@ export default function Home() {
           heading="How this site was built 🛠"
           href="/posts"
         >
-          <p>
-            This article is coming soon! I promise. Seriously I'm writing it as
-            we speak. I'm just trying to figure out how to make it interesting.
-          </p>
+          This article is coming soon! I promise. Seriously I'm writing it as we
+          speak. I'm just trying to figure out how to make it interesting.
         </PreviewCard>
       </div>
     </Stack>

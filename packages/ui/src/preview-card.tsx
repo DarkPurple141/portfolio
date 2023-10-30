@@ -42,7 +42,7 @@ export const PreviewCard = ({
           </Link>
         </Heading>
       </div>
-      {children}
+      <p>{children}</p>
       {promoLink && (
         <p className="font-semibold text-brand.bold">Read article &#x2192;</p>
       )}
