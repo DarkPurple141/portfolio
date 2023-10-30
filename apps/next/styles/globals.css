@@ -1,17 +1,24 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-  @apply font-bold underline;
+p a {
+  @apply underline font-normal;
 }
 
-p,
-li {
-  color: var(--text-color-subtle);
+a {
+  @apply font-semibold;
+}
+
+.prose p {
+  color: var(--text-color);
+}
+
+a {
+  @apply no-underline;
 }
 
 header a {
-  @apply no-underline;
+  @apply text-inherit;
 }
 
 a:hover,

@@ -2,6 +2,7 @@ import { bundleMDX } from 'mdx-bundler'
 import path from 'path'
 import fs from 'node:fs'
 import remarkSlug from 'remark-slug'
+import { prisma } from '@portfolio/db'
 
 function kebabToCamelCase(str: string) {
   return str.replace(/-./g, (x) => x.toUpperCase()[1])
@@ -10,6 +11,11 @@ function kebabToCamelCase(str: string) {
 async function build() {
   const posts = fs.readdirSync(path.join(__dirname, 'posts'))
   const postNames: string[] = []
+
+  const user = await prisma.user.findFirst({
+    where: { email: 'alex.hinds141@gmail.com' },
+    include: { socials: true },
+  })
 
   for (const post of posts) {
     const isDirectory = fs
@@ -41,11 +47,34 @@ async function build() {
       },
     })
 
+    if (metaData.frontmatter.title === 'About') {
+      metaData.frontmatter.author = {
+        name: user?.name,
+        socials: user?.socials,
+        bio: user?.longDescription,
+      }
+    }
+
     const postCleanName = isDirectory ? post : path.parse(postPath).name
 
-    metaData.frontmatter.createdDate = fileMetaData.birthtime
-    metaData.frontmatter.modifiedDate = fileMetaData.mtime
-    metaData.frontmatter.slug = `${postCleanName}-${fileMetaData.birthtimeMs}`
+    const createdDate =
+      metaData.frontmatter.firstPublished || fileMetaData.birthtime
+
+    const createdDateObj = new Date(createdDate)
+
+    // eg: 2023-10-28T02:30:53.235Z
+    metaData.frontmatter.modified = {
+      raw: fileMetaData.mtime,
+      formatted: new Date(fileMetaData.mtime).toLocaleDateString('en-gb'),
+    }
+
+    // eg: 2023-10-28T02:30:53.235Z
+    metaData.frontmatter.created = {
+      raw: createdDate,
+      formatted: createdDateObj.toLocaleDateString('en-gb'),
+    }
+
+    metaData.frontmatter.slug = `${postCleanName}-${createdDateObj.getFullYear()}-${createdDateObj.getMonth()}-${createdDateObj.getDate()}`
 
     fs.writeFileSync(
       path.join(__dirname, '../generated', `${postCleanName}.generated.ts`),

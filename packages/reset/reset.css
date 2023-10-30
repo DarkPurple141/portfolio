@@ -38,6 +38,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+address {
+  font: inherit;
+}
+
 /*
   6. Improve media defaults
 */

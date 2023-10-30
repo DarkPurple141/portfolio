@@ -6,6 +6,7 @@
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
+    "@portfolio/db": "workspace:*",
     "mdx-bundler": "^9.2.1"
   },
   "devDependencies": {
