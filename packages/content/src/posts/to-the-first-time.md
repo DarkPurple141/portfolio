@@ -25,4 +25,4 @@ Ha, speaking of, we should probably use a framework for our server too. Maybe [F
 
 AND A DATABASE! Oh silly me! You’ll definitely need a database. There are hundreds of options locally, but maybe you’ll opt for the cloud. Or not. Do you know SQL? No? Maybe a non-relational database is for you then? Maybe that’ll be easier. Or throw the towel in, stoop over a toilet and feel sick for a few months. To say nothing of security..
 
-This article was originally published on [medium](https://al-hinds.medium.com/to-the-first-time-web-developer-e6623a624a83)
+This article was originally published on [medium](https://al-hinds.medium.com/to-the-first-time-web-developer-e6623a624a83).

@@ -3,11 +3,13 @@
   "source": "generated/index.ts",
   "scripts": {
     "build": "tsx src/index.ts",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "clean": "rm -rf generated && mkdir generated"
   },
   "dependencies": {
     "@portfolio/db": "workspace:*",
-    "mdx-bundler": "^9.2.1"
+    "mdx-bundler": "^9.2.1",
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@portfolio/tsconfig": "workspace:*",

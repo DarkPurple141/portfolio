@@ -9,10 +9,6 @@ a {
   @apply font-semibold;
 }
 
-.prose p {
-  color: var(--text-color);
-}
-
 a {
   @apply no-underline;
 }

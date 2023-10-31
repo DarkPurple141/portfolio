@@ -29,6 +29,7 @@
     "db:seed": {
       "dependsOn": ["db:migrate"],
       "inputs": ["src/**/*.ts", "prisma/schema.prisma"]
-    }
+    },
+    "clean": {}
   }
 }

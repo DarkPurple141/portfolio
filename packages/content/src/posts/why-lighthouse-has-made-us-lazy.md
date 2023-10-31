@@ -38,6 +38,8 @@ Why do we do this? That’s been a burning question I’ve been pondering in my 
 
 So invariably we measure what we can, and this gets us into trouble.
 
-Consider, Lighthouse. The distilled simplicity makes it an attractive offering. TTI (Time to Interactive), FID (First Input Delay), FMP/TTR (First Meaningful Paint/Time to Render), CLS (Cumulative Layout Shift) — together these are great heuristics for measuring a web application’s performance. And while I wouldn’t say that an application could be performant and fail Lighthouse’s heuristics, it also gives false significance to what some of these metrics mean. The biggest issue with them is how much they all focus on the load performance experience. And as I’ve already said, this is a false idol.
+[Consider, Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/). The distilled simplicity makes it an attractive offering. TTI (Time to Interactive), FID (First Input Delay), FMP/TTR (First Meaningful Paint/Time to Render), CLS (Cumulative Layout Shift) — together these are great heuristics for measuring a web application’s performance. And while I wouldn’t say that an application could be performant and fail Lighthouse’s heuristics, it also gives false significance to what some of these metrics mean. The biggest issue with them is how much they all focus on the load performance experience. And as I’ve already said, this is a false idol.
 
 Science struggles with ill-defined objectives. Humans love to aim for simplicity. But sometimes the reality is neither. Better performance measurement pushes most of these notions aside, using them as guides rather than gospel. Unfortunately it’s also more complex to instrument, more subjective, and harder to abstract, and when time pressed we’re lazy.
+
+This article was originally published on [medium](https://al-hinds.medium.com/frontend-performance-why-lighthouse-has-made-us-lazy-b7a1247db7cb).

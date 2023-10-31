@@ -25,7 +25,7 @@ export default function Home() {
       </Stack>
       <div className="grid sm:grid-cols-2 gap-8">
         <PreviewCard
-          heading="Built with Next.js"
+          heading="One person, many frameworks"
           href="/posts"
           published={{
             iso: new Date().toISOString(),
@@ -35,7 +35,9 @@ export default function Home() {
         >
           This site was built with Next.js. This site has also been deployed and
           built with <Link href="https://astro.alhinds.com">Astro</Link> and{' '}
-          <Link href="https://astro.alhinds.com">Remix</Link>.
+          <Link href="https://remix.alhinds.com">Remix</Link>. My old website,
+          built in Vue 2,{' '}
+          <Link href="https://vue2.alhinds.com">lives here</Link>.
         </PreviewCard>
         <PreviewCard
           promoLink

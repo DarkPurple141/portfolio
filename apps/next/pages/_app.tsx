@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Alex Hinds, Web developer</title>
         <meta name="title" content="Alex Hinds, Web developer and designer" />
         <meta
           name="description"

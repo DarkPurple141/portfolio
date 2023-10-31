@@ -1,4 +1,6 @@
 import { bundleMDX } from 'mdx-bundler'
+// @ts-expect-error
+import RSS from 'rss'
 import path from 'path'
 import fs from 'fs'
 import remarkSlug from 'remark-slug'
@@ -12,6 +14,7 @@ function kebabToCamelCase(str: string) {
 async function build() {
   const posts = fs.readdirSync(path.join(__dirname, 'posts'))
   const postNames: string[] = []
+  const postMetaData: any[] = []
 
   const user = await prisma.user.findFirst({
     where: { email: 'alex.hinds141@gmail.com' },
@@ -89,6 +92,7 @@ async function build() {
       )
     )
 
+    postMetaData.push(metaData.frontmatter)
     postNames.push(postCleanName)
   }
 
@@ -102,6 +106,36 @@ async function build() {
       })
       .join('\n')
   )
+
+  /* lets create an rss feed */
+  const feed = new RSS({
+    title: "Alex Hinds' Blog",
+    description:
+      'A collection of posts about web development, design and more.',
+    feed_url: 'https://alhinds.com/rss.xml',
+    site_url: 'https://alhinds.com',
+    image_url: 'https://alhinds.com/og-image.png',
+    managingEditor: 'Alex Hinds',
+    webMaster: 'Alex Hinds',
+    copyright: `${new Date().getFullYear()} Alex Hinds`,
+    language: 'en',
+  })
+
+  postMetaData.forEach((post) => {
+    feed.item({
+      title: post.title,
+      author: 'Alex Hinds',
+      description: post.stub,
+      url: `https://alhinds.com/posts/${post.slug}`,
+      guid: post.slug,
+      categories: post.tags,
+      date: post.created.raw,
+    })
+  })
+  // cache the xml to send to clients
+  const xml = feed.xml()
+
+  fs.writeFileSync(path.join(__dirname, '../generated/rss.xml'), xml)
 }
 
 build()
