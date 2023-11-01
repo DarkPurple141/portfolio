@@ -13,6 +13,7 @@
 h1 {
   font: var(--font-heading-lg);
   font-size: var(--splash-font-size);
+  line-height: var(--splash-font-size);
 }
 
 h2 {
@@ -93,8 +94,9 @@ main {
 }
 
 header {
-  align-items: center;
+  align-items: baseline;
   display: flex;
+  font-size: var(--splash-font-size);
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
 }
@@ -102,8 +104,7 @@ header {
 .logo {
   display: block;
   overflow: visible;
-  height: var(--splash-font-size);
-  width: var(--splash-font-size);
+  height: 0.7em;
 }
 
 footer {
