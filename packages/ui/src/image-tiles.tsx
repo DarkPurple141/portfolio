@@ -42,7 +42,7 @@ export const ImageTiles = ({
         <img
           className="object-cover w-full h-full"
           alt="Alex working with others at Atlassian."
-          src="http://localhost:3030/img/working.jpg"
+          src={`${staticAssetsUrl}/img/working.jpg`}
         />
       </div>
     </div>
