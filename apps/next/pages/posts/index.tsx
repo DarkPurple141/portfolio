@@ -10,24 +10,6 @@ export const getStaticProps: GetStaticProps = () => {
   }
 }
 
-// const PostPreview = ({ post }: { post: Post }) => {
-//   return (
-//     <li className="flex flex-col gap-1">
-//       <div>
-//         <time dateTime={post.frontmatter.created.raw}>
-//           {post.frontmatter.created.formatted}
-//         </time>
-//         <Heading as="h2" className="leading-none">
-//           <Link href={`/posts/${post.frontmatter.slug}`}>
-//             {post.frontmatter.title}
-//           </Link>
-//         </Heading>
-//       </div>
-//       <p>{post.frontmatter.stub}</p>
-//     </li>
-//   )
-// }
-
 export default function Posts({ posts }: { posts: Post[] }) {
   return (
     <Stack gap="gap-8">

@@ -7,6 +7,10 @@ export const ImageTiles = () => {
       />
       <img
         className="object-cover mb-4"
+        src="https://static.alhinds.com/img/profile_alt.jpg"
+      />
+      <img
+        className="object-cover mb-4"
         src="https://static.alhinds.com/img/teaching.jpg"
       />
       <img
@@ -15,7 +19,7 @@ export const ImageTiles = () => {
       />
       <img
         className="object-cover mb-4"
-        src="https://static.alhinds.com/img/profile_landscape.jpg.jpg"
+        src="https://static.alhinds.com/img/profile_landscape.jpg"
       />
     </div>
   )
