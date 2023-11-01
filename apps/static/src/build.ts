@@ -28,7 +28,7 @@ async function main() {
         user,
       })
 
-      fs.writeFileSync(path.join(__dirname, '../public/index.html'), compiled)
+      fs.writeFileSync(path.join(__dirname, '../static/index.html'), compiled)
     }
   )
 }
