@@ -16,8 +16,8 @@ export const getStaticProps: GetStaticProps = async () => {
 export default ({ post }: { post: Post }) => {
   return (
     <div className="grid gap-4">
-      <ImageTiles />
       <PostView post={post} />
+      <ImageTiles />
     </div>
   )
 }
