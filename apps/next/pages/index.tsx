@@ -11,13 +11,13 @@ export default function Home() {
         </Heading>
         <Stack gap="gap-4">
           <p>
-            Alex is a design-focused software engineer and former journalist
-            with a passion for delivering great user experiences for the web. He
-            has more than a{' '}
+            I'm a a design-focused software engineer and former journalist with
+            a passion for delivering great user experiences for the web. I have
+            more than a{' '}
             <a href="https://static.alhinds.com">decade of experience</a> in web
             development and software design and am currently focused on design
             systems, frontend tooling and code evolution at{' '}
-            <a href="https://atlassian.design">Atlassian</a>. He's worked at
+            <a href="https://atlassian.design">Atlassian</a>. I've worked at
             companies of all sizes, in-house and on contract.
           </p>
           <Socials />

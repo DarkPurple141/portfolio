@@ -2,7 +2,7 @@
   "name": "@portfolio/content",
   "source": "generated/index.ts",
   "scripts": {
-    "build": "tsx src/index.ts",
+    "build": "tsx src/index.ts && cp generated/rss.xml ../../apps/next/public/rss.xml",
     "dev": "tsx watch src/index.ts",
     "clean": "rm -rf generated && mkdir generated"
   },
