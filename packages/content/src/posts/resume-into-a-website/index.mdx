@@ -1,6 +1,6 @@
 ---
 title: How I made my resumé into a website
-slug: resume-into-a-website
+published: 2023-11-01T02:30:53.235Z
 stub:
   Along time ago I designend and built my resumé in HTML. It was a fun little
   project. I’ve recently transformed the same HTML into a website. This is how I
@@ -46,17 +46,25 @@ pretending to be one. It wasn't:
 So I did a revamp. It's live now at
 [static.alhinds.com](https://static.alhinds.com).
 
-## The process
+## Before and after
 
-<div>
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
   <img
     src="https://static.alhinds.com/resume-into-a-website/mobile-before.png"
     alt="Screenshot of the old resume in mobile"
-    class="w-1/2"
   />
   <img
     src="https://static.alhinds.com/resume-into-a-website/mobile.png"
     alt="Screenshot of the new resume in mobile"
-    class="w-1/2"
   />
 </div>
+
+Note this still prints at A4. I didn't change the HTML structure at all. What I
+did change was some of the design constraints (via CSS) for the mobile view. The
+key now is that all content flows in a column/block layout on all viewports,
+with some of the typography and spacing also scaling with the viewport.
+
+Because I've been working heavily in the design system space recently I also
+coined a proper theme file for the site which I'm now sharing with this website
+too. This means all the typography, color and space requirements are defined in
+one place and this helps to keep the two sites in relative harmony.

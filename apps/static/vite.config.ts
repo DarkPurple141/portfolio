@@ -4,6 +4,7 @@ export default defineConfig({
   root: './static',
   build: {
     outDir: '../dist',
+    emptyOutDir: true,
   },
   server: {
     port: 3030,
