@@ -1,5 +1,6 @@
 export { default as about } from './about.generated'
 export { default as abstraction } from './abstraction.generated'
+export { default as resumeIntoAWebsite } from './resume-into-a-website.generated'
 export { default as theFoundationsAreFoundationsForAReason } from './the-foundations-are-foundations-for-a-reason.generated'
 export { default as toTheFirstTime } from './to-the-first-time.generated'
 export { default as webDevelopmentIsEasyRight } from './web-development-is-easy-right.generated'

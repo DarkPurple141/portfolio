@@ -27,6 +27,25 @@ async function build() {
     const postPath = isDirectory
       ? path.join(__dirname, 'posts', post, 'index.mdx')
       : path.join(__dirname, 'posts', post)
+
+    if (isDirectory) {
+      const postDirPath = path.join(__dirname, 'posts', post)
+      const assetPath = path.join(
+        __dirname,
+        '../../../apps/static/static/public',
+        post
+      )
+      fs.existsSync(assetPath) ? undefined : fs.mkdirSync(assetPath)
+
+      fs.readdirSync(postDirPath).forEach((fileName) => {
+        if (path.parse(fileName).name === 'index') return
+        fs.copyFileSync(
+          path.join(postDirPath, fileName),
+          path.join(assetPath, fileName)
+        )
+      })
+    }
+
     const file = fs.readFileSync(postPath, 'utf8')
     const fileMetaData = fs.statSync(postPath)
     const metaData = await bundleMDX({

@@ -1,0 +1,62 @@
+---
+title: How I made my resumé into a website
+slug: resume-into-a-website
+stub:
+  Along time ago I designend and built my resumé in HTML. It was a fun little
+  project. I’ve recently transformed the same HTML into a website. This is how I
+  did it.
+tags:
+  - web development
+  - html
+  - css
+---
+
+Some people find their websites become glorified resumés. About five years ago I
+set out to do the opposite, I made my resumé from HTML and hosted it on one of
+my [miscellaneous domains](https://misc.alhinds.com/resume). This was pretty
+cool. It gave me a bunch of flexibility and allowed me to leverage the same CSS
+theme across other personal branding projects. A nifty little feature is with
+the following CSS:
+
+```css
+@page {
+  size: 210mm 317mm;
+  margin: 0;
+}
+```
+
+... It also prints correctly on A4 paper. So if I ever needed a PDF for a
+recruiter I could print the page and voila, I had a PDF (I know, I know, I could
+have just made a PDF, but where’s the fun in that?).
+
+<img
+  src="https://static.alhinds.com/resume-into-a-website/print.png"
+  alt="Screenshot of the printing behavior of the resume"
+/>
+
+Over the years I’ve made a few updates to the resumé, but it’s mostly remained
+the same. It was bugging me though that it wasn't really a website. It was a PDF
+pretending to be one. It wasn't:
+
+- responsive
+- accessible (there were all sorts of contrast violations)
+- it didn't have dark mode (okay this is probably not necessary, but I wanted
+  it)
+
+So I did a revamp. It's live now at
+[static.alhinds.com](https://static.alhinds.com).
+
+## The process
+
+<div>
+  <img
+    src="https://static.alhinds.com/resume-into-a-website/mobile-before.png"
+    alt="Screenshot of the old resume in mobile"
+    class="w-1/2"
+  />
+  <img
+    src="https://static.alhinds.com/resume-into-a-website/mobile.png"
+    alt="Screenshot of the new resume in mobile"
+    class="w-1/2"
+  />
+</div>
