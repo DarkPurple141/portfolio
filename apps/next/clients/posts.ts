@@ -1,7 +1,7 @@
 import * as content from '@portfolio/content/generated'
 
 const posts = Object.values(content)
-  .filter((p) => p.frontmatter.title !== 'About')
+  .filter((p) => p.frontmatter.stub !== 'about')
   .sort((a, b) => {
     // sort by date
     return (

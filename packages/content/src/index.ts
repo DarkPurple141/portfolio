@@ -50,7 +50,7 @@ async function build() {
       },
     })
 
-    if (metaData.frontmatter.title === 'About') {
+    if (metaData.frontmatter.stub === 'about') {
       metaData.frontmatter.author = {
         name: user?.name,
         bio: user?.longDescription,

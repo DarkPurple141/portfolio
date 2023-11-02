@@ -123,7 +123,7 @@ a:focus-visible {
     --text-color-subtlest: hsl(0deg 0% 6.67% / 60%);
     --text-color-inverse: var(--accent-bg-color);
     --border-color: hsl(201.82deg 6% 90%);
-    --accent-bg-color: hsl(240deg 61.54% 94.9%);
-    --accent-bg-color-bold: hsl(240deg 61.54% 64.9%);
+    --accent-bg-color: hsl(240deg 62% 94.9%);
+    --accent-bg-color-bold: hsl(240deg 62% 64.9%);
   }
 }

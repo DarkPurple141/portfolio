@@ -1,5 +1,5 @@
 ---
-title: Web development is easy, right?
+title: How I became a web developer
 stub: My own journey wading into the world of web dev. It’s not as easy as it looks, it takes time, and it’s not for everyone.
 published: 2017-06-30T02:30:53.235Z
 tags: 
