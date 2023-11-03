@@ -10,8 +10,8 @@ export default function Document() {
         <body className="max-w-2xl m-auto flex flex-col justify-between">
           <Main />
           <NextScript />
-          <footer className="py-4 text-center mt-auto">
-            <p className="mb-2">Designed in Figma. Made in Sydney 🇦🇺</p>
+          <footer className="p-8 flex flex-col items-center justify-between gap-4 sm:flex-row  mt-auto">
+            <p>Designed in Figma. Made in Sydney 🇦🇺</p>
             <p className="copyright">© {new Date().getFullYear()} Alex Hinds</p>
           </footer>
         </body>

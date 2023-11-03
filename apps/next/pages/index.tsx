@@ -33,9 +33,10 @@ export default function Home() {
           }}
           promoLink
         >
-          This site was built with Next.js. This site has also been deployed and
-          built with <Link href="https://astro.alhinds.com">Astro</Link> and{' '}
-          <Link href="https://remix.alhinds.com">Remix</Link>. My old website,
+          This site was built with{' '}
+          <Link href="https://nextjs.org/">Next.js</Link>. This site has also
+          been <Link href="https://astro.alhinds.com">deployed</Link> and built
+          with <Link href="https://astro.build/">Astro</Link>. My old website,
           built in Vue 2,{' '}
           <Link href="https://vue2.alhinds.com">lives here</Link>.
         </PreviewCard>

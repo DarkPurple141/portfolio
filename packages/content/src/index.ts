@@ -82,16 +82,25 @@ async function build() {
 
     const createdDateObj = new Date(createdDate)
 
+    const dateOptions = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    } as const
+
     // eg: 2023-10-28T02:30:53.235Z
     metaData.frontmatter.modified = {
       raw: fileMetaData.mtime,
-      formatted: new Date(fileMetaData.mtime).toLocaleDateString('en-gb'),
+      formatted: new Date(fileMetaData.mtime).toLocaleString(
+        'en-US',
+        dateOptions
+      ),
     }
 
     // eg: 2023-10-28T02:30:53.235Z
     metaData.frontmatter.created = {
       raw: createdDate,
-      formatted: createdDateObj.toLocaleDateString('en-gb'),
+      formatted: createdDateObj.toLocaleString('en-US', dateOptions),
     }
 
     metaData.frontmatter.slug = `${postCleanName}-${createdDateObj.getFullYear()}-${createdDateObj.getMonth()}-${createdDateObj.getDate()}`
