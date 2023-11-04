@@ -28,20 +28,39 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 
-export function PostView({ post }: { post: Post }) {
+export const MDX = ({
+  code,
+  frontmatter,
+}: Pick<Post, 'code' | 'frontmatter'>) => {
   const Component = useMemo(
-    () => getMDXComponent(post.code, { ...post.frontmatter }),
-    [post.code]
+    () => getMDXComponent(code, { ...frontmatter }),
+    [code]
   )
   return (
-    <article className="markdown max-w-none prose prose-sm prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold prose-headings:text-inherit prose-p:text-subtle prose-li:text-subtle prose-blockquote:text-subtle hover:prose-a:text-brand.bold prose-a:text-inherit -mt-8">
-      <Heading as="h1">{post.frontmatter.title}</Heading>
+    <article className="markdown max-w-none prose prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold prose-headings:text-inherit prose-p:text-subtle prose-li:text-subtle prose-blockquote:text-subtle hover:prose-a:text-brand.bold prose-a:text-inherit -mt-8">
       <Component />
       <p className="border-t mt-8 -mb-8 pt-8 italic">
         You can read more of my <Link href="/posts">writing here</Link> - or why
         not subscribe to <Link href="/rss.xml">my RSS feed</Link>.
       </p>
     </article>
+  )
+}
+
+export function PostView({ post }: { post: Post }) {
+  return (
+    <>
+      <div className="mb-8">
+        <Heading as="h1" className="heading-lg">
+          {post.frontmatter.title}
+        </Heading>
+        <p className="text-subtlest">
+          {post.frontmatter.created.formatted} - last modified{' '}
+          {post.frontmatter.modified.formatted}
+        </p>
+      </div>
+      <MDX code={post.code} frontmatter={post.frontmatter} />
+    </>
   )
 }
 

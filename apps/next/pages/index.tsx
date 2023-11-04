@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <Stack gap="gap-16">
-      <Stack gap="gap-8">
+      <Stack gap="gap-8" className="splash">
         <Heading className="heading-xl" as="h1">
           <span className="text-brand.bold">Alex Hinds</span> is a web developer
           and designer based in Sydney, Australia.
@@ -24,6 +24,9 @@ export default function Home() {
         </Stack>
       </Stack>
       <div className="grid sm:grid-cols-2 gap-8">
+        <Heading className="heading-lg col-span-1 md:col-span-2" as="h2">
+          Featured posts
+        </Heading>
         <PreviewCard
           heading="One person, many frameworks"
           href="/posts"

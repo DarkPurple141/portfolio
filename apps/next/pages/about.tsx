@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
-import { PostView } from './posts/[slug]'
+import { MDX } from './posts/[slug]'
 import { Post, getAboutPost } from '../clients/posts'
-import { ImageTiles } from '@portfolio/ui'
+import { Heading, ImageTiles } from '@portfolio/ui'
 
 export const getStaticProps: GetStaticProps = async () => {
   const post = getAboutPost()
@@ -16,8 +16,11 @@ export const getStaticProps: GetStaticProps = async () => {
 export default ({ post }: { post: Post }) => {
   return (
     <div className="grid gap-8">
+      <Heading as="h1" className="heading-xl">
+        {post.frontmatter.title}
+      </Heading>
       <ImageTiles />
-      <PostView post={post} />
+      <MDX code={post.code} frontmatter={post.frontmatter} />
     </div>
   )
 }

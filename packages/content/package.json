@@ -16,6 +16,7 @@
     "@types/prettier": "^2",
     "prettier": "^2.8.1",
     "remark-autolink-headings": "^7.0.1",
+    "remark-reading-time": "^2.0.1",
     "remark-slug": "^7.0.1",
     "tsx": "^3.14.0"
   }
