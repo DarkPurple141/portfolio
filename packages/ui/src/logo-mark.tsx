@@ -1,7 +1,7 @@
 export const LogoMark = () => {
   return (
     <h2>
-      <a className="flex gap-3 flex-row items-center" href="/">
+      <a href="/">
         <svg
           height="1em"
           viewBox="0 0 85 35"
@@ -11,7 +11,7 @@ export const LogoMark = () => {
           <rect x="50" y="0" width="35" height="13" fill="currentColor" />
           <rect x="50" y="22" width="35" height="13" fill="currentColor" />
         </svg>
-        <span className="max-md:sr-only">Alex Hinds</span>
+        <span className="sr-only">Alex Hinds</span>
       </a>
     </h2>
   )

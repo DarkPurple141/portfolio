@@ -9,6 +9,7 @@ module.exports = {
       backgroundColor: {
         surface: 'var(--bg-color)',
         'neutral.hover': 'var(--bg-color-hover)',
+        'accent': 'var(--accent-bg-color)',
       },
       colors: {
         default: 'var(--text-color)',

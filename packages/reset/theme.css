@@ -26,7 +26,6 @@
     --font-heading-xl: var(--font-heading-400);
     --font-heading-lg: var(--font-heading-300);
     --font-heading-md: var(--font-heading-200);
-    --font-heading-sm: var(--font-heading-100);
     --font-body-sm: var(--font-body);
   }
 }
@@ -43,12 +42,28 @@
   font: var(--font-heading-md);
 }
 
+.heading-500 {
+  font: var(--font-heading-500);
+}
+
+.heading-400 {
+  font: var(--font-heading-400);
+}
+
+.heading-300 {
+  font: var(--font-heading-300);
+}
+
 .heading-sm {
   font: var(--font-heading-sm);
 }
 
 .body-lg {
   font: var(--font-body-lg);
+}
+
+.body-md {
+  font: var(--font-body);
 }
 
 .body-sm {
@@ -58,7 +73,7 @@
 /* body default */
 body {
   position: relative;
-  font: var(--font-body);
+  font: var(--font-body-lg);
   font-kerning: normal;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -116,14 +131,14 @@ a:focus-visible {
 
 @media print and (prefers-color-scheme: dark), (prefers-color-scheme: light) {
   :root {
-    --bg-color: hsl(201.82deg 24% 100%);
-    --bg-color-hover: hsl(201.82deg 14.29% 95.88%);
+    --bg-color: hsl(240deg 24% 100%);
+    --bg-color-hover: hsl(240deg 24% 96%);
     --text-color: hsl(201.82deg 24% 6%);
     --text-color-subtle: hsl(0deg 0% 6.67% / 75%);
     --text-color-subtlest: hsl(0deg 0% 6.67% / 60%);
     --text-color-inverse: var(--accent-bg-color);
     --border-color: hsl(201.82deg 6% 90%);
     --accent-bg-color: hsl(240deg 62% 94.9%);
-    --accent-bg-color-bold: hsl(240deg 62% 64.9%);
+    --accent-bg-color-bold: hsl(240deg 62% 62%);
   }
 }

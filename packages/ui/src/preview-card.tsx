@@ -36,7 +36,7 @@ export const PreviewCard = ({
         {published && (
           <time dateTime={published.iso}>{published.formatted}</time>
         )}
-        <Heading className="heading-sm leading-none" as="h2">
+        <Heading className="bold leading-none" as="h2">
           <Link ref={ref} href={href}>
             {heading}
           </Link>

@@ -54,10 +54,7 @@ export function PostView({ post }: { post: Post }) {
         <Heading as="h1" className="heading-lg">
           {post.frontmatter.title}
         </Heading>
-        <p className="text-subtlest">
-          {post.frontmatter.created.formatted} - last modified{' '}
-          {post.frontmatter.modified.formatted}
-        </p>
+        <p className="text-subtlest">{post.frontmatter.created.formatted}</p>
       </div>
       <MDX code={post.code} frontmatter={post.frontmatter} />
     </>
