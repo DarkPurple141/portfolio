@@ -15,9 +15,9 @@
   --font-heading-md: var(--font-heading-300);
   --font-heading-sm: var(--font-heading-200);
   --font-heading-xs: var(--font-heading-100);
-  --font-body-lg: 1rem/1.5 var(--font-family);
-  --font-body: 0.875rem/1.5 var(--font-family);
-  --font-body-sm: 0.75rem/1.5 var(--font-family);
+  --font-body-lg: 1rem/1.6 var(--font-family);
+  --font-body: 0.875rem/1.6 var(--font-family);
+  --font-body-sm: 0.75rem/1.6 var(--font-family);
 }
 
 /* mobile */

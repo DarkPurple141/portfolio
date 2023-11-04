@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
       </Head>
-      <header className="flex flex-row justify-between py-4">
+      <header className="sticky top-0 left-0 right-0 flex flex-row justify-between items-center py-4 bg-surface">
         <LogoMark />
         <Inline gap="gap-3">
           {[

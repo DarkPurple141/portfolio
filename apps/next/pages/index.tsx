@@ -10,7 +10,7 @@ export default function Home() {
           and designer based in Sydney, Australia.
         </Heading>
         <Stack gap="gap-4">
-          <p>
+          <p className="body-lg">
             I'm a a design-focused software engineer and former journalist with
             a passion for delivering great user experiences for the web. I have
             more than a{' '}

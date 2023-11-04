@@ -48,6 +48,10 @@ p {
   address {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  p {
+    line-height: 1.5;
+  }
 }
 
 address {

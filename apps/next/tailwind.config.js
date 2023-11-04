@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
+        surface: 'var(--bg-color)',
         'neutral.hover': 'var(--bg-color-hover)',
       },
       colors: {
