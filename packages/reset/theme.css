@@ -132,12 +132,12 @@ a:focus-visible {
 @media print and (prefers-color-scheme: dark), (prefers-color-scheme: light) {
   :root {
     --bg-color: hsl(240deg 24% 100%);
-    --bg-color-hover: hsl(240deg 24% 96%);
-    --text-color: hsl(201.82deg 24% 6%);
+    --bg-color-hover: hsla(240deg 24% 96% / 75%);
+    --text-color: hsl(240deg 24% 6%);
     --text-color-subtle: hsl(0deg 0% 6.67% / 75%);
     --text-color-subtlest: hsl(0deg 0% 6.67% / 60%);
     --text-color-inverse: var(--accent-bg-color);
-    --border-color: hsl(201.82deg 6% 90%);
+    --border-color: hsl(240deg 6% 90%);
     --accent-bg-color: hsl(240deg 62% 94.9%);
     --accent-bg-color-bold: hsl(240deg 62% 62%);
   }
