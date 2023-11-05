@@ -1,7 +1,9 @@
 ---
-title: The tools I use for software development in 2023
+title: The tools I use for software development
 published: 2023-11-05T02:30:53.235Z
-description: What I'm using in 2023.
+description:
+  What I'm using to build and design software in 2023. Tools, frameworks
+  equipment and infrastructure.
 tags:
   - software
   - personal

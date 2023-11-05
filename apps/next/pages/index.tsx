@@ -58,7 +58,10 @@ export default function Home({
         </PreviewCard>
         <PreviewCard
           promoLink
-          published={post.frontmatter.published}
+          published={{
+            formatted: post.frontmatter.created.formatted,
+            iso: post.frontmatter.created.raw,
+          }}
           heading={post.frontmatter.title}
           href={`/posts/${post.frontmatter.slug}`}
         >
