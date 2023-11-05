@@ -1,7 +1,7 @@
 ---
 title: The tools I use for software development in 2023
 published: 2023-11-05T02:30:53.235Z
-stub: What I'm using in 2023.
+description: What I'm using in 2023.
 tags:
   - software
   - personal

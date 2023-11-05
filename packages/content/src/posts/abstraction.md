@@ -1,7 +1,7 @@
 ---
 title: Abstraction
 published: 2015-01-30T02:30:53.235Z
-stub:
+description:
   What is abstraction and how does it apply to programming? One of my original
   blogs about programming!
 tags:

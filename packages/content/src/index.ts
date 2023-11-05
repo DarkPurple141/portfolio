@@ -70,7 +70,7 @@ async function build() {
       },
     })
 
-    if (metaData.frontmatter.stub === 'about') {
+    if (metaData.frontmatter.description === 'about') {
       metaData.frontmatter.author = {
         name: user?.name,
         bio: user?.longDescription,
@@ -151,12 +151,12 @@ async function build() {
   })
 
   postMetaData
-    .filter((post) => post.stub !== 'about')
+    .filter((post) => post.description !== 'about')
     .forEach((post) => {
       feed.item({
         title: post.title,
         author: 'Alex Hinds',
-        description: post.stub,
+        description: post.description,
         url: `https://alhinds.com/posts/${post.slug}`,
         guid: post.slug,
         categories: post.tags,

@@ -1,6 +1,6 @@
 ---
 title: So you're trying to build a website?
-stub:
+description:
   A fun little article on the absurdities and overwhelming depth of becoming a
   first-time web developer.
 published: 2018-01-30T02:30:53.235Z

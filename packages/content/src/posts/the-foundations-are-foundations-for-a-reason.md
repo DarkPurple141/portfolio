@@ -1,6 +1,6 @@
 ---
 title: 'Don’t ignore the basics: JS, CSS, HTML'
-stub:
+description:
   Why the building blocks of the web remain the core drivers of success in the
   modern web.
 published: 2018-01-30T02:30:53.235Z

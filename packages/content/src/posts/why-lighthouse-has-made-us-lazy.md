@@ -1,7 +1,7 @@
 ---
 title: 'Frontend Performance: Why Lighthouse has made us lazy'
 published: 2021-01-06T02:30:53.235Z
-stub:
+description:
   The greatest trap of optimising web application performance is failing to
   understand the limitations of the tools we use to measure it, and the type of
   performance we’re trying to extract.

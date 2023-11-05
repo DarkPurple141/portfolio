@@ -27,7 +27,7 @@ export default function Posts({ posts }: { posts: Post[] }) {
                 iso: post.frontmatter.created.raw,
               }}
             >
-              {post.frontmatter.stub}
+              {post.frontmatter.description}
             </PreviewCard>
           </li>
         ))}

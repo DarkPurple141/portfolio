@@ -1,7 +1,21 @@
 import { Heading, Stack, Socials, PreviewCard } from '@portfolio/ui'
 import Link from 'next/link'
+import { getLatestPost } from '../clients/posts'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async () => {
+  const post = getLatestPost()
+
+  return {
+    props: {
+      post,
+    },
+  }
+}
+
+export default function Home({
+  post,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Stack gap="gap-24">
       <Stack gap="gap-8" className="splash">
@@ -14,11 +28,11 @@ export default function Home() {
             I'm a design-focused software engineer and former journalist with a
             passion for delivering great user experiences for the web. I have
             more than a{' '}
-            <a href="https://static.alhinds.com">decade of experience</a> in web
-            development and software design and am currently focused on design
-            systems, frontend tooling and code evolution at{' '}
-            <a href="https://atlassian.design">Atlassian</a>. I've worked at
-            companies of all sizes, in-house and on contract.
+            <Link href="https://static.alhinds.com">decade of experience</Link>{' '}
+            in web development and software design and am currently focused on
+            design systems, frontend tooling and code evolution at{' '}
+            <Link href="https://atlassian.design">Atlassian</Link>. I've worked
+            at companies of all sizes, in-house and on contract.
           </p>
           <Socials />
         </Stack>
@@ -44,15 +58,11 @@ export default function Home() {
         </PreviewCard>
         <PreviewCard
           promoLink
-          published={{
-            iso: '2023-10-28T02:00:00.005Z',
-            formatted: 'October 2023',
-          }}
-          heading="How this site was built 🛠"
-          href="/posts"
+          published={post.frontmatter.published}
+          heading={post.frontmatter.title}
+          href={`/posts/${post.frontmatter.slug}`}
         >
-          This article is coming very very soon! I promise. Seriously I'm
-          writing it as we speak...
+          {post.frontmatter.description}
         </PreviewCard>
       </div>
     </Stack>

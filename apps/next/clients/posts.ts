@@ -1,7 +1,7 @@
 import * as content from '@portfolio/content/generated'
 
 const posts = Object.values(content)
-  .filter((p) => p.frontmatter.stub !== 'about')
+  .filter((p) => p.frontmatter.description !== 'about')
   .sort((a, b) => {
     // sort by date
     return (
@@ -16,6 +16,10 @@ export function getAllPosts() {
 
 export function getPostBySlug(slug: string) {
   return posts.find((post) => post.frontmatter.slug === slug)
+}
+
+export function getLatestPost() {
+  return posts[0]
 }
 
 export function getAboutPost() {
