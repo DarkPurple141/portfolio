@@ -9,8 +9,8 @@ const metaData = {
     stub: 'The greatest trap of optimising web application performance is failing to understand the limitations of the tools we use to measure it, and the type of performance we’re trying to extract.',
     tags: ['performance', 'web development', 'lighthouse'],
     modified: {
-      raw: '2023-11-02T03:10:00.700Z',
-      formatted: 'November 2, 2023',
+      raw: '2023-11-05T03:45:43.802Z',
+      formatted: 'November 5, 2023',
     },
     created: { raw: '2021-01-06T02:30:53.235Z', formatted: 'January 6, 2021' },
     slug: 'why-lighthouse-has-made-us-lazy-2021-0-6',
@@ -25,8 +25,8 @@ const metaData = {
       stub: 'The greatest trap of optimising web application performance is failing to understand the limitations of the tools we use to measure it, and the type of performance we’re trying to extract.',
       tags: ['performance', 'web development', 'lighthouse'],
       modified: {
-        raw: '2023-11-02T03:10:00.700Z',
-        formatted: 'November 2, 2023',
+        raw: '2023-11-05T03:45:43.802Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2021-01-06T02:30:53.235Z',

@@ -8,7 +8,7 @@ const metaData = {
     stub: 'about',
     author: {
       name: 'Alex Hinds',
-      bio: 'I am a software engineer with a passion for building beautiful and performant user interfaces. I have a strong background in web development, with experience in React, Node.js, TypeScript, and GraphQL. I am a strong advocate for open source software and have contributed to a number of projects including @compiled, @emotion, storybook-addon-performance and eslint-codemod-utils. I am currently working at Atlassian on the Atlassian Design System.',
+      bio: "I'm a design-focused software engineer and former journalist with\n  a passion for delivering great user experiences for the web. I've\n  honed my craft at some of the world's best technology companies,\n  working in many different problem domains. I thrive at the\n  intersection of design and engineering, and my latest focus has\n  been on building Design Systems at scale.",
     },
     modified: {
       raw: '2023-11-03T00:00:47.657Z',
@@ -26,7 +26,7 @@ const metaData = {
       stub: 'about',
       author: {
         name: 'Alex Hinds',
-        bio: 'I am a software engineer with a passion for building beautiful and performant user interfaces. I have a strong background in web development, with experience in React, Node.js, TypeScript, and GraphQL. I am a strong advocate for open source software and have contributed to a number of projects including @compiled, @emotion, storybook-addon-performance and eslint-codemod-utils. I am currently working at Atlassian on the Atlassian Design System.',
+        bio: "I'm a design-focused software engineer and former journalist with\n  a passion for delivering great user experiences for the web. I've\n  honed my craft at some of the world's best technology companies,\n  working in many different problem domains. I thrive at the\n  intersection of design and engineering, and my latest focus has\n  been on building Design Systems at scale.",
       },
       modified: {
         raw: '2023-11-03T00:00:47.657Z',

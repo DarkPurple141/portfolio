@@ -1,5 +1,5 @@
 ---
-title: To the first-time web developer
+title: So you're trying to build a website?
 stub:
   A fun little article on the absurdities and overwhelming depth of becoming a
   first-time web developer.

@@ -2,20 +2,23 @@
 title: How I made my resumé into a website
 published: 2023-11-01T02:30:53.235Z
 stub:
-  A while back I designed and built my resumé in HTML. It was a fun little
-  project. I’ve recently transformed the same HTML into a proper website. This
-  is how I did it.
+  A while back I designed and built my resumé in HTML. I’ve recently transformed
+  the same HTML into a proper website.
 tags:
   - web development
   - html
   - css
 ---
 
-About five years ago I made my resumé from HTML and hosted it on one of my
-[miscellaneous domains](https://misc.alhinds.com/resume). This was pretty cool.
-It gave me a bunch of flexibility and allowed me to leverage the same CSS theme
-across other personal branding web projects. A nifty little feature is with the
-following CSS:
+About five years ago I decided to remake my resumé from HTML and hosted it on
+one of my [miscellaneous domains](https://misc.alhinds.com/resume). Designing
+and building in HTML and CSS is something I enjoy doing - it's flexible and
+familiar so it was a fun little project and delivered a result that I was happy
+with. It also gave me a bunch of flexibility to leverage the same CSS across
+other personal branding web projects.
+
+A key constraint was ensuring it could be printed on a single page - and I
+managed to achieve that with the following CSS:
 
 ```css
 @page {
@@ -24,18 +27,19 @@ following CSS:
 }
 ```
 
-... It also prints correctly on A4 paper. So if I ever needed a PDF for a
-recruiter I could print the page and voila, I had a PDF (I know, I know, I could
-have just made a PDF, but where’s the fun in that?).
+... and with some fine tuning on the size, and volume of content it prints
+correctly on A4 paper. If I ever needed a PDF for a recruiter I could print the
+page and voila, I had a PDF (I know, I know, I could have just made a PDF, but
+where’s the fun in that?).
 
 <img
   src="https://static.alhinds.com/resume-into-a-website/print.png"
   alt="Screenshot of the printing behavior of the resume"
 />
 
-Over the years I’ve made a few updates to the resumé, but it’s mostly remained
-the same. It was bugging me though that it wasn't _really_ a website. It was a
-PDF pretending to be one. It wasn't:
+Over the years I’ve made a few updates to the resumé, but the design and layout
+has mostly remained the same. It was bugging me though that it wasn't _really_ a
+website. It was a PDF dressed up with some flavour. It wasn't:
 
 - responsive
 - accessible (there were all sorts of contrast violations)

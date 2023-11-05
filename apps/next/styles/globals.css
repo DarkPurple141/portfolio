@@ -5,6 +5,10 @@ p a {
   @apply underline font-normal;
 }
 
+p {
+  @apply text-subtle;
+}
+
 a {
   @apply font-semibold;
 }

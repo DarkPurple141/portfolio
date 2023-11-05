@@ -30,8 +30,13 @@ export const userData: Omit<User, 'id'> = {
   shortDescription3rdPerson:
     'Alex Hinds is a web developer who thrives at the intersection of design and engineering.',
   longDescription3rdPerson:
-    'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development. He thrives at the intersection of design and engineering, and has worked with some of the best technology teams in the industry.',
-  shortDescription:
-    'I am a software engineer with a passion for building beautiful and performant user interfaces.',
-  longDescription: `I am a software engineer with a passion for building beautiful and performant user interfaces. I have a strong background in web development, with experience in React, Node.js, TypeScript, and GraphQL. I am a strong advocate for open source software and have contributed to a number of projects including @compiled, @emotion, storybook-addon-performance and eslint-codemod-utils. I am currently working at Atlassian on the Atlassian Design System.`,
+    'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development. He thrives at the intersection of design and engineering, and has worked with some of the best technology companies in the industry.',
+  shortDescription: `I'm a design-focused software engineer and former journalist with
+    a passion for delivering great user experiences for the web.`,
+  longDescription: `I'm a design-focused software engineer and former journalist with
+  a passion for delivering great user experiences for the web. I've
+  honed my craft at some of the world's best technology companies,
+  working in many different problem domains. I thrive at the
+  intersection of design and engineering, and my latest focus has
+  been on building Design Systems at scale.`,
 }

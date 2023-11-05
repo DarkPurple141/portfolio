@@ -25,7 +25,7 @@ h3 {
 }
 
 p {
-  font: var(--font-body-sm);
+  font: var(--font-body);
 }
 
 @media print {
@@ -50,6 +50,7 @@ p {
   }
 
   p {
+    font: var(--font-body-sm);
     line-height: 1.5;
   }
 }
@@ -94,7 +95,7 @@ main {
 }
 
 .column:first-of-type {
-  background-color: var(--accent-bg-color); /*#d99;*/
+  background-color: var(--accent-bg-color);
 }
 
 header {

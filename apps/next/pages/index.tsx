@@ -3,16 +3,16 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <Stack gap="gap-16">
+    <Stack gap="gap-24">
       <Stack gap="gap-8" className="splash">
         <Heading className="heading-xl" as="h1">
           <span className="text-brand.bold">Alex Hinds</span> is a web developer
           and designer based in Sydney, Australia.
         </Heading>
         <Stack gap="gap-4">
-          <p className="body-lg">
-            I'm a a design-focused software engineer and former journalist with
-            a passion for delivering great user experiences for the web. I have
+          <p>
+            I'm a design-focused software engineer and former journalist with a
+            passion for delivering great user experiences for the web. I have
             more than a{' '}
             <a href="https://static.alhinds.com">decade of experience</a> in web
             development and software design and am currently focused on design

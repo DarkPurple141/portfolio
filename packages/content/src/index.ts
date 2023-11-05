@@ -150,17 +150,19 @@ async function build() {
     language: 'en',
   })
 
-  postMetaData.forEach((post) => {
-    feed.item({
-      title: post.title,
-      author: 'Alex Hinds',
-      description: post.stub,
-      url: `https://alhinds.com/posts/${post.slug}`,
-      guid: post.slug,
-      categories: post.tags,
-      date: post.created.raw,
+  postMetaData
+    .filter((post) => post.stub !== 'about')
+    .forEach((post) => {
+      feed.item({
+        title: post.title,
+        author: 'Alex Hinds',
+        description: post.stub,
+        url: `https://alhinds.com/posts/${post.slug}`,
+        guid: post.slug,
+        categories: post.tags,
+        date: post.created.raw,
+      })
     })
-  })
   // cache the xml to send to clients
   const xml = feed.xml()
 
