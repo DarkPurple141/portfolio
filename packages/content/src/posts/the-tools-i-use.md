@@ -33,8 +33,9 @@ All the things I use to develop software.
 
 - Preferred language - [typescript](https://www.typescriptlang.org/) - I've been
   using it for years and it's still the best option.
-- Package manager - [pnpm](https://pnpm.io/) - To me the successor to `yarn` and
-  with some elegantly designed smarts over `npm`. Also independent.
+- Package manager - [pnpm](https://pnpm.io/) - To me the successor to
+  [yarn](https://yarnpkg.com/) and with some elegantly designed smarts over
+  [npm](https://www.npmjs.com/). Also independent.
 - Editor - [vscode](https://code.visualstudio.com/) - never bet against
   microsoft
 - Terminal - [iterm2](https://iterm2.com/) sometimes I still use `terminal`
@@ -52,13 +53,18 @@ All the things I use to develop software.
 
 The key meta frameworks/tools that I use to build software.
 
-- [Next.js](https://nextjs.org/)
-- [Prisma](https://www.prisma.io/)
-- Styling & fast design - [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [React](https://reactjs.org/)
-- [TRPC](https://trpc.io/)
-- [MDX](https://mdxjs.com/)
+- [Next.js](https://nextjs.org/) - my go to for build simple web apps for some
+  time.
+- [Prisma](https://www.prisma.io/) - a new addition as an ORM but excellent
+  tooling means it's been easy to integrate.
+- [Tailwind CSS](https://tailwindcss.com/) - great sensible defaults for design
+  and excellent tooling. Easy to extend once you learn the basics.
+- [Vite](https://vitejs.dev/) - just works.
+- [React](https://reactjs.org/) - I'm liking it less in the last few years but
+  it's still the standard. I would like to give Vue another go though.
+- [TRPC](https://trpc.io/) - typesafety across network calls and works well with
+  prisma.
+- [MDX](https://mdxjs.com/) -
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
@@ -68,12 +74,18 @@ There are some here that I've omitted but these are the core set. I like to keep
 the number of extensions to a minimum in general but I'm not afraid to add more
 if need be.
 
-- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Github Actions](https://marketplace.visualstudio.com/items?itemName=cschleiden.vscode-github-actions)
-- [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) -
+  a must for working with docker
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) -
+  background process for running eslint while developing
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) -
+  background process for running prettier while developing
+- [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) -
+  key metadata and insights from commits inline
+- [Github Actions](https://marketplace.visualstudio.com/items?itemName=cschleiden.vscode-github-actions) -
+  syntax highlighting and snippets for github actions
+- [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) -
+  AI pair programming
 - [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)
 - [Prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)

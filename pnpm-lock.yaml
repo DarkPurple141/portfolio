@@ -62,12 +62,18 @@ importers:
       '@portfolio/content':
         specifier: workspace:*
         version: link:../../packages/content
+      '@portfolio/db':
+        specifier: workspace:*
+        version: link:../../packages/db
       '@portfolio/reset':
         specifier: workspace:*
         version: link:../../packages/reset
       '@portfolio/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^5.5.2
+        version: 5.5.2
       '@types/node':
         specifier: 18.11.18
         version: 18.11.18
@@ -1488,6 +1494,10 @@ packages:
   /@prisma/engines@4.8.0:
     resolution: {integrity: sha512-A1Asn2rxZMlLAj1HTyfaCv0VQrLUv034jVay05QlqZg1qiHPeA3/pGTfNMijbsMYCsGVxfWEJuaZZuNxXGMCrA==, tarball: https://packages.atlassian.com/api/npm/npm-remote/@prisma/engines/-/engines-4.8.0.tgz}
     requiresBuild: true
+
+  /@prisma/nextjs-monorepo-workaround-plugin@5.5.2:
+    resolution: {integrity: sha512-iYXDnY0L7HkZS57ui6Q+vL7g+RFlJDFrW3lQcUXs/RxYia7YGiq7OwF452An+K11YL1YDUo5LF/E48hPgeI9ZQ==}
+    dev: false
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}

@@ -10,6 +10,7 @@
   "dependencies": {
     "@next/font": "13.1.1",
     "@portfolio/content": "workspace:*",
+    "@portfolio/db": "workspace:*",
     "@portfolio/reset": "workspace:*",
     "@portfolio/ui": "workspace:*",
     "@types/node": "18.11.18",
@@ -22,6 +23,7 @@
     "typescript": "^4.9.3"
   },
   "devDependencies": {
+    "@prisma/nextjs-monorepo-workaround-plugin": "^5.5.2",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
