@@ -1,5 +1,5 @@
 import { Heading, PreviewCard, Stack } from '@portfolio/ui'
-import { Post, getAllPosts } from '../../app/clients/posts'
+import { Post, getAllPosts } from '@/app/clients/posts'
 import { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = () => {

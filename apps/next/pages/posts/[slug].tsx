@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { getAllPosts, getPostBySlug, Post } from '../../app/clients/posts'
+import { getAllPosts, getPostBySlug, Post } from '@/app/clients/posts'
 import { Heading } from '@portfolio/ui'
-import { MDX } from '../../app/components/mdx'
+import { MDX } from '@/app/components/mdx'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {

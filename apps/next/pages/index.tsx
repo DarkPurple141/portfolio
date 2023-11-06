@@ -1,6 +1,6 @@
 import { Heading, Stack, Socials, PreviewCard } from '@portfolio/ui'
 import Link from 'next/link'
-import { getLatestPost } from '../app/clients/posts'
+import { getLatestPost } from '@/app/clients/posts'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {

@@ -1,3 +1,4 @@
+'use client'
 import { getMDXComponent } from 'mdx-bundler/client'
 import Link from 'next/link'
 import { useMemo } from 'react'

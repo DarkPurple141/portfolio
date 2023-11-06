@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next'
-import { MDX } from '../app/components/mdx'
-import { Post, getAboutPost } from '../app/clients/posts'
+import { MDX } from '@/app/components/mdx'
+import { Post, getAboutPost } from '@/app/clients/posts'
 import { Heading, ImageTiles } from '@portfolio/ui'
 
 export const getStaticProps: GetStaticProps = async () => {
