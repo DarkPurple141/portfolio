@@ -1,5 +1,6 @@
 export { default as about } from './about.generated'
 export { default as abstraction } from './abstraction.generated'
+export { default as iBuiltATailwindPreset } from './i-built-a-tailwind-preset.generated'
 export { default as resumeIntoAWebsite } from './resume-into-a-website.generated'
 export { default as theFoundationsAreFoundationsForAReason } from './the-foundations-are-foundations-for-a-reason.generated'
 export { default as theToolsIUse } from './the-tools-i-use.generated'

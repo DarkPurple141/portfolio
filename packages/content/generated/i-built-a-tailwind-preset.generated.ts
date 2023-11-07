@@ -1,0 +1,43 @@
+/** THIS IS A GENERATED FILE
+ * @command pnpm build
+ */
+const metaData = {
+  code: 'var Component=(()=>{var p=Object.create;var a=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var f=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),w=(n,e)=>{for(var r in e)a(n,r,{get:e[r],enumerable:!0})},s=(n,e,r,o)=>{if(e&&typeof e=="object"||typeof e=="function")for(let i of u(e))!g.call(n,i)&&i!==r&&a(n,i,{get:()=>e[i],enumerable:!(o=h(e,i))||o.enumerable});return n};var y=(n,e,r)=>(r=n!=null?p(m(n)):{},s(e||!n||!n.__esModule?a(r,"default",{value:n,enumerable:!0}):r,n)),b=n=>s(a({},"__esModule",{value:!0}),n);var l=f((T,c)=>{c.exports=_jsx_runtime});var I={};w(I,{default:()=>j,frontmatter:()=>x});var t=y(l()),x={title:"I built a Tailwind preset",published:new Date(1699065053235),description:"I wanted to play around with setting up and managing a shared configuration for tailwind. It\'s pretty simple.",tags:["explainers","tailwind","configuration"]};function d(n){let e=Object.assign({p:"p",a:"a",h2:"h2",pre:"pre",code:"code"},n.components);return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(e.p,{children:`One thing I wanted to do with this website was create shareable atomic\nmini-packages of confguration that I could leverage while experimenting. The\nidea - to write a piece of configuration once and use it across projects in Vue,\nReact, Astro you name it.`}),`\n`,(0,t.jsxs)(e.p,{children:[`I\'ve done this already with my\n`,(0,t.jsx)(e.a,{href:"https://github.com/DarkPurple141/portfolio/blob/master/packages/tsconfig/base.json",children:"typescript configuration"}),`,\nmy\n`,(0,t.jsx)(e.a,{href:"https://github.com/DarkPurple141/portfolio/blob/master/packages/reset/reset.css",children:"CSS reset"}),`\nand my local\n`,(0,t.jsx)(e.a,{href:"https://github.com/DarkPurple141/portfolio/tree/master/packages/ui",children:"UI library"}),"."]}),`\n`,(0,t.jsxs)(e.p,{children:[`But I haven\'t yet truly abstracted my theme configuration - currently it remains\na single style sheet with a range of CSS Vars. I was certain I could craft a\nshareable Tailwind configuration but I\'d never really tried. At work we use\n`,(0,t.jsx)(e.a,{href:"https://emotion.sh/docs/introduction",children:"@emotion"}),` and\n`,(0,t.jsx)(e.a,{href:"https://compiledcssinjs.com/",children:"@compiled"}),` for styling (as well as some scatted\nscss).`]}),`\n`,(0,t.jsx)(e.h2,{id:"tailwind-plugins-and-presets",children:"Tailwind plugins and presets"}),`\n`,(0,t.jsxs)(e.p,{children:[`Tailwind has a number of ways to extend its configuration. The most common is by\nsimply creating a `,(0,t.jsx)(e.a,{href:"https://tailwindcss.com/docs/presets",children:"preset"}),` which is very\nbasic and just a javascript object. You can also create\n`,(0,t.jsx)(e.a,{href:"https://tailwindcss.com/docs/plugins",children:"plugins"}),` which are more complex and can\nbe used to extend the core functionality of Tailwind.`]}),`\n`,(0,t.jsx)(e.p,{children:"I sense a plugin is in my future but for now a preset is perfectly fine."}),`\n`,(0,t.jsx)(e.pre,{children:(0,t.jsx)(e.code,{className:"language-js",children:`// @portfolio/tailwind-preset/index.js\n/** @type {import(\'tailwindcss\').Config} */\nmodule.exports = {\n  theme: {\n    extend: {\n      // this will provide these values as usable keywords for colors\n      backgroundColor: {\n        surface: \'var(--bg-color)\',\n        \'neutral.hover\': \'var(--bg-color-hover)\',\n        accent: \'var(--accent-bg-color)\',\n      },\n      colors: {\n        default: \'var(--text-color)\',\n        subtle: \'var(--text-color-subtle)\',\n        subtlest: \'var(--text-color-subtlest)\',\n        accent: \'var(--accent-bg-color)\',\n        \'accent.bold\': \'var(--accent-bg-color-bold)\',\n      },\n    },\n  },\n  plugins: [require(\'@tailwindcss/typography\')],\n}\n`})}),`\n`,(0,t.jsx)(e.p,{children:`This is the first pass. It works and it\'s pretty simple. I\'m currently using it\nin my Next app and my UI library as such:`}),`\n`,(0,t.jsx)(e.pre,{children:(0,t.jsx)(e.code,{className:"language-js",children:`// @portfolio/next/tailwind.config.js\n/** @type {import(\'tailwindcss\').Config} */\nmodule.exports = {\n  presets: [require(\'@portfolio/tailwind-preset\')],\n}\n`})}),`\n`,(0,t.jsx)(e.p,{children:`And it works great. I\'m keen to extend it soon to typpgraphy as that\'s what more\nof my current theme file does very little color and I\'d prefer not to use the\ntypography plugin if it can be avoided!`})]})}function v(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,Object.assign({},n,{children:(0,t.jsx)(d,n)})):d(n)}var j=v;return b(I);})();\n;return Component;',
+  frontmatter: {
+    title: 'I built a Tailwind preset',
+    published: '2023-11-04T02:30:53.235Z',
+    description:
+      "I wanted to play around with setting up and managing a shared configuration for tailwind. It's pretty simple.",
+    tags: ['explainers', 'tailwind', 'configuration'],
+    modified: {
+      raw: '2023-11-07T03:44:33.388Z',
+      formatted: 'November 7, 2023',
+    },
+    created: { raw: '2023-11-04T02:30:53.235Z', formatted: 'November 4, 2023' },
+    slug: 'i-built-a-tailwind-preset-2023-10-4',
+  },
+  errors: [],
+  matter: {
+    content:
+      "\nOne thing I wanted to do with this website was create shareable atomic\nmini-packages of confguration that I could leverage while experimenting. The\nidea - to write a piece of configuration once and use it across projects in Vue,\nReact, Astro you name it.\n\nI've done this already with my\n[typescript configuration](https://github.com/DarkPurple141/portfolio/blob/master/packages/tsconfig/base.json),\nmy\n[CSS reset](https://github.com/DarkPurple141/portfolio/blob/master/packages/reset/reset.css)\nand my local\n[UI library](https://github.com/DarkPurple141/portfolio/tree/master/packages/ui).\n\nBut I haven't yet truly abstracted my theme configuration - currently it remains\na single style sheet with a range of CSS Vars. I was certain I could craft a\nshareable Tailwind configuration but I'd never really tried. At work we use\n[@emotion](https://emotion.sh/docs/introduction) and\n[@compiled](https://compiledcssinjs.com/) for styling (as well as some scatted\nscss).\n\n## Tailwind plugins and presets\n\nTailwind has a number of ways to extend its configuration. The most common is by\nsimply creating a [preset](https://tailwindcss.com/docs/presets) which is very\nbasic and just a javascript object. You can also create\n[plugins](https://tailwindcss.com/docs/plugins) which are more complex and can\nbe used to extend the core functionality of Tailwind.\n\nI sense a plugin is in my future but for now a preset is perfectly fine.\n\n```js\n// @portfolio/tailwind-preset/index.js\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  theme: {\n    extend: {\n      // this will provide these values as usable keywords for colors\n      backgroundColor: {\n        surface: 'var(--bg-color)',\n        'neutral.hover': 'var(--bg-color-hover)',\n        accent: 'var(--accent-bg-color)',\n      },\n      colors: {\n        default: 'var(--text-color)',\n        subtle: 'var(--text-color-subtle)',\n        subtlest: 'var(--text-color-subtlest)',\n        accent: 'var(--accent-bg-color)',\n        'accent.bold': 'var(--accent-bg-color-bold)',\n      },\n    },\n  },\n  plugins: [require('@tailwindcss/typography')],\n}\n```\n\nThis is the first pass. It works and it's pretty simple. I'm currently using it\nin my Next app and my UI library as such:\n\n```js\n// @portfolio/next/tailwind.config.js\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  presets: [require('@portfolio/tailwind-preset')],\n}\n```\n\nAnd it works great. I'm keen to extend it soon to typpgraphy as that's what more\nof my current theme file does very little color and I'd prefer not to use the\ntypography plugin if it can be avoided!\n",
+    data: {
+      title: 'I built a Tailwind preset',
+      published: '2023-11-04T02:30:53.235Z',
+      description:
+        "I wanted to play around with setting up and managing a shared configuration for tailwind. It's pretty simple.",
+      tags: ['explainers', 'tailwind', 'configuration'],
+      modified: {
+        raw: '2023-11-07T03:44:33.388Z',
+        formatted: 'November 7, 2023',
+      },
+      created: {
+        raw: '2023-11-04T02:30:53.235Z',
+        formatted: 'November 4, 2023',
+      },
+      slug: 'i-built-a-tailwind-preset-2023-10-4',
+    },
+    isEmpty: false,
+    excerpt: '',
+  },
+}
+export default metaData
