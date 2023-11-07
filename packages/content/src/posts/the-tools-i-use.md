@@ -11,7 +11,7 @@ tags:
 ---
 
 A list of tools, frameworks and equipment that I use to build software - no
-particular order.
+particular order. Many of these I've been using for some time.
 
 ## Infrastructure
 
@@ -87,10 +87,14 @@ if need be.
 - [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) -
   AI pair programming
 - [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)
-- [Prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)
-- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma) -
+  a must for working with prisma.
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) -
+  autocomplete for tailwind classes.
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) -
+  automatically rename paired HTML tags. Very useful for keeping refactoring
+  simple.
 
 ## Design
 
@@ -100,12 +104,20 @@ if need be.
 - [Style Dictionary](https://amzn.github.io/style-dictionary/) - a great tool
   for generating design tokens
 
+## Project management
+
+- [Notion](https://www.notion.so/) - it has all the things I need (databases +
+  block based editing) and has a clean UI.
+
 ## Equipment
 
-- Macbook Pro 14" 2023
+- Macbook Pro 14" 2023 - I previously was on a 2016 and hoo-boy the Apple
+  silicon is phenomenal. Unix-based system with a great UI and integrates with
+  all the other Apple ecosystem stuff I use.
 - [Sony WH-1000XM5](https://store.sony.com.au/wh-1000xm5-headphones) - just the
   best headphones
 - Apple Watch SE - simple, cheap, and does all the important things I need in a
-  smart watch.
+  smart watch. Nice to have includes addressing push notifications directly,
+  automatic logins and limiting distractions from my phone.
 - [Artemide Tolomeo](https://www.artemide.com/en/subfamily/1849546/tolomeo-table)
   desk lamp - just a really nice lamp.

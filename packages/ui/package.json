@@ -9,6 +9,7 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@portfolio/tailwind-preset": "workspace:*",
     "@portfolio/tsconfig": "workspace:*",
     "@types/react": "18.0.26",
     "@vitejs/plugin-react": "^3.0.1",
