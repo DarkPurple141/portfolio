@@ -280,6 +280,9 @@ importers:
 
   packages/ui:
     devDependencies:
+      '@portfolio/tailwind-preset':
+        specifier: workspace:*
+        version: link:../tailwind-preset
       '@portfolio/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
