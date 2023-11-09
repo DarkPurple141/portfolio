@@ -22,7 +22,7 @@ export async function getLatestPost() {
   return posts[0]
 }
 
-export function getAboutPost() {
+export async function getAboutPost() {
   return content.about
 }
 
