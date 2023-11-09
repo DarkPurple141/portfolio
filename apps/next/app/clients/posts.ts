@@ -10,15 +10,15 @@ const posts = Object.values(content)
     )
   })
 
-export function getAllPosts() {
+export async function getAllPosts() {
   return posts
 }
 
-export function getPostBySlug(slug: string) {
+export async function getPostBySlug(slug: string) {
   return posts.find((post) => post.frontmatter.slug === slug)
 }
 
-export function getLatestPost() {
+export async function getLatestPost() {
   return posts[0]
 }
 

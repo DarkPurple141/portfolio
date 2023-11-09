@@ -1,3 +1,4 @@
+'use client'
 import { ContextType, ReactNode, createContext, useContext } from 'react'
 
 const LinkContext = createContext<any>('a')

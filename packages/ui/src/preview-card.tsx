@@ -1,3 +1,4 @@
+'use client'
 import { ReactNode, useRef } from 'react'
 import { Heading } from './heading'
 import { useLink } from './link'

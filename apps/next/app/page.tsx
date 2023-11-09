@@ -1,21 +1,10 @@
 import { Heading, Stack, Socials, PreviewCard } from '@portfolio/ui'
 import Link from 'next/link'
 import { getLatestPost } from '@/app/clients/posts'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-export const getStaticProps: GetStaticProps = async () => {
-  const post = getLatestPost()
+export default async function Home() {
+  const post = await getLatestPost()
 
-  return {
-    props: {
-      post,
-    },
-  }
-}
-
-export default function Home({
-  post,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Stack gap="gap-24">
       <Stack gap="gap-8" className="splash">

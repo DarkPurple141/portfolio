@@ -17,7 +17,7 @@ export const jobData: Omit<Job, 'id'>[] = [
     start_date: new Date('2019').getFullYear(),
     end_date: new Date('2020').getFullYear(),
     description:
-      "Developed an innvoative solution to Atlassian's real user monitoring and rolled out a scalable system across cloud and server products. Mostly working with Node.js, docker, AWS and golang.",
+      "Developed an innovative solution to Atlassian's real user monitoring and rolled out a scalable system across cloud and server products. Mostly working with Node.js, docker, AWS and golang.",
   },
   {
     title: 'Web Developer',

@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true,
   },
   reactStrictMode: true,
-  // transpilePackages: ['@portfolio/ui'],
+  transpilePackages: ['@portfolio/ui'],
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.plugins = [...config.plugins, new PrismaPlugin()]

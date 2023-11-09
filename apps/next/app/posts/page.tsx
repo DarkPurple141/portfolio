@@ -1,16 +1,8 @@
 import { Heading, PreviewCard, Stack } from '@portfolio/ui'
-import { Post, getAllPosts } from '@/app/clients/posts'
-import { GetStaticProps } from 'next'
+import { getAllPosts } from '@/app/clients/posts'
 
-export const getStaticProps: GetStaticProps = () => {
-  return {
-    props: {
-      posts: getAllPosts(),
-    },
-  }
-}
-
-export default function Posts({ posts }: { posts: Post[] }) {
+export default async function Posts() {
+  const posts = await getAllPosts()
   return (
     <Stack gap="gap-8">
       <Heading className="heading-xl" id="posts" as="h1">

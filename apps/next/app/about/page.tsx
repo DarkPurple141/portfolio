@@ -1,19 +1,10 @@
-import { GetStaticProps } from 'next'
+'use client'
 import { MDX } from '@/app/components/mdx'
-import { Post, getAboutPost } from '@/app/clients/posts'
+import { getAboutPost } from '@/app/clients/posts'
 import { Heading, ImageTiles } from '@portfolio/ui'
 
-export const getStaticProps: GetStaticProps = async () => {
+export default () => {
   const post = getAboutPost()
-
-  return {
-    props: {
-      post,
-    },
-  }
-}
-
-export default ({ post }: { post: Post }) => {
   return (
     <div className="grid gap-8">
       <Heading as="h1" className="heading-xl">
