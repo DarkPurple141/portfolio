@@ -1,5 +1,5 @@
 'use client'
-import { useLink } from './link'
+import { useLink } from './router'
 
 export const Socials = () => {
   const Link = useLink()

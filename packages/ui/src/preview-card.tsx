@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode, useRef } from 'react'
 import { Heading } from './heading'
-import { useLink } from './link'
+import { useLink } from './router'
 
 type PreviewCardProps = {
   heading: ReactNode

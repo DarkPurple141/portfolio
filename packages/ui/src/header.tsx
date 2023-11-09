@@ -1,10 +1,10 @@
 'use client'
-import { Inline, LogoMark } from '@portfolio/ui'
-import Link from 'next/link'
-
-import { usePathname } from 'next/navigation'
+import { Inline } from './inline'
+import { LogoMark } from './logo-mark'
+import { useLink, usePathname } from './router'
 
 export const Header = () => {
+  const Link = useLink()
   const pathname = usePathname()
   return (
     <header className="sticky top-0 left-0 right-0 flex flex-row justify-between items-center py-4 bg-surface">
