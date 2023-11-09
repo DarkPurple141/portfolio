@@ -1,6 +1,6 @@
 'use client'
-import { MDX } from '@/app/components/mdx'
-import { getAboutPost } from '@/app/clients/posts'
+import { MDX } from '@/app/lib/components/mdx'
+import { getAboutPost } from '@/app/lib/clients/posts'
 import { Heading, ImageTiles } from '@portfolio/ui'
 
 export default () => {

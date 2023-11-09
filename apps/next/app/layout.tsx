@@ -4,8 +4,8 @@ import '../styles/globals.css'
 
 import { LinkProvider } from '@portfolio/ui'
 import Link from 'next/link'
-import { Header } from './components/header'
-import { Footer } from './components/footer'
+import { Header } from './lib/components/header'
+import { Footer } from './lib/components/footer'
 
 export default function RootLayout({
   children,

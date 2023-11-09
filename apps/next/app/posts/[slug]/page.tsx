@@ -1,17 +1,13 @@
-import { getAllPosts, getPostBySlug } from '@/app/clients/posts'
+import { getAllPosts, getPostBySlug } from '@/app/lib/clients/posts'
 import { Heading } from '@portfolio/ui'
-import { MDX } from '@/app/components/mdx'
+import { MDX } from '@/app/lib/components/mdx'
 
 export const generateStaticParams = async () => {
   const posts = await getAllPosts()
   return posts.map((post) => ({ slug: post.frontmatter.slug })) || []
 }
 
-export async function PostView({
-  params: { slug },
-}: {
-  params: { slug: string }
-}) {
+async function PostView({ params: { slug } }: { params: { slug: string } }) {
   const post = await getPostBySlug(slug)
 
   if (!post) {

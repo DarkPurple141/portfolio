@@ -1,5 +1,5 @@
 import { Heading, PreviewCard, Stack } from '@portfolio/ui'
-import { getAllPosts } from '@/app/clients/posts'
+import { getAllPosts } from '@/app/lib/clients/posts'
 
 export default async function Posts() {
   const posts = await getAllPosts()

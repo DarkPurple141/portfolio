@@ -1,6 +1,6 @@
 import { Heading, Stack, Socials, PreviewCard } from '@portfolio/ui'
 import Link from 'next/link'
-import { getLatestPost } from '@/app/clients/posts'
+import { getLatestPost } from '@/app/lib/clients/posts'
 
 export default async function Home() {
   const post = await getLatestPost()
