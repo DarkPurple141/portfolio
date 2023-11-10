@@ -14,7 +14,7 @@ export const MDX = ({
       <Component />
       <p className="border-t mt-8 -mb-8 pt-8">
         You can read more of my <Link href="/posts">writing here</Link>. You can
-        also subscribe to <Link href="/rss.xml">my RSS feed here</Link>.
+        also subscribe to <a href="/rss.xml">my RSS feed here</a>.
       </p>
     </article>
   )
