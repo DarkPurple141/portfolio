@@ -8,7 +8,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.4.1",
     "@portfolio/content": "workspace:*",
     "@portfolio/db": "workspace:*",
     "@portfolio/reset": "workspace:*",

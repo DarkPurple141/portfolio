@@ -48,6 +48,7 @@ address {
 img,
 picture,
 video,
+iframe,
 canvas,
 svg {
   display: block;
