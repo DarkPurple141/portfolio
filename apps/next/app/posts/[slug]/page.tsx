@@ -1,13 +1,28 @@
 import { getAllPosts, getPostBySlug } from '@/app/lib/clients/posts'
+import type { Metadata } from 'next/types'
 import { Heading } from '@portfolio/ui'
 import { MDX } from '@/app/lib/components/mdx'
+
+type Params = { params: { slug: string } }
 
 export const generateStaticParams = async () => {
   const posts = await getAllPosts()
   return posts.map((post) => ({ slug: post.frontmatter.slug })) || []
 }
 
-async function PostView({ params: { slug } }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  // fetch data
+  const post = await getPostBySlug(params?.slug)
+
+  if (!post) return {}
+
+  return {
+    title: post?.frontmatter.title,
+    description: post?.frontmatter.description,
+  }
+}
+
+async function PostView({ params: { slug } }: Params) {
   const post = await getPostBySlug(slug)
 
   if (!post) {
