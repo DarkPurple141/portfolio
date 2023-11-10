@@ -13,7 +13,7 @@
   "dependencies": {
     "lodash.merge": "^4.6.1",
     "marked": "^4.0.0",
-    "vue": "^2.5.16",
+    "vue": "^3.0.0",
     "vue-awesome": "^2.3.4",
     "vue-disqus": "^2.0.6",
     "vue-router": "^3.0.1",
