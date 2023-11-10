@@ -10,7 +10,7 @@ tags:
   - configuration
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YQMSietiFm0?si=fLu9Tc-WdgbYjC5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YQMSietiFm0?si=fLu9Tc-WdgbYjC5c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 I'm pretty familiar with [Next.js](https://nextjs.org/). I've been using it
 since Next 9/10 and the simplicity of its mental model was always a big draw for
