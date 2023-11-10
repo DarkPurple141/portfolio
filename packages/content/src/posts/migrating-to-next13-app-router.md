@@ -2,8 +2,7 @@
 title: Migrating to Next.js 13's app router
 published: 2023-11-10T02:30:53.235Z
 description:
-  Having used the pages directory and its opinionated file-based routing for a
-  while, I wanted to try and migrate to the new app router and server components
+  I wanted to try and migrate to the Next.js's app router and server components
   and test how much it tested my mental model and assumptions.
 tags:
   - explainers
