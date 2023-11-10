@@ -104,6 +104,14 @@ a:focus-visible {
   outline: 2px solid var(--accent-bg-color-bold);
 }
 
+/* Loading states */
+img,
+picture,
+video,
+iframe {
+  background-color: var(--bg-color-hover);
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
