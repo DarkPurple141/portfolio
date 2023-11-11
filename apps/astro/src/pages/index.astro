@@ -1,0 +1,49 @@
+---
+import { Heading, PreviewCard, Socials, Stack } from '@portfolio/ui';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Astro">
+	<Stack gap="gap-24">
+		<Stack gap="gap-8" className="splash">
+			<Heading className="heading-xl" as="h1">
+				<span class="text-brand.bold">Alex Hinds</span> is a web developer
+				and designer based in Sydney, Australia.
+			</Heading>
+			<Stack gap="gap-4">
+				<p>
+					I'm a design-focused software engineer and former journalist with a
+					passion for delivering great user experiences for the web. I have
+					more than a{' '}
+					<a href="https://static.alhinds.com">decade of experience</a>{' '}
+					in web development and software design and am currently focused on
+					design systems, frontend tooling and code evolution at{' '}
+					<a href="https://atlassian.design">Atlassian</a>. I've worked
+					at companies of all sizes, in-house and on contract.
+				</p>
+				<Socials />
+			</Stack>
+		</Stack>
+		<div class="grid sm:grid-cols-2 gap-8 -m-8 p-8 bg-accent">
+			<Heading className="heading-300 col-span-1 sm:col-span-2" as="h2">
+				Featured
+			</Heading>
+			<PreviewCard
+				heading="One person, many frameworks"
+				href="/posts"
+				published={{
+					iso: new Date().toISOString(),
+					formatted: 'Pinned',
+				}}
+				promoLink
+			>
+				This site was built with{' '}
+				<a href="https://nextjs.org/">Next.js</a>. This site has also
+				been <a href="https://astro.alhinds.com">deployed</a> and built
+				with <a href="https://astro.build/">Astro</a>. My old website{' '}
+				<a href="https://vue2.alhinds.com">lives here</a>.
+			</PreviewCard>
+		</div>
+	</Stack>
+</Layout>
+

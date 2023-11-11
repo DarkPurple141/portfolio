@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   metadataBase: new URL('https://alhinds.com'),
   title: 'Alex Hinds, Web developer',
+  icons: new URL('https://alhinds.com/logo.svg'),
   description:
     'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development.',
   openGraph: {
