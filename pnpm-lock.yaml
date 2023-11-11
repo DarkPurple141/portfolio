@@ -350,6 +350,9 @@ importers:
       tailwindcss:
         specifier: ^3.2.4
         version: 3.2.4(postcss@8.4.21)
+      tsup:
+        specifier: ^5.11.13
+        version: 5.12.9(postcss@8.4.21)
       vite:
         specifier: ^4.0.0
         version: 4.0.3
@@ -8875,6 +8878,41 @@ packages:
   /tslib@2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==, tarball: https://packages.atlassian.com/api/npm/npm-remote/tslib/-/tslib-2.4.1.tgz}
 
+  /tsup@5.12.9(postcss@8.4.21):
+    resolution: {integrity: sha512-dUpuouWZYe40lLufo64qEhDpIDsWhRbr2expv5dHEMjwqeKJS2aXA/FPqs1dxO4T6mBojo7rvo3jP9NNzaKyDg==, tarball: https://packages.atlassian.com/api/npm/npm-remote/tsup/-/tsup-5.12.9.tgz}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: ^4.1.0
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      bundle-require: 3.1.2(esbuild@0.14.54)
+      cac: 6.7.14
+      chokidar: 3.5.3
+      debug: 4.3.4
+      esbuild: 0.14.54
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss: 8.4.21
+      postcss-load-config: 3.1.4(postcss@8.4.21)
+      resolve-from: 5.0.0
+      rollup: 2.79.1
+      source-map: 0.8.0-beta.0
+      sucrase: 3.29.0
+      tree-kill: 1.2.2
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
+    dev: true
+
   /tsup@5.12.9(typescript@4.9.4):
     resolution: {integrity: sha512-dUpuouWZYe40lLufo64qEhDpIDsWhRbr2expv5dHEMjwqeKJS2aXA/FPqs1dxO4T6mBojo7rvo3jP9NNzaKyDg==, tarball: https://packages.atlassian.com/api/npm/npm-remote/tsup/-/tsup-5.12.9.tgz}
     hasBin: true
@@ -9352,7 +9390,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite-node@0.34.6(@types/node@17.0.45):
+  /vite-node@0.34.6(@types/node@18.11.18):
     resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -9362,7 +9400,7 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 4.5.0(@types/node@17.0.45)
+      vite: 4.5.0(@types/node@18.11.18)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -9510,7 +9548,7 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vite@4.5.0(@types/node@17.0.45):
+  /vite@4.5.0(@types/node@18.11.18):
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9538,7 +9576,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.18
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
@@ -9590,7 +9628,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.5
       '@types/chai-subset': 1.3.3
-      '@types/node': 17.0.45
+      '@types/node': 18.11.18
       '@vitest/expect': 0.34.6
       '@vitest/runner': 0.34.6
       '@vitest/snapshot': 0.34.6
@@ -9609,8 +9647,8 @@ packages:
       strip-literal: 1.0.1
       tinybench: 2.5.0
       tinypool: 0.7.0
-      vite: 4.5.0(@types/node@17.0.45)
-      vite-node: 0.34.6(@types/node@17.0.45)
+      vite: 4.5.0(@types/node@18.11.18)
+      vite-node: 0.34.6(@types/node@18.11.18)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less

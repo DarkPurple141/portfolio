@@ -1,12 +1,12 @@
 {
   "name": "@portfolio/ui",
   "source": "src/index.ts",
-  "module": "src/index.ts",
+  "module": "dist/index.js",
   "types": "src/index.ts",
   "scripts": {
     "dev": "vite build --watch",
     "watch": "vite build --watch",
-    "build": "vite build"
+    "build": "tsc"
   },
   "devDependencies": {
     "@portfolio/tailwind-preset": "workspace:*",

@@ -2,6 +2,9 @@
   "extends": "@portfolio/tsconfig/base.json",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "outDir": "dist"
   }
 }
