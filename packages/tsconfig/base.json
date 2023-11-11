@@ -4,6 +4,7 @@
   "compilerOptions": {
     "composite": false,
     "target": "ES2018",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitThis": true,
