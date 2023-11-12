@@ -6,12 +6,13 @@
   "scripts": {
     "deploy": "turbo run deploy",
     "build": "turbo run build",
+    "cut:version": "pnpm changeset version && pnpm changeset tag",
     "dev": "turbo run dev",
     "watch": "turbo run watch",
     "lint": "eslint \"apps/**/*.{ts,tsx}\" \"packages/**/*.{ts,tsx}\" --fix"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.25.2",
+    "@changesets/cli": "^2.26.0",
     "@types/node": "^17.0.45",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",

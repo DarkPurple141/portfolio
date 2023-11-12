@@ -1,5 +1,6 @@
 {
   "name": "@portfolio/static",
+  "private": true,
   "author": "Alex Hinds <alex.hinds141@gmail.com>",
   "scripts": {
     "watch": "tsx watch src/build.ts",

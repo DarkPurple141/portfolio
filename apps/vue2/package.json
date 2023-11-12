@@ -1,9 +1,9 @@
 {
   "name": "@portfolio/vue2",
+  "private": true,
   "version": "1.0.0",
   "description": "A portfolio display for projects, notes and other work.",
   "author": "Alex Hinds <alex.hinds141@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "vite",
     "start": "pnpm dev",
