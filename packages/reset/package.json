@@ -1,5 +1,6 @@
 {
   "name": "@halyard/reset",
+  "version": "1.0.0",
   "source": "reset.css",
   "files": [
     "reset.css",
