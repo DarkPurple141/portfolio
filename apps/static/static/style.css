@@ -1,5 +1,5 @@
-@import url('@portfolio/reset/reset.css');
-@import url('@portfolio/reset/theme.css');
+@import url('@halyard/reset/reset.css');
+@import url('@halyard/reset/theme.css');
 
 @page {
   size: 210mm 317mm;

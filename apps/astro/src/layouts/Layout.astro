@@ -3,7 +3,7 @@ interface Props {
 	title: string;
 }
 
-import { Header, Footer } from '@portfolio/ui';
+import { Header, Footer } from '@halyard/ui';
 
 const { title } = Astro.props;
 ---
@@ -27,8 +27,8 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	@import url('@portfolio/reset/reset.css');
-	@import url('@portfolio/reset/theme.css');
+	@import url('@halyard/reset/reset.css');
+	@import url('@halyard/reset/theme.css');
 
 	p a {
   @apply underline font-normal;

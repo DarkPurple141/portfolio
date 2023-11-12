@@ -65,13 +65,13 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.0.2
         version: 5.0.2(astro@3.5.2)(tailwindcss@3.2.4)
-      '@portfolio/reset':
+      '@halyard/reset':
         specifier: workspace:*
         version: link:../../packages/reset
       '@portfolio/tailwind-preset':
         specifier: workspace:*
         version: link:../../packages/tailwind-preset
-      '@portfolio/ui':
+      '@halyard/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@types/react':
@@ -111,13 +111,13 @@ importers:
       '@portfolio/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@portfolio/reset':
+      '@halyard/reset':
         specifier: workspace:*
         version: link:../../packages/reset
       '@portfolio/tailwind-preset':
         specifier: workspace:*
         version: link:../../packages/tailwind-preset
-      '@portfolio/ui':
+      '@halyard/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@types/node':
@@ -165,10 +165,10 @@ importers:
       '@portfolio/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@portfolio/reset':
+      '@halyard/reset':
         specifier: workspace:*
         version: link:../../packages/reset
-      '@portfolio/tsconfig':
+      '@halyard/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       handlebars:
@@ -205,7 +205,7 @@ importers:
         specifier: ^2.8.0
         version: 2.20.0
     devDependencies:
-      '@portfolio/tsconfig':
+      '@halyard/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@types/marked':
@@ -263,7 +263,7 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2
     devDependencies:
-      '@portfolio/tsconfig':
+      '@halyard/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/prettier':
@@ -291,7 +291,7 @@ importers:
         specifier: ^4.8.0
         version: 4.8.0(prisma@4.8.0)
     devDependencies:
-      '@portfolio/tsconfig':
+      '@halyard/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/node':
@@ -329,7 +329,7 @@ importers:
       '@portfolio/tailwind-preset':
         specifier: workspace:*
         version: link:../tailwind-preset
-      '@portfolio/tsconfig':
+      '@halyard/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/react':

@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "devDependencies": {
-    "@portfolio/tsconfig": "workspace:*",
+    "@halyard/tsconfig": "workspace:*",
     "@types/node": "^18.0.0",
     "prisma": "^4.8.0",
     "tsup": "^5.11.13",

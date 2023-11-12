@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "@portfolio/db": "workspace:*",
-    "@portfolio/reset": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "@halyard/reset": "workspace:*",
+    "@halyard/tsconfig": "workspace:*",
     "handlebars": "latest",
     "vite": "^4.0.0",
     "tsx": "^3.12.1"

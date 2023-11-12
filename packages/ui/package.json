@@ -1,5 +1,5 @@
 {
-  "name": "@portfolio/ui",
+  "name": "@halyard/ui",
   "source": "src/index.ts",
   "module": "dist/index.js",
   "types": "src/index.ts",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@portfolio/tailwind-preset": "workspace:*",
-    "@portfolio/tsconfig": "workspace:*",
+    "@halyard/tsconfig": "workspace:*",
     "@types/react": "18.0.26",
     "@vitejs/plugin-react": "^3.0.1",
     "autoprefixer": "^10.4.13",

@@ -1,4 +1,4 @@
-import { Heading, Stack, Socials, PreviewCard } from '@portfolio/ui'
+import { Heading, Stack, Socials, PreviewCard } from '@halyard/ui'
 import Link from 'next/link'
 import { getLatestPost } from '@/app/lib/clients/posts'
 

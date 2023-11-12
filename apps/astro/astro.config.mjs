@@ -5,5 +5,5 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react({ include: ['@portfolio/ui'] })],
+  integrations: [tailwind(), react({ include: ['@halyard/ui'] })],
 })

@@ -1,4 +1,8 @@
 {
-  "name": "@portfolio/reset",
-  "source": "reset.css"
+  "name": "@halyard/reset",
+  "source": "reset.css",
+  "files": [
+    "reset.css",
+    "theme.css"
+  ]
 }

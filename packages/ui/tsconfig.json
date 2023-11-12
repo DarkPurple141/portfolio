@@ -1,5 +1,5 @@
 {
-  "extends": "@portfolio/tsconfig/base.json",
+  "extends": "@halyard/tsconfig/base.json",
   "include": ["src/**/*"],
   "compilerOptions": {
     "jsx": "react-jsx",

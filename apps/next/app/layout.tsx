@@ -1,9 +1,9 @@
-import '@portfolio/reset/reset.css'
-import '@portfolio/reset/theme.css'
+import '@halyard/reset/reset.css'
+import '@halyard/reset/theme.css'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 
-import { LinkProvider, Header, Footer, PathnameProvider } from '@portfolio/ui'
+import { LinkProvider, Header, Footer, PathnameProvider } from '@halyard/ui'
 import Link from 'next/link'
 
 export default function RootLayout({

@@ -12,7 +12,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "@portfolio/tsconfig": "workspace:*",
+    "@halyard/tsconfig": "workspace:*",
     "@types/prettier": "^2",
     "prettier": "^2.8.1",
     "remark-autolink-headings": "^7.0.1",

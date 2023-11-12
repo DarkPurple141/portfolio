@@ -10,9 +10,9 @@
   "dependencies": {
     "@portfolio/content": "workspace:*",
     "@portfolio/db": "workspace:*",
-    "@portfolio/reset": "workspace:*",
+    "@halyard/reset": "workspace:*",
     "@portfolio/tailwind-preset": "workspace:*",
-    "@portfolio/ui": "workspace:*",
+    "@halyard/ui": "workspace:*",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",

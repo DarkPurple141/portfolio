@@ -1,6 +1,6 @@
 import { getAllPosts, getPostBySlug } from '@/app/lib/clients/posts'
 import type { Metadata } from 'next/types'
-import { Heading } from '@portfolio/ui'
+import { Heading } from '@halyard/ui'
 import { MDX } from '@/app/lib/components/mdx'
 
 type Params = { params: { slug: string } }

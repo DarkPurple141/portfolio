@@ -1,4 +1,4 @@
-import { Heading, PreviewCard, Stack } from '@portfolio/ui'
+import { Heading, PreviewCard, Stack } from '@halyard/ui'
 import { getAllPosts } from '@/app/lib/clients/posts'
 
 export default async function Posts() {

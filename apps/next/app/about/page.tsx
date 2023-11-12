@@ -1,6 +1,6 @@
 import { MDX } from '@/app/lib/components/mdx'
 import { getAboutPost } from '@/app/lib/clients/posts'
-import { Heading, ImageTiles } from '@portfolio/ui'
+import { Heading, ImageTiles } from '@halyard/ui'
 
 export default async () => {
   const post = await getAboutPost()
