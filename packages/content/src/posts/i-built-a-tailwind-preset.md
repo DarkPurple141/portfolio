@@ -40,7 +40,7 @@ be used to extend the core functionality of Tailwind.
 I sense a plugin is in my future but for now a preset is perfectly fine.
 
 ```js
-// @portfolio/tailwind-preset/index.js
+// @halyard/tailwind-preset/index.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
@@ -71,7 +71,7 @@ in my Next app and my UI library as such:
 // @portfolio/next/tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  presets: [require('@portfolio/tailwind-preset')],
+  presets: [require('@halyard/tailwind-preset')],
 }
 ```
 

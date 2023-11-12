@@ -15,7 +15,7 @@
     "@astrojs/react": "^3.0.4",
     "@astrojs/tailwind": "^5.0.2",
     "@halyard/reset": "workspace:*",
-    "@portfolio/tailwind-preset": "workspace:*",
+    "@halyard/tailwind-preset": "workspace:*",
     "@halyard/ui": "workspace:*",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",

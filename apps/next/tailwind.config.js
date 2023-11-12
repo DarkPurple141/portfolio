@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [
-    require('@portfolio/tailwind-preset'),
+    require('@halyard/tailwind-preset'),
   ],
   content: [
     './{pages,app}/**/*.{js,ts,jsx,tsx}',

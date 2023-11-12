@@ -68,7 +68,7 @@ importers:
       '@halyard/reset':
         specifier: workspace:*
         version: link:../../packages/reset
-      '@portfolio/tailwind-preset':
+      '@halyard/tailwind-preset':
         specifier: workspace:*
         version: link:../../packages/tailwind-preset
       '@halyard/ui':
@@ -114,7 +114,7 @@ importers:
       '@halyard/reset':
         specifier: workspace:*
         version: link:../../packages/reset
-      '@portfolio/tailwind-preset':
+      '@halyard/tailwind-preset':
         specifier: workspace:*
         version: link:../../packages/tailwind-preset
       '@halyard/ui':
@@ -326,7 +326,7 @@ importers:
 
   packages/ui:
     devDependencies:
-      '@portfolio/tailwind-preset':
+      '@halyard/tailwind-preset':
         specifier: workspace:*
         version: link:../tailwind-preset
       '@halyard/tsconfig':

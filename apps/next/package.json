@@ -11,7 +11,7 @@
     "@portfolio/content": "workspace:*",
     "@portfolio/db": "workspace:*",
     "@halyard/reset": "workspace:*",
-    "@portfolio/tailwind-preset": "workspace:*",
+    "@halyard/tailwind-preset": "workspace:*",
     "@halyard/ui": "workspace:*",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",

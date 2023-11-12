@@ -9,7 +9,7 @@
     "build": "tsc"
   },
   "devDependencies": {
-    "@portfolio/tailwind-preset": "workspace:*",
+    "@halyard/tailwind-preset": "workspace:*",
     "@halyard/tsconfig": "workspace:*",
     "@types/react": "18.0.26",
     "@vitejs/plugin-react": "^3.0.1",
