@@ -1,3 +1,4 @@
 {
-  "name": "@portfolio/remix"
+  "name": "@portfolio/remix",
+  "private": true
 }
