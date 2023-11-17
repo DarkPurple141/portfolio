@@ -9,8 +9,8 @@ export default async function Home() {
     <Stack gap="gap-24">
       <Stack gap="gap-8" className="splash">
         <Heading className="heading-xl" as="h1">
-          <span className="text-brand.bold">Alex Hinds</span> is a web developer
-          and designer based in Sydney, Australia.
+          <span className="text-brand.bold">Alex Hinds</span> is an engineer for
+          the web. I'm based in Sydney.
         </Heading>
         <Stack gap="gap-4">
           <p>
