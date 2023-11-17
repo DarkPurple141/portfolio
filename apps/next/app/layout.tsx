@@ -16,7 +16,30 @@ export default function RootLayout({
       <LinkProvider value={Link}>
         <html lang="en">
           <head>
-            <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+            <link
+              rel="apple-touch-icon"
+              sizes="180x180"
+              href="/apple-touch-icon.png"
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="32x32"
+              href="/favicon-32x32.png"
+            />
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="16x16"
+              href="/favicon-16x16.png"
+            />
+            <link rel="manifest" href="/site.webmanifest" />
+            <link
+              rel="mask-icon"
+              href="/safari-pinned-tab.svg"
+              color="#6262DA"
+            />
+            <meta name="msapplication-TileColor" content="#6262da" />
           </head>
           <body className="max-w-2xl m-auto flex flex-col justify-between">
             <Header />
@@ -32,8 +55,12 @@ export default function RootLayout({
 export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   metadataBase: new URL('https://alhinds.com'),
-  title: 'Alex Hinds, Web developer',
-  icons: new URL('https://alhinds.com/logo.svg'),
+  title: 'Alex Hinds, web developer and designer',
+  manifest: '/site.webmanifest',
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#98c0d7' },
+    { media: '(prefers-color-scheme: light)', color: '#6262da' },
+  ],
   description:
     'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development.',
   openGraph: {
@@ -47,7 +74,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Alex Hinds, Web developer and designer',
+        alt: 'Alex Hinds, web developer and designer',
       },
     ],
   },
