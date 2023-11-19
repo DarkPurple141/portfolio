@@ -57,10 +57,10 @@ export default async ({ params }: Params) => {
 
   return new ImageResponse(
     (
-      <div tw="flex flex-col w-full h-full items-start justify-between bg-slate-950 px-16 py-8">
+      <div tw="flex flex-col w-full h-full items-start justify-between bg-slate-950 p-16">
         <div tw="flex flex-col text-slate-100">
-          <p tw="m-0 text-xl leading-none text-[#98c0d7]">Read article</p>
-          <h1 tw="mt-2 text-5xl font-bold tracking-tight">
+          <p tw="m-0 text-2xl leading-none text-[#98c0d7]">Read article</p>
+          <h1 tw="mt-2 text-6xl font-bold tracking-tight">
             {post.frontmatter.title}
           </h1>
         </div>
