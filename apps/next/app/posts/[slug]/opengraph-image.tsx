@@ -57,16 +57,16 @@ export default async ({ params }: Params) => {
 
   return new ImageResponse(
     (
-      <div tw="flex flex-col w-full h-full items-start justify-between bg-slate-950 p-16">
+      <div tw="flex flex-col w-full h-full items-start justify-between bg-[#030712] p-16">
         <div tw="flex flex-col text-slate-100">
           <p tw="m-0 text-2xl leading-none text-[#98c0d7]">Read article</p>
-          <h1 tw="mt-2 text-6xl font-bold tracking-tight">
+          <h1 tw="mt-2 text-7xl font-bold tracking-tight">
             {post.frontmatter.title}
           </h1>
         </div>
         <div tw="flex text-slate-300">
           <img
-            tw="bg-[#98c0d7] w-16 h-16 mr-4 rounded-full"
+            tw="bg-[#98c0d7] w-18 h-18 mr-4 rounded-full"
             src="https://github.com/darkpurple141.png"
             width="100"
             height="100"
