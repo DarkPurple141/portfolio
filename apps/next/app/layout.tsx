@@ -61,6 +61,12 @@ export const metadata: Metadata = {
     { media: '(prefers-color-scheme: dark)', color: '#98c0d7' },
     { media: '(prefers-color-scheme: light)', color: '#6262da' },
   ],
+  icons: {
+    other: {
+      rel: 'webmention',
+      url: 'https://webmention.io/www.alhinds.com/webmention',
+    },
+  },
   description:
     'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development.',
   openGraph: {
