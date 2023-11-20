@@ -6,9 +6,12 @@ export async function GET(request: NextRequest) {
   const slug = searchParams.get('slug')
 
   if (!slug) {
-    return new Response(JSON.stringify(await getAllPosts()), {
-      headers: { 'content-type': 'application/json' },
-    })
+    return new Response(
+      JSON.stringify((await getAllPosts()).map((p) => p.frontmatter)),
+      {
+        headers: { 'content-type': 'application/json' },
+      }
+    )
   }
 
   return new Response(JSON.stringify(await getPostBySlug(slug)), {
