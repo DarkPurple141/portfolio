@@ -3,15 +3,15 @@ import { getAllPosts, getPostBySlug } from '../lib/clients/posts'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl
-  const title = searchParams.get('title')
+  const slug = searchParams.get('slug')
 
-  if (!title) {
+  if (!slug) {
     return new Response(JSON.stringify(await getAllPosts()), {
       headers: { 'content-type': 'application/json' },
     })
   }
 
-  return new Response(JSON.stringify(await getPostBySlug(title)), {
+  return new Response(JSON.stringify(await getPostBySlug(slug)), {
     headers: { 'content-type': 'application/json' },
   })
 }
