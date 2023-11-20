@@ -1,5 +1,10 @@
 import { Heading, PreviewCard, Stack } from '@halyard/ui'
 import { getAllPosts } from '@/app/lib/clients/posts'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Posts | alhinds.com',
+}
 
 export default async function Posts() {
   const posts = await getAllPosts()
