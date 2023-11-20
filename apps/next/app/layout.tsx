@@ -62,6 +62,7 @@ export const metadata: Metadata = {
     { media: '(prefers-color-scheme: light)', color: '#6262da' },
   ],
   icons: {
+    // this is a hack for custom <link />
     other: {
       rel: 'webmention',
       url: 'https://webmention.io/www.alhinds.com/webmention',

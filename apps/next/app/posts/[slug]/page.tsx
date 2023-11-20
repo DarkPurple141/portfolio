@@ -9,15 +9,39 @@ export const generateStaticParams = async () => {
   return posts.map((post) => ({ slug: post.frontmatter.slug })) || []
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: Params): Promise<Metadata | undefined> {
   // fetch data
   const post = await getPostBySlug(params?.slug)
 
-  if (!post) return {}
+  if (!post) return
+
+  const { title, description, created, slug } = post.frontmatter
+
+  const ogImage = `https://alhinds.com/og?title=${title}&slug=${slug}`
 
   return {
-    title: post?.frontmatter.title,
-    description: post?.frontmatter.description,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime: created.raw,
+      url: `https://alhinds.com/posts/${slug}`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage],
+    },
   }
 }
 

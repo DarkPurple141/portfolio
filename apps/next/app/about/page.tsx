@@ -1,6 +1,11 @@
 import { MDX } from '@/app/lib/components/mdx'
 import { getAboutPost } from '@/app/lib/clients/posts'
 import { Heading, ImageTiles } from '@halyard/ui'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About | alhinds.com',
+}
 
 export default async () => {
   const post = await getAboutPost()
