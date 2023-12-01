@@ -53,17 +53,25 @@ async function PostView({ params: { slug } }: Params) {
   }
 
   return (
-    <>
+    <div className="h-entry" data-pagefind-body>
       <div className="mb-8">
-        <Heading as="h1" className="heading-lg">
+        <Heading as="h1" className="heading-lg p-name entry-title">
           {post.frontmatter.title}
         </Heading>
-        <time className="text-subtlest" dateTime={post.frontmatter.created.raw}>
+        <div className="vcard sr-only">
+          <a rel="author" className="p-author h-card" href="/about">
+            Alex Hinds
+          </a>
+        </div>
+        <time
+          className="text-subtlest dt-published"
+          dateTime={post.frontmatter.created.raw}
+        >
           {post.frontmatter.created.formatted}
         </time>
       </div>
       <MDX code={post.code} frontmatter={post.frontmatter} />
-    </>
+    </div>
   )
 }
 

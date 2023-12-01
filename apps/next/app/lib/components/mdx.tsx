@@ -10,7 +10,13 @@ export const MDX = ({
 }: Pick<Post, 'code' | 'frontmatter'>) => {
   const Component = useMemo(() => getMDXComponent(code, frontmatter), [code])
   return (
-    <article className="markdown max-w-none prose prose-sm prose-code:text-inherit prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold prose-headings:text-inherit prose-p:text-subtle prose-li:text-subtle prose-blockquote:text-subtle hover:prose-a:text-brand.bold prose-a:text-inherit -mt-8">
+    <article className="markdown e-content max-w-none prose prose-sm prose-code:text-inherit prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold prose-headings:text-inherit prose-p:text-subtle prose-li:text-subtle prose-blockquote:text-subtle hover:prose-a:text-brand.bold prose-a:text-inherit -mt-8">
+      <a
+        href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/posts/${frontmatter.slug}`}
+        className="sr-only u-url u-uid"
+      >
+        Permalink
+      </a>
       <Component />
       <p className="border-t mt-8 -mb-8 pt-8">
         You can read more of my <Link href="/posts">writing here</Link>. You can
