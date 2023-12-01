@@ -58,8 +58,12 @@ async function PostView({ params: { slug } }: Params) {
         <Heading as="h1" className="heading-lg p-name entry-title">
           {post.frontmatter.title}
         </Heading>
-        <div className="vcard sr-only">
-          <a rel="author" className="p-author h-card" href="/about">
+        <div className="sr-only">
+          <a
+            rel="author"
+            className="p-author h-card"
+            href="https://alhinds.com"
+          >
             Alex Hinds
           </a>
         </div>
