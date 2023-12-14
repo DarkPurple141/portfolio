@@ -1,12 +1,12 @@
 import { bundleMDX } from 'mdx-bundler'
-// @ts-expect-error
-import RSS from 'rss'
+
 import path from 'path'
 import fs from 'fs'
 import remarkSlug from 'remark-slug'
 
 import { prisma } from '@portfolio/db'
 import prettier from 'prettier'
+import { generateRSS } from './rss'
 
 function kebabToCamelCase(str: string) {
   return str.replace(/-./g, (x) => x.toUpperCase()[1])
@@ -136,37 +136,7 @@ async function build() {
       .join('\n')
   )
 
-  /* lets create an rss feed */
-  const feed = new RSS({
-    title: "Alex Hinds' Blog",
-    description:
-      'A collection of posts about web development, design and more.',
-    feed_url: 'https://alhinds.com/rss.xml',
-    site_url: 'https://alhinds.com',
-    image_url: 'https://alhinds.com/og-image.png',
-    managingEditor: 'Alex Hinds',
-    webMaster: 'Alex Hinds',
-    copyright: `${new Date().getFullYear()} Alex Hinds`,
-    language: 'en',
-  })
-
-  postMetaData
-    .filter((post) => post.description !== 'about')
-    .forEach((post) => {
-      feed.item({
-        title: post.title,
-        author: 'Alex Hinds',
-        description: post.description,
-        url: `https://alhinds.com/posts/${post.slug}`,
-        guid: post.slug,
-        categories: post.tags,
-        date: post.created.raw,
-      })
-    })
-  // cache the xml to send to clients
-  const xml = feed.xml()
-
-  fs.writeFileSync(path.join(__dirname, '../generated/rss.xml'), xml)
+  generateRSS(postMetaData)
 }
 
 build()
