@@ -17,7 +17,7 @@
     "@halyard/tailwind-preset": "workspace:*",
     "@halyard/tsconfig": "workspace:*",
     "@types/react": "18.0.26",
-    "@vitejs/plugin-react": "^3.0.1",
+    "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "react": "18.2.0",
