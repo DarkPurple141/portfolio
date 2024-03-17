@@ -21,7 +21,7 @@
     "db:migrate:deploy": "prisma migrate deploy",
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
-    "db:seed": "tsx src/seed.ts --import",
+    "db:seed": "tsx --import src/seed.ts",
     "db:generate": "prisma generate",
     "dev": "tsup --watch",
     "format": "prisma format",
