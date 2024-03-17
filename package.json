@@ -33,7 +33,7 @@
   },
   "prisma": {
     "schema": "packages/db/prisma/schema.prisma",
-    "seed": "tsx --import packages/db/src/seed.ts"
+    "seed": "tsx packages/db/src/seed.ts"
   },
   "packageManager": "pnpm@7.33.1"
 }
