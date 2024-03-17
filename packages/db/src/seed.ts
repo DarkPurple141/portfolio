@@ -5,6 +5,8 @@ import { jobData } from './data/jobs'
 import { socials, userData } from './data/user'
 ;(async () => {
   try {
+    // eslint-disable-next-line no-console
+    console.log('Seeding database...')
     await Promise.all(
       educationData.map((qualification) =>
         prisma.qualification.upsert({
@@ -21,6 +23,8 @@ import { socials, userData } from './data/user'
       )
     )
 
+    // eslint-disable-next-line no-console
+    console.log('Adding user...')
     await prisma.user.upsert({
       where: {
         email: userData.email,
@@ -43,6 +47,8 @@ import { socials, userData } from './data/user'
       },
     })
 
+    // eslint-disable-next-line no-console
+    console.log('Adding jobs...')
     await Promise.all(
       jobData.map((job) =>
         prisma.job.upsert({
@@ -63,6 +69,8 @@ import { socials, userData } from './data/user'
     console.error(error)
     process.exit(1)
   } finally {
+    // eslint-disable-next-line no-console
+    console.log('Seeding complete')
     await prisma.$disconnect()
   }
 })()
