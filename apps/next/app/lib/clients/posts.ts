@@ -26,4 +26,4 @@ export async function getAboutPost() {
   return content.about
 }
 
-export type Post = typeof posts[number]
+export type Post = (typeof posts)[number]
