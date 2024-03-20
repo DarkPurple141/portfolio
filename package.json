@@ -35,5 +35,5 @@
     "schema": "packages/db/prisma/schema.prisma",
     "seed": "tsx packages/db/src/seed.ts"
   },
-  "packageManager": "pnpm@7.33.1"
+  "packageManager": "pnpm@7.33.7"
 }
