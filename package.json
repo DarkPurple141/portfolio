@@ -29,11 +29,11 @@
     "vitest": "latest"
   },
   "engines": {
-    "node": ">=16"
+    "node": "24.x"
   },
   "prisma": {
     "schema": "packages/db/prisma/schema.prisma",
     "seed": "tsx packages/db/src/seed.ts"
   },
-  "packageManager": "pnpm@7.33.1"
+  "packageManager": "pnpm@10.27.0"
 }
