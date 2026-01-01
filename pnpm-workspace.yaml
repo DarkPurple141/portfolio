@@ -2,3 +2,13 @@ packages:
   # all packages in subdirs of packages/ are part of monorepo
   - 'packages/*'
   - 'apps/*'
+
+onlyBuiltDependencies:
+  - '@prisma/adapter-better-sqlite3'
+  - '@prisma/client'
+  - 'prisma'
+  - 'better-sqlite3'
+  - '@prisma/engines'
+  - 'sharp'
+  - 'esbuild'
+  - 'less'

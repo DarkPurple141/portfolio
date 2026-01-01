@@ -1,3 +1,6 @@
 {
-  "extends": "@halyard/tsconfig/base.json"
+  "extends": "@halyard/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "ESNext"
+  }
 }

@@ -3,7 +3,7 @@
   "display": "Default",
   "compilerOptions": {
     "composite": false,
-    "target": "ES2018",
+    "target": "ES2022",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
