@@ -19,8 +19,8 @@ import { socials, userData } from './data/user'
           create: {
             ...qualification,
           },
-        })
-      )
+        }),
+      ),
     )
 
     // eslint-disable-next-line no-console
@@ -61,11 +61,10 @@ import { socials, userData } from './data/user'
           create: {
             ...job,
           },
-        })
-      )
+        }),
+      ),
     )
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error(error)
     process.exit(1)
   } finally {

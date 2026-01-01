@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
       JSON.stringify((await getAllPosts()).map((p) => p.frontmatter)),
       {
         headers: { 'content-type': 'application/json' },
-      }
+      },
     )
   }
 

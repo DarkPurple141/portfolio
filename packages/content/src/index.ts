@@ -34,7 +34,7 @@ async function build() {
       const assetPath = path.join(
         __dirname,
         '../../../apps/static/static/public',
-        post
+        post,
       )
       fs.existsSync(assetPath) ? undefined : fs.mkdirSync(assetPath)
 
@@ -42,7 +42,7 @@ async function build() {
         if (path.parse(fileName).name === 'index') return
         fs.copyFileSync(
           path.join(postDirPath, fileName),
-          path.join(assetPath, fileName)
+          path.join(assetPath, fileName),
         )
       })
     }
@@ -94,7 +94,7 @@ async function build() {
       raw: fileMetaData.mtime,
       formatted: new Date(fileMetaData.mtime).toLocaleString(
         'en-US',
-        dateOptions
+        dateOptions,
       ),
     }
 
@@ -110,15 +110,15 @@ async function build() {
       path.join(__dirname, '../generated', `${postCleanName}.generated.ts`),
       prettier.format(
         `/** THIS IS A GENERATED FILE\n * @command pnpm build\n */\nconst metaData = ${JSON.stringify(
-          metaData
+          metaData,
         )}; export default metaData;`,
         {
           parser: 'babel',
           semi: false,
           singleQuote: true,
           printWidth: 80,
-        }
-      )
+        },
+      ),
     )
 
     postMetaData.push(metaData.frontmatter)
@@ -130,10 +130,10 @@ async function build() {
     postNames
       .map((post) => {
         return `export { default as ${kebabToCamelCase(
-          post
+          post,
         )} } from './${post}.generated'`
       })
-      .join('\n')
+      .join('\n'),
   )
 
   generateRSS(postMetaData)

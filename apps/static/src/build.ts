@@ -29,7 +29,7 @@ async function main() {
       })
 
       fs.writeFileSync(path.join(__dirname, '../static/index.html'), compiled)
-    }
+    },
   )
 }
 

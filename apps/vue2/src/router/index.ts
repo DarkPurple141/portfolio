@@ -10,7 +10,7 @@ Vue.use(Router)
 const scrollBehavior: RouterOptions['scrollBehavior'] = (
   to,
   _,
-  savedPosition
+  savedPosition,
 ) => {
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
