@@ -1,0 +1,33 @@
+---
+import { Heading } from '@halyard/ui'
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  return fetch('https://alhinds.com/content')
+    .then((res) => res.json())
+    .then(
+      // @ts-expect-error
+      (posts) => posts.map((post) => ({ params: { slug: post.slug } })) || [],
+    )
+}
+
+const { slug } = Astro.params
+
+const post = await fetch(`https://alhinds.com/content?slug=${slug}`).then(
+  (res) => res.json(),
+)
+---
+
+<Layout
+  title={post.frontmatter.title}
+  description={post.frontmatter.description}
+>
+  <div class="mb-8">
+    <Heading as="h1" className="heading-lg">
+      {post.frontmatter.title}
+    </Heading>
+    <time class="text-subtlest" datetime={post.frontmatter.created.raw}>
+      {post.frontmatter.created.formatted}
+    </time>
+  </div>
+</Layout>

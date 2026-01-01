@@ -1,0 +1,83 @@
+---
+interface Props {
+  title: string
+  description: string
+}
+
+import { Header, Footer } from '@halyard/ui'
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6262DA" />
+    <meta name="msapplication-TileColor" content="#6262da" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#6262da"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#98c0d7"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="max-w-2xl m-auto flex flex-col justify-between">
+    <Header />
+    <main class="py-8 my-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  @import url('@halyard/reset/reset.css');
+  @import url('@halyard/reset/theme.css');
+
+  p a {
+    @apply underline font-normal;
+  }
+
+  p {
+    @apply text-subtle;
+  }
+
+  a {
+    @apply font-semibold;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  header a {
+    @apply text-inherit;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    @apply text-brand.bold;
+  }
+
+  main,
+  header {
+    @apply px-8;
+  }
+
+  article {
+    @apply py-8;
+  }
+</style>
