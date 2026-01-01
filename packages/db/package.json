@@ -7,9 +7,9 @@
   "module": "./dist/index.mjs",
   "devDependencies": {
     "@halyard/tsconfig": "workspace:*",
-    "@types/node": "^18.0.0",
+    "@types/node": "^24.0.0",
     "prisma": "^4.8.0",
-    "tsup": "^5.11.13",
+    "tsup": "^8.0.0",
     "tsx": "^4.7.1",
     "typescript": "^5.0.0"
   },
@@ -30,6 +30,6 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@prisma/client": "^4.8.0"
+    "@prisma/client": "^7.0.0"
   }
 }
