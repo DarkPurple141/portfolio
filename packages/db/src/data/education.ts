@@ -1,4 +1,4 @@
-import type { Qualification } from '@prisma/client'
+import type { Qualification } from '../../prisma/generated/client'
 
 export const educationData: Omit<Qualification, 'id'>[] = [
   {

@@ -1,4 +1,4 @@
-import type { Job } from '@prisma/client'
+import type { Job } from '../../prisma/generated/client'
 
 export const jobData: Omit<Job, 'id'>[] = [
   {

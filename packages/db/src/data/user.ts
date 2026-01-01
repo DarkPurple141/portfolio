@@ -1,4 +1,4 @@
-import type { User, Social } from '@prisma/client'
+import type { User, Social } from '../../prisma/generated/client'
 
 export const socials: Omit<Social, 'id' | 'userId'>[] = [
   {

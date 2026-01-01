@@ -20,3 +20,6 @@ yarn-error.log*
 
 # build outputs
 dist
+
+# prisma generated files
+**/prisma/generated/*
