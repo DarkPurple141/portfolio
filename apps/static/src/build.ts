@@ -1,5 +1,4 @@
 import hbs from 'handlebars'
-import path from 'path'
 import fs from 'fs'
 import { prisma } from '@portfolio/db'
 
@@ -11,26 +10,27 @@ async function main() {
     include: { socials: true },
   })
 
-  fs.readFile(
-    path.join(__dirname, 'index.template.hbs'),
-    (err, rawTemplate) => {
-      if (err) {
-        console.error(err)
-        return
-      }
+  const fileUrl = new URL('index.template.hbs', import.meta.url)
 
-      const file = rawTemplate.toString()
-      const template = hbs.compile(file)
-      const compiled = template({
-        jobs,
-        qualifications,
-        published_year: new Date().getFullYear(),
-        user,
-      })
+  fs.readFile(fileUrl, (err, rawTemplate) => {
+    if (err) {
+      console.error(err)
+      return
+    }
 
-      fs.writeFileSync(path.join(__dirname, '../static/index.html'), compiled)
-    },
-  )
+    const file = rawTemplate.toString()
+    const template = hbs.compile(file)
+    const compiled = template({
+      jobs,
+      qualifications,
+      published_year: new Date().getFullYear(),
+      user,
+    })
+
+    const outputUrl = new URL('../static/index.html', import.meta.url)
+
+    fs.writeFileSync(outputUrl, compiled)
+  })
 }
 
 main()

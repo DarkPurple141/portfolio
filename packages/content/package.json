@@ -1,7 +1,11 @@
 {
   "name": "@portfolio/content",
   "private": true,
+  "type": "module",
   "source": "generated/index.ts",
+  "exports": {
+    "./generated": "./generated/index.ts"
+  },
   "scripts": {
     "build": "tsx src/index.ts && cp generated/rss.xml ../../apps/next/public/rss.xml",
     "dev": "tsx watch src/index.ts",

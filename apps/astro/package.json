@@ -13,7 +13,9 @@
   "dependencies": {
     "@astrojs/check": "^0.9.1",
     "@astrojs/react": "^4.0.0",
+    "@portfolio/db": "workspace:*",
     "@halyard/reset": "workspace:*",
+    "@portfolio/content": "workspace:*",
     "@halyard/tailwind-preset": "workspace:*",
     "@halyard/ui": "workspace:*",
     "@types/react": "^18.0.21",

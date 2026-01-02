@@ -1,6 +1,7 @@
 {
   "extends": "@halyard/tsconfig/base.json",
   "compilerOptions": {
+    "module": "preserve",
     "jsx": "preserve"
   },
   "include": ["src/**/*"]

@@ -2,6 +2,7 @@ import { prisma } from '.'
 
 import { educationData } from './data/education'
 import { jobData } from './data/jobs'
+import { postsData } from './data/posts'
 import { socials, userData } from './data/user'
 ;(async () => {
   try {
@@ -61,6 +62,20 @@ import { socials, userData } from './data/user'
           create: {
             ...job,
           },
+        }),
+      ),
+    )
+
+    // eslint-disable-next-line no-console
+    console.log('Adding posts...')
+    await Promise.all(
+      postsData.map((post) =>
+        prisma.post.upsert({
+          where: {
+            slug: post.slug,
+          },
+          update: post,
+          create: post,
         }),
       ),
     )

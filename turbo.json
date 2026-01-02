@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^db:migrate", "^db:seed", "^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", "generated/**"],
       "inputs": ["src/**/*", "app/**/*", "prisma/schema.prisma"]
     },
     "lint": {

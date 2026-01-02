@@ -1,23 +1,32 @@
 ---
 import { Heading, PreviewCard, Stack } from '@halyard/ui'
 import Layout from '../../layouts/Layout.astro'
-import zod from 'zod'
+import { prisma } from '@portfolio/db'
 
-const postFrontMatter = zod.object({
-  title: zod.string(),
-  slug: zod.string(),
-  description: zod.string(),
-  created: zod.object({
-    formatted: zod.string(),
-    raw: zod.string(),
-  }),
+const posts = await prisma.post.findMany({
+  where: { published: true },
+  orderBy: { createdAt: 'desc' },
 })
 
-const postsSchema = zod.array(postFrontMatter)
+// Format dates for display
+const dateOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+} as const
 
-const posts = await fetch('https://alhinds.com/content')
-  .then((res) => res.json())
-  .then(postsSchema.parse)
+const formattedPosts = posts.map((post) => {
+  const createdDate = new Date(post.createdAt)
+  return {
+    title: post.title,
+    slug: post.slug,
+    description: post.description,
+    created: {
+      formatted: createdDate.toLocaleString('en-US', dateOptions),
+      raw: post.createdAt.toISOString(),
+    },
+  }
+})
 ---
 
 <Layout
@@ -28,7 +37,7 @@ const posts = await fetch('https://alhinds.com/content')
     <Heading className="heading-xl" id="posts" as="h1">Posts</Heading>
     <ul class="flex gap-8 flex-col" aria-describedby="posts">
       {
-        posts.map((post) => (
+        formattedPosts.map((post) => (
           <li class="flex flex-col gap-1">
             <PreviewCard
               heading={post.title}

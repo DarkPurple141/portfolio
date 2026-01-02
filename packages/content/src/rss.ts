@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs'
-import { join } from 'path'
+import path from 'path'
 // @ts-expect-error
 import RSS from 'rss'
 
@@ -54,5 +54,5 @@ export function generateRSS(posts: any[]) {
 
   const xml = feed.xml()
 
-  writeFileSync(join(__dirname, '../generated/rss.xml'), xml)
+  writeFileSync(path.join(import.meta.dirname, '../generated/rss.xml'), xml)
 }

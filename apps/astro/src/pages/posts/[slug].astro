@@ -1,33 +1,52 @@
 ---
 import { Heading } from '@halyard/ui'
 import Layout from '../../layouts/Layout.astro'
+import { prisma } from '@portfolio/db'
 
 export async function getStaticPaths() {
-  return fetch('https://alhinds.com/content')
-    .then((res) => res.json())
-    .then(
-      // @ts-expect-error
-      (posts) => posts.map((post) => ({ params: { slug: post.slug } })) || [],
-    )
+  const posts = await prisma.post.findMany()
+  return posts.map((post) => ({ params: { slug: post.slug } }))
 }
 
 const { slug } = Astro.params
 
-const post = await fetch(`https://alhinds.com/content?slug=${slug}`).then(
-  (res) => res.json(),
-)
+const post = await prisma.post.findUnique({
+  where: { slug },
+})
+
+if (!post) {
+  return Astro.redirect('/404')
+}
+
+// Parse the tags JSON string back to array
+const tags = JSON.parse(post.tags)
+
+// Format dates for display
+const createdDate = new Date(post.createdAt)
+const dateOptions = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+} as const
+
+const frontmatter = {
+  title: post.title,
+  description: post.description,
+  created: {
+    raw: post.createdAt.toISOString(),
+    formatted: createdDate.toLocaleString('en-US', dateOptions),
+  },
+}
 ---
 
-<Layout
-  title={post.frontmatter.title}
-  description={post.frontmatter.description}
->
+<Layout title={frontmatter.title} description={frontmatter.description}>
   <div class="mb-8">
     <Heading as="h1" className="heading-lg">
-      {post.frontmatter.title}
+      {frontmatter.title}
     </Heading>
-    <time class="text-subtlest" datetime={post.frontmatter.created.raw}>
-      {post.frontmatter.created.formatted}
+    <time class="text-subtlest" datetime={frontmatter.created.raw}>
+      {frontmatter.created.formatted}
     </time>
   </div>
+  <!-- You'll need to render the post.content (markdown) here -->
 </Layout>
