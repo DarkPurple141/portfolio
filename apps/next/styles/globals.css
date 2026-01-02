@@ -1,6 +1,6 @@
-@import "@halyard/tailwind-preset";
-@import "@halyard/reset/reset.css";
-@import "@halyard/reset/theme.css";
+@import '@halyard/reset/reset.css';
+@import '@halyard/reset/theme.css';
+@import '@halyard/tailwind-preset';
 
 /*
  * Source paths for Tailwind to scan
