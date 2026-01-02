@@ -5,6 +5,7 @@ interface Props {
 }
 
 import { Header, Footer } from '@halyard/ui'
+import '../styles/global.css'
 
 const { title, description } = Astro.props
 ---
@@ -43,8 +44,7 @@ const { title, description } = Astro.props
   </body>
 </html>
 <style is:global>
-  @import url('@halyard/reset/reset.css');
-  @import url('@halyard/reset/theme.css');
+  @reference "../styles/global.css";
 
   p a {
     @apply underline font-normal;
@@ -69,7 +69,7 @@ const { title, description } = Astro.props
   a:hover,
   a:active,
   a:focus {
-    @apply text-brand.bold;
+    @apply text-brand-bold;
   }
 
   main,

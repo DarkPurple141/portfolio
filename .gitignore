@@ -23,3 +23,6 @@ dist
 
 # prisma generated files
 **/prisma/generated/*
+
+# astro build output
+.astro/

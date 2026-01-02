@@ -1,15 +1,15 @@
 {
   "name": "@halyard/tailwind-preset",
-  "version": "1.0.0",
-  "source": "src/index.js",
-  "main": "src/index.js",
+  "type": "module",
+  "version": "2.0.0",
+  "exports": {
+    ".": "./src/preset.css"
+  },
   "files": [
     "src"
   ],
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.10"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.2.4"
+    "@tailwindcss/typography": "^0.5.16",
+    "tailwindcss": "^4.0.0"
   }
 }

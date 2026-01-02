@@ -1,5 +1,12 @@
-@tailwind components;
-@tailwind utilities;
+@import "@halyard/tailwind-preset";
+@import "@halyard/reset/reset.css";
+@import "@halyard/reset/theme.css";
+
+/*
+ * Source paths for Tailwind to scan
+ */
+@source "../app/**/*.{js,ts,jsx,tsx}";
+@source "../../../packages/ui/src/**/*.{js,ts,jsx,tsx}";
 
 p a {
   @apply underline font-normal;
@@ -24,7 +31,7 @@ header a {
 a:hover,
 a:active,
 a:focus {
-  @apply text-brand.bold;
+  @apply text-brand-bold;
 }
 
 main,

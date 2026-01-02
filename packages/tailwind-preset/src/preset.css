@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+/*
+ * Custom theme extensions for the portfolio
+ * These map CSS custom properties from @halyard/reset to Tailwind utilities
+ */
+@theme {
+  /* Background colors */
+  --color-surface: var(--bg-color);
+  --color-neutral-hover: var(--bg-color-hover);
+  --color-accent: var(--accent-bg-color);
+
+  /* Text colors */
+  --color-default: var(--text-color);
+  --color-subtle: var(--text-color-subtle);
+  --color-subtlest: var(--text-color-subtlest);
+  --color-brand: var(--accent-bg-color);
+  --color-brand-bold: var(--accent-bg-color-bold);
+}

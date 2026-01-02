@@ -1,0 +1,10 @@
+@import '@halyard/tailwind-preset';
+@import '@halyard/reset/reset.css';
+@import '@halyard/reset/theme.css';
+
+/*
+ * Source paths for Tailwind to scan
+ * In v4, content configuration moves to CSS
+ */
+@source "../**/*.{astro,html,js,jsx,ts,tsx}";
+@source "../../../packages/ui/src/**/*.{js,jsx,ts,tsx}";

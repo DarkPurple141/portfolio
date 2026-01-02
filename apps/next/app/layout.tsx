@@ -1,5 +1,3 @@
-import '@halyard/reset/reset.css'
-import '@halyard/reset/theme.css'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 
