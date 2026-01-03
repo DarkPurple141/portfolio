@@ -2,6 +2,7 @@
 import { Heading } from '@halyard/ui'
 import Layout from '../../layouts/Layout.astro'
 import { prisma } from '@portfolio/db'
+import { getEntry, render } from 'astro:content'
 
 export async function getStaticPaths() {
   const posts = await prisma.post.findMany()
@@ -10,19 +11,14 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params
 
-const post = await prisma.post.findUnique({
-  where: { slug },
-})
+const post = await getEntry('blog', slug)
 
 if (!post) {
   return Astro.redirect('/404')
 }
 
-// Parse the tags JSON string back to array
-const tags = JSON.parse(post.tags)
-
 // Format dates for display
-const createdDate = new Date(post.createdAt)
+const createdDate = new Date(post.data.createdAt)
 const dateOptions = {
   year: 'numeric',
   month: 'long',
@@ -30,13 +26,15 @@ const dateOptions = {
 } as const
 
 const frontmatter = {
-  title: post.title,
-  description: post.description,
+  title: post.data.title,
+  description: post.data.description,
   created: {
-    raw: post.createdAt.toISOString(),
+    raw: post.data.createdAt.toISOString(),
     formatted: createdDate.toLocaleString('en-US', dateOptions),
   },
 }
+
+const { Content } = await render(post)
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
@@ -48,5 +46,5 @@ const frontmatter = {
       {frontmatter.created.formatted}
     </time>
   </div>
-  <!-- You'll need to render the post.content (markdown) here -->
+  <Content />
 </Layout>

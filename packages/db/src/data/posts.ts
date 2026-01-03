@@ -23,7 +23,7 @@ type PostData = {
   description: string
   content: string
   code: string
-  tags: string
+  tags: string[]
   published: boolean
   createdAt: Date
   updatedAt: Date
@@ -40,7 +40,7 @@ export const postsData: PostData[] = postExports.map(([, post]) => ({
   description: post.frontmatter.description,
   content: post.matter.content,
   code: post.code,
-  tags: JSON.stringify(post.frontmatter.tags || []),
+  tags: post.frontmatter.tags || [],
   published: true,
   createdAt: new Date(post.frontmatter.created.raw),
   updatedAt: new Date(post.frontmatter.modified.raw),

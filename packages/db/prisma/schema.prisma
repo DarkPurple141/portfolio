@@ -56,7 +56,7 @@ model Post {
   description String
   content     String // Raw markdown content
   code        String // Bundled MDX code
-  tags        String // JSON array stored as string
+  tags        Json     @default("[]")
   published   Boolean  @default(true)
   createdAt   DateTime
   updatedAt   DateTime
