@@ -35,7 +35,6 @@
     "db:generate": "prisma generate",
     "dev": "tsup --watch",
     "format": "prisma format",
-    "prebuild": "pnpm run db:generate",
     "predev": "pnpm run db:generate",
     "studio": "prisma studio"
   },
