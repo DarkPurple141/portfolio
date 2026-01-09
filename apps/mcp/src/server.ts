@@ -9,13 +9,16 @@ export function createMcpServer() {
   })
 
   // Tool: Get all posts
-  server.tool(
+  server.registerTool(
     'get_posts',
-    'Get all blog posts, optionally filtered by tag',
     {
-      tag: z.string().optional().describe('Optional tag to filter posts by'),
+      description: 'Get all blog posts, optionally filtered by tag',
+      inputSchema: {
+        tag: z.string().optional().describe('Optional tag to filter posts by'),
+      },
     },
-    async ({ tag }) => {
+    async (args: { tag?: string }) => {
+      const { tag } = args
       const posts = await prisma.post.findMany({
         where: tag
           ? {
@@ -45,17 +48,20 @@ export function createMcpServer() {
           },
         ],
       }
-    }
+    },
   )
 
   // Tool: Get a specific post by slug
-  server.tool(
+  server.registerTool(
     'get_post',
-    'Get a specific blog post by its slug',
     {
-      slug: z.string().describe('The slug of the post to retrieve'),
+      description: 'Get a specific blog post by its slug',
+      inputSchema: {
+        slug: z.string().describe('The slug of the post to retrieve'),
+      },
     },
-    async ({ slug }) => {
+    async (args: { slug: string }) => {
+      const { slug } = args
       const post = await prisma.post.findUnique({
         where: { slug },
       })
@@ -80,76 +86,94 @@ export function createMcpServer() {
           },
         ],
       }
-    }
+    },
   )
 
   // Tool: Get all jobs
-  server.tool('get_jobs', 'Get all work experience/jobs', {}, async () => {
-    const jobs = await prisma.job.findMany({
-      orderBy: { start_date: 'desc' },
-    })
+  server.registerTool(
+    'get_jobs',
+    { description: 'Get all work experience/jobs', inputSchema: {} },
+    async () => {
+      const jobs = await prisma.job.findMany({
+        orderBy: { start_date: 'desc' },
+      })
 
-    return {
-      content: [
-        {
-          type: 'text',
-          text: JSON.stringify(jobs, null, 2),
-        },
-      ],
-    }
-  })
-
-  // Tool: Get all qualifications
-  server.tool('get_qualifications', 'Get all education and qualifications', {}, async () => {
-    const qualifications = await prisma.qualification.findMany({
-      orderBy: { graduation_year: 'desc' },
-    })
-
-    return {
-      content: [
-        {
-          type: 'text',
-          text: JSON.stringify(qualifications, null, 2),
-        },
-      ],
-    }
-  })
-
-  // Tool: Get user profile
-  server.tool('get_user', 'Get user profile information including socials', {}, async () => {
-    const user = await prisma.user.findFirst({
-      include: {
-        socials: true,
-      },
-    })
-
-    if (!user) {
       return {
         content: [
           {
             type: 'text',
-            text: 'No user found',
+            text: JSON.stringify(jobs, null, 2),
           },
         ],
-        isError: true,
       }
-    }
+    },
+  )
 
-    return {
-      content: [
-        {
-          type: 'text',
-          text: JSON.stringify(user, null, 2),
+  // Tool: Get all qualifications
+  server.registerTool(
+    'get_qualifications',
+    { description: 'Get all education and qualifications', inputSchema: {} },
+    async () => {
+      const qualifications = await prisma.qualification.findMany({
+        orderBy: { graduation_year: 'desc' },
+      })
+
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify(qualifications, null, 2),
+          },
+        ],
+      }
+    },
+  )
+
+  // Tool: Get user profile
+  server.registerTool(
+    'get_user',
+    {
+      description: 'Get user profile information including socials',
+      inputSchema: {},
+    },
+    async () => {
+      const user = await prisma.user.findFirst({
+        include: {
+          socials: true,
         },
-      ],
-    }
-  })
+      })
+
+      if (!user) {
+        return {
+          content: [
+            {
+              type: 'text',
+              text: 'No user found',
+            },
+          ],
+          isError: true,
+        }
+      }
+
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify(user, null, 2),
+          },
+        ],
+      }
+    },
+  )
 
   // Tool: Get formatted resume
-  server.tool(
+  server.registerTool(
     'get_resume',
-    'Get a formatted resume with jobs, qualifications, and user info',
-    {},
+    {
+      description:
+        'Get a formatted resume with jobs, qualifications, and user info',
+      inputSchema: {},
+    },
     async () => {
       const [user, jobs, qualifications] = await Promise.all([
         prisma.user.findFirst({
@@ -177,7 +201,7 @@ export function createMcpServer() {
           },
         ],
       }
-    }
+    },
   )
 
   // Resources
