@@ -33,6 +33,7 @@
     "db:push": "prisma db push",
     "db:seed": "tsx ./src/seed.ts",
     "db:generate": "prisma generate",
+    "postinstall": "prisma generate",
     "dev": "tsup --watch",
     "format": "prisma format",
     "predev": "pnpm run db:generate",
