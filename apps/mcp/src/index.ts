@@ -1,41 +1,42 @@
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js'
-import { createServer } from 'http'
+import express from 'express'
 import { createMcpServer } from './server.js'
 
-const server = createMcpServer()
+const app = express()
+const port = 3000
 
-// Start HTTP server for local development
-const PORT = process.env.PORT || 3001
-
-const httpServer = createServer(async (req, res) => {
-  // Handle CORS
+// CORS middleware for all routes
+app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, mcp-session-id')
 
   if (req.method === 'OPTIONS') {
-    res.writeHead(204)
-    res.end()
-    return
+    return res.status(204).end()
   }
+  next()
+})
 
-  if (req.url === '/mcp' || req.url === '/api/mcp') {
+app.all('/', async (req, res) => {
+  const server = createMcpServer()
+  try {
     const transport = new StreamableHTTPServerTransport({
-      sessionIdGenerator: undefined, // Stateless mode
+      sessionIdGenerator: undefined,
     })
 
     await server.connect(transport)
     await transport.handleRequest(req, res)
-  } else if (req.url === '/health') {
-    res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok' }))
-  } else {
-    res.writeHead(404)
-    res.end('Not found')
+  } catch (error) {
+    console.error('MCP error:', error)
+    if (!res.headersSent) {
+      return res.status(500).json({ error: 'Internal server error' })
+    }
+  } finally {
+    await server.close()
   }
 })
 
-httpServer.listen(PORT, () => {
-  console.log(`MCP server listening on port ${PORT}`) // eslint-disable-line no-console
-  console.log(`MCP endpoint: http://localhost:${PORT}/mcp`) // eslint-disable-line no-console
+app.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`MCP server listening on port ${port}`)
 })
