@@ -5,6 +5,14 @@ import { z } from 'zod'
 export function createMcpServer() {
   const server = new McpServer({
     name: 'portfolio-mcp',
+    description:
+      'A MCP server for the portfolio of Al Hinds. This server is used to interact with the portfolio of Al (Alex) Hinds.',
+    icons: [
+      {
+        src: 'https://alhinds.com/favicon.ico',
+        mimeType: 'image/x-icon',
+      },
+    ],
     version: '1.0.0',
   })
 
