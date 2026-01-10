@@ -5,11 +5,16 @@ import { createMcpServer } from '../src/server.js'
 const app = express()
 app.use(express.json())
 
-app.options('*', (req, res) => {
+// CORS middleware for all routes
+app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, mcp-session-id')
-  return res.status(204).end()
+
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end()
+  }
+  next()
 })
 
 app.all('/', async (req, res) => {
