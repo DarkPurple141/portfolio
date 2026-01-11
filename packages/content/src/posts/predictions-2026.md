@@ -1,7 +1,8 @@
 ---
 title: Predictions for 2026
 published: 2026-01-10T02:30:53.235Z
-description: Here are my takes for 2026
+description:
+  The technical and product landscape will change dramatically in 2026.
 tags:
   - predictions
   - product

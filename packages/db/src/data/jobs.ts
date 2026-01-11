@@ -2,11 +2,20 @@ import type { Job } from '../../prisma/generated/client'
 
 export const jobData: Omit<Job, 'id'>[] = [
   {
+    title: 'Founding Product & Engineering Lead',
+    company: 'Lorikeet',
+    href: 'https://lorikeetcx.ai',
+    start_date: new Date('2023').getFullYear(),
+    end_date: null,
+    description:
+      'Employee #2 at Lorikeet, a company building the bleeding edge of CX platforms and revolutionising how we think about support.',
+  },
+  {
     title: 'Senior Software Engineer',
     company: 'Atlassian Design System',
     href: 'https://atlassian.design',
     start_date: new Date('2020').getFullYear(),
-    end_date: null,
+    end_date: new Date('2023').getFullYear(),
     description:
       'Took a leading role in evolving the Atlassian Design System, working closely with designers to build a new generation of components and tools. Led the architecture and rollout of new spacing and typography foundations for the company.',
   },
