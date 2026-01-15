@@ -1,10 +1,9 @@
 {
-  "functions": {
-    "api/mcp.ts": {
-      "maxDuration": 60
-    },
-    "api/webhook.ts": {
-      "maxDuration": 10
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/mcp",
+      "destination": "/api/mcp"
     }
-  }
+  ]
 }

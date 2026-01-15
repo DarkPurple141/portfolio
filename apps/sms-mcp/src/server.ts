@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable no-console */
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 import { sendSms } from './twilio.js'
@@ -22,6 +23,8 @@ async function sleep(ms: number): Promise<void> {
 }
 
 export function createMcpServer() {
+  console.log('[sms-mcp:server] Creating MCP server instance')
+
   const server = new McpServer({
     name: 'sms-mcp',
     version: '1.0.0',
@@ -29,7 +32,10 @@ export function createMcpServer() {
       'A MCP server for sending and receiving SMS messages from a human. Ask when the response requires human intervention.',
   })
 
+  console.log('[sms-mcp:server] MCP server created with name: sms-mcp')
+
   // Tool: Ask a human via SMS and wait for response
+  console.log('[sms-mcp:server] Registering tool: ask_human')
   server.registerTool(
     'ask_human',
     {
@@ -46,15 +52,29 @@ export function createMcpServer() {
       },
     },
     async (args: { message: string; request_id?: string }) => {
+      console.log('[sms-mcp:server] ask_human called with:', {
+        message: args.message,
+        request_id: args.request_id,
+      })
+
       const { message, request_id } = args
       const targetPhone = process.env.TARGET_PHONE_NUMBER!
+      console.log('[sms-mcp:server] Target phone configured:', !!targetPhone)
 
       let requestId = request_id
 
       // If continuing from a previous request, check if we already have a response
       if (requestId) {
+        console.log(
+          '[sms-mcp:server] Continuing from previous request:',
+          requestId,
+        )
         const existingResponse = await checkForResponse(requestId)
         if (existingResponse) {
+          console.log(
+            '[sms-mcp:server] Found existing response for request:',
+            requestId,
+          )
           await clearPendingRequest()
           return {
             content: [
@@ -72,6 +92,10 @@ export function createMcpServer() {
         // Verify the request exists
         const existingRequest = await getRequestById(requestId)
         if (!existingRequest) {
+          console.log(
+            '[sms-mcp:server] Request not found or expired:',
+            requestId,
+          )
           return {
             content: [
               {
@@ -85,16 +109,21 @@ export function createMcpServer() {
             isError: true,
           }
         }
+        console.log('[sms-mcp:server] Request exists, will continue polling')
       } else {
         // New request - send SMS
         requestId = generateRequestId()
+        console.log('[sms-mcp:server] New request, generated ID:', requestId)
 
         try {
+          console.log('[sms-mcp:server] Sending SMS to:', targetPhone)
           await sendSms({
             to: targetPhone,
             message: message,
           })
+          console.log('[sms-mcp:server] SMS sent successfully')
         } catch (error) {
+          console.error('[sms-mcp:server] Failed to send SMS:', error)
           return {
             content: [
               {
@@ -110,20 +139,36 @@ export function createMcpServer() {
         }
 
         // Store the pending request
+        console.log('[sms-mcp:server] Storing pending request:', requestId)
         await storePendingRequest({
           id: requestId,
           message,
           sentAt: Date.now(),
         })
+        console.log('[sms-mcp:server] Pending request stored')
       }
 
       // Poll for response
+      console.log('[sms-mcp:server] Starting to poll for response...')
       const startTime = Date.now()
+      let pollCount = 0
       while (Date.now() - startTime < MAX_WAIT_MS) {
         await sleep(POLL_INTERVAL_MS)
+        pollCount++
+
+        if (pollCount % 10 === 0) {
+          console.log(
+            `[sms-mcp:server] Still polling... (${pollCount} polls, ${Math.round((Date.now() - startTime) / 1000)}s elapsed)`,
+          )
+        }
 
         const response = await checkForResponse(requestId)
         if (response) {
+          console.log(
+            '[sms-mcp:server] Response received after',
+            pollCount,
+            'polls',
+          )
           await clearPendingRequest()
           return {
             content: [
@@ -140,6 +185,9 @@ export function createMcpServer() {
       }
 
       // Timeout - return request_id for continuation
+      console.log(
+        '[sms-mcp:server] Polling timeout reached, returning request_id for continuation',
+      )
       return {
         content: [
           {
@@ -158,6 +206,7 @@ export function createMcpServer() {
   )
 
   // Tool: Check the status of a pending SMS request
+  console.log('[sms-mcp:server] Registering tool: check_sms_status')
   server.registerTool(
     'check_sms_status',
     {
@@ -169,9 +218,14 @@ export function createMcpServer() {
     },
     async (args: { request_id: string }) => {
       const { request_id } = args
+      console.log('[sms-mcp:server] check_sms_status called for:', request_id)
 
       const request = await getRequestById(request_id)
       if (!request) {
+        console.log(
+          '[sms-mcp:server] check_sms_status: request not found:',
+          request_id,
+        )
         return {
           content: [
             {
@@ -187,6 +241,10 @@ export function createMcpServer() {
       }
 
       if (request.response) {
+        console.log(
+          '[sms-mcp:server] check_sms_status: response found for:',
+          request_id,
+        )
         return {
           content: [
             {
@@ -201,6 +259,10 @@ export function createMcpServer() {
         }
       }
 
+      console.log(
+        '[sms-mcp:server] check_sms_status: still waiting for:',
+        request_id,
+      )
       return {
         content: [
           {
@@ -216,5 +278,6 @@ export function createMcpServer() {
     },
   )
 
+  console.log('[sms-mcp:server] All tools registered')
   return server
 }
