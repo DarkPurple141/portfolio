@@ -23,6 +23,8 @@ export interface PendingRequest {
 
 const PENDING_KEY = 'sms-mcp:pending'
 const RESPONSE_KEY_PREFIX = 'sms-mcp:response:'
+const DEDUP_KEY_PREFIX = 'sms-mcp:dedup:'
+const DEDUP_TTL_SECONDS = 60 // Prevent duplicate sends within 60 seconds
 
 // Store a pending SMS request
 export async function storePendingRequest(
@@ -140,6 +142,59 @@ export async function clearPendingRequest(): Promise<void> {
     console.log('[sms-mcp:store] Pending request cleared')
   } catch (error) {
     console.error('[sms-mcp:store] Error clearing pending request:', error)
+    throw error
+  }
+}
+
+// Create a simple hash for deduplication
+function createDedupKey(message: string, phone: string): string {
+  // Simple hash based on message content and phone number
+  const content = `${phone}:${message}`
+  let hash = 0
+  for (let i = 0; i < content.length; i++) {
+    const char = content.charCodeAt(i)
+    hash = (hash << 5) - hash + char
+    hash = hash & hash // Convert to 32bit integer
+  }
+  return `${DEDUP_KEY_PREFIX}${Math.abs(hash).toString(36)}`
+}
+
+// Check if a similar SMS was recently sent, returns existing request_id if so
+export async function checkDuplicateSms(
+  message: string,
+  phone: string,
+): Promise<string | null> {
+  const dedupKey = createDedupKey(message, phone)
+  console.log('[sms-mcp:store] checkDuplicateSms key:', dedupKey)
+  try {
+    const existingRequestId = await redis.get<string>(dedupKey)
+    if (existingRequestId) {
+      console.log(
+        '[sms-mcp:store] Found duplicate SMS, existing request:',
+        existingRequestId,
+      )
+      return existingRequestId
+    }
+    return null
+  } catch (error) {
+    console.error('[sms-mcp:store] Error checking duplicate SMS:', error)
+    throw error
+  }
+}
+
+// Mark an SMS as sent for deduplication
+export async function markSmsSent(
+  message: string,
+  phone: string,
+  requestId: string,
+): Promise<void> {
+  const dedupKey = createDedupKey(message, phone)
+  console.log('[sms-mcp:store] markSmsSent key:', dedupKey, 'request:', requestId)
+  try {
+    await redis.set(dedupKey, requestId, { ex: DEDUP_TTL_SECONDS })
+    console.log('[sms-mcp:store] SMS marked as sent with TTL:', DEDUP_TTL_SECONDS)
+  } catch (error) {
+    console.error('[sms-mcp:store] Error marking SMS as sent:', error)
     throw error
   }
 }

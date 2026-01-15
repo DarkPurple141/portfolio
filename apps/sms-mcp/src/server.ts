@@ -8,6 +8,8 @@ import {
   checkForResponse,
   getRequestById,
   clearPendingRequest,
+  checkDuplicateSms,
+  markSmsSent,
 } from './store.js'
 
 // How long to wait before returning (leave buffer for Vercel timeout)
@@ -111,41 +113,54 @@ export function createMcpServer() {
         }
         console.log('[sms-mcp:server] Request exists, will continue polling')
       } else {
-        // New request - send SMS
-        requestId = generateRequestId()
-        console.log('[sms-mcp:server] New request, generated ID:', requestId)
+        // New request - check for duplicate first
+        const existingRequestId = await checkDuplicateSms(message, targetPhone)
+        if (existingRequestId) {
+          console.log(
+            '[sms-mcp:server] Duplicate SMS detected, using existing request:',
+            existingRequestId,
+          )
+          requestId = existingRequestId
+        } else {
+          // Not a duplicate - send SMS
+          requestId = generateRequestId()
+          console.log('[sms-mcp:server] New request, generated ID:', requestId)
 
-        try {
-          console.log('[sms-mcp:server] Sending SMS to:', targetPhone)
-          await sendSms({
-            to: targetPhone,
-            message: message,
-          })
-          console.log('[sms-mcp:server] SMS sent successfully')
-        } catch (error) {
-          console.error('[sms-mcp:server] Failed to send SMS:', error)
-          return {
-            content: [
-              {
-                type: 'text',
-                text: JSON.stringify({
-                  status: 'error',
-                  error: `Failed to send SMS: ${error instanceof Error ? error.message : 'Unknown error'}`,
-                }),
-              },
-            ],
-            isError: true,
+          try {
+            console.log('[sms-mcp:server] Sending SMS to:', targetPhone)
+            await sendSms({
+              to: targetPhone,
+              message: message,
+            })
+            console.log('[sms-mcp:server] SMS sent successfully')
+
+            // Mark as sent for deduplication
+            await markSmsSent(message, targetPhone, requestId)
+          } catch (error) {
+            console.error('[sms-mcp:server] Failed to send SMS:', error)
+            return {
+              content: [
+                {
+                  type: 'text',
+                  text: JSON.stringify({
+                    status: 'error',
+                    error: `Failed to send SMS: ${error instanceof Error ? error.message : 'Unknown error'}`,
+                  }),
+                },
+              ],
+              isError: true,
+            }
           }
-        }
 
-        // Store the pending request
-        console.log('[sms-mcp:server] Storing pending request:', requestId)
-        await storePendingRequest({
-          id: requestId,
-          message,
-          sentAt: Date.now(),
-        })
-        console.log('[sms-mcp:server] Pending request stored')
+          // Store the pending request
+          console.log('[sms-mcp:server] Storing pending request:', requestId)
+          await storePendingRequest({
+            id: requestId,
+            message,
+            sentAt: Date.now(),
+          })
+          console.log('[sms-mcp:server] Pending request stored')
+        }
       }
 
       // Poll for response
