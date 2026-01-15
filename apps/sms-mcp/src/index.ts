@@ -18,9 +18,8 @@ console.log('[sms-mcp] Environment check:', {
   port,
 })
 
-// Parse URL-encoded bodies (Twilio sends form-urlencoded data)
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+// NOTE: Do NOT use express.json() globally - it consumes the body before
+// the MCP StreamableHTTPServerTransport can read it
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -79,46 +78,52 @@ app.all('/', async (req, res) => {
 })
 
 // Webhook endpoint for Twilio SMS responses
-app.post('/webhook', async (req, res) => {
-  console.log('[sms-mcp] Webhook request received:', {
-    body: req.body,
-    headers: req.headers,
-  })
+// Apply body parsing middleware only to this route
+app.post(
+  '/webhook',
+  express.urlencoded({ extended: true }),
+  express.json(),
+  async (req, res) => {
+    console.log('[sms-mcp] Webhook request received:', {
+      body: req.body,
+      headers: req.headers,
+    })
 
-  try {
-    const body = req.body
+    try {
+      const body = req.body
 
-    // Extract the message body from Twilio's webhook payload
-    const messageBody = body.Body || body.body
-    const from = body.From || body.from
+      // Extract the message body from Twilio's webhook payload
+      const messageBody = body.Body || body.body
+      const from = body.From || body.from
 
-    if (!messageBody) {
-      console.error('[sms-mcp] No message body in webhook payload:', body)
-      return res.status(400).json({ error: 'No message body' })
+      if (!messageBody) {
+        console.error('[sms-mcp] No message body in webhook payload:', body)
+        return res.status(400).json({ error: 'No message body' })
+      }
+
+      console.log(`[sms-mcp] Received SMS from ${from}: ${messageBody}`)
+
+      // Store the response
+      const updated = await storeResponse(messageBody)
+
+      if (updated) {
+        console.log(`[sms-mcp] Stored response for request ${updated.id}`)
+      } else {
+        console.log('[sms-mcp] No pending request found to match response')
+      }
+
+      // Respond with TwiML (empty response - no auto-reply)
+      res.setHeader('Content-Type', 'text/xml')
+      console.log('[sms-mcp] Sending TwiML response')
+      return res
+        .status(200)
+        .send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>')
+    } catch (error) {
+      console.error('[sms-mcp] Webhook error:', error)
+      return res.status(500).json({ error: 'Internal server error' })
     }
-
-    console.log(`[sms-mcp] Received SMS from ${from}: ${messageBody}`)
-
-    // Store the response
-    const updated = await storeResponse(messageBody)
-
-    if (updated) {
-      console.log(`[sms-mcp] Stored response for request ${updated.id}`)
-    } else {
-      console.log('[sms-mcp] No pending request found to match response')
-    }
-
-    // Respond with TwiML (empty response - no auto-reply)
-    res.setHeader('Content-Type', 'text/xml')
-    console.log('[sms-mcp] Sending TwiML response')
-    return res
-      .status(200)
-      .send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>')
-  } catch (error) {
-    console.error('[sms-mcp] Webhook error:', error)
-    return res.status(500).json({ error: 'Internal server error' })
-  }
-})
+  },
+)
 
 app.listen(port, () => {
   console.log(`[sms-mcp] Server listening on port ${port}`)
