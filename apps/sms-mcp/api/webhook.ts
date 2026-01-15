@@ -1,14 +1,16 @@
 /* eslint-disable no-console */
-import type { VercelRequest, VercelResponse } from '@vercel/node'
+import express from 'express'
 import { storeResponse } from '../src/store.js'
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
+const app = express()
+const port = process.env.WEBHOOK_PORT || 3002
 
+// Parse URL-encoded bodies (Twilio sends form-urlencoded data)
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+app.post('/', async (req, res) => {
   try {
-    // Twilio sends form-urlencoded data
     const body = req.body
 
     // Extract the message body from Twilio's webhook payload
@@ -40,4 +42,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.error('Webhook error:', error)
     return res.status(500).json({ error: 'Internal server error' })
   }
-}
+})
+
+app.listen(port, () => {
+  console.log(`SMS webhook server listening on port ${port}`)
+})
+
+export default app
