@@ -29,7 +29,7 @@
   "devDependencies": {
     "@halyard/prettier-config": "workspace:*",
     "@tailwindcss/postcss": "^4.0.0",
-    "eslint": "^8.0.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-astro": "^0.29.1",
     "@tailwindcss/vite": "^4.0.0",
     "prettier": "^3.0.0",
