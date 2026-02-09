@@ -10,8 +10,8 @@ const metaData = {
       'What is abstraction and how does it apply to programming? One of my original blogs about programming!',
     tags: ['explainers', 'c', 'abstraction'],
     modified: {
-      raw: '2023-11-05T10:29:42.235Z',
-      formatted: 'November 5, 2023',
+      raw: '2026-02-09T04:59:54.736Z',
+      formatted: 'February 9, 2026',
     },
     created: { raw: '2015-01-30T02:30:53.235Z', formatted: 'January 30, 2015' },
     slug: 'abstraction-2015-0-30',
@@ -27,8 +27,8 @@ const metaData = {
         'What is abstraction and how does it apply to programming? One of my original blogs about programming!',
       tags: ['explainers', 'c', 'abstraction'],
       modified: {
-        raw: '2023-11-05T10:29:42.235Z',
-        formatted: 'November 5, 2023',
+        raw: '2026-02-09T04:59:54.736Z',
+        formatted: 'February 9, 2026',
       },
       created: {
         raw: '2015-01-30T02:30:53.235Z',

@@ -10,8 +10,8 @@ const metaData = {
       "I wanted to try and migrate to the Next.js's app router and server components and test how much it tested my mental model and assumptions.",
     tags: ['explainers', 'nextjs', 'configuration'],
     modified: {
-      raw: '2023-11-10T11:15:15.533Z',
-      formatted: 'November 10, 2023',
+      raw: '2026-02-09T04:59:54.737Z',
+      formatted: 'February 9, 2026',
     },
     created: {
       raw: '2023-11-10T02:30:53.235Z',
@@ -30,8 +30,8 @@ const metaData = {
         "I wanted to try and migrate to the Next.js's app router and server components and test how much it tested my mental model and assumptions.",
       tags: ['explainers', 'nextjs', 'configuration'],
       modified: {
-        raw: '2023-11-10T11:15:15.533Z',
-        formatted: 'November 10, 2023',
+        raw: '2026-02-09T04:59:54.737Z',
+        formatted: 'February 9, 2026',
       },
       created: {
         raw: '2023-11-10T02:30:53.235Z',
