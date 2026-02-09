@@ -7,23 +7,46 @@
 <link rel="icon" href="https://alhinds.com/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
   :root {
-    --bg: #111110;
-    --bg-raised: #1a1a18;
-    --bg-code: #0d0d0c;
-    --border: #2a2a26;
-    --border-accent: #d4a843;
-    --text: #e8e4db;
-    --text-muted: #8a867d;
-    --text-dim: #5c5952;
-    --accent: #d4a843;
-    --accent-dim: rgba(212,168,67,0.12);
+    --font-family: 'Helvetica Neue', system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
     --green: #7ec984;
     --radius: 6px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(201.82deg 24% 6%);
+      --bg-raised: hsl(201.82deg 24% 12%);
+      --bg-code: hsl(201.82deg 24% 4%);
+      --border: hsl(201.82deg 24% 18%);
+      --border-accent: hsl(201.82deg 44% 72%);
+      --text: hsl(180deg 100% 96.67%);
+      --text-muted: hsl(0deg 0% 86.67% / 85%);
+      --text-dim: hsl(0deg 0% 86.67% / 60%);
+      --accent: hsl(201.82deg 44% 72%);
+      --accent-dim: hsl(201.82deg 44% 18%);
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: hsl(240deg 24% 100%);
+      --bg-raised: hsl(240deg 24% 96% / 75%);
+      --bg-code: hsl(240deg 10% 96%);
+      --border: hsl(240deg 6% 90%);
+      --border-accent: hsl(240deg 62% 62%);
+      --text: hsl(240deg 24% 6%);
+      --text-muted: hsl(240deg 24% 6.67% / 75%);
+      --text-dim: hsl(240deg 24% 6.67% / 60%);
+      --accent: hsl(240deg 62% 62%);
+      --accent-dim: hsl(240deg 62% 94.9%);
+    }
   }
 
   html { font-size: 16px; -webkit-font-smoothing: antialiased; }
@@ -31,19 +54,8 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Instrument Sans', sans-serif;
-    line-height: 1.65;
+    font: 0.875rem/1.6 var(--font-family);
     min-height: 100vh;
-  }
-
-  .grain {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
   }
 
   .layout {
@@ -86,20 +98,16 @@
   }
 
   h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 400;
-    line-height: 1.15;
+    font: bold clamp(2.2rem, 5vw, 3rem)/1.25 var(--font-family);
     color: var(--text);
     margin-bottom: 20px;
     animation: fadeDown 0.6s 0.08s ease both;
   }
 
   .subtitle {
-    font-size: 1.05rem;
+    font: 1rem/1.6 var(--font-family);
     color: var(--text-muted);
     max-width: 540px;
-    line-height: 1.7;
     animation: fadeDown 0.6s 0.16s ease both;
   }
 
@@ -228,7 +236,7 @@
     color: var(--text-muted);
   }
 
-  .code-body .key { color: #c4b28a; }
+  .code-body .key { color: var(--accent); }
   .code-body .str { color: var(--green); }
   .code-body .brace { color: var(--text-dim); }
 
@@ -352,7 +360,6 @@
 </style>
 </head>
 <body>
-<div class="grain"></div>
 <div class="layout">
 
   <div class="server-badge">MCP Server &middot; Online</div>
