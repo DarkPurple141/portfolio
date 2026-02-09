@@ -10,8 +10,8 @@ const metaData = {
       'The technical and product landscape will change dramatically in 2026.',
     tags: ['predictions', 'product'],
     modified: {
-      raw: '2026-02-09T04:59:54.738Z',
-      formatted: 'February 9, 2026',
+      raw: '2026-01-11T05:35:15.658Z',
+      formatted: 'January 11, 2026',
     },
     created: { raw: '2026-01-10T02:30:53.235Z', formatted: 'January 10, 2026' },
     slug: 'predictions-2026-2026-0-10',
@@ -27,8 +27,8 @@ const metaData = {
         'The technical and product landscape will change dramatically in 2026.',
       tags: ['predictions', 'product'],
       modified: {
-        raw: '2026-02-09T04:59:54.738Z',
-        formatted: 'February 9, 2026',
+        raw: '2026-01-11T05:35:15.658Z',
+        formatted: 'January 11, 2026',
       },
       created: {
         raw: '2026-01-10T02:30:53.235Z',

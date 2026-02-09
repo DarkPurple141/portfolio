@@ -10,8 +10,8 @@ const metaData = {
       "I wanted to play around with setting up and managing a shared configuration for tailwind. It's pretty simple.",
     tags: ['explainers', 'tailwind', 'configuration'],
     modified: {
-      raw: '2026-02-09T04:59:54.737Z',
-      formatted: 'February 9, 2026',
+      raw: '2023-11-12T01:32:58.695Z',
+      formatted: 'November 12, 2023',
     },
     created: { raw: '2023-11-04T02:30:53.235Z', formatted: 'November 4, 2023' },
     slug: 'i-built-a-tailwind-preset-2023-10-4',
@@ -27,8 +27,8 @@ const metaData = {
         "I wanted to play around with setting up and managing a shared configuration for tailwind. It's pretty simple.",
       tags: ['explainers', 'tailwind', 'configuration'],
       modified: {
-        raw: '2026-02-09T04:59:54.737Z',
-        formatted: 'February 9, 2026',
+        raw: '2023-11-12T01:32:58.695Z',
+        formatted: 'November 12, 2023',
       },
       created: {
         raw: '2023-11-04T02:30:53.235Z',
