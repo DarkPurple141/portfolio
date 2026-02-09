@@ -1,10 +1,12 @@
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js'
 import express from 'express'
+import { readFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createMcpServer } from './server.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+const indexHtml = readFileSync(resolve(__dirname, 'index.html'), 'utf-8')
 const app = express()
 const port = 3000
 
@@ -21,7 +23,8 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (_req, res) => {
-  res.sendFile(resolve(__dirname, 'index.html'))
+  res.setHeader('Content-Type', 'text/html')
+  res.send(indexHtml)
 })
 
 app.all('/mcp', async (req, res) => {
