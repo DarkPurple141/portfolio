@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "portfolio": {
+      "type": "url",
+      "url": "https://mcp.alhinds.com/mcp"
+    }
+  }
+}
