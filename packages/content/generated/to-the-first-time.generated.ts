@@ -10,8 +10,8 @@ const metaData = {
     published: '2018-01-30T02:30:53.235Z',
     tags: ['web development', 'javascript'],
     modified: {
-      raw: '2023-11-05T10:29:42.184Z',
-      formatted: 'November 5, 2023',
+      raw: '2026-02-09T04:31:00.791Z',
+      formatted: 'February 9, 2026',
     },
     created: { raw: '2018-01-30T02:30:53.235Z', formatted: 'January 30, 2018' },
     slug: 'to-the-first-time-2018-0-30',
@@ -27,8 +27,8 @@ const metaData = {
       published: '2018-01-30T02:30:53.235Z',
       tags: ['web development', 'javascript'],
       modified: {
-        raw: '2023-11-05T10:29:42.184Z',
-        formatted: 'November 5, 2023',
+        raw: '2026-02-09T04:31:00.791Z',
+        formatted: 'February 9, 2026',
       },
       created: {
         raw: '2018-01-30T02:30:53.235Z',
