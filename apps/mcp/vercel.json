@@ -1,9 +1,3 @@
 {
-  "outputDirectory": ".",
-  "rewrites": [
-    {
-      "source": "/mcp",
-      "destination": "/api/mcp"
-    }
-  ]
+  "outputDirectory": "."
 }
