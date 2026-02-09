@@ -11,13 +11,14 @@ datasource db {
 }
 
 model Job {
-  id          Int     @id @default(autoincrement())
-  title       String
-  description String
-  href        String?
-  company     String  @unique
-  start_date  Int
-  end_date    Int?
+  id                   Int     @id @default(autoincrement())
+  title                String
+  description          String
+  extended_description String?
+  href                 String?
+  company              String  @unique
+  start_date           Int
+  end_date             Int?
 }
 
 model Qualification {

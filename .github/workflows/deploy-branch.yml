@@ -9,15 +9,16 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
   cancel-in-progress: true
 
+env:
+  DATABASE_URL: file:./prisma/dev.db
+
 jobs:
   build:
     name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 10
+      - uses: pnpm/action-setup@v4
       - name: Set node version to 24
         uses: actions/setup-node@v4
         with:
@@ -32,4 +33,4 @@ jobs:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           VUE_DEPLOY_URL: https://${{github.repository_owner}}-portfolio-${{github.job}}-pr-vue2.surge.sh
-        run: pnpm deploy
+        run: pnpm run deploy
