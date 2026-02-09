@@ -10,8 +10,8 @@ const metaData = {
     published: '2016-01-06T02:30:53.235Z',
     tags: ['c', 'explainers'],
     modified: {
-      raw: '2026-02-09T04:31:00.791Z',
-      formatted: 'February 9, 2026',
+      raw: '2023-11-05T10:29:42.203Z',
+      formatted: 'November 5, 2023',
     },
     created: { raw: '2016-01-06T02:30:53.235Z', formatted: 'January 6, 2016' },
     slug: 'what-are-header-files-2016-0-6',
@@ -27,8 +27,8 @@ const metaData = {
       published: '2016-01-06T02:30:53.235Z',
       tags: ['c', 'explainers'],
       modified: {
-        raw: '2026-02-09T04:31:00.791Z',
-        formatted: 'February 9, 2026',
+        raw: '2023-11-05T10:29:42.203Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2016-01-06T02:30:53.235Z',

@@ -9,10 +9,7 @@ const metaData = {
     description:
       'Large language models are wildly powerful, but their weakness is their inability to properly understand their own limitations. Functions are the key to unlocking their potential.',
     tags: ['AI'],
-    modified: {
-      raw: '2026-02-09T04:31:00.786Z',
-      formatted: 'February 9, 2026',
-    },
+    modified: { raw: '2024-03-17T06:50:34.400Z', formatted: 'March 17, 2024' },
     created: { raw: '2024-03-17T02:30:53.235Z', formatted: 'March 17, 2024' },
     slug: 'ai-functions-2024-2-17',
   },
@@ -27,8 +24,8 @@ const metaData = {
         'Large language models are wildly powerful, but their weakness is their inability to properly understand their own limitations. Functions are the key to unlocking their potential.',
       tags: ['AI'],
       modified: {
-        raw: '2026-02-09T04:31:00.786Z',
-        formatted: 'February 9, 2026',
+        raw: '2024-03-17T06:50:34.400Z',
+        formatted: 'March 17, 2024',
       },
       created: { raw: '2024-03-17T02:30:53.235Z', formatted: 'March 17, 2024' },
       slug: 'ai-functions-2024-2-17',

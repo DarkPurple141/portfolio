@@ -10,8 +10,8 @@ const metaData = {
     published: '2018-01-30T02:30:53.235Z',
     tags: ['web development', 'javascript'],
     modified: {
-      raw: '2026-02-09T04:31:00.790Z',
-      formatted: 'February 9, 2026',
+      raw: '2023-11-05T10:29:42.248Z',
+      formatted: 'November 5, 2023',
     },
     created: { raw: '2018-01-30T02:30:53.235Z', formatted: 'January 30, 2018' },
     slug: 'the-foundations-are-foundations-for-a-reason-2018-0-30',
@@ -27,8 +27,8 @@ const metaData = {
       published: '2018-01-30T02:30:53.235Z',
       tags: ['web development', 'javascript'],
       modified: {
-        raw: '2026-02-09T04:31:00.790Z',
-        formatted: 'February 9, 2026',
+        raw: '2023-11-05T10:29:42.248Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2018-01-30T02:30:53.235Z',
