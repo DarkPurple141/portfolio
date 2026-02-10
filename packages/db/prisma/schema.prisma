@@ -50,6 +50,12 @@ model User {
   longDescription3rdPerson  String?
 }
 
+model Skill {
+  id       Int    @id @default(autoincrement())
+  name     String @unique
+  category String
+}
+
 model Post {
   id          Int      @id @default(autoincrement())
   slug        String   @unique

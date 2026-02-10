@@ -10,8 +10,8 @@ const metaData = {
       "What I'm using to build and design software in 2023. Tools, frameworks equipment and infrastructure.",
     tags: ['software', 'personal', 'tools'],
     modified: {
-      raw: '2023-11-07T03:15:01.943Z',
-      formatted: 'November 7, 2023',
+      raw: '2026-02-09T09:35:58.630Z',
+      formatted: 'February 9, 2026',
     },
     created: { raw: '2023-11-05T02:30:53.235Z', formatted: 'November 5, 2023' },
     slug: 'the-tools-i-use-2023-10-5',
@@ -27,8 +27,8 @@ const metaData = {
         "What I'm using to build and design software in 2023. Tools, frameworks equipment and infrastructure.",
       tags: ['software', 'personal', 'tools'],
       modified: {
-        raw: '2023-11-07T03:15:01.943Z',
-        formatted: 'November 7, 2023',
+        raw: '2026-02-09T09:35:58.630Z',
+        formatted: 'February 9, 2026',
       },
       created: {
         raw: '2023-11-05T02:30:53.235Z',

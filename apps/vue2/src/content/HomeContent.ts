@@ -1,15 +1,15 @@
 export default [
   {
-    stub: "I'm a designer and engineer.",
+    stub: "I'm a design engineer and product leader.",
     content:
-      "I believe good software is maintainable, testable, and shipped. I believe premature optimisation is evil. I don't forget the value of the aesthetic.",
+      "I believe good software is maintainable, testable, and shipped. I don't forget the value of the aesthetic. I lead teams that build with craft and urgency.",
     title: 'Engineer',
     link: 'Engineer',
     id: 'tech',
     icon: 'code',
   },
   {
-    stub: "I'm a journalist.",
+    stub: 'I have a background in journalism.',
     content:
       "I've written for print and online, worked in television and have produced and run multiple podcasts.",
     title: 'Journalist',
@@ -27,11 +27,11 @@ export default [
     icon: 'pencil',
   },
   {
-    stub: "I've got a diverse skillset.",
+    stub: 'I lead across product and engineering.',
     content:
-      'I pride myself on being the bridge between the technical and non-technical. ' +
-      'I can comfortably sit in both worlds.',
-    title: 'About', // Adaptable, Malleable,
+      'I bridge the technical and non-technical. ' +
+      'I can comfortably sit in both worlds and use that to drive product and technical decisions.',
+    title: 'About',
     link: 'About',
     id: 'skills',
     icon: 'gears',

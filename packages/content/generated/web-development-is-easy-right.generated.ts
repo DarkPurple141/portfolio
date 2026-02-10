@@ -10,8 +10,8 @@ const metaData = {
     published: '2017-06-30T02:30:53.235Z',
     tags: ['web development', 'javascript', 'personal'],
     modified: {
-      raw: '2023-11-05T10:29:42.230Z',
-      formatted: 'November 5, 2023',
+      raw: '2026-02-09T09:35:58.631Z',
+      formatted: 'February 9, 2026',
     },
     created: { raw: '2017-06-30T02:30:53.235Z', formatted: 'June 30, 2017' },
     slug: 'web-development-is-easy-right-2017-5-30',
@@ -27,8 +27,8 @@ const metaData = {
       published: '2017-06-30T02:30:53.235Z',
       tags: ['web development', 'javascript', 'personal'],
       modified: {
-        raw: '2023-11-05T10:29:42.230Z',
-        formatted: 'November 5, 2023',
+        raw: '2026-02-09T09:35:58.631Z',
+        formatted: 'February 9, 2026',
       },
       created: { raw: '2017-06-30T02:30:53.235Z', formatted: 'June 30, 2017' },
       slug: 'web-development-is-easy-right-2017-5-30',
