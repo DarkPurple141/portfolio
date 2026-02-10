@@ -137,6 +137,39 @@ export function createMcpServer() {
     },
   )
 
+  // Tool: Get all skills
+  server.registerTool(
+    'get_skills',
+    {
+      description:
+        'Get all technical skills, optionally filtered by category (languages, frameworks, infrastructure, ai, design)',
+      inputSchema: {
+        category: z
+          .string()
+          .optional()
+          .describe(
+            'Optional category to filter by: languages, frameworks, infrastructure, ai, design',
+          ),
+      },
+    },
+    async (args: { category?: string }) => {
+      const { category } = args
+      const skills = await prisma.skill.findMany({
+        where: category ? { category } : undefined,
+        orderBy: { category: 'asc' },
+      })
+
+      return {
+        content: [
+          {
+            type: 'text',
+            text: JSON.stringify(skills, null, 2),
+          },
+        ],
+      }
+    },
+  )
+
   // Tool: Get user profile
   server.registerTool(
     'get_user',
@@ -183,7 +216,7 @@ export function createMcpServer() {
       inputSchema: {},
     },
     async () => {
-      const [user, jobs, qualifications] = await Promise.all([
+      const [user, jobs, qualifications, skills] = await Promise.all([
         prisma.user.findFirst({
           include: { socials: true },
         }),
@@ -193,12 +226,16 @@ export function createMcpServer() {
         prisma.qualification.findMany({
           orderBy: { graduation_year: 'desc' },
         }),
+        prisma.skill.findMany({
+          orderBy: { category: 'asc' },
+        }),
       ])
 
       const resume = {
         user,
         experience: jobs,
         education: qualifications,
+        skills,
       }
 
       return {
@@ -247,6 +284,22 @@ export function createMcpServer() {
           uri: 'portfolio://jobs',
           mimeType: 'application/json',
           text: JSON.stringify(jobs, null, 2),
+        },
+      ],
+    }
+  })
+
+  server.resource('skills', 'portfolio://skills', async () => {
+    const skills = await prisma.skill.findMany({
+      orderBy: { category: 'asc' },
+    })
+
+    return {
+      contents: [
+        {
+          uri: 'portfolio://skills',
+          mimeType: 'application/json',
+          text: JSON.stringify(skills, null, 2),
         },
       ],
     }

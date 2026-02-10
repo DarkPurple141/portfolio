@@ -3,6 +3,7 @@ import { prisma } from '.'
 import { educationData } from './data/education'
 import { jobData } from './data/jobs'
 import { postsData } from './data/posts'
+import { skillsData } from './data/skills'
 import { socials, userData } from './data/user'
 ;(async () => {
   try {
@@ -61,6 +62,25 @@ import { socials, userData } from './data/user'
           },
           create: {
             ...job,
+          },
+        }),
+      ),
+    )
+
+    // eslint-disable-next-line no-console
+    console.log('Adding skills...')
+    await prisma.skill.deleteMany()
+    await Promise.all(
+      skillsData.map((skill) =>
+        prisma.skill.upsert({
+          where: {
+            name: skill.name,
+          },
+          update: {
+            ...skill,
+          },
+          create: {
+            ...skill,
           },
         }),
       ),

@@ -3,8 +3,14 @@
 import { Redis } from '@upstash/redis'
 
 console.log('[sms-mcp:store] Initializing Redis client')
-console.log('[sms-mcp:store] Redis URL configured:', !!process.env.UPSTASH_REDIS_REST_URL)
-console.log('[sms-mcp:store] Redis token configured:', !!process.env.UPSTASH_REDIS_REST_TOKEN)
+console.log(
+  '[sms-mcp:store] Redis URL configured:',
+  !!process.env.UPSTASH_REDIS_REST_URL,
+)
+console.log(
+  '[sms-mcp:store] Redis token configured:',
+  !!process.env.UPSTASH_REDIS_REST_TOKEN,
+)
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL!,
@@ -43,7 +49,10 @@ export async function storePendingRequest(
         ex: 86400, // Expire after 24 hours
       },
     )
-    console.log('[sms-mcp:store] Stored request by ID:', `${RESPONSE_KEY_PREFIX}${request.id}`)
+    console.log(
+      '[sms-mcp:store] Stored request by ID:',
+      `${RESPONSE_KEY_PREFIX}${request.id}`,
+    )
   } catch (error) {
     console.error('[sms-mcp:store] Error storing pending request:', error)
     throw error
@@ -189,10 +198,18 @@ export async function markSmsSent(
   requestId: string,
 ): Promise<void> {
   const dedupKey = createDedupKey(message, phone)
-  console.log('[sms-mcp:store] markSmsSent key:', dedupKey, 'request:', requestId)
+  console.log(
+    '[sms-mcp:store] markSmsSent key:',
+    dedupKey,
+    'request:',
+    requestId,
+  )
   try {
     await redis.set(dedupKey, requestId, { ex: DEDUP_TTL_SECONDS })
-    console.log('[sms-mcp:store] SMS marked as sent with TTL:', DEDUP_TTL_SECONDS)
+    console.log(
+      '[sms-mcp:store] SMS marked as sent with TTL:',
+      DEDUP_TTL_SECONDS,
+    )
   } catch (error) {
     console.error('[sms-mcp:store] Error marking SMS as sent:', error)
     throw error

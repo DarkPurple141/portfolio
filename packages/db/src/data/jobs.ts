@@ -8,14 +8,14 @@ export const jobData: Omit<Job, 'id'>[] = [
     start_date: new Date('2023').getFullYear(),
     end_date: null,
     description:
-      'Employee #2 at Lorikeet, a company building the bleeding edge of CX platforms and revolutionising how we think about support.',
-    extended_description: `I wanted to go deep on the bleeding edge of AI + flex in a high-agency, high velocity environment brimming with ambition and possibility.. so I joined as employee #2 of Lorikeet. I drove the technical and product foundations as we grew from pre-revenue to Series B. My role was cross-functional:
+      'Employee #2 at Lorikeet, an AI-native CX platform. I drove the technical and product foundations as we grew from pre-revenue to Series B.',
+    extended_description: `I wanted to go deep on AI in a high-agency, high-velocity environment, so I joined as employee #2 of Lorikeet. I drove the technical and product foundations as we grew from pre-revenue to Series B. My role was cross-functional:
 
-- I worked across design (I hired the entire design team, and drove the iteration and development of the brand and product UI foundations). I worked with external contractors on ideation and bridged the gap where needed into the technical implementation (there was nobody else)
-- I worked across product (I drove the iteration, and evolution of the workflow editor, the application and product taxonomy, the LLM controllers and design, the data flows and much more). At a startup I found this role the most challenging and rewarding. Everyday in the age of a coding-agents an LLM-generated code is an opportunity for the product to fray or turn into a feature fountain. Keeping it level is a habit.
-- I worked across engineering, creating a system of runbooks and technical processes, guiding the development and evolution of our infrastructure, running technical learning sessions and providing guidance to juniors. I did less of this role over the course of my tenure as I focused on product and design but over the first 18 months I led all the dev productivity metrics (not that it matters).
+- I worked across design — I hired the entire design team, drove the iteration and development of the brand and product UI foundations, worked with external contractors on ideation and bridged the gap into technical implementation.
+- I worked across product — I drove the evolution of the workflow editor, the application and product taxonomy, the LLM controllers and design, the data flows and much more. At a startup I found this role the most challenging and rewarding. Every day in the age of coding agents and LLM-generated code is an opportunity for the product to fray or turn into a feature fountain. Keeping it level is a habit.
+- I worked across engineering, creating a system of runbooks and technical processes, guiding the development and evolution of our infrastructure, running technical learning sessions and providing guidance to juniors. I focused increasingly on product and design over the course of my tenure, but over the first 18 months I led all the dev productivity metrics.
 
-We moved from having a product that was more mechanical turk than real software to a key part of operational infrastructure serving 10s of thousands of customer requests every day for companies all across the globe.`,
+We moved from having a product that was more mechanical turk than real software to a key part of operational infrastructure serving tens of thousands of customer requests every day for companies across the globe.`,
   },
   {
     title: 'Senior Software Engineer',
@@ -24,8 +24,8 @@ We moved from having a product that was more mechanical turk than real software 
     start_date: new Date('2020').getFullYear(),
     end_date: new Date('2023').getFullYear(),
     description:
-      'Took a leading role in evolving the Atlassian Design System, working closely with designers to build a new generation of components and tools. Led the architecture and rollout of new spacing and typography foundations for the company.',
-    extended_description: null,
+      'Took a leading role in evolving the Atlassian Design System, working closely with designers to build a new generation of components and tools. Led the architecture and rollout of new spacing and typography foundations across the company.',
+    extended_description: `I was a technical lead within the design system team, driving architecture decisions that affected every product at Atlassian. I led the rollout of new spacing and typography token foundations — a company-wide migration touching hundreds of components and thousands of consumers. I worked cross-functionally with the design org to shape the component API surface area and mentored engineers across the team.`,
   },
   {
     title: 'Software Engineer',
@@ -34,7 +34,7 @@ We moved from having a product that was more mechanical turk than real software 
     start_date: new Date('2019').getFullYear(),
     end_date: new Date('2020').getFullYear(),
     description:
-      "Developed an innovative solution to Atlassian's real user monitoring and rolled out a scalable system across cloud and server products. Mostly working with Node.js, docker, AWS and golang.",
+      "Built and rolled out a real user monitoring system across Atlassian's cloud and server products using Node.js, Docker, AWS and Go.",
     extended_description: null,
   },
   {
@@ -44,7 +44,7 @@ We moved from having a product that was more mechanical turk than real software 
     start_date: new Date('2018').getFullYear(),
     end_date: new Date('2019').getFullYear(),
     description:
-      'Helped develop and launch a new sports video streaming platform for the web. Mostly working with React/Node.js.',
+      'Helped build and launch a new sports video streaming platform for the web with React and Node.js.',
     extended_description: null,
   },
   {
