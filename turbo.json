@@ -17,7 +17,7 @@
       "dependsOn": ["^db:migrate", "^db:seed"],
       "cache": false
     },
-"db:generate": {
+    "db:generate": {
       "inputs": ["src/**/*.ts", "prisma/schema.prisma"]
     },
     "db:migrate": {
