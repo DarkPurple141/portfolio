@@ -51,6 +51,7 @@ import { socials, userData } from './data/user'
 
     // eslint-disable-next-line no-console
     console.log('Adding jobs...')
+    await prisma.job.deleteMany()
     await Promise.all(
       jobData.map((job) =>
         prisma.job.upsert({

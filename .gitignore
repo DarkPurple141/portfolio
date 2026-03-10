@@ -24,6 +24,9 @@ dist
 # prisma generated files
 **/prisma/generated/*
 
+# orphaned db file (real db is packages/db/prisma/dev.db)
+packages/db/dev.db
+
 # astro build output
 .astro/
 .vercel
