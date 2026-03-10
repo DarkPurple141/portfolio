@@ -6,7 +6,7 @@ export const jobData: Omit<Job, 'id'>[] = [
     company: 'Lorikeet',
     href: 'https://lorikeetcx.ai',
     start_date: new Date('2023').getFullYear(),
-    end_date: null,
+    end_date: new Date('2026').getFullYear(),
     description:
       'Employee #2 at Lorikeet, an AI-native CX platform. I drove the technical and product foundations as we grew from pre-revenue to Series B.',
     extended_description: `I wanted to go deep on AI in a high-agency, high-velocity environment, so I joined as employee #2 of Lorikeet. I drove the technical and product foundations as we grew from pre-revenue to Series B. My role was cross-functional:
@@ -58,13 +58,23 @@ We moved from having a product that was more mechanical turk than real software 
     extended_description: null,
   },
   {
-    title: 'Web Developer',
-    company: 'Freelance',
-    href: 'https://halyard.dev',
+    title: 'Founder',
+    company: 'Halyard',
+    href: 'https://usehalyard.ai',
+    start_date: new Date('2026').getFullYear(),
+    end_date: null,
+    description:
+      'Building an AI context platform that routes agents to the right experts when they hit knowledge gaps, turning team expertise into reusable organizational memory.',
+    extended_description: null,
+  },
+  {
+    title: 'Consultant & Advisor',
+    company: 'Halyard Studio',
+    href: 'https://halyard.studio',
     start_date: new Date('2015').getFullYear(),
     end_date: null,
     description:
-      'Built and helped maintain websites for universities, architecture firms and not-for-profit organisations.',
+      'Consulting on AI product strategy, engineering leadership and design systems. Previously built and maintained websites for universities, architecture firms and not-for-profit organisations.',
     extended_description: null,
   },
   {
