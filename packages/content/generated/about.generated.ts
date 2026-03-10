@@ -8,17 +8,11 @@ const metaData = {
     description: 'about',
     author: {
       name: 'Alex Hinds',
-      bio: "I'm a design-minded engineer and product leader with a background in journalism. Most recently I've been leading product and engineering at the frontier of AI, building the technical and product foundations for some of Australia's fastest-growing startups. Before that I built design systems at Atlassian. I thrive at the intersection of design, product strategy and technical execution.",
+      bio: "I'm building Halyard, an AI context platform that helps teams capture and share expertise. I also consult and advise on AI product strategy, engineering leadership and design systems through Halyard Studio. Previously I led product and engineering at Lorikeet from pre-revenue to Series B, and built design systems at Atlassian.",
     },
-    modified: {
-      raw: '2026-02-10T00:44:48.920Z',
-      formatted: 'February 10, 2026',
-    },
-    created: {
-      raw: '2026-02-10T00:44:48.919Z',
-      formatted: 'February 10, 2026',
-    },
-    slug: 'about-2026-1-10',
+    modified: { raw: '2026-03-10T05:14:44.569Z', formatted: 'March 10, 2026' },
+    created: { raw: '2026-03-10T05:14:44.569Z', formatted: 'March 10, 2026' },
+    slug: 'about-2026-2-10',
   },
   errors: [],
   matter: {
@@ -29,17 +23,14 @@ const metaData = {
       description: 'about',
       author: {
         name: 'Alex Hinds',
-        bio: "I'm a design-minded engineer and product leader with a background in journalism. Most recently I've been leading product and engineering at the frontier of AI, building the technical and product foundations for some of Australia's fastest-growing startups. Before that I built design systems at Atlassian. I thrive at the intersection of design, product strategy and technical execution.",
+        bio: "I'm building Halyard, an AI context platform that helps teams capture and share expertise. I also consult and advise on AI product strategy, engineering leadership and design systems through Halyard Studio. Previously I led product and engineering at Lorikeet from pre-revenue to Series B, and built design systems at Atlassian.",
       },
       modified: {
-        raw: '2026-02-10T00:44:48.920Z',
-        formatted: 'February 10, 2026',
+        raw: '2026-03-10T05:14:44.569Z',
+        formatted: 'March 10, 2026',
       },
-      created: {
-        raw: '2026-02-10T00:44:48.919Z',
-        formatted: 'February 10, 2026',
-      },
-      slug: 'about-2026-1-10',
+      created: { raw: '2026-03-10T05:14:44.569Z', formatted: 'March 10, 2026' },
+      slug: 'about-2026-2-10',
     },
     isEmpty: false,
     excerpt: '',
