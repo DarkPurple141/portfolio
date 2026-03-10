@@ -5,7 +5,6 @@
   "author": "Alex H <alex.hinds141@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "deploy": "turbo run deploy",
     "build": "turbo run build",
     "cut:version": "pnpm changeset version && pnpm changeset tag",
     "dev": "turbo run dev",
