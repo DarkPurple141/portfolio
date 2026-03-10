@@ -9,19 +9,23 @@ export default async function Home() {
     <Stack gap="gap-24">
       <Stack gap="gap-8" className="splash">
         <Heading className="heading-xl" as="h1">
-          <span className="text-brand.bold">Alex Hinds</span> is an engineer for
-          the web. I'm based in Sydney.
+          <span className="text-brand.bold">Alex Hinds</span> is building
+          something new. I'm based in Sydney.
         </Heading>
         <Stack gap="gap-4">
           <p>
-            I'm a design-focused software engineer and former journalist with a
-            passion for delivering great user experiences for the web. I have
-            more than a{' '}
-            <Link href="https://static.alhinds.com">decade of experience</Link>{' '}
-            in web development and software design and am currently focused on
-            design systems, frontend tooling and code evolution at{' '}
-            <Link href="https://atlassian.design">Atlassian</Link>. I've worked
-            at companies of all sizes, in-house and on contract.
+            I'm building <Link href="https://usehalyard.ai">Halyard</Link>, an
+            AI context platform that helps teams capture and share expertise. I
+            also consult and advise through{' '}
+            <Link href="https://halyard.studio">Halyard Studio</Link> on AI
+            product strategy, engineering leadership and design systems.
+            Previously I led product and engineering at{' '}
+            <Link href="https://lorikeetcx.ai">Lorikeet</Link> from pre-revenue
+            to Series B, and built{' '}
+            <Link href="https://atlassian.design">
+              design systems at Atlassian
+            </Link>
+            .
           </p>
           <Socials />
         </Stack>

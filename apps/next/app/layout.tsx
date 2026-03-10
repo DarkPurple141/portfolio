@@ -53,7 +53,7 @@ export default function RootLayout({
 export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   metadataBase: new URL('https://alhinds.com'),
-  title: 'Alex Hinds, web developer and designer',
+  title: 'Alex Hinds, engineer and product leader',
   manifest: '/site.webmanifest',
   themeColor: [
     { media: '(prefers-color-scheme: dark)', color: '#98c0d7' },
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
     },
   },
   description:
-    'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development.',
+    'Alex Hinds is building Halyard, an AI context platform. Previously led product and engineering at Lorikeet and built design systems at Atlassian.',
   openGraph: {
     type: 'website',
     url: '/',
-    title: 'Alex Hinds, Web developer and designer',
+    title: 'Alex Hinds, engineer and product leader',
     description:
-      'Alex Hinds is a software engineer and former journalist with a passion for UX/UI, frontend engineering and web development.',
+      'Alex Hinds is building Halyard, an AI context platform. Previously led product and engineering at Lorikeet and built design systems at Atlassian.',
     images: [
       {
         url: '/og-image.png',
