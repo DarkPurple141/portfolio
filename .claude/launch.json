@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev"],
+      "description": "Run all apps via turbo"
+    },
+    {
+      "name": "next",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "next", "dev"]
+    },
+    {
+      "name": "astro",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "astro", "dev"]
+    },
+    {
+      "name": "remix",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "remix", "dev"]
+    },
+    {
+      "name": "static",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "static", "dev"]
+    },
+    {
+      "name": "vue2",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "vue2", "dev"]
+    },
+    {
+      "name": "mcp",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "mcp", "dev"]
+    }
+  ]
+}
