@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch --env-file-if-exists=.env.local src/index.ts",
     "build": "vite build && tsc && cp src/docs.html dist/docs.html",
     "start": "NODE_ENV=production node dist/index.js"
   },

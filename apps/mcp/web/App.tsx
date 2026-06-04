@@ -32,6 +32,26 @@ export function App() {
   const isBusy = status === 'submitted' || status === 'streaming'
   const hasMessages = messages.length > 0
 
+  // Kimi (and any reasoning model) streams long, invisible reasoning bursts —
+  // including a fresh one *after* each tool call — during which no text renders.
+  // Show a "thinking" indicator whenever we're busy but nothing visible is
+  // moving yet, and hide it the moment text streams or a tool spinner takes over.
+  const last = messages[messages.length - 1]
+  const lastPart =
+    last && last.role === 'assistant'
+      ? last.parts[last.parts.length - 1]
+      : undefined
+  const streamingText =
+    status === 'streaming' &&
+    lastPart?.type === 'text' &&
+    ((lastPart as { text?: string }).text?.length ?? 0) > 0
+  const runningTool =
+    !!lastPart &&
+    isToolPart(lastPart) &&
+    lastPart.state !== 'output-available' &&
+    lastPart.state !== 'output-error'
+  const showThinking = isBusy && !streamingText && !runningTool
+
   const scrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     const el = scrollRef.current
@@ -49,13 +69,7 @@ export function App() {
       <header className="app-header">
         <div className="app-brand">
           <Logo />
-          <div>
-            <div className="app-title">Al Hinds</div>
-            <div className="app-subtitle">
-              <span className="status-dot" aria-hidden="true" />
-              Portfolio assistant
-            </div>
-          </div>
+          <span className="app-title">Al Hinds</span>
         </div>
         <a className="app-docs-link" href="/docs">
           MCP&nbsp;server
@@ -85,15 +99,15 @@ export function App() {
                 )}
               </div>
             ))}
+            {showThinking && <Thinking />}
           </div>
         ) : (
           <div className="hero">
             <Logo />
             <h1>Ask me about Al</h1>
             <p>
-              I&rsquo;m Al Hinds&rsquo; portfolio assistant. Ask about his work
-              experience, the things he&rsquo;s built and written, his
-              education, or his technical skills.
+              Ask about Al Hinds&rsquo; work experience, the things he&rsquo;s
+              built and written, his education, or his technical skills.
             </p>
             <div className="suggestions">
               {SUGGESTIONS.map((s) => (
@@ -119,6 +133,21 @@ export function App() {
         onRetry={() => regenerate()}
       />
     </>
+  )
+}
+
+function Thinking() {
+  return (
+    <div className="message message-assistant">
+      <div className="thinking" role="status" aria-live="polite">
+        <span className="thinking-dots" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </span>
+        <span className="thinking-label">Thinking</span>
+      </div>
+    </div>
   )
 }
 
