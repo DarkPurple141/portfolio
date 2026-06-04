@@ -1,3 +1,11 @@
 {
-  "outputDirectory": "."
+  "framework": null,
+  "buildCommand": "pnpm turbo run build --filter=@portfolio/mcp",
+  "outputDirectory": "dist/public",
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "dist/**"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
