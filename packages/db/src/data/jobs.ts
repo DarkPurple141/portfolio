@@ -8,7 +8,7 @@ export const jobData: Omit<Job, 'id'>[] = [
     start_date: new Date('2023').getFullYear(),
     end_date: new Date('2026').getFullYear(),
     description:
-      'Employee #2 at Lorikeet, an AI-native CX platform. I drove the technical and product foundations as we grew from pre-revenue to Series B.',
+      'Employee #2 at Lorikeet, an AI-native CX platform. I drove the technical and product foundations as we grew from pre-revenue to Series B - including building the team from 3-30+ across engineering, design and FDE',
     extended_description: `I wanted to go deep on AI in a high-agency, high-velocity environment, so I joined as employee #2 of Lorikeet. I drove the technical and product foundations as we grew from pre-revenue to Series B. My role was cross-functional:
 
 - I worked across design — I hired the entire design team, drove the iteration and development of the brand and product UI foundations, worked with external contractors on ideation and bridged the gap into technical implementation.
@@ -28,7 +28,7 @@ We moved from having a product that was more mechanical turk than real software 
     extended_description: `I was a technical lead within the design system team, driving architecture decisions that affected every product at Atlassian. I led the rollout of new spacing and typography token foundations — a company-wide migration touching hundreds of components and thousands of consumers. I worked cross-functionally with the design org to shape the component API surface area and mentored engineers across the team.`,
   },
   {
-    title: 'Software Engineer',
+    title: 'Senior Software Engineer',
     company: 'Atlassian',
     href: 'https://atlassian.com',
     start_date: new Date('2019').getFullYear(),
@@ -58,6 +58,26 @@ We moved from having a product that was more mechanical turk than real software 
     extended_description: null,
   },
   {
+    title: 'Head of AI (Fractional)',
+    company: 'Qwilr',
+    href: 'https://qwilr.com',
+    start_date: new Date('2026').getFullYear(),
+    end_date: null,
+    description:
+      'Helping Qwilr, a Series C+ proposal engine and CRM, super charge their internal AI capabilities.',
+    extended_description: null,
+  },
+  {
+    title: 'CTO (Fractional)',
+    company: 'Ajust',
+    href: 'https://ajust.com.au',
+    start_date: new Date('2026').getFullYear(),
+    end_date: null,
+    description:
+      'Helping Ajust, an AI consumer advocacy platform, launch their product and scale their engineering team and product teams.',
+    extended_description: null,
+  },
+  {
     title: 'Founder',
     company: 'Halyard',
     href: 'https://usehalyard.ai',
@@ -74,7 +94,7 @@ We moved from having a product that was more mechanical turk than real software 
     start_date: new Date('2015').getFullYear(),
     end_date: null,
     description:
-      'Consulting on AI product strategy, engineering leadership and design systems. Previously built and maintained websites for universities, architecture firms and not-for-profit organisations.',
+      'Consulting on AI product strategy, engineering leadership, and applying AI to business problems. Started a development studio, and since been focused on AI enablement and organisational change.',
     extended_description: null,
   },
   {

@@ -9,7 +9,10 @@ const metaData = {
       'Why the building blocks of the web remain the core drivers of success in the modern web.',
     published: '2018-01-30T02:30:53.235Z',
     tags: ['web development', 'javascript'],
-    modified: { raw: '2026-03-10T05:14:44.574Z', formatted: 'March 10, 2026' },
+    modified: {
+      raw: '2023-11-05T10:29:42.248Z',
+      formatted: 'November 5, 2023',
+    },
     created: { raw: '2018-01-30T02:30:53.235Z', formatted: 'January 30, 2018' },
     slug: 'the-foundations-are-foundations-for-a-reason-2018-0-30',
   },
@@ -24,8 +27,8 @@ const metaData = {
       published: '2018-01-30T02:30:53.235Z',
       tags: ['web development', 'javascript'],
       modified: {
-        raw: '2026-03-10T05:14:44.574Z',
-        formatted: 'March 10, 2026',
+        raw: '2023-11-05T10:29:42.248Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2018-01-30T02:30:53.235Z',

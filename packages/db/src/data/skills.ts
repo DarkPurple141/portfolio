@@ -1,15 +1,6 @@
 import type { Skill } from '../../prisma/generated/client'
 
 export const skillsData: Omit<Skill, 'id'>[] = [
-  // Languages
-  { name: 'TypeScript', category: 'Languages' },
-  { name: 'JavaScript', category: 'Languages' },
-  { name: 'Python', category: 'Languages' },
-  { name: 'HTML', category: 'Languages' },
-  { name: 'CSS', category: 'Languages' },
-  { name: 'Go', category: 'Languages' },
-  { name: 'C', category: 'Languages' },
-
   // Frameworks & Libraries
   { name: 'React', category: 'Frameworks' },
   { name: 'Node.js', category: 'Frameworks' },
@@ -42,7 +33,8 @@ export const skillsData: Omit<Skill, 'id'>[] = [
   // Design & Product
   { name: 'Prototyping', category: 'Design & Product' },
   { name: 'Design systems', category: 'Design & Product' },
-  { name: 'Component architecture', category: 'Design & Product' },
+  { name: 'Cultural change', category: 'Design & Product' },
+  { name: 'Team building', category: 'Design & Product' },
   { name: 'UI/UX', category: 'Design & Product' },
   { name: 'Product strategy', category: 'Design & Product' },
   { name: 'Stakeholder management', category: 'Design & Product' },

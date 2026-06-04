@@ -9,7 +9,10 @@ const metaData = {
     description:
       'A while back I designed and built my resumé in HTML. I’ve recently transformed the same HTML into a proper website.',
     tags: ['web development', 'html', 'css'],
-    modified: { raw: '2026-03-10T05:14:44.572Z', formatted: 'March 10, 2026' },
+    modified: {
+      raw: '2023-11-05T10:29:42.154Z',
+      formatted: 'November 5, 2023',
+    },
     created: { raw: '2023-11-01T02:30:53.235Z', formatted: 'November 1, 2023' },
     slug: 'resume-into-a-website-2023-10-1',
   },
@@ -24,8 +27,8 @@ const metaData = {
         'A while back I designed and built my resumé in HTML. I’ve recently transformed the same HTML into a proper website.',
       tags: ['web development', 'html', 'css'],
       modified: {
-        raw: '2026-03-10T05:14:44.572Z',
-        formatted: 'March 10, 2026',
+        raw: '2023-11-05T10:29:42.154Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2023-11-01T02:30:53.235Z',

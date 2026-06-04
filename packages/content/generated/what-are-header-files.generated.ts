@@ -9,7 +9,10 @@ const metaData = {
       'Header files in C fulfil a few key principles of good modular programming allowing us to separate out our related logic, reuse or not use elements of logic in different files as we see fit and provide an agreed common interface for implementation.',
     published: '2016-01-06T02:30:53.235Z',
     tags: ['c', 'explainers'],
-    modified: { raw: '2026-03-10T05:14:44.579Z', formatted: 'March 10, 2026' },
+    modified: {
+      raw: '2023-11-05T10:29:42.203Z',
+      formatted: 'November 5, 2023',
+    },
     created: { raw: '2016-01-06T02:30:53.235Z', formatted: 'January 6, 2016' },
     slug: 'what-are-header-files-2016-0-6',
   },
@@ -24,8 +27,8 @@ const metaData = {
       published: '2016-01-06T02:30:53.235Z',
       tags: ['c', 'explainers'],
       modified: {
-        raw: '2026-03-10T05:14:44.579Z',
-        formatted: 'March 10, 2026',
+        raw: '2023-11-05T10:29:42.203Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2016-01-06T02:30:53.235Z',

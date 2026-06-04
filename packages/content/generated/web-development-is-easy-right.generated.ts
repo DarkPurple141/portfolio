@@ -9,7 +9,10 @@ const metaData = {
       'My own journey wading into the world of web dev. It’s not as easy as it looks, it takes time, and it’s not for everyone.',
     published: '2017-06-30T02:30:53.235Z',
     tags: ['web development', 'javascript', 'personal'],
-    modified: { raw: '2026-03-10T05:14:44.579Z', formatted: 'March 10, 2026' },
+    modified: {
+      raw: '2023-11-05T10:29:42.230Z',
+      formatted: 'November 5, 2023',
+    },
     created: { raw: '2017-06-30T02:30:53.235Z', formatted: 'June 30, 2017' },
     slug: 'web-development-is-easy-right-2017-5-30',
   },
@@ -24,8 +27,8 @@ const metaData = {
       published: '2017-06-30T02:30:53.235Z',
       tags: ['web development', 'javascript', 'personal'],
       modified: {
-        raw: '2026-03-10T05:14:44.579Z',
-        formatted: 'March 10, 2026',
+        raw: '2023-11-05T10:29:42.230Z',
+        formatted: 'November 5, 2023',
       },
       created: { raw: '2017-06-30T02:30:53.235Z', formatted: 'June 30, 2017' },
       slug: 'web-development-is-easy-right-2017-5-30',

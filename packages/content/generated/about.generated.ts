@@ -10,9 +10,15 @@ const metaData = {
       name: 'Alex Hinds',
       bio: "I'm building Halyard, an AI context platform that helps teams capture and share expertise. I also consult and advise on AI product strategy, engineering leadership and design systems through Halyard Studio. Previously I led product and engineering at Lorikeet from pre-revenue to Series B, and built design systems at Atlassian.",
     },
-    modified: { raw: '2026-03-10T05:14:44.569Z', formatted: 'March 10, 2026' },
-    created: { raw: '2026-03-10T05:14:44.569Z', formatted: 'March 10, 2026' },
-    slug: 'about-2026-2-10',
+    modified: {
+      raw: '2026-02-13T00:29:39.385Z',
+      formatted: 'February 13, 2026',
+    },
+    created: {
+      raw: '2026-02-13T00:29:39.385Z',
+      formatted: 'February 13, 2026',
+    },
+    slug: 'about-2026-1-13',
   },
   errors: [],
   matter: {
@@ -26,11 +32,14 @@ const metaData = {
         bio: "I'm building Halyard, an AI context platform that helps teams capture and share expertise. I also consult and advise on AI product strategy, engineering leadership and design systems through Halyard Studio. Previously I led product and engineering at Lorikeet from pre-revenue to Series B, and built design systems at Atlassian.",
       },
       modified: {
-        raw: '2026-03-10T05:14:44.569Z',
-        formatted: 'March 10, 2026',
+        raw: '2026-02-13T00:29:39.385Z',
+        formatted: 'February 13, 2026',
       },
-      created: { raw: '2026-03-10T05:14:44.569Z', formatted: 'March 10, 2026' },
-      slug: 'about-2026-2-10',
+      created: {
+        raw: '2026-02-13T00:29:39.385Z',
+        formatted: 'February 13, 2026',
+      },
+      slug: 'about-2026-1-13',
     },
     isEmpty: false,
     excerpt: '',

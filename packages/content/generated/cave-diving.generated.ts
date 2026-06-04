@@ -9,7 +9,10 @@ const metaData = {
     description:
       'YouTube served me a video of the Nutty Putty cave incident. I went down a rabbit hole.',
     tags: ['personal', 'caving'],
-    modified: { raw: '2026-03-10T05:14:44.570Z', formatted: 'March 10, 2026' },
+    modified: {
+      raw: '2023-11-29T01:37:43.976Z',
+      formatted: 'November 29, 2023',
+    },
     created: {
       raw: '2023-11-29T02:30:53.235Z',
       formatted: 'November 29, 2023',
@@ -27,8 +30,8 @@ const metaData = {
         'YouTube served me a video of the Nutty Putty cave incident. I went down a rabbit hole.',
       tags: ['personal', 'caving'],
       modified: {
-        raw: '2026-03-10T05:14:44.570Z',
-        formatted: 'March 10, 2026',
+        raw: '2023-11-29T01:37:43.976Z',
+        formatted: 'November 29, 2023',
       },
       created: {
         raw: '2023-11-29T02:30:53.235Z',

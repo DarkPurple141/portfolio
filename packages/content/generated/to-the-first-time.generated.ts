@@ -9,7 +9,10 @@ const metaData = {
       'A fun little article on the absurdities and overwhelming depth of becoming a first-time web developer.',
     published: '2018-01-30T02:30:53.235Z',
     tags: ['web development', 'javascript'],
-    modified: { raw: '2026-03-10T05:14:44.579Z', formatted: 'March 10, 2026' },
+    modified: {
+      raw: '2023-11-05T10:29:42.184Z',
+      formatted: 'November 5, 2023',
+    },
     created: { raw: '2018-01-30T02:30:53.235Z', formatted: 'January 30, 2018' },
     slug: 'to-the-first-time-2018-0-30',
   },
@@ -24,8 +27,8 @@ const metaData = {
       published: '2018-01-30T02:30:53.235Z',
       tags: ['web development', 'javascript'],
       modified: {
-        raw: '2026-03-10T05:14:44.579Z',
-        formatted: 'March 10, 2026',
+        raw: '2023-11-05T10:29:42.184Z',
+        formatted: 'November 5, 2023',
       },
       created: {
         raw: '2018-01-30T02:30:53.235Z',
