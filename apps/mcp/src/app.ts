@@ -1,9 +1,5 @@
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js'
-import express, {
-  type NextFunction,
-  type Request,
-  type Response,
-} from 'express'
+import express from 'express'
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -48,7 +44,7 @@ export function createApp({ serveStatic }: { serveStatic: boolean }) {
   const app = express()
 
   // CORS for the MCP endpoint and API.
-  app.use((req: Request, res: Response, next: NextFunction) => {
+  app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, mcp-session-id')
@@ -60,14 +56,14 @@ export function createApp({ serveStatic }: { serveStatic: boolean }) {
   })
 
   // MCP connection docs / client config.
-  app.get('/docs', (_req: Request, res: Response) => {
+  app.get('/docs', (_req, res) => {
     if (!docsHtmlPath) return res.status(404).send('Docs unavailable')
     res.setHeader('Content-Type', 'text/html')
     res.send(readFileSync(docsHtmlPath, 'utf-8'))
   })
 
   // MCP streamable HTTP endpoint.
-  app.all('/mcp', async (req: Request, res: Response) => {
+  app.all('/mcp', async (req, res) => {
     const server = createMcpServer()
     try {
       const transport = new StreamableHTTPServerTransport({
@@ -87,30 +83,26 @@ export function createApp({ serveStatic }: { serveStatic: boolean }) {
   })
 
   // Chat agent — consumed by the React client's useChat hook.
-  app.post(
-    '/api/chat',
-    express.json({ limit: '1mb' }),
-    async (req: Request, res: Response) => {
-      try {
-        const { messages } = req.body ?? {}
-        if (!Array.isArray(messages)) {
-          return res.status(400).json({ error: 'messages must be an array' })
-        }
-        const result = await streamChat(messages)
-        result.pipeUIMessageStreamToResponse(res)
-      } catch (error) {
-        console.error('Chat error:', error)
-        if (!res.headersSent) {
-          res.status(500).json({ error: 'Chat failed' })
-        }
+  app.post('/api/chat', express.json({ limit: '1mb' }), async (req, res) => {
+    try {
+      const { messages } = req.body ?? {}
+      if (!Array.isArray(messages)) {
+        return res.status(400).json({ error: 'messages must be an array' })
       }
-    },
-  )
+      const result = await streamChat(messages)
+      result.pipeUIMessageStreamToResponse(res)
+    } catch (error) {
+      console.error('Chat error:', error)
+      if (!res.headersSent) {
+        res.status(500).json({ error: 'Chat failed' })
+      }
+    }
+  })
 
   // Serve the built client and fall back to index.html for the SPA.
   if (serveStatic && distPublic) {
     app.use(express.static(distPublic))
-    app.use((req: Request, res: Response, next: NextFunction) => {
+    app.use((req, res, next) => {
       if (req.method !== 'GET') return next()
       res.sendFile(resolve(distPublic, 'index.html'))
     })

@@ -69,8 +69,7 @@ const tools = {
         .optional()
         .describe('Optional category to filter skills by'),
     }),
-    execute: async ({ category }: { category?: string }) =>
-      portfolio.getSkills(category),
+    execute: async ({ category }) => portfolio.getSkills(category),
   }),
   get_posts: tool({
     description:
@@ -78,7 +77,7 @@ const tools = {
     inputSchema: z.object({
       tag: z.string().optional().describe('Optional tag to filter posts by'),
     }),
-    execute: async ({ tag }: { tag?: string }) => portfolio.getPosts(tag),
+    execute: async ({ tag }) => portfolio.getPosts(tag),
   }),
   get_post: tool({
     description:
@@ -86,7 +85,7 @@ const tools = {
     inputSchema: z.object({
       slug: z.string().describe('The slug of the post to retrieve'),
     }),
-    execute: async ({ slug }: { slug: string }) => portfolio.getPost(slug),
+    execute: async ({ slug }) => portfolio.getPost(slug),
   }),
   get_user: tool({
     description:

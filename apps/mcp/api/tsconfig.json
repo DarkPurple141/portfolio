@@ -3,7 +3,12 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "noEmit": true
+    "noEmit": true,
+    // @vercel/node type-checks the function with this config, but its express/
+    // zod type resolution differs from the local build and fails to infer
+    // handler params (flagging them implicit-any). The local build (strict,
+    // src/ only) still type-checks these properly, so relax only here.
+    "noImplicitAny": false
   },
   "include": ["**/*.ts", "../src/**/*.ts"]
 }
