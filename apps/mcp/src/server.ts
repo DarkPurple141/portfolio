@@ -1,6 +1,12 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
-import { prisma } from '@portfolio/db'
 import { z } from 'zod'
+import * as portfolio from './portfolio.js'
+
+function json(data: unknown) {
+  return {
+    content: [{ type: 'text' as const, text: JSON.stringify(data, null, 2) }],
+  }
+}
 
 export function createMcpServer() {
   const server = new McpServer({
@@ -25,38 +31,7 @@ export function createMcpServer() {
         tag: z.string().optional().describe('Optional tag to filter posts by'),
       },
     },
-    async (args: { tag?: string }) => {
-      const { tag } = args
-      const posts = await prisma.post.findMany({
-        where: tag
-          ? {
-              tags: {
-                string_contains: tag,
-              },
-            }
-          : undefined,
-        select: {
-          id: true,
-          slug: true,
-          title: true,
-          description: true,
-          tags: true,
-          published: true,
-          createdAt: true,
-          updatedAt: true,
-        },
-        orderBy: { createdAt: 'desc' },
-      })
-
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(posts, null, 2),
-          },
-        ],
-      }
-    },
+    async (args: { tag?: string }) => json(await portfolio.getPosts(args.tag)),
   )
 
   // Tool: Get a specific post by slug
@@ -69,31 +44,21 @@ export function createMcpServer() {
       },
     },
     async (args: { slug: string }) => {
-      const { slug } = args
-      const post = await prisma.post.findUnique({
-        where: { slug },
-      })
+      const post = await portfolio.getPost(args.slug)
 
       if (!post) {
         return {
           content: [
             {
               type: 'text',
-              text: `Post with slug "${slug}" not found`,
+              text: `Post with slug "${args.slug}" not found`,
             },
           ],
           isError: true,
         }
       }
 
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(post, null, 2),
-          },
-        ],
-      }
+      return json(post)
     },
   )
 
@@ -101,40 +66,14 @@ export function createMcpServer() {
   server.registerTool(
     'get_jobs',
     { description: 'Get all work experience/jobs', inputSchema: {} },
-    async () => {
-      const jobs = await prisma.job.findMany({
-        orderBy: { start_date: 'desc' },
-      })
-
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(jobs, null, 2),
-          },
-        ],
-      }
-    },
+    async () => json(await portfolio.getJobs()),
   )
 
   // Tool: Get all qualifications
   server.registerTool(
     'get_qualifications',
     { description: 'Get all education and qualifications', inputSchema: {} },
-    async () => {
-      const qualifications = await prisma.qualification.findMany({
-        orderBy: { graduation_year: 'desc' },
-      })
-
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(qualifications, null, 2),
-          },
-        ],
-      }
-    },
+    async () => json(await portfolio.getQualifications()),
   )
 
   // Tool: Get all skills
@@ -152,22 +91,8 @@ export function createMcpServer() {
           ),
       },
     },
-    async (args: { category?: string }) => {
-      const { category } = args
-      const skills = await prisma.skill.findMany({
-        where: category ? { category } : undefined,
-        orderBy: { category: 'asc' },
-      })
-
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(skills, null, 2),
-          },
-        ],
-      }
-    },
+    async (args: { category?: string }) =>
+      json(await portfolio.getSkills(args.category)),
   )
 
   // Tool: Get user profile
@@ -178,32 +103,16 @@ export function createMcpServer() {
       inputSchema: {},
     },
     async () => {
-      const user = await prisma.user.findFirst({
-        include: {
-          socials: true,
-        },
-      })
+      const user = await portfolio.getUser()
 
       if (!user) {
         return {
-          content: [
-            {
-              type: 'text',
-              text: 'No user found',
-            },
-          ],
+          content: [{ type: 'text', text: 'No user found' }],
           isError: true,
         }
       }
 
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(user, null, 2),
-          },
-        ],
-      }
+      return json(user)
     },
   )
 
@@ -215,114 +124,49 @@ export function createMcpServer() {
         'Get a formatted resume with jobs, qualifications, and user info',
       inputSchema: {},
     },
-    async () => {
-      const [user, jobs, qualifications, skills] = await Promise.all([
-        prisma.user.findFirst({
-          include: { socials: true },
-        }),
-        prisma.job.findMany({
-          orderBy: { start_date: 'desc' },
-        }),
-        prisma.qualification.findMany({
-          orderBy: { graduation_year: 'desc' },
-        }),
-        prisma.skill.findMany({
-          orderBy: { category: 'asc' },
-        }),
-      ])
-
-      const resume = {
-        user,
-        experience: jobs,
-        education: qualifications,
-        skills,
-      }
-
-      return {
-        content: [
-          {
-            type: 'text',
-            text: JSON.stringify(resume, null, 2),
-          },
-        ],
-      }
-    },
+    async () => json(await portfolio.getResume()),
   )
 
   // Resources
-  server.resource('posts', 'portfolio://posts', async () => {
-    const posts = await prisma.post.findMany({
-      select: {
-        slug: true,
-        title: true,
-        description: true,
-        tags: true,
-        createdAt: true,
+  server.resource('posts', 'portfolio://posts', async () => ({
+    contents: [
+      {
+        uri: 'portfolio://posts',
+        mimeType: 'application/json',
+        text: JSON.stringify(await portfolio.getPosts(), null, 2),
       },
-      orderBy: { createdAt: 'desc' },
-    })
+    ],
+  }))
 
-    return {
-      contents: [
-        {
-          uri: 'portfolio://posts',
-          mimeType: 'application/json',
-          text: JSON.stringify(posts, null, 2),
-        },
-      ],
-    }
-  })
+  server.resource('jobs', 'portfolio://jobs', async () => ({
+    contents: [
+      {
+        uri: 'portfolio://jobs',
+        mimeType: 'application/json',
+        text: JSON.stringify(await portfolio.getJobs(), null, 2),
+      },
+    ],
+  }))
 
-  server.resource('jobs', 'portfolio://jobs', async () => {
-    const jobs = await prisma.job.findMany({
-      orderBy: { start_date: 'desc' },
-    })
+  server.resource('skills', 'portfolio://skills', async () => ({
+    contents: [
+      {
+        uri: 'portfolio://skills',
+        mimeType: 'application/json',
+        text: JSON.stringify(await portfolio.getSkills(), null, 2),
+      },
+    ],
+  }))
 
-    return {
-      contents: [
-        {
-          uri: 'portfolio://jobs',
-          mimeType: 'application/json',
-          text: JSON.stringify(jobs, null, 2),
-        },
-      ],
-    }
-  })
-
-  server.resource('skills', 'portfolio://skills', async () => {
-    const skills = await prisma.skill.findMany({
-      orderBy: { category: 'asc' },
-    })
-
-    return {
-      contents: [
-        {
-          uri: 'portfolio://skills',
-          mimeType: 'application/json',
-          text: JSON.stringify(skills, null, 2),
-        },
-      ],
-    }
-  })
-
-  server.resource('user', 'portfolio://user', async () => {
-    const user = await prisma.user.findFirst({
-      include: { socials: true },
-    })
-
-    return {
-      contents: [
-        {
-          uri: 'portfolio://user',
-          mimeType: 'application/json',
-          text: JSON.stringify(user, null, 2),
-        },
-      ],
-    }
-  })
-
-  // eslint-disable-next-line no-console
-  console.log('Server created')
+  server.resource('user', 'portfolio://user', async () => ({
+    contents: [
+      {
+        uri: 'portfolio://user',
+        mimeType: 'application/json',
+        text: JSON.stringify(await portfolio.getUser(), null, 2),
+      },
+    ],
+  }))
 
   return server
 }
