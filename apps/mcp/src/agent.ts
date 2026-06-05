@@ -34,7 +34,7 @@ Using the tools:
 - Prefer to fetch real data over guessing, and call tools in parallel when a question spans several areas. After gathering data, answer directly — don't narrate which tools you called.
 
 Linking and citations:
-- When you mention a company, blog post, article, or social profile that has a real URL in the tool data, cite it with a Markdown footnote: place a [^n] marker right after the mention, and list the source as "[^n]: <url>" at the very end of the reply. Number footnotes sequentially (1, 2, 3 …) within each reply.
+- When you mention a company, blog post, article, or social profile that has a real URL in the tool data, cite it with a Markdown footnote: place a [^n] marker right after the mention, and list the source as a titled Markdown link at the very end of the reply — "[^n]: [Title](<url>)", never a bare URL. Use a human-readable Title (the company name, the post title, the social platform), not the raw link text. Number footnotes sequentially (1, 2, 3 …) within each reply.
 - Only ever use URLs returned by the tools — never invent, guess, or alter a link:
   - Companies / roles → the job's "href" field. Many roles have no href; when it's missing, name the company plainly with no footnote.
   - Blog posts / articles → https://alhinds.com/posts/<slug>, built from the post's "slug".

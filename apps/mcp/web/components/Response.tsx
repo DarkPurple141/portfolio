@@ -8,11 +8,21 @@ export function Response({ children }: { children: string }) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          a: (props) => (
-            <a href={props.href} target="_blank" rel="noreferrer noopener">
-              {props.children}
-            </a>
-          ),
+          a: (props) => {
+            // Footnote refs/backrefs are same-page fragment links (#…); they
+            // must stay in-document so they scroll instead of opening a new tab.
+            const isExternal = /^https?:\/\//.test(props.href ?? '')
+            return (
+              <a
+                href={props.href}
+                {...(isExternal
+                  ? { target: '_blank', rel: 'noreferrer noopener' }
+                  : {})}
+              >
+                {props.children}
+              </a>
+            )
+          },
         }}
       >
         {children}
