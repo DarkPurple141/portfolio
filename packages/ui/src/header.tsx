@@ -7,9 +7,9 @@ export const Header = () => {
   const Link = useLink()
   const pathname = usePathname()
   return (
-    <header className="sticky top-0 left-0 right-0 flex flex-row justify-between items-center py-4 bg-surface">
+    <header className="sticky top-0 z-50 flex flex-row items-center justify-between border-b border-border bg-surface/80 py-4 backdrop-blur-md">
       <LogoMark />
-      <Inline gap="gap-3">
+      <Inline gap="gap-4">
         {[
           {
             name: 'Posts',
@@ -23,7 +23,11 @@ export const Header = () => {
           <Link
             key={href}
             href={href}
-            className={pathname === href ? 'text-brand.bold' : undefined}
+            className={
+              pathname === href
+                ? 'font-semibold text-brand-bold'
+                : 'font-medium'
+            }
           >
             {name}
           </Link>

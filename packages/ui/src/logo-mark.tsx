@@ -1,7 +1,10 @@
 export const LogoMark = () => {
   return (
     <h2>
-      <a href="/">
+      <a
+        href="/"
+        className="inline-block text-default transition-colors hover:text-brand-bold"
+      >
         <svg
           height="1em"
           viewBox="0 0 85 35"

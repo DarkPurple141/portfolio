@@ -1,4 +1,4 @@
-import { Heading, Stack, Socials, PreviewCard } from '@halyard/ui'
+import { Heading, Stack, Socials, PreviewCard, Panel } from '@halyard/ui'
 import Link from 'next/link'
 import { getLatestPost } from '@/app/lib/clients/posts'
 
@@ -9,7 +9,7 @@ export default async function Home() {
     <Stack gap="gap-24">
       <Stack gap="gap-8" className="splash">
         <Heading className="heading-xl" as="h1">
-          <span className="text-brand.bold">Alex Hinds</span> is building
+          <span className="text-brand-bold">Alex Hinds</span> is building
           something new. I'm based in Sydney.
         </Heading>
         <Stack gap="gap-4">
@@ -30,10 +30,7 @@ export default async function Home() {
           <Socials />
         </Stack>
       </Stack>
-      <div className="grid sm:grid-cols-2 gap-8 -m-8 p-8 bg-accent">
-        <Heading className="heading-300 col-span-1 sm:col-span-2" as="h2">
-          Featured
-        </Heading>
+      <Panel title="Featured" columns={2}>
         <PreviewCard
           heading="One person, many frameworks"
           href="/posts"
@@ -60,7 +57,7 @@ export default async function Home() {
         >
           {post.frontmatter.description}
         </PreviewCard>
-      </div>
+      </Panel>
     </Stack>
   )
 }

@@ -4,7 +4,18 @@
     "build": {
       "dependsOn": ["db:generate", "^db:migrate", "^db:seed", "^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**", "generated/**"],
-      "inputs": ["src/**/*", "app/**/*", "prisma/schema.prisma"]
+      "inputs": [
+        "src/**/*",
+        "app/**/*",
+        "styles/**/*",
+        "static/**/*",
+        "public/**/*",
+        "*.config.js",
+        "*.config.mjs",
+        "*.config.ts",
+        "postcss.config.js",
+        "prisma/schema.prisma"
+      ]
     },
     "lint": {
       "dependsOn": ["build"]

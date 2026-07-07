@@ -20,12 +20,24 @@ h2 {
   font: var(--font-heading-md);
 }
 
+/*
+ * The résumé is a dense, print-oriented artifact, so it pins its own compact
+ * type scale rather than inheriting the marketing-site body/heading scale from
+ * @halyard/reset. Subheadings (job/education titles) must sit clearly above the
+ * body text they introduce.
+ */
 h3 {
-  font: var(--font-heading-xs);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.3;
 }
 
 p {
-  font: var(--font-body);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.55;
 }
 
 @media print {
@@ -50,7 +62,7 @@ p {
   }
 
   p {
-    font: var(--font-body-sm);
+    font-size: 0.8125rem;
     line-height: 1.5;
   }
 }

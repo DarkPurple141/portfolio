@@ -1,5 +1,5 @@
 ---
-import { Heading, PreviewCard, Socials, Stack } from '@halyard/ui'
+import { Heading, PreviewCard, Socials, Stack, Panel } from '@halyard/ui'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -26,10 +26,7 @@ import Layout from '../layouts/Layout.astro'
         <Socials />
       </Stack>
     </Stack>
-    <div class="grid sm:grid-cols-2 gap-8 -m-8 p-8 bg-accent">
-      <Heading className="heading-300 col-span-1 sm:col-span-2" as="h2">
-        Featured
-      </Heading>
+    <Panel title="Featured">
       <PreviewCard
         heading="One person, many frameworks"
         href="/posts"
@@ -46,6 +43,6 @@ import Layout from '../layouts/Layout.astro'
         website{' '}
         <a href="https://vue2.alhinds.com">lives here</a>.
       </PreviewCard>
-    </div>
+    </Panel>
   </Stack>
 </Layout>

@@ -46,38 +46,36 @@ const { title, description } = Astro.props
 <style is:global>
   @reference "../styles/global.css";
 
-  p a {
-    @apply underline font-normal;
-  }
+  @layer base {
+    p a {
+      @apply underline font-normal;
+    }
 
-  p {
-    @apply text-subtle;
-  }
+    p {
+      @apply text-subtle;
+    }
 
-  a {
-    @apply font-semibold;
-  }
+    a {
+      @apply font-semibold no-underline;
+    }
 
-  a {
-    @apply no-underline;
-  }
+    header a {
+      @apply text-inherit;
+    }
 
-  header a {
-    @apply text-inherit;
-  }
+    a:hover,
+    a:active,
+    a:focus {
+      @apply text-brand-bold;
+    }
 
-  a:hover,
-  a:active,
-  a:focus {
-    @apply text-brand-bold;
-  }
+    main,
+    header {
+      @apply px-8;
+    }
 
-  main,
-  header {
-    @apply px-8;
-  }
-
-  article {
-    @apply py-8;
+    article {
+      @apply py-8;
+    }
   }
 </style>

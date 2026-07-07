@@ -8,41 +8,43 @@
 @source "../app/**/*.{js,ts,jsx,tsx}";
 @source "../../../packages/ui/src/**/*.{js,ts,jsx,tsx}";
 
-p a {
-  @apply underline font-normal;
-}
+/*
+ * App-level element defaults live in @layer base so component-level Tailwind
+ * utilities (e.g. an accent color on a link or paragraph) always win.
+ */
+@layer base {
+  p a {
+    @apply underline font-normal;
+  }
 
-p {
-  @apply text-subtle;
-}
+  p {
+    @apply text-subtle;
+  }
 
-a {
-  @apply font-semibold;
-}
+  a {
+    @apply font-semibold no-underline;
+  }
 
-a {
-  @apply no-underline;
-}
+  header a {
+    @apply text-inherit;
+  }
 
-header a {
-  @apply text-inherit;
-}
+  a:hover,
+  a:active,
+  a:focus {
+    @apply text-brand-bold;
+  }
 
-a:hover,
-a:active,
-a:focus {
-  @apply text-brand-bold;
-}
+  main,
+  header {
+    @apply px-8;
+  }
 
-main,
-header {
-  @apply px-8;
-}
+  article {
+    @apply py-8;
+  }
 
-article {
-  @apply py-8;
-}
-
-.markdown {
-  color: var(--text-color);
+  .markdown {
+    color: var(--text-color);
+  }
 }

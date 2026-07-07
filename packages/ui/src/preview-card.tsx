@@ -31,21 +31,28 @@ export const PreviewCard = ({
           ref.current?.click()
         }
       }}
-      className="flex flex-col gap-4 hover:cursor-pointer hover:bg-neutral.hover rounded-md p-4 -m-4"
+      className="group flex cursor-pointer flex-col gap-3 rounded-xl border border-border bg-elevated p-5 transition-colors duration-200 hover:bg-neutral-hover"
     >
-      <div>
+      <div className="flex flex-col gap-1.5">
         {published && (
-          <time dateTime={published.iso}>{published.formatted}</time>
+          <time className="heading-xs text-subtlest" dateTime={published.iso}>
+            {published.formatted}
+          </time>
         )}
-        <Heading className="bold leading-none" as="h2">
+        <Heading className="heading-md leading-tight" as="h2">
           <Link ref={ref} href={href}>
             {heading}
           </Link>
         </Heading>
       </div>
-      <p>{children}</p>
+      <p className="body-sm">{children}</p>
       {promoLink && (
-        <p className="font-semibold text-brand.bold">Read article &#x2192;</p>
+        <p className="mt-1 inline-flex items-center gap-1.5 font-semibold text-brand-bold">
+          Read article
+          <span className="transition-transform duration-200 group-hover:translate-x-1">
+            &#x2192;
+          </span>
+        </p>
       )}
     </div>
   )
