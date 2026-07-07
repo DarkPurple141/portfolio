@@ -29,8 +29,12 @@
     },
     {
       "name": "static",
-      "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["--filter", "static", "dev"]
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "pnpm --filter static exec vite preview --config vite.config.ts --host --port $PORT"
+      ],
+      "autoPort": true
     },
     {
       "name": "vue2",
