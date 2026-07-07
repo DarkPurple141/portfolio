@@ -9,13 +9,18 @@
     },
     {
       "name": "next",
-      "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["--filter", "next", "dev"]
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "pnpm --filter next exec next dev -p $PORT"],
+      "autoPort": true
     },
     {
       "name": "astro",
-      "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["--filter", "astro", "dev"]
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "pnpm --filter astro exec astro dev --host --port $PORT"
+      ],
+      "autoPort": true
     },
     {
       "name": "remix",

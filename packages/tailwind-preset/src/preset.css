@@ -8,6 +8,7 @@
 @theme {
   /* Background colors */
   --color-surface: var(--bg-color);
+  --color-elevated: var(--bg-color-elevated);
   --color-neutral-hover: var(--bg-color-hover);
   --color-accent: var(--accent-bg-color);
 
@@ -17,4 +18,17 @@
   --color-subtlest: var(--text-color-subtlest);
   --color-brand: var(--accent-bg-color);
   --color-brand-bold: var(--accent-bg-color-bold);
+
+  /* Borders */
+  --color-border: var(--border-color);
+}
+
+/*
+ * Shared prose treatment for post bodies. Defined once so Astro and Next
+ * render markdown identically. Colors inherit from the theme tokens rather
+ * than the typography plugin's default palette; headings get an anchor-style
+ * `#` in the brand accent.
+ */
+.prose-portfolio {
+  @apply prose max-w-none prose-code:text-inherit prose-a:text-inherit prose-a:underline prose-a:font-normal hover:prose-a:text-brand-bold prose-headings:text-inherit prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand-bold prose-p:text-subtle prose-li:text-subtle prose-blockquote:text-subtle prose-strong:text-inherit;
 }

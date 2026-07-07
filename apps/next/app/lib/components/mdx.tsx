@@ -10,7 +10,7 @@ export const MDX = ({
 }: Pick<Post, 'code' | 'frontmatter'>) => {
   const Component = useMemo(() => getMDXComponent(code, frontmatter), [code])
   return (
-    <article className="markdown max-w-none prose prose-sm prose-code:text-inherit prose-headings:no-underline prose-headings:after:content-['#'] prose-headings:after:ml-2 prose-headings:after:text-brand.bold prose-headings:text-inherit prose-p:text-subtle prose-li:text-subtle prose-blockquote:text-subtle hover:prose-a:text-brand.bold prose-a:text-inherit -mt-8">
+    <article className="markdown prose-portfolio -mt-8">
       <a href={`/posts/${frontmatter.slug}`} className="sr-only u-url u-uid">
         Permalink
       </a>
