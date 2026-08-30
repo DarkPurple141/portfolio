@@ -33,7 +33,7 @@
     "eslint-plugin-astro": "^0.29.1",
     "@tailwindcss/vite": "^4.0.0",
     "prettier": "^3.0.0",
-    "prettier-plugin-astro": "^0.12.2",
+    "prettier-plugin-astro": "^0.14.0",
     "vite": "^6.0.0"
   }
 }
